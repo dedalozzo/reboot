@@ -93,6 +93,10 @@ Thanks!
 + http://twitter.com/fat
 + http://github.com/fat
 
+**Filippo Fadda**
+
++ http://github.com/dedalozzo
+
 
 
 ## Copyright and license
