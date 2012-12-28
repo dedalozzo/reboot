@@ -1,4 +1,4 @@
-# [Twitter Bootstrap v3.0.0](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+# [P.it Bootstrap v3.0.0](http://dedalozzo.github.com/pit-bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/dedalozzo/pit-bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
 
@@ -101,7 +101,8 @@ Thanks!
 
 ## Copyright and license
 
-Copyright 2012 Twitter, Inc.
+Copyright 2013 Twitter, Inc.
+Copyright 2013 3F sas
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
