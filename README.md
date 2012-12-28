@@ -1,4 +1,4 @@
-# [P.it Bootstrap v3.0.0](http://dedalozzo.github.com/pit-bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/dedalozzo/pit-bootstrap)
+# [P.it Bootstrap v3.0.0](http://dedalozzo.github.com/pit-bootstrap) [![Build Status](https://secure.travis-ci.org/dedalozzo/pit-bootstrap.png)](http://travis-ci.org/dedalozzo/pit-bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
 
