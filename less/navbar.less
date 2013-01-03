@@ -9,7 +9,6 @@
 // Base class and wrapper
 .navbar {
   overflow: visible;
-  padding: 0 20px;
   margin-bottom: @line-height-base;
   #gradient > .vertical(@navbar-background-highlight, @navbar-background);
   border: 1px solid @navbar-border;
@@ -39,7 +38,7 @@
   float: left;
   display: block;
   // Vertically center the text given @navbar-height
-  padding: ((@navbar-height - @line-height-base) / 2) 20px ((@navbar-height - @line-height-base) / 2);
+  padding: (((@navbar-height - @line-height-base) / 2) + 2) 20px ((@navbar-height - @line-height-base) / 2);
   margin-left: -20px; // negative indent to left-align the text down the page
   font-size: 20px;
   font-weight: 200;
@@ -71,9 +70,10 @@
 // -------------------------
 .navbar .divider-vertical {
   height: @navbar-height;
-  margin: 0 9px;
-  border-left: 1px solid @navbar-background;
-  border-right: 1px solid @navbar-background-highlight;
+  padding-top: 2px;
+  padding-right: 9px;
+  margin: 0px;
+  border-left: 1px solid @navbar-border;
 }
 
 // Buttons in navbar
@@ -215,8 +215,9 @@
 .navbar .nav > li > a {
   float: none;
   // Vertically center the text given @navbar-height
-  padding: ((@navbar-height - @line-height-base) / 2) 15px ((@navbar-height - @line-height-base) / 2);
+  padding: (((@navbar-height - @line-height-base) / 2) + 2) 10px ((@navbar-height - @line-height-base) / 2);
   color: @navbar-link-color;
+  font-weight: bold;
   text-decoration: none;
   text-shadow: 0 1px 0 @navbar-background-highlight;
 }
@@ -230,6 +231,10 @@
   background-color: @navbar-link-background-hover; // "transparent" is default to differentiate :hover from .active
   color: @navbar-link-color-hover;
   text-decoration: none;
+}
+
+.navbar .nav > li > [class^="glyphicon-"]:before {
+  vertical-align: -2px;
 }
 
 // Active nav items
