@@ -90,6 +90,41 @@
 }
 
 
+// Tabs (Google style)
+// -------------------------
+
+.nav-tabs-google > li {
+  margin: 0 1px 0 0;
+}
+.nav-tabs-google > li > a {
+  padding-top: 2px;
+  padding-bottom: 6px;
+  line-height: @line-height-base;
+  color: @grayLight;
+  border: 1px solid transparent;
+  &:hover {
+    color: @red;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  &:active {
+    color: @red;
+  }
+}
+.nav-tabs-google li:hover {
+  color: #333;
+  border-bottom: 3px solid @red;
+}
+.nav-tabs-google li.active {
+  font-weight: bold;
+  border-bottom: 3px solid @red;
+}
+.nav-tabs-google > .active > a,
+.nav-tabs-google > .active > a:hover {
+  color: @grayDark;
+  border: 1px solid transparent;
+}
+
 
 // Pills
 // -------------------------
