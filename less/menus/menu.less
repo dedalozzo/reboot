@@ -1,0 +1,63 @@
+//! @file menu.less
+//! @brief Menu.
+//! @details There are many kinds of menus. This is the base class, which is used to create a navigation bar's menu,
+//! tabs or pills menus, etc.
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+@import "menu-header.less";
+@import "menu-list.less";
+@import "menu-pills.less";
+@import "menu-tabs.less";
+@import "menu-icons.less";
+@import "menu-stack.less";
+@import "dropdown/dropdown.less";
+@import "tabbable.less";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.menu {
+  margin-left: 0;
+  list-style: none;
+  font-weight: normal;
+  text-align: middle;
+  .clearfix();
+}
+
+.menu > li {
+  float: left;
+}
+
+.menu > li > a,
+.menu > li > span {
+  display: block;
+  padding: 7px 9px 7px 9px;
+}
+
+.menu > li > a:hover {
+  text-decoration: none;
+}
+
+// Prevents IE8 from misplacing images. See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989.
+.menu > li > a > img,
+.menu > li > span > img {
+  max-width: none;
+}
+
+// Redeclares pull classes because of specifity.
+.menu > .pull-right {
+  float: right;
+}
+
+.menu > li > [class^="icon-"] {
+  &:before {
+    margin-left: 1px;
+  }
+}

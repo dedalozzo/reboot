@@ -1,0 +1,51 @@
+//! @file dropdown-arrow.less
+//! @brief Dropdown arrow decoration below icons.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@dropdown-arrow-border-width: 7px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <li class="dropdown">
+    <a href="#" class="icon-user" id="user" role="button" data-toggle="dropdown"></a>
+    <ul class="dropdown-menu dropdown-arrow" role="menu" aria-labelledby="drop3">
+      <li><a tabindex="-1" href="#"><span class="icon-cog" />&nbsp;Impostazioni</a></li>
+      <li><a tabindex="-1" href="#"><span class="icon-user" />&nbsp;Profilo</a></li>
+      <li class="divider"></li>
+      <li><a tabindex="-1" href="#"><span class="icon-signout" />&nbsp;Disconnetti</a></li>
+    </ul>
+  </li>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown-arrow {
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: @dropdown-arrow-border-width solid transparent;
+    border-right: @dropdown-arrow-border-width solid transparent;
+    border-bottom: @dropdown-arrow-border-width solid @dropdown-border-color;
+    position: absolute;
+    top: -7px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left: (@dropdown-arrow-border-width - 1) solid transparent;
+    border-right: (@dropdown-arrow-border-width - 1) solid transparent;
+    border-bottom: (@dropdown-arrow-border-width - 1) solid @dropdown-background-color;
+    position: absolute;
+    top: -6px;
+  }
+}
