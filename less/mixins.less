@@ -181,6 +181,15 @@
      border-top-left-radius: @radius;
 }
 
+
+.border-radius(@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+
+
 // Drop shadows
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
@@ -286,7 +295,7 @@
   overflow: auto; // Safari fix
 }
 
-// CSS3 Content Columns
+/* // CSS3 Content Columns
 .content-columns(@column-count, @column-gap: @grid-gutter-width) {
   -webkit-column-count: @column-count;
      -moz-column-count: @column-count;
@@ -295,6 +304,7 @@
      -moz-column-gap: @column-gap;
           column-gap: @column-gap;
 }
+*/
 
 // Optional hyphenation
 .hyphens(@mode: auto) {
@@ -384,17 +394,6 @@
 // COMPONENT MIXINS
 // --------------------------------------------------
 
-// Horizontal dividers
-// -------------------------
-// Dividers (basically an hr) within dropdowns and nav lists
-.nav-divider(@top: #e5e5e5, @bottom: #fff) {
-  height: 1px;
-  margin: ((@line-height-base / 2) - 1) 1px; // 8px 1px
-  overflow: hidden;
-  background-color: @top;
-  border-bottom: 1px solid @bottom;
-}
-
 // Button backgrounds
 // ------------------
 .buttonBackground(@background-start, @background-end, @text-color: #fff, @text-shadow: 0 -1px 0 rgba(0,0,0,.25)) {
@@ -420,123 +419,3 @@
 }
 
 
-// Navbar vertical align
-// -------------------------
-// Vertically center elements in the navbar.
-// Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
-.navbarVerticalAlign(@element-height) {
-  margin-top: (@navbar-height - @element-height) / 2;
-}
-
-
-
-// Grid System
-// -----------
-
-// Centered container element
-.container-fixed() {
-  margin-right: auto;
-  margin-left: auto;
-  .clearfix();
-}
-
-// Make a Grid
-// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
-.makeRow() {
-  margin-left: @grid-gutter-width * -1;
-  .clearfix();
-}
-.makeColumn(@columns: 1, @offset: 0) {
-  float: left;
-  margin-left: (@grid-column-width * @offset) + (@grid-gutter-width * (@offset - 1)) + (@grid-gutter-width * 2);
-  width: (@grid-column-width * @columns) + (@grid-gutter-width * (@columns - 1));
-}
-
-// The Grid
-#grid {
-
-  .core(@grid-column-width, @grid-gutter-width) {
-    @grid-width: (@grid-columns * @grid-column-width) + (@grid-gutter-width * (@grid-columns - 1));
-
-    .spanX(@index) when (@index > 0) {
-      (~".span@{index}") { .span(@index); }
-      .spanX(@index - 1);
-    }
-    .spanX(0) {}
-
-    .offsetX(@index) when (@index > 0) {
-      (~".offset@{index}") { .offset(@index); }
-      .offsetX(@index - 1);
-    }
-    .offsetX(0) {}
-
-
-    // Base styles
-    .offset(@columns) {
-      margin-left: percentage(@columns / @grid-columns);
-    }
-    .span(@columns) {
-      width: percentage(@columns / @grid-columns);
-    }
-
-    .row {
-      // Negative indent the columns so text lines up
-      margin-left: @grid-gutter-width / -2;
-      margin-right: @grid-gutter-width / -2;
-      // Clear the floated columns
-      .clearfix();
-    }
-
-    [class*="span"] {
-      float: left; // Collapse whitespace
-      min-height: 1px; // Prevent empty columns from collapsing
-      padding-left: @grid-gutter-width / 2;
-      padding-right: @grid-gutter-width / 2;
-      // Proper box-model (padding doesnt' add to width)
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-    }
-
-    // Generate .spanX and .offsetX
-    .spanX(@grid-columns);
-    .offsetX(@grid-columns);
-
-  }
-
-
-  .input(@grid-column-width, @grid-gutter-width) {
-    @grid-width: (@grid-columns * @grid-column-width) + (@grid-gutter-width * (@grid-columns - 1));
-
-    .spanX(@index) when (@index > 0) {
-      (~"input.span@{index}, textarea.span@{index}, select.span@{index}, .uneditable-input.span@{index}") { .span(@index); }
-      .spanX(@index - 1);
-    }
-    .spanX(0) {}
-
-    .offsetX(@index) when (@index > 0) {
-      (~"input.offset@{index}, textarea.offset@{index}, select.offset@{index}, uneditable-input.offset@{index}") { .offset(@index); }
-      .offsetX(@index - 1);
-    }
-    .offsetX(0) {}
-
-    .span(@columns) {
-      // TODO: Figure out how to add this back behind a class
-      // Part 1: Since inputs require padding *and* margin, we subtract the grid gutter width, as a percent of the row, from the default column width.
-      //width: percentage(@columns / @grid-columns) - percentage(@grid-gutter-width / @grid-width);
-      // Part 2: That subtracted width then gets split in half and added to the left and right margins.
-      // margin-left: percentage((@grid-gutter-width / 2) / @grid-width);
-      // margin-right: percentage((@grid-gutter-width / 2) / @grid-width);
-    }
-
-    .offset(@columns) {
-      // Take the normal offset margin and add an extra gutter's worth.
-      margin-left: percentage(@columns / @grid-columns) + percentage((@grid-gutter-width / 2) / @grid-width);
-    }
-
-    // Generate .spanX and .offsetX
-    .spanX(@grid-columns);
-    .offsetX(@grid-columns);
-  }
-
-}

@@ -65,10 +65,6 @@
   font-size: @font-size-small;
   border-radius: @border-radius-small;
 }
-.btn-mini [class^="icon-"],
-.btn-mini [class*=" icon-"] {
-  margin-top: -1px;
-}
 
 // Mini
 .btn-mini {
@@ -77,13 +73,10 @@
   border-radius: @border-radius-small;
 }
 
-
-// Icons in buttons
-// -------------------------
-
-.btn [class^="glyphicon-"]:before       { vertical-align: -2px; }
-.btn-small [class^="glyphicon-"]:before,
-.btn-mini [class^="glyphicon-"]:before  { vertical-align: -1px; }
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
 
 
 // Block button
@@ -112,28 +105,20 @@ input[type="button"] {
 }
 
 
-
-// Alternate buttons
-// --------------------------------------------------
-
 .btn {
-  .buttonBackground(@btn-background, @btn-background-highlight, @gray, 0 1px 0 rgba(255,255,255,.75));
+  .buttonBackground(@standard-color, @standard-darken-color, @gray, 0 1px 0 rgba(255,255,255,.75));
 }
-// Primary appears as blue
-.btn-primary {
-  .buttonBackground(@btn-background-primary, @btn-background-primary-highlight);
+.btn-info {
+  .buttonBackground(@info-color, @info-darken-color);
 }
-// Warning appears are orange
 .btn-warning {
-  .buttonBackground(@btn-background-warning, @btn-background-warning-highlight);
+  .buttonBackground(@warning-color, @warning-darken-color);
 }
-// Danger and error appear as red
-.btn-danger {
-  .buttonBackground(@btn-background-danger, @btn-background-danger-highlight);
+.btn-error {
+  .buttonBackground(@error-color, @error-darken-color);
 }
-// Success appears as green
 .btn-success {
-  .buttonBackground(@btn-background-success, @btn-background-success-highlight);
+  .buttonBackground(@success-color, @success-darken-color);
 }
 
 
@@ -164,7 +149,7 @@ fieldset[disabled] .btn-link {
   &[disabled],
   fieldset[disabled] & {
     &:hover {
-      color: @grayDark;
+      color: @gray-dark;
       text-decoration: none;
     }
   }

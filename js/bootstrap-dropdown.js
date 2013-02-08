@@ -55,7 +55,7 @@
         $parent.toggleClass('open')
       }
 
-      $this.focus()
+      //$this.focus()
 
       return false
     }

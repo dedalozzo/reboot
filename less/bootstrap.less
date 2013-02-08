@@ -15,9 +15,11 @@
 // Reset
 @import "normalize.less";
 
-// Grid system and page structure
+// Page structure
 @import "scaffolding.less";
-@import "grid.less";
+@import "scrollable.less";
+@import "content.less";
+@import "container.less";
 
 // Base CSS
 @import "type.less";
@@ -27,10 +29,13 @@
 
 // Fonts
 @import "fonts.less";
+@import "font-awesome.less";
 
 // Components: common
-@import "glyphicons.less";
-@import "dropdowns.less";
+@import "menus/menu.less";
+@import "bar/bar.less";
+
+
 @import "wells.less";
 @import "component-animations.less";
 @import "close.less";
@@ -40,10 +45,7 @@
 @import "button-groups.less";
 @import "alerts.less";
 
-// Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
+
 @import "pagination.less";
 @import "pager.less";
 
@@ -60,32 +62,7 @@
 @import "accordion.less";
 @import "carousel.less";
 @import "jumbotron.less";
+@import "banners.less";
 
 // Utility classes
 @import "utilities.less"; // Has to be last to override when necessary
-
-
-
-// Responsive
-// -------------------------------------------------------------
-
-// Responsive utility classes
-@import "responsive-utilities.less";
-
-
-// Media queries
-// ------------------
-
-// Desktops
-@import "responsive-desktop.less";
-
-// Tablets
-@import "responsive-tablet.less";
-
-// Phones
-@import "responsive-phone.less";
-
-
-// Responsive navbar
-// Show a button to toggle navbar contents
-@import "responsive-navbar.less";
