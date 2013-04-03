@@ -1,0 +1,29 @@
+//! @file link.less
+//! @brief A simple link.
+//! @details Resets all styles, including backdroung and borders to make appears the "a" tag as a simple link, even
+//! when the tag is included into a list (tabs, pills, etc.).
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.link {
+  color: @link-color !important;
+  background-color: transparent !important;
+
+  border: none !important;
+
+  text-decoration: none !important;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover !important;
+    background-color: transparent !important;
+
+    border: none !important;
+
+    text-decoration: underline !important;
+  }
+}

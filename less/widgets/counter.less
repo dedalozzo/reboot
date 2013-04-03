@@ -1,0 +1,31 @@
+//! @file updates.less
+//! @brief This widget display a counter.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <div id="counter"><div>11.823</div> AGGIORNAMENTI</></div>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#counter {
+  display: block;
+  margin-bottom: @gutter;
+  text-align: right;
+  color: @gray-dark;
+  line-height: @font-size-base;
+}
+
+#counter > div {
+  font-size: @font-size-base * 4;
+  line-height: @font-size-base * 4;
+  font-weight: bold;
+}

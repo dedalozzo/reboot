@@ -1,0 +1,25 @@
+//! @file images.less
+//! @brief Images' styles.
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// Rounded corners.
+.img-rounded {
+  border-radius: 6px;
+}
+
+// Adds polaroid-esque trim.
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+}
+
+// Perfect circle.
+.img-circle {
+  border-radius: 500px; // Cranks the border-radius so it works with most reasonably sized images.
+}

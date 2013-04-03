@@ -1,0 +1,131 @@
+//! @file menu.less
+//! @brief Menu.
+//! @details You can use a menu inside the navigation bar, on a button or you can make, for example,
+//! menu tabs.
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+@import "menu-wrapper";
+@import "menu-toggle";
+@import "menu-divider";
+@import "arrow";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@menu-color: @gray-dark;
+@menu-background-color: white;
+@menu-border-color: @gray-light;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <li class="menu-wrapper">
+    <a href="#" role="button" data-toggle="menu"><i>class="icon-user"</i></a>
+    <ul class="menu arrow" role="menu" aria-labelledby="drop3">
+      <li><a tabindex="-1" href="#"><i class="icon-cog"</i>&nbsp;Impostazioni</a></li>
+      <li><a tabindex="-1" href="#"><i class="icon-user"</i>&nbsp;Profilo</a></li>
+      <li class="menu-divider"></li>
+      <li><a tabindex="-1" href="#"><span class="icon-signout" />&nbsp;Disconnetti</a></li>
+    </ul>
+  </li>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.menu {
+  display: none;
+
+  position: absolute;
+  margin-left: 0;
+  min-width: 160px;
+
+  z-index: @menu-zindex;
+
+  margin-top: 1px;
+  padding: 5px 0 5px 0;
+
+  list-style: none;
+  text-align: left;
+  background-color: @menu-background-color;
+
+  border: 3px solid @topbar-background-color;
+  border-top: none;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  opacity: 0;
+  pointer-events: none;
+
+
+
+  // Aligns the menu menu to right.
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  // Links within the menu menu.
+  > li > a {
+    float: none;
+    margin: 0;
+    display: block;
+
+    padding: 3px 10px;
+    clear: both;
+    line-height: @line-height-base;
+    color: @menu-color;
+    white-space: nowrap;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.menu li > a:hover,
+.menu li > a:focus {
+  text-decoration: none;
+  color: @menu-background-color;
+  #gradient > .vertical(@link-color-hover, lighten(@link-color-hover, 5%));
+}
+
+
+.menu > li > span {
+  color: @menu-border-color;
+}
+
+/*.wrapper-menu-2.active:after {
+  border-width: 0 6px 6px 6px;
+}*/
+
+
+
+.open {
+  // IE7's z-index only goes to the nearest positioned ancestor, which would  make the menu appear below buttons that
+  // appeared later on the page.
+  *z-index: @menu-zindex;
+
+  & > .menu {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+

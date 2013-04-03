@@ -1,0 +1,71 @@
+//! @file tabs.less
+//! @brief Tabs.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@tabs-border-color: @gray-light;
+@tabs-border-width: 1px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Gives the tabs something to sit on.
+.list.tabs {
+  margin-bottom: @gutter;
+  border-bottom: @tabs-border-width solid @tabs-border-color;
+}
+
+// Makes the list-items overlay the bottom border.
+.list.tabs > li {
+  float: left;
+  margin-bottom: -@tabs-border-width;
+}
+
+.list.tabs > li + li > * {
+  margin-left: 4px;
+}
+
+.list.tabs > li > * {
+  display: block;
+  padding: 4px 6px 3px 6px;
+}
+
+.list.tabs > li > a {
+  color: @gray;
+  border: 1px solid transparent;
+  .border-radius(4px 4px 2px 2px);
+
+  &:hover,
+  &:focus {
+    background-color: @tabs-border-color;
+    border-color: @tabs-border-color !important;
+    border-bottom: @tabs-border-width solid @tabs-border-color;
+  }
+}
+
+.list.tabs > .active {
+  border-bottom: 0 !important;
+}
+
+.list.tabs > .active > a,
+.list.tabs > .active > a:hover,
+.list.tabs > .active > a:focus {
+  color: @gray-dark;
+  background-color: transparent;
+  border: @tabs-border-width solid @tabs-border-color;
+  border-bottom: 1px solid white !important;
+  font-weight: bold;
+}
+
+.list.tabs > .icon > a:hover,
+.list.tabs > .icon > a:focus {
+  color: @link-color-hover;
+  background-color: transparent;
+  border: 1px solid transparent !important;
+}

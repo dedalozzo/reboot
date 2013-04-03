@@ -1,0 +1,72 @@
+//! @file list.less
+//! @brief Common CSS for list items.
+//! @details This is the base class used to create e list in conjunction with another specialized class. There are many
+//! kinds of list: tabs, pills, the navigation bar, menus are all lists.
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list {
+  margin: 0;
+  padding: 0;
+
+  display: table;
+  width: 100%;
+
+  list-style: none;
+  font-weight: normal;
+  text-align: left;
+}
+
+.list > li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.list > li > * {
+  text-align: center;
+  white-space: nowrap;
+}
+
+// Removes the text decoration on links. Generally not used in a list.
+.list > li > a:hover {
+  text-decoration: none;
+}
+
+// Prevents IE8 from misplacing images. See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989.
+.list > li > * > img {
+  max-width: none;
+}
+
+// A space between list items, used instead of the .pull-right class.
+.list > li.space {
+  width: 100%;
+}
+
+// Resets the botton margin to zero.
+.list.no-gutter {
+  margin-bottom: 0 !important;
+}
+
+// A vertical list.
+.list.vertical > li {
+  display: block;
+}
+.list.vertical > li + li > * {
+  margin-left: 0;
+}
+
+// A small list.
+.list.small > li > * {
+  font-size: @font-size-small;
+}
+
+// A large list.
+.list.large > li > * {
+  font-size: @font-size-large;
+}

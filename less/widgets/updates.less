@@ -1,0 +1,61 @@
+//! @file updates.less
+//! @brief This widget countains a tabbed box with all the most important updates.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@bor-border-color: @gray-light;
+@box-border-width: 1px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#updates .items {
+  margin: 0;
+  margin-bottom: @gutter;
+  padding-top: 10px;
+  list-style: none;
+  text-align: left;
+  border-left: @box-border-width solid @bor-border-color;
+  .box-sizing(border-box);
+}
+
+#updates .items > li {
+  padding: 10px;
+  border-left: @box-border-width solid white;
+  height: auto;
+  color: @gray;
+}
+
+#updates .items > li:hover,
+#updates .items > li:focus {
+  background-color: @gray-lighter;
+  cursor: pointer;
+}
+
+#updates .items > li > a {
+  color: @link-color;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    text-decoration: none;
+  }
+}
+
+#updates .items > li > a > div:first-child {
+  float: right;
+}
+
+#updates .items > li > a > div {
+  color: @gray-dark;
+
+  font-weight: normal;
+  font-size: @font-size-small;
+}

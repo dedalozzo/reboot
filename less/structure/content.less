@@ -1,0 +1,28 @@
+//! @file content.less
+//! @brief The page's content.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@content-border-width: 0;
+@content-background-color: white;
+@content-border-color: @gray;
+
+@total-width: 970px;
+@inner-width: @total-width - (@gutter * 2) - (@content-border-width * 2);
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#content {
+  width: auto;
+  padding: @gutter;
+  background-color: @content-background-color;
+  border: @content-border-width solid @content-border-color;
+  .border-radius(@border-radius-base);
+  .clearfix();
+}

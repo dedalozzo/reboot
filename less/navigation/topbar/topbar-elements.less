@@ -1,0 +1,52 @@
+//! @file topbar-elements.less
+//! @brief Navigation bar's elements.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.topbar-elements {
+  width: @total-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list.topbar-elements > li {
+  padding: 6px 3px 6px 3px;
+}
+
+.list.topbar-elements > li:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list.topbar-elements > li:last-child {
+  padding-right: 0;
+}
+
+.list.topbar-elements > li > * {
+  color: @gray;
+  font-weight: bold;
+}
+
+.list.topbar-elements > li + li > * {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.list.topbar-elements > li > a:hover,
+.list.topbar-elements > li > a:focus {
+  color: @link-color-hover;
+}
+
+.list.topbar-elements > .search {
+  border-left: 1px solid @topbar-border-color;
+  border-right: 1px solid @topbar-border-color;
+}
+
+.list.topbar-elements > .search + li > * {
+  margin-left: 10px !important;
+}

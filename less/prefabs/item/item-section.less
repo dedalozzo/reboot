@@ -1,0 +1,32 @@
+//! @file item-section.less
+//! @brief Every item belongs to a section.
+//! @details This is the float pill containing the section's name.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.item-section {
+  float: right;
+  padding: 0;
+  font-size: @font-size-small;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item-section > a {
+  color: @gray;
+  padding: 3px 5px 3px 5px !important;
+  .border-radius(4px);
+  background-color: @gray-lighter;
+  vertical-align: middle;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: @link-color;
+    text-decoration: none;
+  }
+}

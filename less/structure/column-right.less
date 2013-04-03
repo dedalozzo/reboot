@@ -1,0 +1,20 @@
+//! @file right-column.less
+//! @brief Right column.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// 300 (medium rectangle) + 3 (box left border) + 1 (inner left border) + gutter
+@column-right-width: 300 + @gutter;
+
+.column-right {
+  float: right;
+  width: @column-right-width;
+  padding-left: @gutter;
+  .box-sizing(border-box);
+}

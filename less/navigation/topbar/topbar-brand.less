@@ -1,0 +1,36 @@
+//! @file topbar-brand.less
+//! @brief Space decicated to the brand of your site on the navigation bar.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+@import "topbar-brand-logo";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.topbar-brand {
+  padding: 0;
+
+  font-family: SoftPressSCRegular;
+  font-size: 29px;
+}
+
+.topbar-brand ul > li + li > a,
+.topbar-brand ul > li + li > span {
+  margin-left: 3px;
+  margin-right: 10px;
+
+  font-weight: normal;
+  color: @gray;
+}
+
+.topbar-brand ul > li + li > a:hover,
+.topbar-brand ul > li + li > a:focus {
+  color: @link-color-hover;
+}

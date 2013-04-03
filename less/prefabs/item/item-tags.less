@@ -1,0 +1,27 @@
+//! @file item-tags.less
+//! @brief Tags associated within the item.
+//! @details It's a list of elements, use this class associated with .list container.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.item-tags {
+  margin-bottom: 0;
+  margin-left: -1px;
+  padding-top: 10px;
+}
+
+.list.item-tags > li + li > * {
+  margin-left: 5px;
+}
+
+.list.items-tags > li:last-child > * {
+  padding-right: 0 !important;
+}
+
+.list.item-tags > li > * {
+  vertical-align: middle;
+}

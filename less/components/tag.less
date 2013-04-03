@@ -1,0 +1,32 @@
+//! @file tag.less
+//! @brief A tag.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.tag {
+  padding: 3px 5px 3px 5px !important;
+  vertical-align: middle;
+
+  color: @link-color;
+  background-color: @gray-lighter;
+
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid @gray-light;
+  border-right: 1px solid @gray-light;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: @link-color-hover;
+    background-color: @gray-light;
+
+    border-bottom: 1px solid @link-color-hover;
+    border-right: 1px solid @link-color-hover;
+  }
+}

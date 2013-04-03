@@ -1,0 +1,21 @@
+//! @file badge.less
+//! @brief A badge.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.badge {
+  color: @gray;
+  padding: 3px 5px 3px 5px !important;
+  border: 1px solid @gray-light;
+  .border-radius(4px);
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    border-color: @link-color-hover;
+  }
+}

@@ -1,68 +1,96 @@
-/*!
- * Bootstrap v3.0.0
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
- */
+//! @file bootstrap.less
+//! @brief Main file.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+//! @license http://www.apache.org/licenses/LICENSE-2.0
 
-// Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Variables
+@import "globals.less"; // Modify this for custom colors, font-sizes, etc.
+
+// Mixins
 @import "mixins.less";
 
 // Reset
-@import "normalize.less";
-
-// Page structure
-@import "scaffolding.less";
-@import "scrollable.less";
-@import "content.less";
-@import "container.less";
-
-// Base CSS
-@import "type.less";
-@import "code.less";
-@import "forms.less";
-@import "tables.less";
+@import "reset/normalize.less";
+@import "reset/initialize.less";
 
 // Fonts
 @import "fonts.less";
 @import "font-awesome.less";
 
-// Components: common
-@import "menus/menu.less";
-@import "bar/bar.less";
+// Base
+@import "type.less";
+@import "forms.less";
+@import "tables.less";
 
+// Structure
+@import "structure/page-skin.less";
+@import "structure/scrollable.less";
+@import "structure/content.less";
+@import "structure/column-left.less";
+@import "structure/column-right.less";
 
-@import "wells.less";
-@import "component-animations.less";
-@import "close.less";
+// Containers
+@import "containers/list.less";
+@import "containers/ghost.less";
+@import "containers/code.less";
+@import "containers/banner.less";
+@import "containers/thumbnail.less";
 
-// Components: Buttons & Alerts
-@import "buttons.less";
-@import "button-groups.less";
-@import "alerts.less";
+// Navigation
+@import "navigation/pills.less";
+@import "navigation/tabs.less";
+@import "navigation/tabbable.less"; // Tabbable tabs and pills.
+@import "navigation/topbar/topbar.less";
+@import "navigation/toolbar.less";
 
+// Pagination
+@import "pagination/pager.less";
+@import "pagination/pagination.less";
 
-@import "pagination.less";
-@import "pager.less";
+// Widgets
+@import "widgets/counter.less";
+@import "widgets/updates.less";
+@import "widgets/recent-tags.less";
+@import "widgets/recent-badges.less";
 
-// Components: Popovers
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
+// Prefabs (complex components)
+@import "prefabs/item/item.less";
+@import "prefabs/carousel/carousel.less";
 
-// Components: Misc
-@import "thumbnails.less";
-@import "media.less";
-@import "badges.less";
-@import "progress-bars.less";
-@import "accordion.less";
-@import "carousel.less";
-@import "jumbotron.less";
-@import "banners.less";
+// Components (simple components)
+@import "components/link.less";
+@import "components/tag.less";
+@import "components/badge.less";
+@import "components/wells.less";
+@import "components/alerts.less";
+@import "components/tooltip.less";
+@import "components/popovers.less";
+@import "components/progress-bars.less";
+@import "components/accordion.less";
+@import "components/jumbotron.less";
+@import "components/btn.less";
+@import "components/button-groups.less";
+@import "components/menu/menu.less";
+
+// Miscellaneous
+@import "miscellaneous/media.less";
+@import "miscellaneous/close.less";
+@import "miscellaneous/images.less";
+@import "miscellaneous/animations.less";
+@import "miscellaneous/modals.less";
+@import "miscellaneous/separator.less";
+@import "miscellaneous/gravatar.less";
+@import "miscellaneous/colors.less";
 
 // Utility classes
 @import "utilities.less"; // Has to be last to override when necessary
+
+// Spaghetti code
+@import "spaghetti.less";

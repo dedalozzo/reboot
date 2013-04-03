@@ -1,0 +1,35 @@
+//! @file arrow.less
+//! @brief Menu arrow decoration below icons.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@menu-arrow-border-width: 7px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.menu.arrow {
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: @menu-arrow-border-width solid transparent;
+    border-right: @menu-arrow-border-width solid transparent;
+    border-bottom: @menu-arrow-border-width solid @menu-border-color;
+    position: absolute;
+    top: -7px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left: (@menu-arrow-border-width - 1) solid transparent;
+    border-right: (@menu-arrow-border-width - 1) solid transparent;
+    border-bottom: (@menu-arrow-border-width - 1) solid @menu-background-color;
+    position: absolute;
+    top: -6px;
+  }
+}

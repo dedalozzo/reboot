@@ -1,0 +1,64 @@
+//! @file pills.less
+//! @brief Pills.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@pills-border-width: 1px;
+@pills-color: @gray;
+@pills-background-color: white;
+@pills-background-color-hover: @gray-light;
+@pills-border-color: @gray-light;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.pills {
+  margin-bottom: @gutter;
+}
+
+.list.pills > li {
+}
+
+.list.pills > li + li > * {
+  margin-left: 4px;
+}
+
+.list.pills > li > * {
+  padding: 5px 6px 5px 6px;
+}
+
+.list.pills > li > a {
+  .border-radius(4px);
+
+  color: @pills-color;
+  background-color: @pills-background-color;
+
+  &:hover,
+  &:focus {
+    border-color: @pills-border-color;
+    background-color: @pills-background-color-hover;
+  }
+}
+
+.list.pills > .active > a {
+  font-weight: bold;
+  color: @gray-darker;
+  border: 1px solid @pills-border-color;
+}
+
+.list.pills > .active > a,
+.list.pills > .active > a:hover,
+.list.pills > .active > a:focus {
+  background-color: transparent;
+}
+
+.list.pills > .icon > a:hover,
+.list.pills > .icon > a:focus {
+  color: @link-color-hover;
+  background-color: transparent;
+}
