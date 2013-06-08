@@ -1,0 +1,28 @@
+//! @file soft-press-sc.less
+//! @brief Import the Soft Press Small Caps font.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@SoftPressSCPath: "../fonts";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORT FONT
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Soft Press Small Caps
+@font-face {
+  font-family: 'SoftPressSCRegular';
+  src: url('@{SoftPressSCPath}/Soft_Press_SC-webfont.eot');
+  src: url('@{SoftPressSCPath}/Soft_Press_SC-webfont.eot?#iefix') format('embedded-opentype'),
+  url('@{SoftPressSCPath}/Soft_Press_SC-webfont.woff') format('woff'),
+  url('@{SoftPressSCPath}/Soft_Press_SC-webfont.ttf') format('truetype'),
+  url('@{SoftPressSCPath}/Soft_Press_SC-webfont.svg#SoftPressSCRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
