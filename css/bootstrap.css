@@ -398,33 +398,11 @@ button::-moz-focus-inner {
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=3.0.1');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  src: url('../fonts/fontawesome-webfont.eot?v=3.1.1');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.1.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.1.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.1.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.1.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-/*!
- *  Font Awesome 3.0.2
- *  the iconic font designed for use with Twitter Bootstrap
- *  -------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation
- *  can be found at: http://fortawesome.github.com/Font-Awesome/
- *
- *  License
- *  -------------------------------------------------------
- *  - The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
- *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
- *    http://opensource.org/licenses/mit-license.html
- *  - The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
- *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
- *    "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
-
- *  Contact
- *  -------------------------------------------------------
- *  Email: dave@davegandy.com
- *  Twitter: http://twitter.com/fortaweso_me
- *  Work: Lead Product Designer @ http://kyruus.com
- */
 [class^="icon-"]:before {
   font-family: FontAwesome;
   font-style: normal;
@@ -435,6 +413,33 @@ button::-moz-focus-inner {
   vertical-align: -10%;
   font-size: 1.3333333333333333em;
 }
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%;
+}
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em;
+}
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em;
+}
+/* Animated rotating icon */
 .icon-spin {
   display: inline-block;
   -moz-animation: spin 2s infinite linear;
@@ -482,22 +487,47 @@ button::-moz-focus-inner {
     transform: rotate(359deg);
   }
 }
-@-moz-document url-prefix() {
-  .icon-spin {
-    height: .9em;
-  }
-  .btn .icon-spin {
-    height: auto;
-  }
-  .icon-spin.icon-large {
-    height: 1.25em;
-  }
-  .btn .icon-spin.icon-large {
-    height: .75em;
-  }
+/* Icon rotations and mirroring */
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
-/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-    readers do not read off random characters that represent icons */
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
 .icon-glass:before {
   content: "\f000";
 }
@@ -585,10 +615,11 @@ button::-moz-focus-inner {
 .icon-play-circle:before {
   content: "\f01d";
 }
-.icon-repeat:before {
+.icon-repeat:before,
+.icon-rotate-right:before {
   content: "\f01e";
 }
-/* \f020 doesn't work in Safari. all shifted one down */
+/* F020 doesn't work in Safari. all shifted one down */
 .icon-refresh:before {
   content: "\f021";
 }
@@ -781,7 +812,8 @@ button::-moz-focus-inner {
 .icon-arrow-down:before {
   content: "\f063";
 }
-.icon-share-alt:before {
+.icon-share-alt:before,
+.icon-mail-forward:before {
   content: "\f064";
 }
 .icon-resize-full:before {
@@ -1099,7 +1131,8 @@ button::-moz-focus-inner {
 .icon-linkedin:before {
   content: "\f0e1";
 }
-.icon-undo:before {
+.icon-undo:before,
+.icon-rotate-left:before {
   content: "\f0e2";
 }
 .icon-legal:before {
@@ -1234,17 +1267,178 @@ button::-moz-focus-inner {
 .icon-circle:before {
   content: "\f111";
 }
-.icon-reply:before {
+.icon-reply:before,
+.icon-mail-reply:before {
   content: "\f112";
-}
-.icon-github-alt:before {
-  content: "\f113";
 }
 .icon-folder-close-alt:before {
   content: "\f114";
 }
 .icon-folder-open-alt:before {
   content: "\f115";
+}
+.icon-expand-alt:before {
+  content: "\f116";
+}
+.icon-collapse-alt:before {
+  content: "\f117";
+}
+.icon-smile:before {
+  content: "\f118";
+}
+.icon-frown:before {
+  content: "\f119";
+}
+.icon-meh:before {
+  content: "\f11a";
+}
+.icon-gamepad:before {
+  content: "\f11b";
+}
+.icon-keyboard:before {
+  content: "\f11c";
+}
+.icon-flag-alt:before {
+  content: "\f11d";
+}
+.icon-flag-checkered:before {
+  content: "\f11e";
+}
+.icon-terminal:before {
+  content: "\f120";
+}
+.icon-code:before {
+  content: "\f121";
+}
+.icon-reply-all:before {
+  content: "\f122";
+}
+.icon-mail-reply-all:before {
+  content: "\f122";
+}
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123";
+}
+.icon-location-arrow:before {
+  content: "\f124";
+}
+.icon-crop:before {
+  content: "\f125";
+}
+.icon-code-fork:before {
+  content: "\f126";
+}
+.icon-unlink:before {
+  content: "\f127";
+}
+.icon-question:before {
+  content: "\f128";
+}
+.icon-info:before {
+  content: "\f129";
+}
+.icon-exclamation:before {
+  content: "\f12a";
+}
+.icon-superscript:before {
+  content: "\f12b";
+}
+.icon-subscript:before {
+  content: "\f12c";
+}
+.icon-eraser:before {
+  content: "\f12d";
+}
+.icon-puzzle-piece:before {
+  content: "\f12e";
+}
+.icon-microphone:before {
+  content: "\f130";
+}
+.icon-microphone-off:before {
+  content: "\f131";
+}
+.icon-shield:before {
+  content: "\f132";
+}
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+.icon-fire-extinguisher:before {
+  content: "\f134";
+}
+.icon-rocket:before {
+  content: "\f135";
+}
+.icon-maxcdn:before {
+  content: "\f136";
+}
+.icon-chevron-sign-left:before {
+  content: "\f137";
+}
+.icon-chevron-sign-right:before {
+  content: "\f138";
+}
+.icon-chevron-sign-up:before {
+  content: "\f139";
+}
+.icon-chevron-sign-down:before {
+  content: "\f13a";
+}
+.icon-html5:before {
+  content: "\f13b";
+}
+.icon-css3:before {
+  content: "\f13c";
+}
+.icon-anchor:before {
+  content: "\f13d";
+}
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+.icon-bullseye:before {
+  content: "\f140";
+}
+.icon-ellipsis-horizontal:before {
+  content: "\f141";
+}
+.icon-ellipsis-vertical:before {
+  content: "\f142";
+}
+.icon-rss-sign:before {
+  content: "\f143";
+}
+.icon-play-sign:before {
+  content: "\f144";
+}
+.icon-ticket:before {
+  content: "\f145";
+}
+.icon-minus-sign-alt:before {
+  content: "\f146";
+}
+.icon-check-minus:before {
+  content: "\f147";
+}
+.icon-level-up:before {
+  content: "\f148";
+}
+.icon-level-down:before {
+  content: "\f149";
+}
+.icon-check-sign:before {
+  content: "\f14a";
+}
+.icon-edit-sign:before {
+  content: "\f14b";
+}
+.icon-external-link-sign:before {
+  content: "\f14c";
+}
+.icon-share-sign:before {
+  content: "\f14d";
 }
 p {
   margin: 0 0 11px;
@@ -2227,9 +2421,9 @@ table th[class*="span"] {
   padding: 20px;
   background-color: #ffffff;
   border: 0 solid #666666;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 #content:before,
 #content:after {
@@ -2412,9 +2606,9 @@ a.thumbnail:hover {
   padding: 5px 6px 5px 6px;
 }
 .list.pills > li > a {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   color: #666666;
   background-color: #ffffff;
 }
@@ -2456,9 +2650,9 @@ a.thumbnail:hover {
 .list.tabs > li > a {
   color: #666666;
   border: 1px solid transparent;
-  border-radius: 4px 4px 2px 2px;
-  -moz-border-radius: 4px 4px 2px 2px;
   -webkit-border-radius: 4px 4px 2px 2px;
+  -moz-border-radius: 4px 4px 2px 2px;
+  border-radius: 4px 4px 2px 2px;
 }
 .list.tabs > li > a:hover,
 .list.tabs > li > a:focus {
@@ -2639,22 +2833,22 @@ a.thumbnail:hover {
   font-weight: bold;
 }
 .toolgroup > .button:first-child {
-  border-radius: 2px 0 0 2px;
-  -moz-border-radius: 2px 0 0 2px;
   -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
 }
 .toolgroup > .button:last-child {
   border-right: 1px solid #d9d9d9;
-  border-radius: 0 2px 2px 0 !important;
-  -moz-border-radius: 0 2px 2px 0 !important;
   -webkit-border-radius: 0 2px 2px 0 !important;
+  -moz-border-radius: 0 2px 2px 0 !important;
+  border-radius: 0 2px 2px 0 !important;
 }
 .toolgroup > .button + .button {
   border-left: none;
   border-right: 1px solid #d9d9d9;
-  border-radius: 0;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .pager {
   margin: 22px 0;
@@ -2887,9 +3081,9 @@ a.thumbnail:hover {
   font-weight: bold;
   background-color: #e6e6e6;
   padding: 5px 0 5px 0;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .item-tools > a {
   color: #666666;
@@ -2917,9 +3111,9 @@ a.thumbnail:hover {
 .item-section > a {
   color: #666666;
   padding: 3px 5px 3px 5px !important;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   background-color: #e6e6e6;
   vertical-align: middle;
   padding: 0;
@@ -3052,9 +3246,9 @@ a.thumbnail:hover {
   text-align: center;
   background: #222222;
   border: 3px solid white;
-  border-radius: 23px;
-  -moz-border-radius: 23px;
   -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -3150,9 +3344,9 @@ a.thumbnail:hover {
   color: #666666;
   padding: 3px 5px 3px 5px !important;
   border: 1px solid #b3b3b3;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .badge:hover,
 .badge:focus {
@@ -4430,9 +4624,9 @@ button.close {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff3f3f3', endColorstr='#ffe6e6e6', GradientType=0);
   border: 1px solid #d9d9d9;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 .button:hover,
 .button:focus {
