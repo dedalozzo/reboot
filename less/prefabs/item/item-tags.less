@@ -12,10 +12,18 @@
   margin-bottom: 0;
   margin-left: -1px;
   padding-top: 10px;
+  display: block !important;
+  float: left;
+  width: 360px;
+}
+
+.list.item-tags > li {
+  vertical-align: top;
+  padding-bottom: 4px !important;
+  display: inline-block !important;
 }
 
 .list.item-tags > li + li > * {
-  margin-left: 5px;
 }
 
 .list.items-tags > li:last-child > * {
@@ -23,5 +31,7 @@
 }
 
 .list.item-tags > li > * {
-  vertical-align: middle;
+}
+
+.list.items-tags > li > .tag {
 }

@@ -1,0 +1,16 @@
+.list.item-tags {
+  margin-bottom: 0;
+  margin-left: -1px;
+  padding-top: 10px;
+  display: block !important;
+  float: left;
+  width: 360px;
+}
+.list.item-tags > li {
+  vertical-align: top;
+  padding-bottom: 4px !important;
+  display: inline-block !important;
+}
+.list.items-tags > li:last-child > * {
+  padding-right: 0 !important;
+}

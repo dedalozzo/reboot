@@ -398,8 +398,8 @@ button::-moz-focus-inner {
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=3.1.1');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.1.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.1.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.1.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.1.1') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -537,7 +537,7 @@ button::-moz-focus-inner {
 .icon-search:before {
   content: "\f002";
 }
-.icon-envelope:before {
+.icon-envelope-alt:before {
   content: "\f003";
 }
 .icon-heart:before {
@@ -576,12 +576,14 @@ button::-moz-focus-inner {
 .icon-zoom-out:before {
   content: "\f010";
 }
+.icon-power-off:before,
 .icon-off:before {
   content: "\f011";
 }
 .icon-signal:before {
   content: "\f012";
 }
+.icon-gear:before,
 .icon-cog:before {
   content: "\f013";
 }
@@ -591,7 +593,7 @@ button::-moz-focus-inner {
 .icon-home:before {
   content: "\f015";
 }
-.icon-file:before {
+.icon-file-alt:before {
   content: "\f016";
 }
 .icon-time:before {
@@ -615,11 +617,10 @@ button::-moz-focus-inner {
 .icon-play-circle:before {
   content: "\f01d";
 }
-.icon-repeat:before,
-.icon-rotate-right:before {
+.icon-rotate-right:before,
+.icon-repeat:before {
   content: "\f01e";
 }
-/* F020 doesn't work in Safari. all shifted one down */
 .icon-refresh:before {
   content: "\f021";
 }
@@ -812,8 +813,8 @@ button::-moz-focus-inner {
 .icon-arrow-down:before {
   content: "\f063";
 }
-.icon-share-alt:before,
-.icon-mail-forward:before {
+.icon-mail-forward:before,
+.icon-share-alt:before {
   content: "\f064";
 }
 .icon-resize-full:before {
@@ -906,16 +907,17 @@ button::-moz-focus-inner {
 .icon-key:before {
   content: "\f084";
 }
+.icon-gears:before,
 .icon-cogs:before {
   content: "\f085";
 }
 .icon-comments:before {
   content: "\f086";
 }
-.icon-thumbs-up:before {
+.icon-thumbs-up-alt:before {
   content: "\f087";
 }
-.icon-thumbs-down:before {
+.icon-thumbs-down-alt:before {
   content: "\f088";
 }
 .icon-star-half:before {
@@ -954,6 +956,7 @@ button::-moz-focus-inner {
 .icon-phone:before {
   content: "\f095";
 }
+.icon-unchecked:before,
 .icon-check-empty:before {
   content: "\f096";
 }
@@ -1053,6 +1056,7 @@ button::-moz-focus-inner {
 .icon-copy:before {
   content: "\f0c5";
 }
+.icon-paperclip:before,
 .icon-paper-clip:before {
   content: "\f0c6";
 }
@@ -1125,14 +1129,14 @@ button::-moz-focus-inner {
 .icon-sort-up:before {
   content: "\f0de";
 }
-.icon-envelope-alt:before {
+.icon-envelope:before {
   content: "\f0e0";
 }
 .icon-linkedin:before {
   content: "\f0e1";
 }
-.icon-undo:before,
-.icon-rotate-left:before {
+.icon-rotate-left:before,
+.icon-undo:before {
   content: "\f0e2";
 }
 .icon-legal:before {
@@ -1189,7 +1193,7 @@ button::-moz-focus-inner {
 .icon-food:before {
   content: "\f0f5";
 }
-.icon-file-alt:before {
+.icon-file-text-alt:before {
   content: "\f0f6";
 }
 .icon-building:before {
@@ -1267,9 +1271,12 @@ button::-moz-focus-inner {
 .icon-circle:before {
   content: "\f111";
 }
-.icon-reply:before,
-.icon-mail-reply:before {
+.icon-mail-reply:before,
+.icon-reply:before {
   content: "\f112";
+}
+.icon-github-alt:before {
+  content: "\f113";
 }
 .icon-folder-close-alt:before {
   content: "\f114";
@@ -1439,6 +1446,187 @@ button::-moz-focus-inner {
 }
 .icon-share-sign:before {
   content: "\f14d";
+}
+.icon-compass:before {
+  content: "\f14e";
+}
+.icon-collapse:before {
+  content: "\f150";
+}
+.icon-collapse-top:before {
+  content: "\f151";
+}
+.icon-expand:before {
+  content: "\f152";
+}
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153";
+}
+.icon-gbp:before {
+  content: "\f154";
+}
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155";
+}
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156";
+}
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157";
+}
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158";
+}
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159";
+}
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a";
+}
+.icon-file:before {
+  content: "\f15b";
+}
+.icon-file-text:before {
+  content: "\f15c";
+}
+.icon-sort-by-alphabet:before {
+  content: "\f15d";
+}
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
+.icon-sort-by-attributes:before {
+  content: "\f160";
+}
+.icon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
+.icon-sort-by-order:before {
+  content: "\f162";
+}
+.icon-sort-by-order-alt:before {
+  content: "\f163";
+}
+.icon-thumbs-up:before {
+  content: "\f164";
+}
+.icon-thumbs-down:before {
+  content: "\f165";
+}
+.icon-youtube-sign:before {
+  content: "\f166";
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-xing:before {
+  content: "\f168";
+}
+.icon-xing-sign:before {
+  content: "\f169";
+}
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+.icon-dropbox:before {
+  content: "\f16b";
+}
+.icon-stackexchange:before {
+  content: "\f16c";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-adn:before {
+  content: "\f170";
+}
+.icon-bitbucket:before {
+  content: "\f171";
+}
+.icon-bitbucket-sign:before {
+  content: "\f172";
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-tumblr-sign:before {
+  content: "\f174";
+}
+.icon-long-arrow-down:before {
+  content: "\f175";
+}
+.icon-long-arrow-up:before {
+  content: "\f176";
+}
+.icon-long-arrow-left:before {
+  content: "\f177";
+}
+.icon-long-arrow-right:before {
+  content: "\f178";
+}
+.icon-apple:before {
+  content: "\f179";
+}
+.icon-windows:before {
+  content: "\f17a";
+}
+.icon-android:before {
+  content: "\f17b";
+}
+.icon-linux:before {
+  content: "\f17c";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-skype:before {
+  content: "\f17e";
+}
+.icon-foursquare:before {
+  content: "\f180";
+}
+.icon-trello:before {
+  content: "\f181";
+}
+.icon-female:before {
+  content: "\f182";
+}
+.icon-male:before {
+  content: "\f183";
+}
+.icon-gittip:before {
+  content: "\f184";
+}
+.icon-sun:before {
+  content: "\f185";
+}
+.icon-moon:before {
+  content: "\f186";
+}
+.icon-archive:before {
+  content: "\f187";
+}
+.icon-bug:before {
+  content: "\f188";
+}
+.icon-vk:before {
+  content: "\f189";
+}
+.icon-weibo:before {
+  content: "\f18a";
+}
+.icon-renren:before {
+  content: "\f18b";
 }
 p {
   margin: 0 0 11px;
@@ -2599,10 +2787,8 @@ a.thumbnail:hover {
 .list.pills {
   margin-bottom: 20px;
 }
-.list.pills > li + li > * {
-  margin-left: 4px;
-}
 .list.pills > li > * {
+  margin-right: 4px;
   padding: 5px 6px 5px 6px;
 }
 .list.pills > li > a {
@@ -2820,24 +3006,31 @@ a.thumbnail:hover {
 .list.toolbar {
   display: block;
   margin-bottom: 20px;
+  padding: 5px 0 0 5px;
+  background-color: #f3f3f3;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .list.toolbar > li {
   display: inline-block;
-}
-.list.toolbar > li + li {
-  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 0 5px 0 !important;
 }
 .list.toolbar > li > * {
   float: left;
   padding: 1px 5px 1px 5px !important;
   font-weight: bold;
 }
-.toolgroup > .button:first-child {
+.toolgroup > .button:first-child,
+.toolgroup > span:first-child {
   -webkit-border-radius: 2px 0 0 2px;
   -moz-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
 }
-.toolgroup > .button:last-child {
+.toolgroup > .button:last-child,
+.toolgroup > span:last-child {
   border-right: 1px solid #d9d9d9;
   -webkit-border-radius: 0 2px 2px 0 !important;
   -moz-border-radius: 0 2px 2px 0 !important;
@@ -3145,20 +3338,41 @@ a.thumbnail:hover {
   font-size: 16px;
 }
 .item-info {
-  padding: 5px 0 5px 0;
+  border-left: 2px solid #b3b3b3;
+  box-sizing: border-box;
+  padding-left: 5px;
+  margin-top: 10px;
   white-space: nowrap;
   color: #333333;
+  float: right;
+  height: auto;
+  width: 200px;
 }
-.item-info > li:first-child > a {
-  font-weight: bold;
-}
-.item-info > li:first-child > span {
+.item-info > div:first-child {
+  line-height: 14px;
+  padding-bottom: 5px;
   font-size: 12px;
-  margin-left: 10px;
+}
+.item-info > div:last-child {
+  margin-left: 37px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+.item-info > div:last-child > span {
+  font-size: 12px;
+}
+.item-info > div:last-child > span + span {
+  margin-left: 7px;
+}
+.item-info > .gravatar {
+  margin: 0;
+  float: left;
 }
 .item-body {
+  margin-top: 4px;
   display: block;
   white-space: normal;
+  text-align: justify;
   line-height: 20px;
   min-height: 14px;
 }
@@ -3166,15 +3380,17 @@ a.thumbnail:hover {
   margin-bottom: 0;
   margin-left: -1px;
   padding-top: 10px;
+  display: block !important;
+  float: left;
+  width: 360px;
 }
-.list.item-tags > li + li > * {
-  margin-left: 5px;
+.list.item-tags > li {
+  vertical-align: top;
+  padding-bottom: 4px !important;
+  display: inline-block !important;
 }
 .list.items-tags > li:last-child > * {
   padding-right: 0 !important;
-}
-.list.item-tags > li > * {
-  vertical-align: middle;
 }
 .item {
   width: 100%;
@@ -4557,7 +4773,6 @@ button.close {
 .gravatar {
   vertical-align: middle;
   margin-top: -2px;
-  height: 20px;
 }
 .bronze {
   color: #CC9966;
@@ -4568,7 +4783,210 @@ button.close {
 .gold {
   color: gold;
 }
-.pull-right {
+.highlight .hll {
+  background-color: #ffffcc;
+}
+.highlight {
+  background: #ffffff;
+}
+.highlight > pre {
+  font-size: 12px;
+}
+.highlight .c {
+  color: #008800;
+  font-style: italic;
+}
+/* Comment */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+/* Error */
+.highlight .k {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword */
+.highlight .cm {
+  color: #008800;
+  font-style: italic;
+}
+/* Comment.Multiline */
+.highlight .cp {
+  color: #008080;
+}
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #008800;
+  font-style: italic;
+}
+/* Comment.Single */
+.highlight .cs {
+  color: #008800;
+  font-weight: bold;
+}
+/* Comment.Special */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+/* Generic.Deleted */
+.highlight .ge {
+  font-style: italic;
+}
+/* Generic.Emph */
+.highlight .gr {
+  color: #aa0000;
+}
+/* Generic.Error */
+.highlight .gh {
+  color: #999999;
+}
+/* Generic.Heading */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+/* Generic.Inserted */
+.highlight .go {
+  color: #888888;
+}
+/* Generic.Output */
+.highlight .gp {
+  color: #555555;
+}
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+}
+/* Generic.Strong */
+.highlight .gu {
+  color: #aaaaaa;
+}
+/* Generic.Subheading */
+.highlight .gt {
+  color: #aa0000;
+}
+/* Generic.Traceback */
+.highlight .kc {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Constant */
+.highlight .kd {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #000080;
+  font-weight: bold;
+}
+/* Keyword.Type */
+.highlight .m {
+  color: #0000ff;
+}
+/* Literal.Number */
+.highlight .s {
+  color: #0000ff;
+}
+/* Literal.String */
+.highlight .na {
+  color: #ff0000;
+}
+/* Name.Attribute */
+.highlight .nt {
+  color: #000080;
+  font-weight: bold;
+}
+/* Name.Tag */
+.highlight .ow {
+  font-weight: bold;
+}
+/* Operator.Word */
+.highlight .w {
+  color: #bbbbbb;
+}
+/* Text.Whitespace */
+.highlight .mf {
+  color: #0000ff;
+}
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #0000ff;
+}
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #0000ff;
+}
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #0000ff;
+}
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #0000ff;
+}
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #800080;
+}
+/* Literal.String.Char */
+.highlight .sd {
+  color: #0000ff;
+}
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #0000ff;
+}
+/* Literal.String.Double */
+.highlight .se {
+  color: #0000ff;
+}
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #0000ff;
+}
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #0000ff;
+}
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #0000ff;
+}
+/* Literal.String.Other */
+.highlight .sr {
+  color: #0000ff;
+}
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #0000ff;
+}
+/* Literal.String.Single */
+.highlight .ss {
+  color: #0000ff;
+}
+/* Literal.String.Symbol */
+.highlight .il {
+  color: #0000ff;
+}
+/* Literal.Number.Integer.Long */.pull-right {
   float: right !important;
 }
 .pull-left {
@@ -4603,6 +5021,7 @@ button.close {
   padding-left: 5px;
 }
 .pippo {
+  min-width: 12px;
   background-color: #e6e6e6;
   opacity: 0.95;
   filter: alpha(opacity=95);
