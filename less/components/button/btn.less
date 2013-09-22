@@ -1,0 +1,66 @@
+//! @file btn.less
+//! @brief A btn.
+//! @details Apply this style to an element to show the element itself as a btn.
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+@import "btngroup";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn {
+  min-width: 20px;
+  text-align: center;
+
+  border-style: solid;
+  border-width: 1px;
+  .border-radius(2px);
+
+  #button(@gray, @gray-lighter, @gray-light);
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SUBCLASSES
+// ---------------------------------------------------------------------------------------------------------------------
+.btn.blue {
+  #button(white, @blue, darken(@blue, 5%));
+}
+
+.btn.green {
+  #button(white, @green, darken(@green, 5%));
+}
+
+.btn.orange {
+  #button(white, @orange, darken(@orange, 5%));
+}
+
+.btn.red {
+  #button(white, @red, darken(@red, 5%));
+}
+
+.btn.cyan {
+  #button(white, @cyan, darken(@cyan, 5%));
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// MIXINS
+// ---------------------------------------------------------------------------------------------------------------------
+#button(@color, @background-color, @border-color) {
+  color: @color !important;
+  #gradient > .vertical(lighten(@background-color, 5%), @background-color);
+  border-color: @border-color !important;
+
+  &:hover,
+  &:focus {
+    #gradient > .vertical(@background-color, darken(@background-color, 5%));
+  }
+}
