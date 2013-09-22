@@ -1,5 +1,6 @@
-//! @file badge.less
-//! @brief A badge.
+//! @file badge-types.less
+//! @brief Classes to set colors, used ti display the user's reputation and badges.
+//! @details
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
 
@@ -7,15 +8,14 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
-.badge {
-  color: @gray;
-  padding: 3px 5px 3px 5px !important;
-  border: 1px solid @gray-light;
-  .border-radius(4px);
+.bronze {
+  color: #CC9966;
+}
 
-  &:hover,
-  &:focus {
-    color: @link-color-hover;
-    border-color: @link-color-hover;
-  }
+.silver {
+  color: silver;
+}
+
+.gold {
+  color: gold;
 }
