@@ -1,0 +1,75 @@
+//! @file Notebook.less
+//! @brief Notebook that can use both tabs and pills.
+//! @details
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+<div class="notebook" id="updates">
+  <ul class="list tabs no-gutter">
+    <li class="active"><a href="#articles" data-toggle="tab">ARTICOLI</a></li>
+    <li><a href="#tutorials" data-toggle="tab">GUIDE</a></li>
+    <li><a href="#books" data-toggle="tab">LIBRI</a></li>
+  </ul>
+  <div class="notebook-page active" id="articles">
+    <ul class="items">
+      {% for article in articles %}
+        <li>
+          <a href="#">
+            <div><i class="icon-thumbs-up"></i>&nbsp;{{ article.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;5</div>
+            <div>{{ article.whenHasBeenPublished }}</div>
+            {{ article.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="notebook-page" id="tutorials">
+    <ul class="items">
+      {% for tutorial in tutorials %}
+        <li>
+          <a href="#">
+            <div><i class="icon-thumbs-up"></i>&nbsp;{{ tutorial.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;5</div>
+            <div>{{ tutorial.whenHasBeenPublished }}</div>
+            {{ tutorial.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="notebook-page" id="books">
+    <ul class="items">
+      {% for book in books %}
+        <li>
+          <a href="#">
+            <div><i class="icon-thumbs-up"></i>&nbsp;{{ book.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;5</div>
+            <div>{{ book.whenHasBeenPublished }}</div>
+            {{ book.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.notebook {
+  overflow: auto; // Prevents content from running below tabs.
+}
+
+.notebook > .notebook-page {
+  display: none; // Hides page.
+  list-style: none;
+  margin: 0;
+}
+
+.notebook > .notebook-page.active {
+  display: block; // Shows page.
+}

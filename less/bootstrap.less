@@ -11,89 +11,84 @@
 // ---------------------------------------------------------------------------------------------------------------------
 
 // Variables
-@import "globals.less"; // Modify this for custom colors, font-sizes, etc.
-
-// Mixins
-@import "mixins.less";
+@import "globals"; // Modify this for custom colors, font-sizes, etc.
 
 // Reset
-@import "reset/normalize.less";
-@import "reset/initialize.less";
+@import "normalize";
+
+// Base styles
+@import "base";
+
+// Mixins
+@import "mixins/mixins";
+@import "mixins/gradient";
+@import "mixins/css3-properties";
 
 // Fonts
-@import "fonts/soft-press-sc.less";
-@import "fonts/font-awesome.less";
-
-// Base
-@import "type.less";
-@import "forms.less";
-@import "tables.less";
+@import "fonts/soft-press-sc";
+@import "fonts/font-awesome";
 
 // Structure
-@import "structure/page-skin.less";
-@import "structure/scrollable.less";
-@import "structure/content.less";
-@import "structure/column-left.less";
-@import "structure/column-right.less";
+@import "structure/skin";
+@import "structure/scrollable";
+@import "structure/content";
+@import "structure/column-left";
+@import "structure/column-right";
 
 // Containers
-@import "containers/list.less";
-@import "containers/ghost.less";
-@import "containers/code.less";
-@import "containers/banner.less";
-@import "containers/thumbnail.less";
+@import "containers/list";
+@import "containers/ghost";
+@import "containers/banner";
 
 // Navigation
-@import "navigation/pills.less";
-@import "navigation/tabs.less";
-@import "navigation/tabbable.less"; // Tabbable tabs and pills.
-@import "navigation/topbar/topbar.less";
-@import "navigation/toolbar.less";
+@import "navigation/pills";
+@import "navigation/tabs";
+@import "navigation/topbar/topbar";
 
 // Pagination
-@import "pagination/pager.less";
-@import "pagination/pagination.less";
+//@import "pagination/pagination";
+//@import "pagination/pager";
 
 // Widgets
-@import "widgets/counter.less";
-@import "widgets/updates.less";
-@import "widgets/recent-tags.less";
-@import "widgets/recent-badges.less";
+@import "widgets/counter";
+@import "widgets/updates";
+@import "widgets/recent-tags";
+@import "widgets/recent-badges";
 
 // Prefabs (complex components)
-@import "prefabs/item/item.less";
-@import "prefabs/carousel/carousel.less";
+@import "prefabs/item/item";
 
 // Components (simple components)
-@import "components/link.less";
-@import "components/tag.less";
-@import "components/badge.less";
-@import "components/wells.less";
-@import "components/alerts.less";
-@import "components/tooltip.less";
-@import "components/popovers.less";
-@import "components/progress-bars.less";
-@import "components/accordion.less";
-@import "components/jumbotron.less";
-@import "components/btn.less";
-@import "components/button-groups.less";
-@import "components/menu/menu.less";
+@import "components/notebook";
+@import "components/toolbar";
+@import "components/tag";
+@import "components/badge/badge";
+@import "components/menu/menu"; // todo
+@import "components/button/btn";
+@import "components/link";
+//@import "components/alert";
+//@import "components/tooltip";
+
+// Forms
+//@import "forms/base";
+//@import "forms/input-group";
 
 // Miscellaneous
-@import "miscellaneous/media.less";
-@import "miscellaneous/close.less";
-@import "miscellaneous/images.less";
-@import "miscellaneous/animations.less";
-@import "miscellaneous/modals.less";
-@import "miscellaneous/separator.less";
-@import "miscellaneous/gravatar.less";
-@import "miscellaneous/colors.less";
+@import "miscellaneous/title";
+@import "miscellaneous/media";
+@import "miscellaneous/gravatar";
+@import "miscellaneous/separator";
+//@import "miscellaneous/images"; NOT USED
+//@import "miscellaneous/animations"; NOT USED
+//@import "miscellaneous/modal";
+//@import "miscellaneous/close";
 
-// Pygments Styles
-@import "pygmentize/borland.less";
+
+// Pygments styles
+@import "pygmentize/borland";
 
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+@import "utils";
 
 // Spaghetti code
-@import "spaghetti.less";
+@import "spaghetti";

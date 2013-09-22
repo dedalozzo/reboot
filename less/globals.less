@@ -3,7 +3,7 @@
 //! @details
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
-//! @license http://www.apache.org/licenses/LICENSE-2.0
+//! @license Proprietary software
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -17,17 +17,12 @@
 @gray-dark: #333333;
 @gray-darker: #222222;
 
-@standard-color: #F3F3F3;
-@warning-color: #F89406;
-@error-color: #DD4B39;
-@success-color: #46A546;
-@info-color: #478AF8;
-
-@standard-darken-color: darken(@standard-color, 10%);
-@success-darken-color: darken(@success-color, 10%);
-@warning-darken-color: darken(@warning-color, 10%);
-@error-darken-color: darken(@error-color, 10%);
-@info-darken-color: darken(@info-color, 10%);
+// Special colors
+@blue: #428BCA;
+@green: #5CB85C;
+@orange: #F77F00;
+@red: #D9534F;
+@cyan: #5BC0DE;
 
 // Links
 @link-color: #0077CC;
@@ -37,103 +32,7 @@
 @body-background: @gray-lighter;
 @text-color: black;
 
-// Tables
-@table-background: transparent;
-@table-background-accent: #F9F9F9;
-@table-background-hover: #F5F5F5;
-@table-border: #DDDDDD;
-
-// Forms
-@form-actions-background: #F5F5F5;
-@input-background: white;
-@input-background-disabled: @gray-lighter;
-@input-color-placeholder: @gray-light;
-@input-border: #CCCCCC;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Typography
-// ---------------------------------------------------------------------------------------------------------------------
-@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif: Georgia, "Times New Roman", Times, serif;
-@font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
-@font-family-base: @font-family-sans-serif;
-
-@font-size-largest: @font-size-large + 4;
-@font-size-large: @font-size-base + 2;
-@font-size-base: 14px;
-@font-size-small: @font-size-base - 2;
-@font-size-mini: @font-size-small - 2;
-
-@line-height-base: 22px;
-
-@headings-font-family: inherit; // empty to use BS default, @font-family-base
-@headings-font-weight: bold;    // instead of browser default, bold
-
-@gutter: 20px;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Paddings
-// ---------------------------------------------------------------------------------------------------------------------
-@padding-large: 11px 19px;
-@padding-small: 2px 10px;
-@padding-mini: 0 6px;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Border Radius
-// ---------------------------------------------------------------------------------------------------------------------
-@border-radius-base: 2px;
-@border-radius-large: 4px;
-@border-radius-small: 1px;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Forms
-// ---------------------------------------------------------------------------------------------------------------------
-@input-border-radius: @border-radius-base;
-@input-border-radius-search: 20px;
-
-@input-height: @line-height-base + 14px; // base line-height + 12px vertical padding + 2px top/bottom border
-
-
-
-// COMPONENT VARIABLES
-// --------------------------------------------------
-
-
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-
-@menu-zindex: 1000;
-@popover-zindex: 1010;
-@tooltip-zindex: 1030;
-@topbar-zindex: 1030;
-@modal-background-zindex: 1040;
-@modal-zindex: 1050;
-
-// Pagination
-// -------------------------
-
-@pagination-background: white;
-@pagination-background-active: #f5f5f5;
-@pagination-border: #ddd;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Jumbotron
-// ---------------------------------------------------------------------------------------------------------------------
-@jumbotron-background: @gray-lighter;
-@jumbotron-heading-color: inherit;
-@jumbotron-lead-color: inherit;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Form states and alerts
-// ---------------------------------------------------------------------------------------------------------------------
+// Form states and Alerts
 @state-warning-text: #C09853;
 @state-warning-background: #FCF8E3;
 @state-warning-border: darken(spin(@state-warning-background, -10), 3%);
@@ -151,31 +50,67 @@
 @state-info-border: darken(spin(@state-info-background, -10), 7%);
 
 
-// Tooltips and popovers
-// -------------------------
-@tooltip-color: white;
-@tooltip-background: rgba(0,0,0,.9);
-@tooltip-arrow-width: 5px;
-@tooltip-arrow-color: @tooltip-background;
+// ---------------------------------------------------------------------------------------------------------------------
+// Typography
+// ---------------------------------------------------------------------------------------------------------------------
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base: @font-family-sans-serif;
 
-@popover-background: white;
-@popover-arrow-width: 10px;
-@popover-arrow-color: white;
-@popover-title-background: darken(@popover-background, 3%);
+@font-size-largest: @font-size-large + 4;
+@font-size-large: @font-size-base + 2;
+@font-size-base: 14px;
+@font-size-small: @font-size-base - 2;
+@font-size-mini: @font-size-small - 2;
 
-// Special enhancement for popovers
-@popover-arrow-outer-width: @popover-arrow-width + 1;
-@popover-arrow-outer-color: rgba(0,0,0,.25);
+@line-height-base: 22px;
+@line-height-large: 1.33;
+@line-height-small: 1.5;
+//@line-height-base:        1.428571429; // 20/14
+@line-height-computed: floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family: @font-family-base;
+@headings-font-weight: bold;
+@headings-line-height: 1.1;
+
+@gutter: 20px;
 
 
-// Miscellaneous
-// -------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// Paddings
+// ---------------------------------------------------------------------------------------------------------------------
+@padding-base-vertical: 6px;
+@padding-base-horizontal: 12px;
 
-// Hr border color
-@hr-border: @gray-lighter;
+@padding-large-vertical: 10px;
+@padding-large-horizontal: 16px;
 
-// Horizontal forms & lists
-@component-offset-horizontal: 180px;
+@padding-small-vertical: 5px;
+@padding-small-horizontal: 10px;
 
-// Wells
-@well-background: #F5F5F5;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Border Radius
+// ---------------------------------------------------------------------------------------------------------------------
+@border-radius-base: 2px;
+@border-radius-large: 4px;
+@border-radius-small: 1px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Z-Indexes
+// ---------------------------------------------------------------------------------------------------------------------
+@menu-zindex: 1000;
+@popover-zindex: 1010;
+@tooltip-zindex: 1030;
+@topbar-zindex: 1030;
+@modal-background-zindex: 1040;
+@modal-zindex: 1050;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Forms
+// ---------------------------------------------------------------------------------------------------------------------
+@input-border-radius: @border-radius-base;
+@input-height: @line-height-base + 14px; // base line-height + 12px vertical padding + 2px top/bottom border

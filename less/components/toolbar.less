@@ -1,0 +1,94 @@
+//! @file toolbar.less
+//! @brief Toolbar.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.toolbar {
+  display: block;
+  border-top: 1px solid @gray-light;
+  //border-top: 1px solid darken(@gray-lighter, 5%);
+  margin-bottom: @gutter / 2;
+  //padding: 5px 0 0 5px;
+  //background-color: lighten(@gray-lighter, 5%); //@gray-light;
+  //#gradient > .vertical(lighten(@gray-lighter, 5%), lighten(@gray-lighter, 0%));
+  //border: 1px solid @gray-lighter;
+  //.border-radius(4px);
+}
+
+.list.toolbar.no-border {
+  margin-top: -20px;
+  border-top: none;
+}
+
+.list.toolbar > li {
+  display: inline-block;
+  margin-right: 4px !important;
+}
+
+.list.toolbar > li > * {
+  float: left;
+  font-weight: bold;
+  border-bottom: 1px solid darken(@gray-lighter, 5%);
+}
+
+.list.toolbar > li > a {
+  padding: 1px 3px 1px 3px !important;
+  min-width: 20px;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: @font-size-base !important;
+
+  color: @gray;
+  #gradient > .vertical(lighten(@gray-lighter, 5%), @gray-lighter);
+
+  .border-radius(0 0 2px 2px);
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    #gradient > .vertical(@gray-lighter, darken(@gray-lighter, 5%));
+  }
+}
+
+.list.toolbar > .tool > a {
+  border-left: 1px solid darken(@gray-lighter, 5%);
+  border-right: 1px solid darken(@gray-lighter, 5%);
+}
+
+.toolgroup > span {
+  padding: 1px 5px 1px 5px !important;
+  min-width: 10px;
+  background-color: @gray-lighter;
+  color: @gray-dark;
+  .opacity(95);
+}
+
+.toolgroup > a:first-child,
+.toolgroup > span:first-child {
+  border-left: 1px solid darken(@gray-lighter, 5%);
+  .border-radius(0 0 0 2px) !important;
+}
+
+.toolgroup > a:last-child,
+.toolgroup > span:last-child {
+  border-right: 1px solid darken(@gray-lighter, 5%);
+  .border-radius(0 0 2px 0) !important;
+}
+
+.toolgroup > a + a,
+.toolgroup > a + span,
+.toolgroup > span + a {
+  //border-left: none;
+  border-left: 1px solid darken(@gray-lighter, 5%);
+  .border-radius(0);
+}
+
+.toolgroup > a {
+  border-right: none;
+  .border-radius(0) !important;
+}

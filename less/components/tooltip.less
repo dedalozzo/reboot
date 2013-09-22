@@ -1,27 +1,71 @@
-//
-// Tooltips
-// --------------------------------------------------
+//! @file tooltip.less
+//! @brief Tooltip.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
 
 
-// Base class
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@tooltip-color: white;
+@tooltip-background: rgba(0,0,0,.9);
+@tooltip-arrow-width: 5px;
+@tooltip-arrow-color: @tooltip-background;
+@tooltip-max-width: 200px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <div class="topbar">
+    <ul class="list topbar-elements">
+      <li class="topbar-brand">
+        <ul class="list">
+          <li>
+            <a class="topbar-brand-logo" href="./"></a>
+          </li>
+          <li>
+            <a href="./">PROGRAMMAZIONE.IT</a>
+          </li>
+        </ul>
+      </li>
+      <li class="search">
+        <span><input style="width: 250px; height: 28px;" type="text" /></span>
+      </li>
+      <li><a href="#"><i class="icon-group"></i>&nbsp;Utenti</a></li>
+      <li><a href="#"><i class="icon-tags"></i>&nbsp;Tags</a></li>
+      <li><a href="#"><i class="icon-certificate"></i>&nbsp;Badges</a></li>
+      <li class="space"></li>
+      <li><a href="#"><img class="gravatar" src="http://www.gravatar.com/avatar/b6799a3261ca303c0b39f991fd9250b4.png" />&nbsp;dedalo</a></li>
+    </ul>
+  </div>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
 .tooltip {
   position: absolute;
   z-index: @tooltip-zindex;
   display: block;
   visibility: visible;
-  padding: 5px;
-  font-size: 11px;
+  font-size: @font-size-small;
+  line-height: 1.4;
   .opacity(0);
-  &.in     { .opacity(100); }
-  &.top    { margin-top:  -3px; }
-  &.right  { margin-left:  3px; }
-  &.bottom { margin-top:   3px; }
-  &.left   { margin-left: -3px; }
+
+  &.in     { .opacity(.9); }
+  &.top    { margin-top:  -3px; padding: 5px 0; }
+  &.right  { margin-left:  3px; padding: 0 5px; }
+  &.bottom { margin-top:   3px; padding: 5px 0; }
+  &.left   { margin-left: -3px; padding: 0 5px; }
 }
 
 // Wrapper for the tooltip content
 .tooltip-inner {
-  max-width: 200px;
+  max-width: @tooltip-max-width;
   padding: 3px 8px;
   color: @tooltip-color;
   text-align: center;
@@ -46,6 +90,18 @@
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;
   }
+  &.top-left .tooltip-arrow {
+    bottom: 0;
+    left: 5px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-right .tooltip-arrow {
+    bottom: 0;
+    right: 5px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-top-color: @tooltip-arrow-color;
+  }
   &.right .tooltip-arrow {
     top: 50%;
     left: 0;
@@ -64,6 +120,18 @@
     top: 0;
     left: 50%;
     margin-left: -@tooltip-arrow-width;
+    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    top: 0;
+    left: 5px;
+    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    top: 0;
+    right: 5px;
     border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-bottom-color: @tooltip-arrow-color;
   }
