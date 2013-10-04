@@ -1,5 +1,5 @@
-//! @file item-title.less
-//! @brief Item's title.
+//! @file reputation.less
+//! @brief User reputation.
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
 
@@ -7,9 +7,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
-.item-title {
-  white-space: normal;
-  padding-right: 5px;
-  font-weight: bold;
-  font-size: @font-size-large;
+.reputation {
+  font-size: @font-size-small;
+}
+
+.reputation > * + * {
+  margin-left: 7px;
 }

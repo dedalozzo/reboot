@@ -3,6 +3,62 @@
 // --------------------------------------------------
 
 
+// Extra small screen / phone
+@screen-xs:                  480px;
+@screen-phone:               @screen-xs;
+
+// Small screen / tablet
+@screen-sm:                  768px;
+@screen-tablet:              @screen-sm;
+
+// Medium screen / desktop
+@screen-md:                  992px;
+@screen-desktop:             @screen-md;
+
+// Large screen / wide desktop
+@screen-lg:                  1200px;
+@screen-lg-desktop:          @screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm - 1);
+@screen-sm-max:              (@screen-md - 1);
+@screen-md-max:              (@screen-lg - 1);
+
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+@input-background:                       #fff;
+@input-background-disabled:              @gray-lighter;
+
+@input-color:                    @gray;
+@input-border:                   #ccc;
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             #66afe9;
+
+@input-color-placeholder:        @gray-light;
+
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:             (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+@input-group-addon-background:           @gray-lighter;
+@input-group-addon-border-color: @input-border;
+
+
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+
 // Normalize non-controls
 //
 // Restyle and baseline non-control form elements.
@@ -138,7 +194,7 @@ input[type="number"] {
   line-height: @line-height-base;
   color: @input-color;
   vertical-align: middle;
-  background-color: @input-bg;
+  background-color: @input-background;
   border: 1px solid @input-border;
   border-radius: @input-border-radius;
   .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
@@ -155,7 +211,7 @@ input[type="number"] {
   &[readonly],
   fieldset[disabled] & {
     cursor: not-allowed;
-    background-color: @input-bg-disabled;
+    background-color: @input-background-disabled;
   }
 
   // Reset height for `textarea`s
@@ -253,15 +309,15 @@ input[type="checkbox"],
 
 // Warning
 .has-warning {
-  .form-control-validation(@state-warning-text; @state-warning-text; @state-warning-bg);
+  .form-control-validation(@state-warning-text; @state-warning-text; @state-warning-background);
 }
 // Error
 .has-error {
-  .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+  .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-background);
 }
 // Success
 .has-success {
-  .form-control-validation(@state-success-text; @state-success-text; @state-success-bg);
+  .form-control-validation(@state-success-text; @state-success-text; @state-success-background);
 }
 
 
@@ -334,39 +390,6 @@ input[type="checkbox"],
     }
   }
 }
-
-
-// Horizontal forms
-//
-// Horizontal forms are built on grid classes and allow you to create forms with
-// labels on the left and inputs on the right.
-
-.form-horizontal {
-
-  // Consistent vertical alignment of labels, radios, and checkboxes
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: (@padding-base-vertical + 1); // Default padding plus a border
-  }
-
-  // Make form groups behave like rows
-  .form-group {
-    .make-row();
-  }
-
-  // Only right align form labels here when the columns stop stacking
-  @media (min-width: @screen-tablet) {
-    .control-label {
-      text-align: right;
-    }
-  }
-}
-
 
 
 // Form validation states

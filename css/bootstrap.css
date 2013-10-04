@@ -344,7 +344,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   margin: 0;
   color: #000000;
   background-color: #e6e6e6;
@@ -463,6 +467,9 @@ blockquote p {
 .icon-large:before {
   vertical-align: -10%;
   font-size: 1.3333333333333333em;
+}
+[class^="icon-"].gray {
+  color: #666666;
 }
 /* EXTRAS
  * -------------------------- */
@@ -1694,16 +1701,18 @@ blockquote p {
 }
 #scrollable {
   width: 970px;
+  height: 100%;
   background-color: transparent;
   margin-right: auto;
   margin-left: auto;
   position: relative;
   margin-top: 61px;
-  margin-bottom: 10px;
   text-align: center;
 }
 #content {
   width: auto;
+  min-height: 100%;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #ffffff;
   border: 0 solid #666666;
@@ -1763,9 +1772,6 @@ blockquote p {
 .list > li.space {
   width: 100%;
 }
-.list.no-gutter {
-  margin-bottom: 0 !important;
-}
 .list.vertical > li {
   display: block;
 }
@@ -1777,6 +1783,18 @@ blockquote p {
 }
 .list.large > li > * {
   font-size: 16px;
+}
+.list > li.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+}
+.list.padding5 > li {
+  padding: 5px 0 5px 0;
+}
+.list.padding3 > li {
+  padding: 3px 0 3px 0;
 }
 .ghost {
   max-width: 930px;
@@ -1843,9 +1861,6 @@ blockquote p {
   color: #0077cc;
   background-color: transparent;
 }
-.list.pills.gutter-plus {
-  margin-bottom: 25px !important;
-}
 .list.tabs {
   margin-bottom: 20px;
   border-bottom: 1px solid #b3b3b3;
@@ -1898,7 +1913,7 @@ blockquote p {
   margin-left: auto;
 }
 .list.topbar-elements > li {
-  padding: 6px 3px 6px 3px;
+  padding: 5px 3px 5px 3px;
 }
 .list.topbar-elements > li:first-child {
   padding-left: 0;
@@ -1919,17 +1934,10 @@ blockquote p {
 .list.topbar-elements > li > a:focus {
   color: #0077cc;
 }
-.list.topbar-elements > .search {
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-}
-.list.topbar-elements > .search + li > * {
-  margin-left: 10px !important;
-}
 .topbar-brand-logo {
   display: inline-block;
-  height: 26px;
-  width: 26px;
+  height: 28px;
+  width: 28px;
   background-color: #666666;
   border: 1px solid #0077cc;
 }
@@ -1952,6 +1960,36 @@ blockquote p {
 .topbar-brand ul > li + li > a:hover,
 .topbar-brand ul > li + li > a:focus {
   color: #0077cc;
+}
+.topbar-search {
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+.topbar-search + li > * {
+  margin-left: 10px !important;
+  vertical-align: middle;
+}
+.topbar-search > form > input {
+  padding: 6px 23px 6px 23px;
+  font-size: 14px;
+  margin-left: -19px;
+  margin-right: -17px;
+  border: 1px solid #d9d9d9;
+  width: 250px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.topbar-search > form > [class^="icon-"] {
+  position: relative;
+  vertical-align: middle;
+}
+.topbar-search > form > [class^="icon-"]:first-child {
+  left: 5px;
+}
+.topbar-search > form > [class^="icon-"]:last-child {
+  left: -5px;
 }
 /*
   <div class="topbar">
@@ -1995,6 +2033,59 @@ blockquote p {
   z-index: 1030;
 }
 /*
+  <div id="footer">
+    <ul class="list">
+      <li><a href="{{ baseUri }}/chi-siamo">CHI SIAMO</a></li>
+      <li><a href="{{ baseUri }}/aiuto">AIUTO</a></li>
+      <li><a href="{{ baseUri }}/legale">LEGALE</a></li>
+      <li><a href="{{ baseUri }}/privacy">PRIVACY</a></li>
+      <li><a href="{{ baseUri }}/lavoro">LAVORO</a></li>
+      <li><a href="{{ baseUri }}/pubblicita">PUBBLICITÀ</a></li>
+      <li><a href="{{ baseUri }}/contatti">CONTATTI</a></li>
+      <li class="space"></li>
+      <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/it/"><img alt="Licenza Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/it/80x15.png" /></a></li>
+    </ul>
+    © {{ serverName|capitalize }}™ 1999-{{ year }}. Testata giornalistica iscritta col n. 569 presso il Tribunale di Milano in data 14/10/2002.
+    <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Alcuni diritti riservati.<br>
+    I contributi degli utenti</span> sono distribuiti con licenza <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/it/">cc-wiki</a>, l'attribuzione è richiesta e la condivisione deve avvenire con le stesse modalità descritte in licenza.<br>
+    <span class="version">Powered by <a href="">PitPress</a> v{{ version }}</span>
+  </div>
+*/
+#footer {
+  position: relative;
+  text-align: left;
+  font-size: 12px;
+  padding: 10px 10px 5px 10px;
+  color: #222222;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#666666), to(#595959));
+  background-image: -webkit-linear-gradient(top, #666666, 0%, #595959, 100%);
+  background-image: -moz-linear-gradient(top, #666666 0%, #595959 100%);
+  background-image: linear-gradient(to bottom, #666666 0%, #595959 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff595959', GradientType=0);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+#footer img {
+  vertical-align: middle;
+}
+#footer ul > li + li {
+  padding-left: 20px;
+}
+#footer a {
+  color: white;
+}
+#footer a:hover,
+#footer a:focus {
+  text-decoration: underline;
+}
+#footer > .version {
+  color: black;
+  font-size: 10px;
+  text-align: right;
+}
+/*
   <div id="counter"><div>11.823</div> AGGIORNAMENTI</></div>
 */
 #counter {
@@ -2013,6 +2104,7 @@ blockquote p {
   margin: 0;
   margin-bottom: 20px;
   padding-top: 10px;
+  padding-left: 0;
   list-style: none;
   text-align: left;
   border-left: 1px solid #b3b3b3;
@@ -2021,6 +2113,7 @@ blockquote p {
   box-sizing: border-box;
 }
 #updates .items > li {
+  text-align: left !important;
   padding: 10px;
   border-left: 1px solid #ffffff;
   height: auto;
@@ -2047,33 +2140,6 @@ blockquote p {
   color: #333333;
   font-weight: normal;
   font-size: 12px;
-}
-.list.recent-tags {
-  color: #666666;
-  margin-bottom: 20px;
-}
-.list.recent-tags > li {
-  padding: 3px 0 3px 0;
-  vertical-align: bottom;
-}
-.list.recent-tags > li:first-child {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 5px;
-}
-.list.recent-badges {
-  color: #666666;
-  margin-bottom: 20px;
-}
-.list.recent-badges > li {
-  padding: 5px 0 5px 0;
-}
-.list.recent-badges > li:first-child {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 5px;
 }
 .item-tools {
   float: left;
@@ -2144,6 +2210,7 @@ blockquote p {
 }
 .item-title {
   white-space: normal;
+  padding-right: 5px;
   font-weight: bold;
   font-size: 16px;
 }
@@ -2154,25 +2221,20 @@ blockquote p {
   margin-top: 10px;
   white-space: nowrap;
   color: #333333;
-  float: right;
   height: auto;
   width: 200px;
 }
 .item-info > div:first-child {
+  text-align: left !important;
   line-height: 14px;
   padding-bottom: 5px;
   font-size: 12px;
 }
 .item-info > div:last-child {
+  text-align: left !important;
   margin-left: 37px;
   line-height: 16px;
   vertical-align: middle;
-}
-.item-info > div:last-child > span {
-  font-size: 12px;
-}
-.item-info > div:last-child > span + span {
-  margin-left: 7px;
 }
 .item-info > .gravatar {
   margin: 0;
@@ -2368,14 +2430,9 @@ blockquote p {
   border-bottom: 1px solid #0077cc;
   border-right: 1px solid #0077cc;
 }
-.bronze {
-  color: #CC9966;
-}
-.silver {
-  color: silver;
-}
-.gold {
-  color: gold;
+.popularity {
+  color: #666666;
+  vertical-align: bottom;
 }
 .badge {
   color: #666666;
@@ -2389,6 +2446,40 @@ blockquote p {
 .badge:focus {
   color: #0077cc;
   border-color: #0077cc;
+}
+.bronze {
+  color: #CC9966;
+}
+.silver {
+  color: silver;
+}
+.gold {
+  color: gold;
+}
+.user {
+  padding-left: 5px;
+  color: #333333;
+  width: 200px;
+  height: 64px;
+}
+.user > img {
+  vertical-align: top;
+  margin-top: 0;
+}
+.user > .user-info {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 5px;
+}
+.user > .user-info > div {
+  line-height: 21px;
+}
+.user > .user-info > .when {
+  line-height: 18px;
+}
+.user > .user-info > .reputation {
+  line-height: 24px;
 }
 .dropdown-wrapper {
   float: none;
@@ -2831,11 +2922,17 @@ blockquote p {
   list-style: none;
 }
 /*
-  <span><img class="gravatar" src="http://www.gravatar.com/avatar/b6799a3261ca303c0b39f991fd9250b4.png" />&nbsp;</span><a href="#">dedalo</a>
+  <img class="gravatar" src="http://www.gravatar.com/avatar/b6799a3261ca303c0b39f991fd9250b4.png" />
 */
 .gravatar {
   vertical-align: middle;
   margin-top: -2px;
+}
+.reputation {
+  font-size: 12px;
+}
+.reputation > * + * {
+  margin-left: 7px;
 }
 .separator {
   display: block;
@@ -3052,6 +3149,15 @@ blockquote p {
 .pull-left {
   float: left !important;
 }
+.gutter {
+  margin-bottom: 20px !important;
+}
+.no-gutter {
+  margin-bottom: 0 !important;
+}
+.gutter-plus {
+  margin-bottom: 25px !important;
+}
 .hide {
   display: none !important;
 }
@@ -3070,4 +3176,31 @@ blockquote p {
 }
 .affix {
   position: fixed;
+}
+.list.group > li > * {
+  text-align: left;
+}
+.pages,
+#pages,
+#comments {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  border: 1px solid #666666;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: #F3F3F3;
+  color: #666666;
+  font-size: 70%;
+  margin-top: 10px;
+  text-align: left;
+}
+.pages a span,
+#pages a span {
+  text-decoration: underline;
+  background-color: #FDE3BD;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
 }

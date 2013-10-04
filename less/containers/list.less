@@ -48,11 +48,6 @@
   width: 100%;
 }
 
-// Resets the bottom margin to zero.
-.list.no-gutter {
-  margin-bottom: 0 !important;
-}
-
 // A vertical list.
 .list.vertical > li {
   display: block;
@@ -69,4 +64,23 @@
 // A large list.
 .list.large > li > * {
   font-size: @font-size-large;
+}
+
+// The list title.
+.list > li.title {
+  font-size: @font-size-large;
+  font-weight: bold;
+  color: @gray-dark;
+  margin-bottom: 5px;
+}
+
+
+// Sets the top and bottom padding to 5px.
+.list.padding5 > li {
+  padding: 5px 0 5px 0;
+}
+
+// Sets the top and bottom padding to 3px.
+.list.padding3 > li {
+  padding: 3px 0 3px 0;
 }
