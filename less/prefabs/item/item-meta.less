@@ -1,0 +1,29 @@
+//! @file item-meta.less
+//! @brief Item's metadata.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.item-meta {
+  display: block;
+  white-space: normal;
+  text-align: left;
+  line-height: @line-height-base - 4;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 0;
+  border-top: 1px dashed @gray-light;
+  border-bottom: 1px dashed @gray-light;
+  .clearfix();
+}
+
+.item-meta img {
+  float: left;
+  padding-right: 10px;
+}
+
+.item-meta > span {
+  color: @gray;
+}
