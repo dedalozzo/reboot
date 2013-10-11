@@ -31,22 +31,21 @@
 
 .list.toolbar > li > * {
   float: left;
-  font-weight: bold;
-  border-bottom: 1px solid darken(@gray-lighter, 5%);
-}
 
-.list.toolbar > li > a {
-  padding: 1px 3px 1px 3px !important;
+  border-bottom: 1px solid darken(@gray-lighter, 5%);
+
   min-width: 20px;
   text-align: center;
 
   font-weight: bold;
-  font-size: @font-size-base !important;
+  font-size: @font-size-large;
+}
 
+.list.toolbar > li > a {
   color: @gray;
   #gradient > .vertical(lighten(@gray-lighter, 5%), @gray-lighter);
 
-  .border-radius(0 0 2px 2px);
+  padding: 2px 5px 2px 5px;
 
   &:hover,
   &:focus {
@@ -55,17 +54,18 @@
   }
 }
 
-.list.toolbar > .tool > a {
-  border-left: 1px solid darken(@gray-lighter, 5%);
-  border-right: 1px solid darken(@gray-lighter, 5%);
-}
-
-.toolgroup > span {
-  padding: 1px 5px 1px 5px !important;
+.list.toolbar > li > span {
+  padding: 2px 7px 2px 7px;
   min-width: 10px;
   background-color: @gray-lighter;
   color: @gray-dark;
   .opacity(95);
+}
+
+.list.toolbar > .tool > * {
+  border-left: 1px solid darken(@gray-lighter, 5%);
+  border-right: 1px solid darken(@gray-lighter, 5%);
+  .border-radius(0 0 2px 2px);
 }
 
 .toolgroup > a:first-child,
@@ -81,6 +81,7 @@
 }
 
 .toolgroup > a + a,
+.toolgroup > span + span,
 .toolgroup > a + span,
 .toolgroup > span + a {
   //border-left: none;
