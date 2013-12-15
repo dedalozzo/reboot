@@ -9,19 +9,20 @@
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
 .list.item-tags {
-  margin-bottom: 0;
+  font-size: 0; // Trick to fix a Firefox bug.
   margin-left: -1px;
-  display: block !important;
   float: left;
   width: 360px;
 }
 
 .list.item-tags > li {
+  font-size: @font-size-base;
   vertical-align: top;
+  padding-right: 4px !important;
   padding-bottom: 4px !important;
   display: inline-block !important;
 }
 
-.list.items-tags > li:last-child > * {
+.list.items-tags > li:last-child {
   padding-right: 0 !important;
 }
