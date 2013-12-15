@@ -1,26 +1,49 @@
-//
-// Modals
-// --------------------------------------------------
+//! @file modal.less
+//! @brief Modal dialog.
+//! @details
+//! @author Filippo F. Fadda
+//! @credits Mark Otto, Jacob Thornton
+//! @copyright 3F s.a.s. di Filippo Fadda
 
+
+// ---------------------------------------------------------------------------------------------------------------------
+// INFO
+// ---------------------------------------------------------------------------------------------------------------------
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
 
-// Kill the scroll on the body
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@modal-inner-padding: @gutter;
+
+@modal-title-padding: @gutter / 2;
+@modal-title-line-height: @line-height-base;
+
+@modal-content-background-color: white;
+@modal-content-border-color: @gray-light;
+//@modal-content-fallback-border-color: #999;
+@modal-content-fallback-border-color: darken(@modal-content-border-color, 12%);
+
+@modal-backdrop-background-color: black;
+
+@modal-header-border-color: #e5e5e5;
+@modal-footer-border-color: @modal-header-border-color;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Kills the scroll on the body.
 .modal-open {
   overflow: hidden;
-
-
-  // Account for hiding of scrollbar
-  body&,
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    margin-right: 15px
-  }
 }
 
-// Container that the modal scrolls within
+// Container that the modal scrolls within.
 .modal {
   display: none;
   overflow: auto;
@@ -30,7 +53,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: @zindex-modal-background;
+  text-align: left;
+  z-index: @modal-background-zindex;
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
@@ -40,38 +64,39 @@
   &.in .modal-dialog { .translate(0, 0)}
 }
 
-// Shell div to position the modal with bottom padding
+// Shells div to position the modal with bottom padding.
 .modal-dialog {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: auto;
   padding: 10px;
-  z-index: (@zindex-modal-background + 10);
+  z-index: (@modal-background-zindex + 10);
 }
 
-// Actual modal
+// Actual modal.
 .modal-content {
   position: relative;
-  background-color: @modal-content-bg;
+  background-color: @modal-content-background-color;
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
   border-radius: @border-radius-large;
   .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
-  // Remove focus outline from opened modal
-  outline: none;
+  outline: none; // Removes focus outline from opened modal.
 }
 
-// Modal background
+// Modal background.
 .modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: (@zindex-modal-background - 10);
-  background-color: @modal-backdrop-bg;
-  // Fade for backdrop
+  z-index: (@modal-background-zindex - 10);
+  background-color: @modal-backdrop-background-color;
+
+  // Fades for backdrop.
   &.fade { .opacity(0); }
   &.in { .opacity(.5); }
 }
@@ -81,14 +106,14 @@
 .modal-header {
   padding: @modal-title-padding;
   border-bottom: 1px solid @modal-header-border-color;
-  min-height: (@modal-title-padding + @modal-title-line-height);
+  //min-height: (@modal-title-padding + @modal-title-line-height);
 }
 // Close icon
 .modal-header .close {
   margin-top: -2px;
 }
 
-// Title text within header
+// Title text within header.
 .modal-title {
   margin: 0;
   line-height: @modal-title-line-height;
@@ -122,20 +147,4 @@
   .btn-block + .btn-block {
     margin-left: 0;
   }
-}
-
-// Scale up the modal
-@media screen and (min-width: @screen-tablet) {
-
-  .modal-dialog {
-    left: 50%;
-    right: auto;
-    width: 600px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .modal-content {
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
-  }
-
 }
