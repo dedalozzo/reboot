@@ -48,6 +48,14 @@
   width: 100%;
 }
 
+// Top and bottom vertical aligns.
+.list > li.top {
+  vertical-align: top;
+}
+.list > li.bottom {
+  vertical-align: bottom !important;
+}
+
 // A vertical list.
 .list.vertical > li {
   display: block;
@@ -83,4 +91,12 @@
 // Sets the top and bottom padding to 3px.
 .list.padding3 > li {
   padding: 3px 0 3px 0;
+}
+
+// Sets the bottom margin to 10px, but not on the last element. This style is useful in a vertical list.
+.list.mbottom10 > li {
+  margin-bottom: 10px;
+}
+.list.mbottom10 > li:last-child {
+  margin-bottom: 0;
 }
