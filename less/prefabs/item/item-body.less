@@ -19,31 +19,22 @@
 
 .item-body > .positive,
 .item-body > .negative {
-  padding-top: @gutter / 2;
+  padding-top: 2px;
 }
 
-.item-body > .positive {
-  border-top: 1px dashed @gray-light;
-}
-
-.item-body > .negative {
-  border-bottom: 1px dashed @gray-light;
-  padding-bottom: @gutter / 2;
-}
-
-.item-body > .positive:before,
-.item-body > .negative:before {
+.item-body > .positive > p:first-child:before,
+.item-body > .negative > p:first-child:before {
   font-family: FontAwesome;
   font-size: @font-size-large;
   color: @gray-light;
   vertical-align: top;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
-.item-body > .positive:before {
+.item-body > .positive > p:first-child:before {
   content: "\f164";
 }
 
-.item-body > .negative:before {
+.item-body > .negative > p:first-child:before {
   content: "\f165";
 }
