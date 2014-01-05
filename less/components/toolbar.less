@@ -8,15 +8,10 @@
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
 .list.toolbar {
+  font-size: 0; // Trick to fix a Firefox bug.
   display: block;
   border-top: 1px solid @gray-light;
-  //border-top: 1px solid darken(@gray-lighter, 5%);
   margin-bottom: @gutter / 2;
-  //padding: 5px 0 0 5px;
-  //background-color: lighten(@gray-lighter, 5%); //@gray-light;
-  //#gradient > .vertical(lighten(@gray-lighter, 5%), lighten(@gray-lighter, 0%));
-  //border: 1px solid @gray-lighter;
-  //.border-radius(4px);
 }
 
 .list.toolbar.no-border {
@@ -25,8 +20,13 @@
 }
 
 .list.toolbar > li {
+  font-size: @font-size-base;
   display: inline-block;
-  margin-right: 4px !important;
+  margin-right: @gutter / 4;
+}
+
+.list.toolbar > li.break {
+  margin-right: @gutter;
 }
 
 .list.toolbar > li > * {
