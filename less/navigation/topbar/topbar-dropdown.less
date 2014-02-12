@@ -1,0 +1,153 @@
+//! @file topbar-dropdown.less
+//! @brief Dropdown menu.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+//@import "menu-divider";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <li class="topbar-dropdown">
+    <ul>
+      <li>
+        <span><i class="icon-plus"></i>&nbsp;<i class="icon-caret-down"></i></span>
+        <ul class="">
+          <li><a href="#"><i class="icon-question"></i>&nbsp;Fai una domanda...</a></li>
+          <li><a href="#"><i class="icon-link"></i>&nbsp;Inserisci un link...</a></li>
+          <li><a href="#"><i class="icon-code"></i>&nbsp;Scrivi sul blog...</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.topbar-dropdown ul {
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-dropdown li {
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-dropdown a {
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-dropdown ul {
+  list-style: none;
+}
+
+.topbar-dropdown a {
+  text-decoration: none;
+}
+
+.topbar-dropdown > ul > li {
+  float: left;
+  position: relative;
+}
+
+.topbar-dropdown > ul > li > a {
+  padding: 5px;		/* This is the padding between the different titles */
+
+  -webkit-transition: color .15s;
+  -moz-transition: color .15s;
+  -o-transition: color .15s;
+  transition: color .15s;
+}
+
+.topbar-dropdown > ul > li > a:hover {
+  //color: rgb(250,250,250);
+}
+
+.topbar-dropdown > ul > li > ul {
+  opacity: 0;
+  visibility: hidden;
+  padding: 3px;
+  background-color: rgb(250,250,250);
+  text-align: left;  /* This is for the text when box is dropped down, centered isnt always totally in the middle so best to have on the left */
+  position: absolute;
+  top: 20px;			/* This is for the drop down annimation */
+  left: 50%;
+  margin-left: -90px;
+  width: 180px;
+
+  -webkit-transition: all .3s .1s;
+  -moz-transition: all .3s .1s;
+  -o-transition: all .3s .1s;
+  transition: all .3s .1s;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+}
+
+.topbar-dropdown > ul > li:hover > ul {
+  opacity: 1;
+  top: 42px;			/* This is how far from the top the drop down annimation will go  */
+  visibility: visible;
+}
+
+.topbar-dropdown > ul > li > ul:before{
+  content: '';
+  display: block;
+  border-color: transparent transparent rgb(250,250,250) transparent;
+  border-style: solid;
+  border-width: 10px;  /* The border on the drop down box  */
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.topbar-dropdown > ul ul > li {
+  position: relative;
+  //border-left: 1px solid white;
+  //border-right: 1px solid white;
+}
+
+.topbar-dropdown ul ul a {     /* This is the drop down menu, change font or size when its drops down */
+  //color: rgb(50,50,50);
+  //background-color: rgb(250,250,250);
+  font-weight: normal;
+  padding: 5px 10px 5px 10px;
+  display: block;
+
+  -webkit-transition: background-color .1s;
+  -moz-transition: background-color .1s;
+  -o-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.topbar-dropdown ul ul a:hover {
+  //background-color: rgb(240,240,240);
+  background-color: @gray-lighter;
+}
+
+.topbar-dropdown ul ul > li:hover > ul {
+  opacity: 1;
+  left: 196px;
+  visibility: visible;
+}
