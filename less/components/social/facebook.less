@@ -1,0 +1,30 @@
+//! @file facebook.less
+//! @brief Facebook button.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@facebook-color: #3C5595;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#facebook-btn {
+  background-color: @facebook-color;
+  text-shadow: 0 -1px lighten(@facebook-color, 20%);
+}
+
+#facebook-btn:hover,
+#facebook-btn:active {
+  background-color: darken(@facebook-color, 5%);
+}
+
+#facebook-btn .logo {
+  background-color: lighten(@facebook-color, 10%);
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../img/facebook.png');
+}
