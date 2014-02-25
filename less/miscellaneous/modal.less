@@ -21,7 +21,7 @@
 @modal-inner-padding: @gutter;
 
 @modal-title-padding: @gutter / 2;
-@modal-title-line-height: @line-height-base;
+@modal-title-line-height: @line-height;
 
 @modal-content-background-color: white;
 @modal-content-border-color: @gray-light;
@@ -80,7 +80,7 @@
   background-color: @modal-content-background-color;
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
-  border-radius: @border-radius-large;
+  border-radius: 4px;
   .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   outline: none; // Removes focus outline from opened modal.
