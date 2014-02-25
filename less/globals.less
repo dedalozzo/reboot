@@ -61,41 +61,14 @@
 @font-size-largest: @font-size-large + 4;
 @font-size-large: @font-size-base + 2;
 @font-size-base: 14px;
-@font-size-small: @font-size-base - 1;
-@font-size-mini: @font-size-small - 2;
-
-@line-height-base: 22px;
-@line-height-large: 1.33;
-@line-height-small: 1.5;
-//@line-height-base:        1.428571429; // 20/14
-@line-height-computed: floor(@font-size-base * @line-height-base); // ~20px
+@font-size-small: @font-size-base - 2;
+@font-size-mini: @font-size-small - 1;
 
 @headings-font-family: @font-family-base;
 @headings-font-weight: bold;
-@headings-line-height: 1.1;
 
+@line-height: 22px;
 @gutter: 20px;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Paddings
-// ---------------------------------------------------------------------------------------------------------------------
-@padding-base-vertical: 6px;
-@padding-base-horizontal: 12px;
-
-@padding-large-vertical: 10px;
-@padding-large-horizontal: 16px;
-
-@padding-small-vertical: 5px;
-@padding-small-horizontal: 10px;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Border Radius
-// ---------------------------------------------------------------------------------------------------------------------
-@border-radius-base: 2px;
-@border-radius-large: 4px;
-@border-radius-small: 1px;
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -108,10 +81,3 @@
 @topbar-zindex: 1030;
 @modal-background-zindex: 1040;
 @modal-zindex: 1050;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Forms
-// ---------------------------------------------------------------------------------------------------------------------
-@input-border-radius: @border-radius-base;
-@input-height: @line-height-base + 14px; // base line-height + 12px vertical padding + 2px top/bottom border
