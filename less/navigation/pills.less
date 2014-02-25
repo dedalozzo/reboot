@@ -62,3 +62,42 @@
   color: @link-color-hover;
   background-color: transparent;
 }
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// COLORS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.pills > li > a.blue {
+  #pill(white, @blue, darken(@blue, 5%));
+}
+
+.list.pills > li > a.green {
+  #pill(white, @green, darken(@green, 5%));
+}
+
+.list.pills > li > a.orange {
+  #pill(white, @orange, darken(@orange, 5%));
+}
+
+.list.pills > li > a.red {
+  #pill(white, @red, darken(@red, 5%));
+}
+
+.list.pills > li > a.cyan {
+  #pill(white, @cyan, darken(@cyan, 5%));
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// MIXINS
+// ---------------------------------------------------------------------------------------------------------------------
+#pill(@color, @background-color, @border-color) {
+  color: @color !important;
+  #gradient > .vertical(lighten(@background-color, 5%), @background-color);
+  border-color: @border-color !important;
+
+  &:hover,
+  &:focus {
+    #gradient > .vertical(@background-color, darken(@background-color, 5%));
+  }
+}
