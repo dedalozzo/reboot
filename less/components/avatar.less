@@ -1,0 +1,49 @@
+//! @file user.less
+//! @brief The user information.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.avatar {
+  padding-left: 5px;
+  color: @gray-dark;
+  width: 200px;
+  height: 64px;
+}
+
+.avatar > a > img {
+  vertical-align: top;
+  margin-top: 0;
+}
+
+.avatar > .avatar-info {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.avatar > .avatar-info > * {
+  //display: block;
+}
+
+.avatar > .avatar-info > div {
+  line-height: 21px;
+}
+
+.avatar > .avatar-info > div:first-child {
+  margin-top: -2px;
+}
+
+.avatar > .avatar-info > .when {
+  font-size: @font-size-small;
+  margin-top: 2px;
+  line-height: 18px;
+}
+
+.avatar > .avatar-info > .reputation {
+  line-height: 24px;
+}
