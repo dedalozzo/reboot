@@ -1,0 +1,308 @@
+//! @file selectize.less
+//! @brief Selectize component styles.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IMPORTS
+// ---------------------------------------------------------------------------------------------------------------------
+@import "plugins/remove_button";
+@import "plugins/dropdown_header";
+@import "plugins/optgroup_columns";
+@import "plugins/drag_drop";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// EXPANDABLE CONTAINER (STYLED LIKE A TEXT AREA)
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-control {
+  position: relative;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-dropdown {
+  position: absolute;
+  z-index: @dropdown-zindex;
+  background-color: red;
+  margin-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 1px solid @input-border-color;
+  .box-sizing(border-box);
+  .border-radius(4px);
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU CONTENT (ALL THE ITEMS GO IN HERE)
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-dropdown-content {
+  overflow-y: auto; // Shows the vertical scrollbar in case the elements overflow the maximum height.
+  overflow-x: hidden; // Never displays the horizontal scrollbar.
+  max-height: 200px; // Fix the maximum height for the content.
+  background-color: green;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU ITEMS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Those styles are applied to each menu items.
+.selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: @gutter;
+  padding-right: @gutter / 4;
+}
+
+// Highlight the match found based on the keyboard inputs.
+.selectize-dropdown [data-selectable] .highlight {
+  background-color: yellow;
+  //.border-radius(1px);
+}
+
+// Styles of the active item.
+.selectize-dropdown .active {
+  background-color: @gray-light;
+  color: @gray-darker;
+}
+
+// Used when is allowed to create a new item not available on the list.
+.selectize-dropdown .create {
+  color: red;
+}
+
+// Active and create at the same time.
+.selectize-dropdown .active.create {
+  color: purple;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN CARET (DOWN/UP) FOR COMBO BOX
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-control.single .selectize-input:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  border-color: @gray-dark transparent transparent transparent;
+}
+
+.selectize-control.single .selectize-input.dropdown-active:after {
+  margin-top: -4px;
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent @gray-dark transparent;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// GROUP OF MENU ITEMS (USED WHEN YOU WANT GROUP ALL EUROPE NATIONS FOR EXAMPLE)
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-dropdown .optgroup-header {
+  margin-left: -5px;
+  padding-left: @gutter / 2;
+  padding-right: @gutter / 4;
+  font-weight: bold;
+  color: @gray-dark;
+
+  // Obviously, you can't select a group header.
+  background: white;
+  cursor: default;
+}
+
+// In case the first menu item is a group header, doesn't show the above border.
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+  border-top: none;
+}
+
+.selectize-dropdown .optgroup:first-child:before {
+  display: none;
+}
+
+.selectize-dropdown .optgroup:before {
+  content: ' ';
+  display: block;
+  height: 1px;
+  margin-top: 9px;
+  overflow: hidden;
+  background-color: @gray-light;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+
+
+
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  background: white;
+  cursor: text;
+  display: inline-block;
+}
+
+.selectize-input {
+  padding: 4px;
+  //padding: 6px 12px;
+
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .box-sizing(border-box);
+  border: 1px solid @input-border-color;
+  .border-radius(4px);
+}
+
+.selectize-control.multi .selectize-input.has-items {
+  padding: 5px 12px 2px;
+}
+.selectize-input.full {
+  background-color: #ffffff;
+}
+.selectize-input.disabled,
+.selectize-input.disabled * {
+  cursor: default !important;
+}
+.selectize-input.focus {
+}
+.selectize-input.dropdown-active {
+  .border-radius(4px 4px 0 0);
+}
+.selectize-input > * {
+  vertical-align: middle;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 1px 3px;
+  background: #efefef;
+  color: #333333;
+  border: 0 solid rgba(0, 0, 0, 0);
+}
+.selectize-control.multi .selectize-input > div.active {
+  background: @input-outline-color;
+  color: #ffffff;
+  border: 0 solid rgba(0, 0, 0, 0);
+}
+.selectize-control.multi .selectize-input.disabled > div,
+.selectize-control.multi .selectize-input.disabled > div.active {
+  color: #808080;
+  background: white;
+  border: 0 solid rgba(77, 77, 77, 0);
+}
+
+
+.selectize-input > input {
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  background: none !important;
+  line-height: inherit !important;
+  -webkit-user-select: auto !important;
+}
+
+.selectize-input > input:focus {
+  outline: none !important;
+}
+
+.selectize-input::after {
+  content: ' ';
+  display: block;
+  clear: left;
+}
+
+.selectize-input.dropdown-active::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: white;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+  cursor: pointer;
+}
+
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+  cursor: text;
+}
+
+
+.selectize-control.rtl.single .selectize-input:after {
+  left: 17px;
+  right: auto;
+}
+
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important;
+}
+
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: white;
+}
+
+
+
+.selectize-input {
+  min-height: 31px;
+}
+
+.selectize-input.dropdown-active {
+  .border-radius(4px);
+}
+
+.selectize-input.dropdown-active::before {
+  display: none;
+}
+
+.selectize-input.focus {
+  border-color: @input-outline-color;
+  outline: 0;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.selectize-control.multi .selectize-input > div {
+  .border-radius(3px);
+}
+
+.form-control.selectize-control {
+  padding: 0;
+  height: auto;
+  border: none;
+  background: none;
+  .border-radius(0);
+}
