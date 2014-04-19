@@ -3,7 +3,6 @@
 //! @details This is the base class used to create e list in conjunction with another specialized class. There are many
 //! kinds of list: tabs, pills, the navigation bar, menus are all lists.
 //! @author Filippo F. Fadda
-//! @credits Mark Otto, Jacob Thornton
 //! @copyright 3F s.a.s. di Filippo Fadda
 
 
@@ -13,12 +12,10 @@
 .list {
   margin: 0;
   padding: 0;
-
   display: table;
   width: 100%;
-
-  list-style: none;
   font-weight: normal;
+  list-style: none;
   text-align: left;
 }
 
@@ -26,10 +23,11 @@
   display: table-cell;
   vertical-align: middle;
   text-align: left;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
 }
 
 .list > li > * {
-  text-align: center;
   white-space: nowrap;
 }
 
@@ -65,12 +63,12 @@
 }
 
 // A small list.
-.list.small > li > * {
+.list.small > li {
   font-size: @font-size-small;
 }
 
 // A large list.
-.list.large > li > * {
+.list.large > li {
   font-size: @font-size-large;
 }
 
