@@ -64,29 +64,8 @@ hr {
 
 // p
 p {
-  margin: 0 0 @line-height / 2;
+  margin: 0 0 @gutter / 2 0;
 }
-
-
-// h1, h2, h3, h4, h5, h6
-h1, h2, h3, h4, h5, h6 {
-  margin: (@line-height / 2) 0;
-  font-family: @headings-font-family;
-  font-weight: @headings-font-weight;
-  line-height: @line-height;
-  text-rendering: optimizelegibility; // Fix the character spacing for headings
-}
-
-h1,
-h2,
-h3 { line-height: @line-height * 2; }
-
-h1 { font-size: @font-size-base * 2.75; } // ~38px
-h2 { font-size: @font-size-base * 2.25; } // ~32px
-h3 { font-size: @font-size-base * 1.75; } // ~24px
-h4 { font-size: @font-size-base * 1.25; } // ~18px
-h5 { font-size: @font-size-base; }
-h6 { font-size: @font-size-base * 0.85; } // ~12px
 
 
 // blockquote
