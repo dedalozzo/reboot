@@ -34,40 +34,42 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
-#footer {
+footer {
   position: relative;
   text-align: left;
   font-size: @font-size-small;
-  padding: 5px 10px 0 10px;
+  padding: 6px 10px 5px 10px;
   color: @gray-darker;
   #gradient > .vertical(@gray, darken(@gray, 5%));
   .border-radius(4px 4px 0 0);
 }
 
-#footer img {
+footer img {
   vertical-align: middle;
 }
 
-#footer ul > li + li {
+footer ul > li + li {
   padding-left: 20px;
 }
 
-#footer a {
+footer a {
   color: white;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    color: white;
+    text-decoration: underline !important;
   }
 }
 
-#footer > .copyright {
+footer > .copyright {
   line-height: normal;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-#footer > .version {
-  margin-top: 5px;
+footer > .version {
+  margin-bottom: 0;
   color: black;
   font-size: @font-size-mini;
   text-align: left;
