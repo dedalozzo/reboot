@@ -28,10 +28,8 @@
 .selectize-dropdown {
   position: absolute;
   z-index: @dropdown-zindex;
-  background-color: red;
+  background-color: white;
   margin-top: 3px;
-  padding-left: 3px;
-  padding-right: 3px;
   border: 1px solid @input-border-color;
   .box-sizing(border-box);
   .border-radius(4px);
@@ -45,7 +43,6 @@
   overflow-y: auto; // Shows the vertical scrollbar in case the elements overflow the maximum height.
   overflow-x: hidden; // Never displays the horizontal scrollbar.
   max-height: 200px; // Fix the maximum height for the content.
-  background-color: green;
 }
 
 
@@ -57,14 +54,13 @@
 .selectize-dropdown [data-selectable] {
   cursor: pointer;
   overflow: hidden;
-  padding-left: @gutter;
-  padding-right: @gutter / 4;
+  line-height: 1.3;
+  padding: 2px 5px 2px @gutter;
 }
 
 // Highlight the match found based on the keyboard inputs.
 .selectize-dropdown [data-selectable] .highlight {
   background-color: yellow;
-  //.border-radius(1px);
 }
 
 // Styles of the active item.
@@ -136,9 +132,9 @@
   content: ' ';
   display: block;
   height: 1px;
-  margin-top: 9px;
+  margin-top: 10px;
   overflow: hidden;
-  background-color: @gray-light;
+  background-color: @gray-lighter;
   margin-left: -12px;
   margin-right: -12px;
 }
@@ -268,11 +264,6 @@
 .selectize-control .selectize-input.disabled {
   opacity: 0.5;
   background-color: white;
-}
-
-
-
-.selectize-input {
 }
 
 .selectize-input.dropdown-active {
