@@ -1,0 +1,76 @@
+//! @file reputation.less
+//! @brief User reputation.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Normal.
+.reputation {
+  .box-sizing(border-box);
+  .border-radius(4px);
+  background-color: @gray-lighter;
+  color: @gray-dark;
+  height: 58px;
+  min-width: 110px;
+  padding: 5px 5px 5px 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: @font-size-base;
+}
+
+.reputation > div {
+  text-align: center;
+  line-height: 1;
+}
+
+.reputation > div:first-child {
+  font-weight: bold;
+  font-size: @font-size-large;
+}
+
+.reputation > div:nth-child(2) {
+  font-size: 70%;
+}
+
+.reputation > div:last-child {
+  margin-top: @gutter / 2;
+  font-weight: bold;
+  font-size: @font-size-mini;
+}
+
+.reputation > div:last-child > * + * {
+  padding-left: @gutter / 4;
+}
+
+
+// Large.
+.reputation.big {
+  margin: @gutter 0 @gutter 0;
+  padding: 9px 10px 12px 10px;
+  height: auto;
+  display: block;
+}
+
+.reputation.big > div {
+}
+
+.reputation.big > div:first-child {
+  font-size: @font-size-base * 3;
+}
+
+.reputation.big > div:nth-child(2) {
+  font-size: @font-size-large;
+}
+
+.reputation.big > div:last-child {
+  margin-top: @gutter / 2;
+  font-size: @font-size-largest;
+}
+
+.reputation.big > div:last-child > * + * {
+  padding-left: @gutter - 5;
+}
