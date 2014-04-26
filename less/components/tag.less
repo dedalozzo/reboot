@@ -10,6 +10,7 @@
 .tag {
   padding: 3px 5px 3px 5px !important;
   vertical-align: middle;
+  text-transform:lowercase;
 
   color: @link-color;
   background-color: @gray-lighter;
@@ -35,4 +36,63 @@
 .popularity {
   color: @gray;
   vertical-align: bottom;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SUBCLASSES
+// ---------------------------------------------------------------------------------------------------------------------
+.tag.question {
+  background-color: red;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    background-color: darken(red, 10%);
+  }
+}
+
+.tag.link {
+  background-color: @link-color;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: darken(@link-color, 10%);
+  }
+}
+
+.tag.article {
+  background-color: #4CAE4C;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: darken(#4CAE4C, 10%);
+  }
+}
+
+.tag.book {
+  background-color: saddlebrown;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: darken(saddlebrown, 10%);
+  }
+}
+
+.tag.tutorial {
+  background-color: pink;
+  color: @gray-dark;
+
+  &:hover,
+  &:focus {
+    color: @gray-dark;
+    background-color: darken(pink, 10%);
+  }
 }
