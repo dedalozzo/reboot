@@ -6,15 +6,6 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// IMPORTS
-// ---------------------------------------------------------------------------------------------------------------------
-@import "plugins/remove_button";
-@import "plugins/dropdown_header";
-@import "plugins/optgroup_columns";
-@import "plugins/drag_drop";
-
-
-// ---------------------------------------------------------------------------------------------------------------------
 // EXPANDABLE CONTAINER (STYLED LIKE A TEXT AREA)
 // ---------------------------------------------------------------------------------------------------------------------
 .selectize-control {
@@ -140,73 +131,38 @@
 }
 
 
+// ---------------------------------------------------------------------------------------------------------------------
+// THE REAL INPUT CONTROL
+// ---------------------------------------------------------------------------------------------------------------------
 
-
-
-.selectize-input,
-.selectize-control.single .selectize-input.input-active {
-  background: white;
-  cursor: text;
-  display: inline-block;
-}
-
+// The container of the input control.
 .selectize-input {
-  padding: 0 4px 2px 4px; // Don't fuckin change this!
+  padding: 0 4px 2px 4px; // We need padding top to be zero to align text vertically.
   line-height: @input-line-height;
   display: inline-block;
   width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  .box-sizing(border-box);
   border: 1px solid @input-border-color;
   .border-radius(4px);
+  .box-sizing(border-box);
 }
 
-.selectize-control.multi .selectize-input.has-items {
-  padding: 5px 12px 2px;
-}
-.selectize-input.full {
-  background-color: #ffffff;
-}
-.selectize-input.disabled,
-.selectize-input.disabled * {
-  cursor: default !important;
-}
-.selectize-input.focus {
-}
-.selectize-input.dropdown-active {
-  .border-radius(4px 4px 0 0);
-}
+// When you select a value from the list, the control is styled like follow.
 .selectize-input > * {
   vertical-align: middle;
-  display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
-}
-.selectize-control.multi .selectize-input > div {
-  cursor: pointer;
-  margin: 0 3px 3px 0;
-  ddingdding: 1px 3px;
-  background: #efefef;
-  color: #333333;
-  border: 0 solid rgba(0, 0, 0, 0);
-}
-.selectize-control.multi .selectize-input > div.active {
-  background: @input-outline-color;
-  color: #ffffff;
-  border: 0 solid rgba(0, 0, 0, 0);
-}
-.selectize-control.multi .selectize-input.disabled > div,
-.selectize-control.multi .selectize-input.disabled > div.active {
-  color: #808080;
-  background: white;
-  border: 0 solid rgba(77, 77, 77, 0);
+
+  // Those are needs to get the desired 32px control's height.
+  height: 28px;
+  line-height: 1.8;
 }
 
-
+// The input inside the container.
 .selectize-input > input {
+  height: 28px; // This is needed to get the desired 32px control's height. See above.
   padding: 0 !important;
   min-height: 0 !important;
   max-height: none !important;
@@ -217,10 +173,22 @@
   background: none !important;
   line-height: inherit !important;
   -webkit-user-select: auto !important;
+
+  // Removes the outline from the real input control inside the container.
+  &:focus {
+    outline: none !important;
+  }
 }
 
-.selectize-input > input:focus {
-  outline: none !important;
+.selectize-input.focus {
+  border-color: @input-outline-color;
+  outline: none;
+}
+
+.selectize-input.disabled,
+.selectize-input.disabled * {
+  cursor: default !important;
+  opacity: 0.5;
 }
 
 .selectize-input::after {
@@ -229,69 +197,100 @@
   clear: left;
 }
 
-.selectize-input.dropdown-active::before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  background: white;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// INPUT CONTROL SUBCLASS TO SELECT MANY ITEMS
+// ---------------------------------------------------------------------------------------------------------------------
 
-
-.selectize-control.single .selectize-input,
-.selectize-control.single .selectize-input input {
-  cursor: pointer;
-}
-
-.selectize-control.single .selectize-input.input-active,
-.selectize-control.single .selectize-input.input-active input {
-  cursor: text;
-}
-
-
-.selectize-control.rtl.single .selectize-input:after {
-  left: 10px;
-  right: auto;
-}
-
-.selectize-control.rtl .selectize-input > input {
-  margin: 0 4px 0 -2px !important;
-}
-
-.selectize-control .selectize-input.disabled {
-  opacity: 0.5;
-  background-color: white;
-}
-
-.selectize-input.dropdown-active {
-  .border-radius(4px);
-}
-
-.selectize-input.dropdown-active::before {
-  display: none;
-}
-
-.selectize-input.focus {
-  border-color: @input-outline-color;
-  outline: 0;
-}
-
-.selectize-control.multi .selectize-input.has-items {
-  padding-left: 9px;
-  padding-right: 9px;
-}
-
+// The item itself. The item is the div and can contains an anchor or a span or another div (your choice).
 .selectize-control.multi .selectize-input > div {
-  .border-radius(3px);
+  display: inline-block;
+  line-height: 1.6;
+  margin-right: 5px; // Space between items.
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
-.form-control.selectize-control {
-  padding: 0;
-  height: auto;
-  border: none;
-  background: none;
-  .border-radius(0);
+// Padding of the control that contains the items.
+.selectize-control.multi .selectize-input.has-items {
+  padding: 0 3px 0 3px;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// REMOVE BUTTON STYLE
+// ---------------------------------------------------------------------------------------------------------------------
+.selectize-control.plugin-remove_button {
+  [data-value] {
+    position: relative;
+  }
+  [data-value] .remove {
+    display: inline-block;
+    padding: 0;
+    width: 20px;
+
+    color: @gray;
+    background-color: @gray-lighter;
+    font-size: @font-size-base;
+    font-weight: bold;
+
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+
+    border-left: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid @gray-light;
+    border-right: 1px solid @gray-light;
+    .box-sizing(border-box);
+    .border-radius(0 2px 2px 0);
+  }
+  [data-value] .remove:hover {
+    background-color: darken(@gray-lighter, 5%);
+    color: @link-color-hover;
+  }
+  [data-value].active .remove {
+    background-color: @gray-lighter;
+    color: @gray;
+  }
+  .disabled [data-value] .remove:hover {
+  }
+  .disabled [data-value] .remove {
+  }
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// WEBKIT SPECIFIC STYLES (CHROME, SAFARI, OPERA, ETC.)
+// ---------------------------------------------------------------------------------------------------------------------
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+
+  // Webkit browsers need one more padding-top pixel to align vertically the text inside.
+  .selectize-input {
+    padding-top: 1px; // It was 0.
+  }
+
+  // Because the selected item is not on the same baseline of the replaced placeholder, we need to increment the line-height.
+  .selectize-input > * {
+    line-height: 2.0;
+  }
+
+  // Two pixels because 1+1, see above.
+  .selectize-control.multi .selectize-input > div {
+    padding-top: 2px; // It was 0.
+  }
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// MOZILLA SPECIFIC STYLES (FIREFOX, ETC.)
+// ---------------------------------------------------------------------------------------------------------------------
+
+@-moz-document url-prefix() {
+
+  // In case of multiple items, the placeholder is not correctly vertically aligned, we need extra padding.
+  .selectize-control.multi .selectize-input {
+    padding-top: 1px; // It was 0.
+    padding-bottom: 1px; // It was 0.
+  }
 }
