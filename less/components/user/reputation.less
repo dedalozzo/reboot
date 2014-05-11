@@ -14,36 +14,54 @@
   .border-radius(4px);
   background-color: @gray-lighter;
   color: @gray-dark;
-  height: 58px;
+  height: 42px;
   min-width: 110px;
-  padding: 5px 5px 5px 5px;
-  display: inline-block;
   vertical-align: top;
   font-size: @font-size-base;
+  display: inline-block;
 }
 
-.reputation > div {
+.reputation table {
+  height: 100%;
+  width: 100%;
+}
+
+.reputation tr {
   text-align: center;
   line-height: 1;
 }
 
-.reputation > div:first-child {
+.reputation tr:first-child td {
+  padding-top: 5px;
+  vertical-align: top;
   font-weight: bold;
-  font-size: @font-size-large;
+  font-size: @font-size-base;
 }
 
-.reputation > div:nth-child(2) {
+.reputation tr:nth-child(2) td {
+  vertical-align: top;
   font-size: 70%;
 }
 
-.reputation > div:last-child {
-  margin-top: @gutter / 2;
+.reputation tr:last-child td {
+  padding-bottom: 5px;
+  vertical-align: bottom;
   font-weight: bold;
   font-size: @font-size-mini;
 }
 
-.reputation > div:last-child > * + * {
+.reputation .badges > * + * {
   padding-left: @gutter / 4;
+}
+
+.reputation .badges {
+  vertical-align: middle;
+}
+
+
+// Extended reputation on three lines.
+.reputation.ext {
+  height: 58px;
 }
 
 
@@ -55,22 +73,20 @@
   display: block;
 }
 
-.reputation.big > div {
-}
-
-.reputation.big > div:first-child {
+.reputation.big tr:first-child td {
   font-size: @font-size-base * 3;
 }
 
-.reputation.big > div:nth-child(2) {
+.reputation.big tr:nth-child(2) td {
   font-size: @font-size-large;
+  padding-bottom: 10px;
 }
 
-.reputation.big > div:last-child {
+.reputation.big tr:last-child td {
   margin-top: @gutter / 2;
   font-size: @font-size-largest;
 }
 
-.reputation.big > div:last-child > * + * {
-  padding-left: @gutter - 5;
+.reputation.big .badges > * + * {
+  padding-left: @gutter / 4;
 }
