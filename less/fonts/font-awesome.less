@@ -39,12 +39,32 @@
   font-style: normal;
   font-weight: normal !important;
   line-height: 1;
-  //-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-large:before {
-  vertical-align: -10%;
-  font-size: 4/3em;
+  vertical-align: middle;
+  font-size: 18px !important;
+}
+
+.icon-largest:before {
+  vertical-align: middle;
+  font-size: 30px !important;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// FIX FOR SPECIFIC ICONS
+// ---------------------------------------------------------------------------------------------------------------------
+.icon-comment.icon-large:before {
+  vertical-align: -2%;
+}
+
+.icon-flag.icon-large:before {
+  margin-left: -1px;
+}
+
+.icon-heart:before {
+  margin-left: 1px;
 }
 
 
