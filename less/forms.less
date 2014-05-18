@@ -7,17 +7,30 @@
 
 
 //----------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+//----------------------------------------------------------------------------------------------------------------------
+@input-height: 32px;
+@input-line-height: 1.3; // Used for input controls.
+
+@input-padding: 4px;
+@input-border-radius: 4px;
+
+// Colors
+@input-border-color: #ccc;
+@input-outline-color: #129FEA;
+
+
+//----------------------------------------------------------------------------------------------------------------------
 // COMMON STYLES
 //----------------------------------------------------------------------------------------------------------------------
 
 form,
 input,
 select,
-textarea,
-button {
+textarea {
   font-family: @font-family-base;
-  font-size: @font-size-large; // Don't fuckin change this!
-  line-height: @input-line-height; // Don't fuckin change this!
+  font-size: @font-size-large;
+  line-height: @input-line-height;
 }
 
 // I list all input types one by one and not just “input”, because I don’t want to address input types “file” and “range”.
@@ -35,9 +48,7 @@ input[type='text'],
 input[type='time'],
 input[type='url'],
 input[type='week'],
-//select,
 textarea,
-button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
@@ -46,7 +57,6 @@ input[type='submit'] {
   -o-background-clip: padding-box;
   -webkit-background-clip: padding;
   background-clip: padding-box;
-  height: 33px;
 }
 
 input[type='color'],
@@ -65,12 +75,13 @@ input[type='url'],
 input[type='week'],
 textarea {
   display: inline-block;
-  .box-sizing(border-box);
-  padding: 4px 4px 4px 4px; // Don't fuckin change this!
+  padding: @input-padding;
   background-color: white;
   border: 1px solid @input-border-color;
-  .border-radius(4px);
+  .border-radius(@input-border-radius);
+  .box-sizing(border-box);
   font:1em "Helvetica neue", Arial, sans-serif; // Don't fuckin change this!
+  height: @input-height;
 }
 
 input[type='color']:focus,
@@ -88,7 +99,6 @@ input[type='time']:focus,
 input[type='url']:focus,
 input[type='week']:focus,
 textarea:focus,
-button:focus,
 input[type='button']:focus,
 input[type='reset']:focus,
 input[type='submit']:focus {
@@ -141,48 +151,9 @@ textarea {
 //----------------------------------------------------------------------------------------------------------------------
 // BUTTONS
 //----------------------------------------------------------------------------------------------------------------------
-button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  vertical-align: middle;
-  padding: 4px 8px 4px 8px; // Don't fuckin change this!
-  zoom: 1;
-  white-space: nowrap;
-  text-align: center;
-  cursor: pointer;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: @font-family-base;
-  font-size: @font-size-base;
-  font-weight: normal;
-  line-height: @button-line-height !important;
-  text-shadow: white 0 1px 1px;
-  overflow: visible;
-  border: none;
-  .border-radius(2px);
-  color: @gray-dark;
-  #gradient > .vertical(lighten(@gray-light, 5%), @gray-light);
-  text-decoration: none;
-}
-
-// “Pushed in” effect for active state.
-button:hover,
-input[type='button']:hover,
-input[type='reset']:hover,
-input[type='submit']:hover {
-  #gradient > .vertical(@gray-light, darken(@gray-light, 5%));
-}
-
-// Fallback for browsers not supporting gradients (like IE 9).
-button:active,
-input[type='button']:active,
-input[type='reset']:active,
-input[type='submit']:active {
-  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
 
 
@@ -211,8 +182,7 @@ textarea[disabled] {
 }
 
 input[disabled],
-textarea[disabled],
-button[disabled] {
+textarea[disabled] {
   color: #888;
   cursor: default;
   -khtml-user-select: none;
@@ -278,6 +248,25 @@ input[type="checkbox"]:focus:invalid:focus {
     color: #888;
   }
 
+  // I really dunno why Chrome needs one more pixel height to get the desired height.
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'],
+  textarea {
+    height: @input-height + 1;
+  }
+
 }
 
 // Chrome (as of v.32/34 on OS X) needs additional room for color to display. May be able to remove this tweak as color
@@ -302,8 +291,7 @@ input[type="color"] {
 // Fix a Firefox bug to vertical align the text to middle.
 @-moz-document url-prefix() {
   input[type="button"],
-  input[type="submit"],
-  button {
+  input[type="submit"] {
     padding-bottom: 5px;
   }
 }
@@ -361,62 +349,3 @@ input[type='radio'] + label {
   display: inline-block;
   margin: 0 5px 0 0;
 }
-
-
-
-//.frm-stacked input[type="text"],
-//.frm-stacked input[type="password"],
-//.frm-stacked input[type="email"],
-//.frm-stacked input[type="url"],
-//.frm-stacked input[type="date"],
-//.frm-stacked input[type="month"],
-//.frm-stacked input[type="time"],
-//.frm-stacked input[type="datetime"],
-//.frm-stacked input[type="datetime-local"],
-//.frm-stacked input[type="week"],
-//.frm-stacked input[type="number"],
-//.frm-stacked input[type="search"],
-//.frm-stacked input[type="tel"],
-//.frm-stacked input[type="color"],
-//.frm-stacked select,
-//.frm-stacked label,
-//.frm-stacked textarea {
-//  display: block;
-//}
-//
-//// Need to separate out the :not() selector from the rest of the CSS 2.1 selectors since IE8 won't execute CSS that
-//// contains a CSS3 selector.
-//.frm-stacked input:not([type]) {
-//  display: block;
-//  margin: 0.25em 0;
-//}
-//
-//.frm-aligned input,
-//.frm-aligned textarea,
-//.frm-aligned select,
-//.frm-message-inline {
-//  display: inline-block;
-//  *display: inline;
-//  *zoom: 1;
-//  vertical-align: middle;
-//}
-//
-//.frm-aligned textarea {
-//  vertical-align: top;
-//}
-//
-//// Inline help for forms.
-//.frm-message-inline {
-//  display: inline-block;
-//  padding-left: 0.3em;
-//  color: #666;
-//  vertical-align: middle;
-//  font-size: 0.875em;
-//}
-//
-//// Block help for forms.
-//.frm-message {
-//  display: block;
-//  color: #666;
-//  font-size: 0.875em;
-//}
