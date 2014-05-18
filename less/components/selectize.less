@@ -6,6 +6,12 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------
 // EXPANDABLE CONTAINER (STYLED LIKE A TEXT AREA)
 // ---------------------------------------------------------------------------------------------------------------------
 .selectize-control {
@@ -23,7 +29,7 @@
   margin-top: 3px;
   border: 1px solid @input-border-color;
   .box-sizing(border-box);
-  .border-radius(4px);
+  .border-radius(@input-border-radius);
 }
 
 
@@ -100,8 +106,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 .selectize-dropdown .optgroup-header {
   margin-left: -5px;
-  padding-left: @gutter / 2;
-  padding-right: @gutter / 4;
+  padding-left: 10px;
+  padding-right: 5px;
   font-weight: bold;
   color: @gray-dark;
 
@@ -137,7 +143,7 @@
 
 // The container of the input control.
 .selectize-input {
-  padding: 0 4px 2px 4px; // We need padding top to be zero to align text vertically.
+  padding: 1px @input-padding 1px @input-padding;
   line-height: @input-line-height;
   display: inline-block;
   width: 100%;
@@ -145,7 +151,7 @@
   position: relative;
   z-index: 1;
   border: 1px solid @input-border-color;
-  .border-radius(4px);
+  .border-radius(@input-border-radius);
   .box-sizing(border-box);
 }
 
@@ -162,7 +168,7 @@
 
 // The input inside the container.
 .selectize-input > input {
-  height: 28px; // This is needed to get the desired 32px control's height. See above.
+  height: @input-height - @input-padding; // This is needed to get the desired 32px control's height. See above.
   padding: 0 !important;
   min-height: 0 !important;
   max-height: none !important;
@@ -265,12 +271,13 @@
 
 @media (-webkit-min-device-pixel-ratio: 0) {
 
-  // Webkit browsers need one more padding-top pixel to align vertically the text inside.
+  // Webkit browsers need one more padding-top pixel to align vertically the text inside and keep the height fixed to 32px.
   .selectize-input {
-    padding-top: 1px; // It was 0.
+    padding-bottom: 2px;
   }
 
-  // Because the selected item is not on the same baseline of the replaced placeholder, we need to increment the line-height.
+  // Because the selected item is not on the same baseline of the replaced placeholder, we need to increment the
+  // line-height.
   .selectize-input > * {
     line-height: 2.0;
   }
