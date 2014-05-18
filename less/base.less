@@ -61,12 +61,22 @@ hr {
   border-top: 1px solid @gray-lighter;
 }
 
-hr.fade {
+hr.fade-short,
+hr.fade-long {
   border: none;
   height: 1px;
-  background: -moz-linear-gradient(right, @gray 0%, @gray-light 0%, white 95%);
-  background: -webkit-linear-gradient(right, @gray 0%, @gray-light 0%, white 95%);
-  background: linear-gradient(to left, @gray 0%, @gray-light 0%, white 95%);
+}
+
+hr.fade-short {
+  background: -moz-linear-gradient(right, @gray 0%, @gray-light 0%, white 100%);
+  background: -webkit-linear-gradient(right, @gray 0%, @gray-light 0%, white 100%);
+  background: linear-gradient(to left, @gray 0%, @gray-light 0%, white 100%);
+}
+
+hr.fade-long {
+  background: -moz-linear-gradient(right, white 0%, @gray-light 35%, white 100%);
+  background: -webkit-linear-gradient(right, white 0%, @gray-light 35%, white 100%);
+  background: linear-gradient(to left, white 0%, @gray-light 35%, white 100%);
 }
 
 
