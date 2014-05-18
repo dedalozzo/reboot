@@ -1,0 +1,44 @@
+//! @file change-avatar.less
+//! @brief Link style to change the avatar.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <a class="change-avatar" href="#"><i class="icon-camera"></i>CAMBIA FOTO</a>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.change-avatar {
+  position: absolute;
+  width: 160px;
+  top: 134px;
+  left: 5px;
+  .box-sizing(border-box);
+  padding: 5px 10px;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  zoom: 1;
+}
+
+.change-avatar:hover,
+.change-avatar:focus {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  filter: none;
+}
+
+.change-avatar i {
+  padding-right: 10px;
+}
