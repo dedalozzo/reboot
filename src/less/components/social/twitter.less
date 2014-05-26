@@ -1,0 +1,30 @@
+//! @file twitter.less
+//! @brief Twitter button.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@twitter-color: #4AAFDB;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#twitter-btn {
+  background-color: @twitter-color;
+  text-shadow: 0 -1px lighten(@twitter-color, 20%);
+}
+
+#twitter-btn:hover,
+#twitter-btn:active {
+  background-color: darken(@twitter-color, 5%);
+}
+
+#twitter-btn .logo {
+  background-color: lighten(@twitter-color, 10%);
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../../../../dist/img/twitter.png');
+}

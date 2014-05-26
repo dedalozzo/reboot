@@ -1,0 +1,41 @@
+//! @file item-tools.less
+//! @brief Tools to vote and to add to star the item.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.item-tools {
+  float: left;
+  text-align: center !important;
+  font-weight: bold;
+  background-color: @gray-lighter;
+  color: @gray-dark;
+  padding: 5px 0 5px 0;
+  .border-radius(4px);
+  width: 40px;
+}
+
+.item-tools > a {
+  margin-left: 1px;
+  color: @gray;
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    text-decoration: none;
+  }
+
+  &:first-child {
+    padding-bottom: 1px;
+  }
+
+  &:last-child {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid darken(@gray-lighter, 5%);
+  }
+}

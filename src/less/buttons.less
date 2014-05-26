@@ -1,0 +1,339 @@
+//! @file buttons.less
+//! @brief Buttons' styles.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+//! @license Proprietary software
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@button-height: 32px;
+@button-small-height: 26px;
+@button-mini-height: 20px;
+@button-large-height: 40px;
+
+@button-line-height: @button-height;
+@button-mini-line-height: @button-mini-height;
+@button-small-line-height: @button-small-height;
+@button-large-line-height: @button-large-height;
+
+@button-padding-horizontal: 10px;
+@button-small-padding-horizontal: 8px;
+@button-mini-padding-horizontal: 4px;
+@button-large-padding-horizontal: 12px;
+
+@button-disabled-color: #999;
+@button-disabled-background: #f5f5f5;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Default button is gray.
+.btn {
+  display: inline-block;
+  .box-sizing(border-box); // This is necessary or min-width will never work.
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border: none; // Required for `button` and `input` elements.
+  line-height: @button-line-height; // Used to set height.
+  min-height: @button-height; // Necessary for `input` elements in Firefox and Opera because `line-height` is not working.
+  font-size: @font-family-base; // Reset button group whitespace hack.
+  font-weight: 600;
+  padding: 0 @button-padding-horizontal;
+  color: @gray-dark;
+  background-color: @gray-light;
+  zoom: 1;
+  overflow: visible;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .border-radius(2px);
+}
+
+.btn:hover,
+.btn:focus {
+  // Applies hover style also to focus state.
+  color: @gray-dark;
+  background-color: darken(@gray-light, 5%);
+
+  outline: none; // Removes default focus style.
+  text-decoration: none; // Required for `a` elements.
+}
+
+// Active.
+.btn:active,
+.btn.active {
+  background-color: darken(@gray-light, 10%);
+}
+
+// Disabled.
+.btn:disabled {
+  color: @button-disabled-color;
+  background-color: @button-disabled-background;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Anchor appears like a button.
+// ---------------------------------------------------------------------------------------------------------------------
+a.btn {
+  display: inline-block !important;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// COLOR MODIFIERS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn.blue {
+  color: white;
+  background-color: @blue;
+}
+.btn.blue:hover,
+.btn.blue:focus {
+  background-color: darken(@blue, 5%);
+}
+.btn.blue:active,
+.btn.blue.active {
+  background-color: darken(@blue, 10%);
+}
+
+.btn.orange {
+  color: white;
+  background-color: @orange;
+}
+.btn.orange:hover,
+.btn.orange:focus {
+  background-color: darken(@orange, 5%);
+}
+.btn.orange:active,
+.btn.orange.active {
+  background-color: darken(@orange, 10%);
+}
+
+.btn.red {
+  color: white;
+  background-color: @red;
+}
+.btn.red:hover,
+.btn.red:focus {
+  background-color: lighten(@red, 5%);
+}
+.btn.red:active,
+.btn.red.active {
+  background-color: darken(@red, 10%);
+}
+
+.btn.green {
+  color: white;
+  background-color: @green;
+}
+.btn.green:hover,
+.btn.green:focus {
+  background-color: darken(@green, 5%);
+}
+.btn.green:active,
+.btn.green.active {
+  background-color: darken(@green, 10%);
+}
+
+.btn.yellow {
+  color: white;
+  background-color: @yellow;
+}
+.btn.yellow:hover,
+.btn.yellow:focus {
+  background-color: darken(@yellow, 5%);
+}
+.btn.yellow:active,
+.btn.yellow.active {
+  background-color: darken(@yellow, 10%);
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SIZE MODIFIERS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn.mini {
+  min-height: @button-mini-height;
+  padding: 0 @button-mini-padding-horizontal;
+  line-height: @button-mini-line-height;
+  font-size: @font-size-mini;
+}
+
+.btn.small {
+  min-height: @button-small-height;
+  padding: 0 @button-small-padding-horizontal;
+  line-height: @button-small-line-height;
+  font-size: @font-size-small;
+}
+
+.btn.large {
+  min-height: @button-large-height;
+  padding: 0 @button-large-padding-horizontal;
+  line-height: @button-large-line-height;
+  font-size: @font-size-large;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// A BUTTON THAT APPEARS LIKE A LINK
+// ---------------------------------------------------------------------------------------------------------------------
+.btn-link,
+.btn-link:hover,
+.btn-link:active,
+.btn-link.active,
+.btn-link:disabled {
+  border-color: transparent;
+  background: none;
+}
+
+.btn-link {
+  color: @link-color;
+}
+
+.btn-link:hover,
+.btn-link:active,
+.btn-link.active {
+  color: @link-color-hover;
+  text-decoration: underline;
+}
+
+.btn-link:disabled {
+  color: @button-disabled-color;
+}
+
+.btn-link:focus {
+  outline: 2px solid;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// A BUTTON THAT APPEARS LIKE AN ICON
+// ---------------------------------------------------------------------------------------------------------------------
+.btn-icon {
+  color: @gray !important;
+  width: 34px !important;
+  background-color: transparent !important;
+  padding: 0;
+}
+
+.btn-icon:hover {
+  color: @gray;
+  background-color: lighten(@gray, 30%);
+}
+
+.btn-icon:active,
+.btn-icon.active {
+  color: lighten(@gray, 10%);
+}
+
+.btn-icon:focus {
+  outline: 2px solid;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// COLORED ICONS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn-icon.blue:hover {
+  color: @blue !important;
+  background-color: lighten(@blue, 35%) !important;
+}
+.btn-icon.blue:focus,
+.btn-icon.blue:active,
+.btn-icon.blue.active {
+  color: @blue !important;
+}
+
+.btn-icon.orange:hover {
+  color: @orange !important;
+  background-color: lighten(@orange, 35%) !important;
+}
+.btn-icon.orange:focus,
+.btn-icon.orange:active,
+.btn-icon.orange.active {
+  color: @orange !important;
+}
+
+.btn-icon.red:hover {
+  color: @red !important;
+  background-color: lighten(@red, 35%) !important;
+}
+.btn-icon.red:focus,
+.btn-icon.red:active,
+.btn-icon.red.active {
+  color: @red !important;
+}
+
+.btn-icon.green:hover {
+  color: @green !important;
+  background-color: lighten(@green, 35%) !important;
+}
+.btn-icon.green:focus,
+.btn-icon.green:active,
+.btn-icon.green.active {
+  color: @green !important;
+}
+
+.btn-icon.yellow:hover {
+  color: @yellow !important;
+  background-color: lighten(@yellow, 35%) !important;
+}
+.btn-icon.yellow:focus,
+.btn-icon.yellow:active,
+.btn-icon.yellow.active {
+  color: @yellow !important;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// A GROUP OF BUTTONS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn-group {
+  display: table-row;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-group > .btn {
+  display: table-cell;
+}
+
+.btn-group > .btn:first-child {
+  .border-radius(2px 0 0 2px) !important;
+}
+
+.btn-group > .btn:last-child {
+  .border-radius(0 2px 2px 0) !important;
+}
+
+.btn-group > .btn + .btn {
+  border-left: 1px solid white;
+  .border-radius(0);
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// A BUTTON WITH A DROPDOWN
+// ---------------------------------------------------------------------------------------------------------------------
+
+/*
+ * 1. Behave like buttons.
+ * 2. Create position context for dropdowns.
+ */
+
+.btn-dropdown {
+  /* 1 */
+  display: inline-block;
+  vertical-align: middle;
+  /* 2 */
+  position: relative;
+}

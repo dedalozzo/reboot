@@ -1,0 +1,29 @@
+//! @file .item-actors.less
+//! @brief Information about who liked the item.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.item-actors {
+  text-align: left;
+  margin-top: -@gutter + 5px;
+  margin-bottom: @gutter;
+  font-size: 0; // Trick to fix a Firefox bug.
+  margin-left: -1px;
+  float: left;
+}
+
+.list.item-actors > li {
+  vertical-align: top;
+  padding-right: 4px !important;
+  padding-bottom: 6px !important;
+  display: inline-block !important;
+}
+
+.list.item-actors > li:last-child {
+  padding-right: 0 !important;
+}

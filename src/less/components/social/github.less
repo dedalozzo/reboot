@@ -1,0 +1,30 @@
+//! @file github.less
+//! @brief GitHub button.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@github-color: #797979;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#github-btn {
+  background-color: @github-color;
+  text-shadow: 0 -1px lighten(@github-color, 20%);
+}
+
+#github-btn:hover,
+#github-btn:active {
+  background-color: darken(@github-color, 5%);
+}
+
+#github-btn .logo {
+  background-color: lighten(@github-color, 10%);
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../../../../dist/img/github.png');
+}

@@ -1,0 +1,142 @@
+//! @file dropdown.less
+//! @brief jQuery Bootstrap-style Dropdowns.
+//! @see http://labs.abeautifulsite.net/jquery-dropdown/
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@dropdown-tip-distance: 10px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown {
+  position: absolute;
+  z-index: @dropdown-zindex;
+  display: none;
+}
+
+.dropdown .dropdown-menu,
+.dropdown .dropdown-panel {
+  min-width: 160px;
+  max-width: 360px;
+  list-style: none;
+  background: #FFF;
+  border: 1px solid @gray-light;
+  .border-radius(2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  overflow: visible;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.dropdown .dropdown-panel {
+  padding: 10px;
+}
+
+.dropdown.dropdown-scroll .dropdown-menu,
+.dropdown.dropdown-scroll .dropdown-panel {
+  max-height: 358px;
+  overflow: auto;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN TIP (THE ARROW ABOVE THE DROPDOWN MENU)
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown.dropdown-tip {
+  margin-top: 8px;
+}
+
+.dropdown.dropdown-tip:before {
+  position: absolute;
+  top: -6px;
+  left: @dropdown-tip-distance - 1;
+  content: '';
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid @gray-light;
+  display: inline-block;
+}
+
+.dropdown.dropdown-tip:after {
+  position: absolute;
+  top: -5px;
+  left: @dropdown-tip-distance + 1;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #FFF;
+  display: inline-block;
+}
+
+.dropdown.dropdown-tip.dropdown-anchor-right:before {
+  left: auto;
+  right: @dropdown-tip-distance;
+}
+
+.dropdown.dropdown-tip.dropdown-anchor-right:after {
+  left: auto;
+  right: @dropdown-tip-distance + 1;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown .dropdown-menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 18px;
+}
+
+.dropdown .dropdown-menu li > a,
+.dropdown .dropdown-menu li > button,
+.dropdown .dropdown-menu label {
+  border: none;
+  .border-radius(0);
+  background-color: transparent;
+  display: block;
+  color: @gray-dark;
+  text-align: left;
+  text-decoration: none;
+  line-height: 18px;
+  padding: 3px 12px 3px 8px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dropdown .dropdown-menu li > a:hover,
+.dropdown .dropdown-menu li > button:hover,
+.dropdown .dropdown-menu label:hover {
+  background-color: @link-color-hover;
+  color: #FFF;
+  cursor: pointer;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU WITH ICON
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown .dropdown-menu li [class^="icon-"]:before {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  margin-right: 5px;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// DROPDOWN MENU DIVIDER
+// ---------------------------------------------------------------------------------------------------------------------
+.dropdown .dropdown-menu .dropdown-divider {
+  font-size: 1px;
+  border-top: solid 1px @gray-lighter;
+  padding: 0;
+  margin: 5px 0;
+}
