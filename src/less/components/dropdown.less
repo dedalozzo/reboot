@@ -66,7 +66,7 @@
 .dropdown.dropdown-tip:after {
   position: absolute;
   top: -5px;
-  left: @dropdown-tip-distance + 1;
+  left: @dropdown-tip-distance;
   content: '';
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -98,6 +98,7 @@
 .dropdown .dropdown-menu li > a,
 .dropdown .dropdown-menu li > button,
 .dropdown .dropdown-menu label {
+  .box-sizing(border-box);
   border: none;
   .border-radius(0);
   background-color: transparent;
