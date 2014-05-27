@@ -4,28 +4,6 @@
   padding: 0;
 }
 
-.like {
-
-}
-
-.btn-like {
-  color: @gray !important;
-  width: 34px !important;
-  background-color: transparent !important;
-  padding: 0;
-}
-.btn-like:hover,
-.btn-like:focus {
-  color: @red !important;
-  background-color: transparent;
-}
-.btn-like:active,
-.btn-like.active {
-  color: @red;
-}
-
-
-
 
 .pippo {
 /*  position: absolute;
@@ -42,155 +20,7 @@
 }
 
 
-
-
-
-//! @file topbar.less
-//! @brief Navigation bar.
-//! @details
-//! @author Filippo F. Fadda
-//! @copyright 3F s.a.s. di Filippo Fadda
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// SETTINGS
-// ---------------------------------------------------------------------------------------------------------------------
-@topbar-color: black;
-@topbar-background-color: lighten(@gray-lighter, 7%);
-@topbar-border-color: @gray-dark;
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// USAGE
-// ---------------------------------------------------------------------------------------------------------------------
 /*
-  <section class="topbar">
-    <nav>
-      <div class="pull-left">
-        <a class="topbar-brand-logo" href="{{ baseUri }}"></a>
-        <a class="topbar-brand-name" href="//{{ domainName }}">PROGRAMMAZIONE.IT</a>
-        <form class="topbar-search" method="get" action="search.php" autocomplete="off" name="form_search">
-          <input type="search" placeholder="Cerca" autocomplete="on" id="keyword" name="keyword">
-          <i class="icon-search"></i>
-        </form>
-        <a href="{{ baseUri }}/tour/">Tour</a>
-        <a href="{{ baseUri }}/aiuto/">Aiuto</a>
-      </div>
-      <div class="pull-right">
-        <span><i class="icon-inbox"></i>&nbsp;<i class="icon-caret-down"></i></span>
-        <span><i class="icon-plus"></i>&nbsp;<i class="icon-caret-down"></i></span>
-      {% if user is defined %}
-        {% set userUri = '//utenti.'~serverName~'/'~user.id %}
-        <a href="{{ userUri }}"><img class="gravatar" src="{{ user.getGravatar(user.email) }}&s=20">&nbsp;{{ user.displayName }}</a>
-      {% else %}
-        <a href="{{ baseUri }}/accedi/">Accedi</a>
-        <a href="{{ baseUri }}/registrati/">Registrati</a>
-      {% endif %}
-      <!-- <a href="#" data-toggle="modal" data-target="#myModal">Registrati</a> -->
-      <!-- Button trigger modal -->
-        <span class="fixsize"></span>
-      </div>
-    </nav>
-  </section>
-*/
-
-/*
-// ---------------------------------------------------------------------------------------------------------------------
-// CSS
-// ---------------------------------------------------------------------------------------------------------------------
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: visible;
-  width: 100%;
-  text-align: left;
-  //border-top: 1px solid @topbar-border-color;
-  //border-bottom: 1px solid @topbar-border-color;
-  #gradient > .vertical(@topbar-background-color, darken(@topbar-background-color, 5%));
-  z-index: @topbar-zindex;
-}
-
-.topbar > ul {
-  width: @total-width;
-  margin-right: auto;
-  margin-left: auto;
-  //background-color: yellow;
-}
-
-.topbar > ul > li {
-  padding: 4px 0 4px 0;
-}
-
-.topbar > ul > li > * {
-  display: inline-block;
-  vertical-align: middle;
-  color: @gray;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.topbar > nav > div > a {
-  &:focus,
-  &:hover {
-    color: @link-color-hover;
-    text-decoration: none;
-  }
-}
-
-.topbar > nav > div:last-child > a:last-child,
-.topbar > nav > div:last-child > span:last-child {
-  margin-left: 0;
-}
-
-
-.fixsize {
-  height: 28px;
-}
-
-
-.topbar-brand-logo {
-  height: 28px;
-  width: 28px;
-
-  background-color: @gray;
-  border: 1px solid @link-color;
-
-  &:focus,
-  &:hover {
-    border-color: @link-color-hover;
-  }
-}
-
-.topbar-brand-name {
-  font-family: SoftPressSCRegular;
-  font-size: 29px;
-  font-weight: normal !important;
-  line-height: 1;
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// WEBKIT SPECIFIC STYLES (CHROME, SAFARI, OPERA, ETC.)
-// ---------------------------------------------------------------------------------------------------------------------
-
-@media (-webkit-min-device-pixel-ratio: 0) {
-
-  .topbar-brand-logo {
-    margin-top: 1px;
-  }
-
-  .topbar-brand-name {
-    margin-top: 2px;
-    //padding-top: 3px;
-  }
-}
-
-
-.topbar-brand-logo,
-.topbar-brand-name {
-  margin-left: 0 !important;
-}
-
 .topbar-search {
   color: @gray-dark !important;
 }
@@ -215,4 +45,5 @@
   &:last-child {
     left: -7px;
   }
-}*/
+}
+*/
