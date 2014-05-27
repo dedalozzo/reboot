@@ -118,6 +118,21 @@ blockquote p {
 }
 
 
+// blink
+blink {
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite
+}
+
+@-webkit-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@keyframes blink {
+  67% { opacity: 0 }
+}
+
+
 // ---------------------------------------------------------------------------------------------------------------------
 // MIXINS
 // ---------------------------------------------------------------------------------------------------------------------
