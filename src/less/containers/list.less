@@ -98,3 +98,12 @@
 .list.mbottom10 > li:last-child {
   margin-bottom: 0;
 }
+
+// Sets a margin only below the even children, but not on the last element.
+.list.even > li:nth-child(even) {
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+.list.even > li:last-child {
+  margin-bottom: 0;
+}
