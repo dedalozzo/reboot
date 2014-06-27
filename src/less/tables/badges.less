@@ -1,0 +1,50 @@
+//! @file badges.less
+//! @brief A table to display badges.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.badges thead {
+  border-bottom: 1px solid @gray-lighter;
+}
+
+.badges tr th {
+  padding-bottom: 10px;
+}
+
+.badges tr td {
+  padding: 10px 0;
+  border-bottom: 1px solid @gray-lighter;
+  vertical-align: top;
+}
+
+.badges tr td:first-child {
+  padding-left: 0;
+}
+
+.badges tr th:nth-child(2),
+.badges tr td:nth-child(2) {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.badges tr td:nth-child(2) {
+  vertical-align: middle;
+  text-align: justify;
+}
+
+.badges tr th:nth-child(3),
+.badges tr td:nth-child(3) {
+  font-weight: bold;
+  text-align: center;
+}
+
+.badges tr td:last-child {
+  color: @green;
+  padding-left: 5px;
+  text-align: right;
+}
