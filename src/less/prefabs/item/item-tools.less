@@ -25,17 +25,26 @@
 
   &:hover,
   &:focus {
-    color: @link-color-hover;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &:first-child {
     padding-bottom: 1px;
+
+    &:hover,
+    &.active {
+      color: @red;
+    }
   }
 
   &:last-child {
     margin-top: 5px;
     padding-top: 5px;
     border-top: 1px solid darken(@gray-lighter, 5%);
+
+    &:hover {
+      color: @link-color-hover;
+    }
   }
 }
