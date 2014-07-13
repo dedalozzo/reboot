@@ -1,0 +1,71 @@
+//! @file prompt.less
+//! @brief UNIX styled prompt.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+    <section class="prompt gutter">
+      <p><span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$ {{ method }} {{ url }}</p>
+      <p><span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$ Errore 404 (Pagina non trovata)</p>
+      <p><span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$ <blink>&#95</blink></p>
+    </section>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.prompt {
+  width: 970px;
+  height: 600px;
+
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  padding: 7px;
+
+  border: 1px solid black;
+  .border-radius(2px);
+  .box-sizing(border-box);
+
+  &:focus,
+  &:hover {
+    color: white;
+    border-color: @link-color-hover;
+  }
+}
+
+.prompt p {
+  line-height: 70%;
+}
+
+.at {
+  color: lightgreen;
+}
+
+.tilde {
+  color: cyan;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// WEBKIT SPECIFIC STYLES (CHROME, SAFARI, OPERA, ETC.)
+// ---------------------------------------------------------------------------------------------------------------------
+@media (-webkit-min-device-pixel-ratio: 0) {
+
+  .prompt {
+    width: 971px;
+    height: 601px;
+  }
+
+}
