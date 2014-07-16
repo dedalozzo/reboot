@@ -21,32 +21,30 @@
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
 .prompt {
-  width: 970px;
-  height: 600px;
+  float: right;
+  width: 345px;
+  height: 335px;
 
   color: white;
   background-color: black;
   opacity: 0.8;
 
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1;
   text-align: left;
-  padding: 7px;
 
-  border: 1px solid black;
+  margin: 10px 15px 0 20px;
+  padding: 4px;
+
+  border: 1px solid @gray-light;
   .border-radius(2px);
   .box-sizing(border-box);
-
-  &:focus,
-  &:hover {
-    color: white;
-    border-color: @link-color-hover;
-  }
 }
 
 .prompt p {
-  line-height: 70%;
+  line-height: 1.3;
+  word-wrap: break-word;
 }
 
 .at {
@@ -55,17 +53,4 @@
 
 .tilde {
   color: cyan;
-}
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// WEBKIT SPECIFIC STYLES (CHROME, SAFARI, OPERA, ETC.)
-// ---------------------------------------------------------------------------------------------------------------------
-@media (-webkit-min-device-pixel-ratio: 0) {
-
-  .prompt {
-    width: 971px;
-    height: 601px;
-  }
-
 }
