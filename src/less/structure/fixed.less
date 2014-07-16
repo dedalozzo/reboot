@@ -1,0 +1,33 @@
+//! @file fixed.less
+//! @brief The fixed container.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#fixed {
+  width: @total-width;
+  //height: 100%;
+  background-color: transparent;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  text-align: left;
+}
+
+#fixed #content {
+  .border-radius(0 2px 2px 2px);
+}
+
+#fixed > ul {
+  margin-top: @gutter;
+  .border-radius(2px 2px 0 0);
+  background-color: @gray-lighter;
+  padding: 10px;
+}
+
+#fixed > ul > li:last-child > a {
+  margin-right: 0 !important;
+}
