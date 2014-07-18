@@ -16,6 +16,7 @@
   padding: 5px 0 5px 0;
   .border-radius(4px);
   width: 40px;
+  .user-select(none);
 }
 
 .item-tools > a {
@@ -32,19 +33,21 @@
   &:first-child {
     padding-bottom: 1px;
 
-    &:hover,
     &.active {
       color: @red;
     }
   }
 
-  &:last-child {
-    margin-top: 5px;
-    padding-top: 5px;
+  &:last-of-type {
+    margin-top: 3px;
+    padding-top: 4px;
     border-top: 1px solid darken(@gray-lighter, 5%);
 
     &:hover {
       color: @link-color-hover;
     }
   }
+}
+
+.item-tools > span {
 }
