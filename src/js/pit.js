@@ -30,12 +30,15 @@ $(document).ready(
                 votesCount++;
                 like.addClass('active');
                 break;
-              case -1:
+              case 2:
                 votesCount--;
                 like.removeClass('active');
                 break;
               case 0:
-                // trigger an error
+                // Unchanged
+                break;
+              case -1:
+                // No user logged in
                 break;
             }
 
