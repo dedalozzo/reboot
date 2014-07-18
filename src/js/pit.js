@@ -6,6 +6,8 @@
 
 $(document).ready(
   function() {
+
+    // Like
     $("article > div.item-tools > a:first-child").click(
       function() {
         event.preventDefault();
@@ -13,9 +15,34 @@ $(document).ready(
         var postId = $(this).parents("article").attr("id");
         var like = $(this);
 
-        $.post('http://ajax.programmazione.me/vota/', {id: postId}, function(data) {
-          like.addClass('active');
+        $.ajax({
+          type: "POST",
+          url: 'http://ajax.programmazione.me/like/',
+          xhrFields: { withCredentials: true },
+          dataType: "json",
+          data: { id: postId },
+          success: function(data) {
+            span = like.next();
+            votesCount = Number(span.text());
+
+            switch (data) {
+              case 1:
+                votesCount++;
+                like.addClass('active');
+                break;
+              case -1:
+                votesCount--;
+                like.removeClass('active');
+                break;
+              case 0:
+                // trigger an error
+                break;
+            }
+
+            span.text(votesCount);
+          }
         });
+
       }
     );
   }
