@@ -45,13 +45,24 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // SUBCLASSES
 // ---------------------------------------------------------------------------------------------------------------------
+.tag.none {
+  background-color: @gray-darker;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: darken(@gray-darker, 10%);
+  }
+}
+
 .tag.question {
   background-color: red;
   color: white;
 
   &:hover,
   &:focus {
-    color: @link-color-hover;
+    color: white;
     background-color: darken(red, 10%);
   }
 }
