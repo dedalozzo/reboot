@@ -216,21 +216,27 @@ a.btn {
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// THE LIKE BUTTON
+// SPECIAL BUTTONS
 // ---------------------------------------------------------------------------------------------------------------------
-.btn-like {
+.btn-like,
+.btn-star {
   color: @gray !important;
   width: 34px !important;
   background-color: transparent !important;
   padding: 0;
 }
-.btn-like:hover {
-  color: @red !important;
+
+.btn-like:hover,
+.btn-star:hover {
   background-color: transparent;
 }
-.btn-like:active,
-.btn-like.active {
-  color: @red;
+
+.btn-like.active{
+  color: @red !important;
+}
+
+.btn-star.active {
+  color: @yellow !important;
 }
 
 
@@ -306,6 +312,7 @@ a.btn {
 .btn-icon.yellow.active {
   color: @yellow !important;
 }
+
 
 
 // ---------------------------------------------------------------------------------------------------------------------
