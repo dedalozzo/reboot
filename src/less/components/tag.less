@@ -45,29 +45,29 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // SUBCLASSES
 // ---------------------------------------------------------------------------------------------------------------------
-.tag.index {
-  background-color: @gray-darker;
-  color: white;
+.tag.alt {
+  background-color: lightgray;
+  color: @gray-dark;
 
   &:hover,
   &:focus {
-    color: white;
-    background-color: darken(@gray-darker, 10%);
-  }
-}
-
-.tag.question {
-  background-color: red;
-  color: white;
-
-  &:hover,
-  &:focus {
-    color: white;
-    background-color: darken(red, 10%);
+    color: @gray-dark;
+    background-color: darken(lightgray, 10%);
   }
 }
 
 .tag.link {
+  background-color: skyblue;
+  color: @gray-dark;
+
+  &:hover,
+  &:focus {
+    color: @gray-dark;
+    background-color: darken(skyblue, 10%);
+  }
+}
+
+.tag.question {
   background-color: pink;
   color: @gray-dark;
 
@@ -79,23 +79,23 @@
 }
 
 .tag.article {
-  background-color: #4CAE4C;
-  color: white;
+  background-color: #FFD700;
+  color: @gray-dark;
 
   &:hover,
   &:focus {
-    color: white;
-    background-color: darken(#4CAE4C, 10%);
+    color: @gray-dark;
+    background-color: darken(#FFD700, 10%);
   }
 }
 
 .tag.book {
-  background-color: saddlebrown;
-  color: white;
+  background-color: #FFA770;
+  color: @gray-dark;
 
   &:hover,
   &:focus {
-    color: white;
-    background-color: darken(saddlebrown, 10%);
+    color: @gray-dark;
+    background-color: darken(#FFA770, 10%);
   }
 }
