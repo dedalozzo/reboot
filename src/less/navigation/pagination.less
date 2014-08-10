@@ -1,0 +1,29 @@
+//! @file pagination.less
+//! @brief Pagination.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <div id="pagination" class="pull-right gutter"><a href="#">PAGINA SEGUENTE <i class="icon-forward"></i></a></div>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+#pagination > a {
+  padding: 4px 6px;
+  color: @gray;
+  background-color: @gray-lighter;
+  .border-radius(2px);
+
+  &:hover {
+    color: @link-color-hover;
+    text-decoration: none;
+  }
+}
