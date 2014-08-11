@@ -35,6 +35,12 @@
   }
 }
 
+.tag > i.no-text {
+  text-align: center;
+  display: inline-block;
+  min-width: 12px;
+}
+
 // The popularity of a tag.
 .popularity {
   color: @gray;
@@ -53,6 +59,48 @@
   &:focus {
     color: @gray-dark;
     background-color: darken(lightgray, 10%);
+  }
+}
+
+.tag.facebook {
+  background-color: lightgray;
+  color: #3C5595;
+
+  &:hover,
+  &:focus {
+    color: #3C5595;
+    background-color: darken(lightgray, 10%);
+
+    border-bottom: 1px solid #3C5595;
+    border-right: 1px solid #3C5595;
+  }
+}
+
+.tag.twitter {
+  background-color: lightgray;
+  color: #4AAFDB;
+
+  &:hover,
+  &:focus {
+    color: #4AAFDB;
+    background-color: darken(lightgray, 10%);
+
+    border-bottom: 1px solid #4AAFDB;
+    border-right: 1px solid #4AAFDB;
+  }
+}
+
+.tag.google {
+  background-color: lightgray;
+  color: #D84D3A;
+
+  &:hover,
+  &:focus {
+    color: #D84D3A;
+    background-color: darken(lightgray, 10%);
+
+    border-bottom: 1px solid #D84D3A;
+    border-right: 1px solid #D84D3A;
   }
 }
 
