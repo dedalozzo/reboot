@@ -81,6 +81,17 @@
 .topbar > ul > li  {
 }
 
+.topbar > ul > li > a.link {
+  margin-left: 10px;
+  color: @gray;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+  }
+}
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // BRAND'S NAME AND LOGO
@@ -120,6 +131,38 @@
   font-weight: normal !important;
   line-height: 29px;
   color: @gray;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SEARCH INPUT
+// ---------------------------------------------------------------------------------------------------------------------
+
+.topbar-search {
+  color: @gray-dark !important;
+}
+
+.topbar-search + a {
+  margin-left: 10px !important;
+}
+
+.topbar-search input {
+  margin-right: -17px;
+  padding-right: 23px;
+  font-weight: normal;
+  height: 29px;
+  width: 300px;
+  .border-radius(4px);
+  vertical-align: middle;
+}
+
+.topbar-search > [class^="icon-"] {
+  position: relative;
+  vertical-align: middle;
+
+  &:last-child {
+    left: -7px;
+  }
 }
 
 
