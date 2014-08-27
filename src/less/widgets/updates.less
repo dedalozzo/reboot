@@ -28,7 +28,6 @@
 
 #updates .items > li {
   text-align: left !important;
-  padding: 10px;
   border-left: @box-border-width solid white;
   height: auto;
   color: @gray;
@@ -41,6 +40,14 @@
 }
 
 #updates .items > li > a {
+  display: block;
+
+  margin: 0;
+  padding: 10px;
+
+  width: 100%;
+  height: 100%;
+
   color: @link-color;
   font-weight: bold;
 
@@ -53,6 +60,7 @@
 
 #updates .items > li > a > div:first-child {
   float: right;
+  margin-right: 20px;
 }
 
 #updates .items > li > a > div {
