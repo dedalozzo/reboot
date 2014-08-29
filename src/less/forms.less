@@ -13,7 +13,7 @@
 @input-line-height: 1.3; // Used for input controls.
 
 @input-padding: 4px;
-@input-border-radius: 4px;
+@input-border-radius: 2px;
 
 // Colors
 @input-border-color: #ccc;
@@ -31,6 +31,7 @@ textarea {
   font-family: @font-family-base;
   font-size: @font-size-large;
   line-height: @input-line-height;
+  width: 100%;
 }
 
 // I list all input types one by one and not just “input”, because I don’t want to address input types “file” and “range”.
@@ -80,7 +81,7 @@ textarea {
   border: 1px solid @input-border-color;
   .border-radius(@input-border-radius);
   .box-sizing(border-box);
-  font:1em "Helvetica neue", Arial, sans-serif; // Don't fuckin change this!
+  font: 1em "Helvetica neue", Arial, sans-serif; // Don't fuckin change this!
   height: @input-height;
 }
 
@@ -333,8 +334,7 @@ legend {
 
 label {
   display: block;
-  font-weight: bold;
-  color: @gray-darker;
+  color: @red;
 }
 
 input + label {
