@@ -67,10 +67,10 @@ function star() {
 
           switch (data) {
             case 1:
-              $("button.btn-star").addClass('active');
+              star.addClass('active');
               break;
             case 2:
-              $("button.btn-star").removeClass('active');
+              star.removeClass('active');
               break;
             case -1:
               // No user logged in
