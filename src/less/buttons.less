@@ -165,21 +165,21 @@ a.btn {
   min-height: @button-mini-height;
   padding: 0 @button-mini-padding-horizontal;
   line-height: @button-mini-line-height;
-  font-size: @font-size-mini;
+  font-size: @font-size-mini !important;
 }
 
 .btn.small {
   min-height: @button-small-height;
   padding: 0 @button-small-padding-horizontal;
   line-height: @button-small-line-height;
-  font-size: @font-size-small;
+  font-size: @font-size-small !important;
 }
 
 .btn.large {
   min-height: @button-large-height;
   padding: 0 @button-large-padding-horizontal;
   line-height: @button-large-line-height;
-  font-size: @font-size-large;
+  font-size: @font-size-large !important;
 }
 
 
@@ -323,6 +323,17 @@ a.btn {
   color: @yellow !important;
 }
 
+
+// ---------------------------------------------------------------------------------------------------------------------
+// A LIST OF BUTTONS
+// ---------------------------------------------------------------------------------------------------------------------
+.btn-list > li {
+  padding-left: @gutter / 2;
+}
+
+.btn-list > li:last-child {
+  padding-right: 0
+}
 
 
 // ---------------------------------------------------------------------------------------------------------------------
