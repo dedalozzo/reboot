@@ -102,7 +102,7 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// GROUP OF MENU ITEMS (USED WHEN YOU WANT GROUP ALL EUROPE NATIONS FOR EXAMPLE)
+// GROUP OF MENU ITEMS (USED WHEN YOU WANT GROUP ALL EUROPEAN NATIONS FOR EXAMPLE)
 // ---------------------------------------------------------------------------------------------------------------------
 .selectize-dropdown .optgroup-header {
   margin-left: -5px;
@@ -203,6 +203,7 @@
   clear: left;
 }
 
+
 // ---------------------------------------------------------------------------------------------------------------------
 // INPUT CONTROL SUBCLASS TO SELECT MANY ITEMS
 // ---------------------------------------------------------------------------------------------------------------------
@@ -271,7 +272,8 @@
 
   // Webkit browsers need one more padding-top pixel to align vertically the text inside and keep the height fixed to 32px.
   .selectize-input {
-    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-bottom: 1px;
   }
 
   // Because the selected item is not on the same baseline of the replaced placeholder, we need to increment the
@@ -282,7 +284,8 @@
 
   // Two pixels because 1+1, see above.
   .selectize-control.multi .selectize-input > div {
-    padding-top: 2px; // It was 0.
+    padding-top: 1px; // It was 0.
+    padding-bottom: 2px;
   }
 }
 
