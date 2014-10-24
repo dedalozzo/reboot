@@ -1,0 +1,39 @@
+//! @file post-it.less
+//! @brief A simple Post-it.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <ul class="list vertical post-it">
+    <li class="title">Post-it Title</li>
+    <li>Hello</li>
+    <li>World</li>
+  </ul>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.post-it {
+  margin-bottom: @gutter;
+  padding: 5px 10px 5px 10px;
+  text-align: left;
+  .box-sizing(border-box);
+  .border-radius(2px);
+  list-style: disc;
+  background-color: #FFFFA5;
+}
+
+.post-it > li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.post-it > li:first-child {
+  padding: 0;
+}
