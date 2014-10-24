@@ -105,6 +105,14 @@
   margin-bottom: 0;
 }
 
+// Sets the bottom margin to 15px, but not on the last element. This style is useful in a vertical list.
+.list.mbottom15 > li {
+  margin-bottom: 15px;
+}
+.list.mbottom15 > li:last-child {
+  margin-bottom: 0;
+}
+
 // Sets a margin only below the even children, but not on the last element.
 .list.even > li:nth-child(even) {
   margin-top: 3px;
