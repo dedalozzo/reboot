@@ -145,6 +145,7 @@
 .selectize-input {
   padding: 1px @input-padding 1px @input-padding;
   line-height: @input-line-height;
+  //line-height: @input-height / 2;
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -232,7 +233,7 @@
   }
   [data-value] .remove {
     display: inline-block;
-    padding: 0;
+    padding-bottom: 0;
     width: 20px;
 
     color: @gray;
@@ -274,12 +275,6 @@
   .selectize-input {
     padding-top: 2px;
     padding-bottom: 1px;
-  }
-
-  // Because the selected item is not on the same baseline of the replaced placeholder, we need to increment the
-  // line-height.
-  .selectize-input > * {
-    line-height: 2.0;
   }
 
   // Two pixels because 1+1, see above.
