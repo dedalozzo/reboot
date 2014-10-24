@@ -11,10 +11,15 @@
 
 // 300 (medium rectangle) + gutter
 @column-right-width: 300 + @gutter;
+@column-right-reduce: 50;
 
 .column-right {
   float: right;
   width: @column-right-width;
   padding-left: @gutter;
   .box-sizing(border-box);
+}
+
+.column-right.compressed {
+  width: @column-right-width - @column-right-reduce;
 }
