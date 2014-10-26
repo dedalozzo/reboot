@@ -55,7 +55,7 @@ function star() {
       event.preventDefault();
 
       var postId = $("article").attr("id");
-      var star = $(this);
+      //var star = $(this);
 
       $.ajax({
         type: "POST",
@@ -67,10 +67,10 @@ function star() {
 
           switch (data) {
             case 1:
-              star.addClass('active');
+              $("button.btn-star").addClass('active');
               break;
             case 2:
-              star.removeClass('active');
+              $("button.btn-star").removeClass('active');
               break;
             case -1:
               // No user logged in
