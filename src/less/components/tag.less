@@ -37,7 +37,20 @@
   }
 }
 
-.tag > i.no-text {
+// A tag that doesn't change on hover.
+.tag.hoverless {
+  &:hover,
+  &:focus {
+    color: @link-color;
+    background-color: @gray-lighter;
+
+    border-bottom: 1px solid @gray-light;
+    border-right: 1px solid @gray-light;
+  }
+}
+
+// A nameless tag.
+.tag > i.nameless {
   text-align: center;
   display: inline-block;
   min-width: 13px;
@@ -46,7 +59,15 @@
 // The popularity of a tag.
 .popularity {
   color: @gray;
-  vertical-align: bottom;
+  vertical-align: middle;
+  border-top: 1px solid transparent;
+}
+
+// The tag's excerpt.
+.excerpt {
+  padding-top: 2px;
+  font-size: @font-size-mini !important;
+  color: @gray-dark;
 }
 
 
