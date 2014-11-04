@@ -334,17 +334,27 @@ legend {
 //----------------------------------------------------------------------------------------------------------------------
 
 label {
-  display: block;
+  display: inline-block;
   white-space: normal !important;
-  color: @red;
 }
 
 input + label {
-  margin-top: 5px;
 }
 
 input[type='checkbox'] + label,
 input[type='radio'] + label {
   display: inline-block;
   margin: 0 5px 0 0;
+}
+
+
+//----------------------------------------------------------------------------------------------------------------------
+// AN ERROR MESSAGE
+//----------------------------------------------------------------------------------------------------------------------
+
+.error {
+  display: block;
+  white-space: normal !important;
+  color: @red;
+  margin-top: 5px;
 }
