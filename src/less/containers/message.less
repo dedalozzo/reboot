@@ -1,0 +1,41 @@
+//! @file message.less
+//! @brief A status message.
+//! @details
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// USAGE
+// ---------------------------------------------------------------------------------------------------------------------
+/*
+  <div class="message gutter">
+    <p><i class="icon-trash"></i> Article <b>deleted</b> by <a href="#"><img class="gravatar" src="&s=16" /></a> <b><a href="#">dedalo</a></b>.</p>
+    <p>Message body.</p>
+  </div>
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.message {
+  padding: 6px 10px 6px 10px;
+  background-color: #FFFD5D;
+  border: 1px solid @gray-lighter;
+  .border-radius(2px);
+  .box-sizing(boder-box);
+}
+
+.message > p {
+  margin: 0;
+
+  &:first-child {
+    margin-bottom: 3px;
+    font-size: @font-size-larger;
+  }
+
+  > i {
+    color: @gray;
+  }
+}
