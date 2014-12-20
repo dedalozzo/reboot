@@ -24,20 +24,19 @@ function like() {
           votesCount = Number(score.text());
 
           switch (data) {
-            case 1:
+            case 1: // Registered
               votesCount++;
               like.addClass('active');
               break;
-            case 2:
+            case 2: // Deleted
               votesCount--;
               like.removeClass('active');
               break;
-            case 0:
-              // Unchanged
+            case 3: // Replaced
+              // Can't occour in case of a Like.
               break;
-            case -1:
-              // No user logged in
-              break;
+            default: // Error
+              alert(data);
           }
 
           score.text(votesCount);
@@ -66,6 +65,66 @@ function star() {
         success: function(data) {
 
           switch (data) {
+            case 1: // Starred
+              $("button.btn-star").addClass('active');
+              break;
+            case 2: // Unstarred
+              $("button.btn-star").removeClass('active');
+              break;
+            default: // Error
+              alert(data);
+          }
+
+        }
+      });
+
+    }
+  );
+}
+
+
+function submit() {
+
+}
+
+
+function approve() {
+
+}
+
+
+function returnForRevision() {
+
+}
+
+
+function reject() {
+
+}
+
+
+function revert() {
+
+}
+
+
+function moveToTrash() {
+  $("button.btn-star").click(
+    function() {
+      event.preventDefault();
+
+      var postId = $("article").attr("id");
+      //var star = $(this);
+
+      $.ajax({
+        type: "POST",
+        url: 'http://ajax.programmazione.me/move-to-trash/',
+        xhrFields: { withCredentials: true },
+        dataType: "json",
+        data: { id: postId },
+        success: function(data) {
+
+          switch (data) {
             case 1:
               $("button.btn-star").addClass('active');
               break;
@@ -85,9 +144,88 @@ function star() {
 }
 
 
+function restore() {
+  $("button.btn-star").click(
+    function() {
+      event.preventDefault();
+
+      var postId = $("article").attr("id");
+      //var star = $(this);
+
+      $.ajax({
+        type: "POST",
+        url: 'http://ajax.programmazione.me/restore/',
+        xhrFields: { withCredentials: true },
+        dataType: "json",
+        data: { id: postId },
+        success: function(data) {
+
+          switch (data) {
+            case 1:
+              $("button.btn-star").addClass('active');
+              break;
+            case 2:
+              $("button.btn-star").removeClass('active');
+              break;
+            case -1:
+              // No user logged in
+              break;
+          }
+
+        }
+      });
+
+    }
+  );
+}
+
+
+function markAsDraft() {
+
+}
+
+
+function close() {
+
+}
+
+
+function lock() {
+
+}
+
+
+function unprotect() {
+
+}
+
+
+function hide() {
+
+}
+
+
+function show() {
+
+}
+
+
 $(document).ready(
   function() {
     like();
     star();
+    submit();
+    approve();
+    returnForRevision();
+    reject();
+    revert();
+    moveToTrash();
+    restore();
+    markAsDraft();
+    close();
+    lock();
+    unprotect();
+    hide();
+    show();
   }
 );
