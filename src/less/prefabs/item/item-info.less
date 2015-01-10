@@ -1,0 +1,26 @@
+//! @file item-info.less
+//! @brief Item's date and time and other info.
+//! @author Filippo F. Fadda
+//! @copyright 3F s.a.s. di Filippo Fadda
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+.list.item-info {
+  margin-top: -@gutter;
+  margin-bottom: @gutter / 2;
+}
+
+.list.item-info > li {
+  float: right;
+  margin-left: 20px;
+  padding: 0 5px 0 5px;
+  vertical-align: middle;
+  font-size: @font-size-small;
+  line-height: 1.5;
+  color: @gray-dark;
+  border: 1px solid @gray-light;
+  border-top: none;
+  .border-bottom-radius(4px);
+}
