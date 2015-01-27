@@ -233,8 +233,7 @@
   }
   [data-value] .remove {
     display: inline-block;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 0;
     width: 20px;
 
     color: @gray;
@@ -246,15 +245,17 @@
     text-align: center;
     vertical-align: middle;
 
-    //border-bottom: 1px solid @gray-light;
-    border-left: 1px solid @gray-light;
-    //border-right: 1px solid @gray-light;
+    border-bottom: 1px solid darken(@gray-lighter, @obscuring-percentage);
+    border-right: 1px solid darken(@gray-lighter, @obscuring-percentage);
     .box-sizing(border-box);
     .border-radius(0 0 2px 0);
   }
   [data-value] .remove:hover {
     background-color: darken(@gray-lighter, 5%);
     color: @link-color-hover;
+
+    border-bottom-color: darken(@gray-lighter, @obscuring-percentage-double);
+    border-right-color: darken(@gray-lighter, @obscuring-percentage-double);
   }
   [data-value].active .remove {
     background-color: @gray-lighter;
@@ -275,14 +276,10 @@
 
   // Webkit browsers need one more padding-top pixel to align vertically the text inside and keep the height fixed to 32px.
   .selectize-input {
-    padding-top: 2px;
-    padding-bottom: 1px;
+    padding-top: 2px; // It was 1px.
   }
-
-  // Two pixels because 1+1, see above.
   .selectize-control.multi .selectize-input > div {
-    padding-top: 1px; // It was 0.
-    padding-bottom: 2px;
+    padding-top: 2px; // It was 1px.
   }
 }
 
