@@ -7,6 +7,7 @@
 // SETTINGS
 // ---------------------------------------------------------------------------------------------------------------------
 @obscuring-percentage: 5%;
+@obscuring-percentage-double: @obscuring-percentage * 2;
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -14,7 +15,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 .tag {
   display: inline-block;
-  padding: 5px !important;
+  padding: 4px 5px 4px 5px !important;
   vertical-align: middle;
   text-transform: lowercase;
   font-family: @font-family-base;
@@ -28,6 +29,8 @@
 
   border-top: 0;
   border-left: 0;
+  border-bottom: 1px solid darken(@gray-lighter, @obscuring-percentage);
+  border-right: 1px solid darken(@gray-lighter, @obscuring-percentage);
 
   &:hover,
   &:focus {
@@ -35,6 +38,9 @@
 
     color: @link-color-hover;
     background-color: darken(@gray-lighter, @obscuring-percentage);
+
+    border-bottom-color: darken(@gray-lighter, @obscuring-percentage-double);
+    border-right-color: darken(@gray-lighter, @obscuring-percentage-double);
   }
 }
 
@@ -44,6 +50,9 @@
   &:focus {
     color: @link-color;
     background-color: @gray-lighter;
+
+    border-bottom-color: darken(@gray-lighter, @obscuring-percentage);
+    border-right-color: darken(@gray-lighter, @obscuring-percentage);
   }
 }
 
@@ -76,65 +85,61 @@
   background-color: lightgray;
   color: @gray-dark;
 
+  border-bottom-color: darken(lightgray, @obscuring-percentage);
+  border-right-color: darken(lightgray, @obscuring-percentage);
+
   &:hover,
   &:focus {
     color: @gray-dark;
     background-color: darken(lightgray, @obscuring-percentage);
+
+    border-bottom-color: darken(lightgray, @obscuring-percentage-double);
+    border-right-color: darken(lightgray, @obscuring-percentage-double);
   }
 }
 
 .tag.facebook {
-  background-color: lightgray;
   color: #3C5595;
 
   &:hover,
   &:focus {
     color: #3C5595;
-    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
 .tag.twitter {
-  background-color: lightgray;
   color: #4AAFDB;
 
   &:hover,
   &:focus {
     color: #4AAFDB;
-    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
 .tag.google {
-  background-color: lightgray;
   color: #D84D3A;
 
   &:hover,
   &:focus {
     color: #D84D3A;
-    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
 .tag.linkedin {
-  background-color: lightgray;
   color: #1D87BE;
 
   &:hover,
   &:focus {
     color: #1D87BE;
-    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
 .tag.rss {
-  background-color: lightgray;
   color: #FF8000;
 
   &:hover,
   &:focus {
     color: #FF8000;
-    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -142,10 +147,16 @@
   background-color: skyblue;
   color: @gray-dark;
 
+  border-bottom-color: darken(skyblue, @obscuring-percentage);
+  border-right-color: darken(skyblue, @obscuring-percentage);
+
   &:hover,
   &:focus {
     color: @gray-dark;
     background-color: darken(skyblue, @obscuring-percentage);
+
+    border-bottom-color: darken(skyblue, @obscuring-percentage-double);
+    border-right-color: darken(skyblue, @obscuring-percentage-double);
   }
 }
 
@@ -153,10 +164,16 @@
   background-color: pink;
   color: @gray-dark;
 
+  border-bottom-color: darken(pink, @obscuring-percentage);
+  border-right-color: darken(pink, @obscuring-percentage);
+
   &:hover,
   &:focus {
     color: @gray-dark;
     background-color: darken(pink, @obscuring-percentage);
+
+    border-bottom-color: darken(pink, @obscuring-percentage-double);
+    border-right-color: darken(pink, @obscuring-percentage-double);
   }
 }
 
@@ -164,10 +181,16 @@
   background-color: #FFD700;
   color: @gray-dark;
 
+  border-bottom-color: darken(#FFD700, @obscuring-percentage);
+  border-right-color: darken(#FFD700, @obscuring-percentage);
+
   &:hover,
   &:focus {
     color: @gray-dark;
     background-color: darken(#FFD700, @obscuring-percentage);
+
+    border-bottom-color: darken(#FFD700, @obscuring-percentage-double);
+    border-right-color: darken(#FFD700, @obscuring-percentage-double);
   }
 }
 
@@ -175,9 +198,15 @@
   background-color: #FFA770;
   color: @gray-dark;
 
+  border-bottom-color: darken(#FFA770, @obscuring-percentage);
+  border-right-color: darken(#FFA770, @obscuring-percentage);
+
   &:hover,
   &:focus {
     color: @gray-dark;
     background-color: darken(#FFA770, @obscuring-percentage);
+
+    border-bottom-color: darken(#FFA770, @obscuring-percentage-double);
+    border-right-color: darken(#FFA770, @obscuring-percentage-double);
   }
 }
