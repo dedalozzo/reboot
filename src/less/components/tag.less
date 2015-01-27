@@ -3,37 +3,38 @@
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
 
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@obscuring-percentage: 5%;
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
 .tag {
   display: inline-block;
-  padding: 4px 5px 4px 5px !important;
+  padding: 5px !important;
   vertical-align: middle;
   text-transform: lowercase;
   font-family: @font-family-base;
   font-size: @font-size-base;
   font-weight: normal;
   line-height: 1;
+  .border-radius(1px);
 
   color: @link-color;
   background-color: @gray-lighter;
 
   border-top: 0;
   border-left: 0;
-  border-bottom: 1px solid @gray-light;
-  border-right: 1px solid @gray-light;
 
   &:hover,
   &:focus {
     text-decoration: none;
 
     color: @link-color-hover;
-    background-color: @gray-light;
-
-    border-bottom: 1px solid @link-color-hover;
-    border-right: 1px solid @link-color-hover;
+    background-color: darken(@gray-lighter, @obscuring-percentage);
   }
 }
 
@@ -43,9 +44,6 @@
   &:focus {
     color: @link-color;
     background-color: @gray-lighter;
-
-    border-bottom: 1px solid @gray-light;
-    border-right: 1px solid @gray-light;
   }
 }
 
@@ -81,7 +79,7 @@
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(lightgray, 10%);
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -92,10 +90,7 @@
   &:hover,
   &:focus {
     color: #3C5595;
-    background-color: darken(lightgray, 10%);
-
-    border-bottom: 1px solid #3C5595;
-    border-right: 1px solid #3C5595;
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -106,10 +101,7 @@
   &:hover,
   &:focus {
     color: #4AAFDB;
-    background-color: darken(lightgray, 10%);
-
-    border-bottom: 1px solid #4AAFDB;
-    border-right: 1px solid #4AAFDB;
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -120,10 +112,7 @@
   &:hover,
   &:focus {
     color: #D84D3A;
-    background-color: darken(lightgray, 10%);
-
-    border-bottom: 1px solid #D84D3A;
-    border-right: 1px solid #D84D3A;
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -134,10 +123,7 @@
   &:hover,
   &:focus {
     color: #1D87BE;
-    background-color: darken(lightgray, 10%);
-
-    border-bottom: 1px solid #1D87BE;
-    border-right: 1px solid #1D87BE;
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -148,10 +134,7 @@
   &:hover,
   &:focus {
     color: #FF8000;
-    background-color: darken(lightgray, 10%);
-
-    border-bottom: 1px solid #FF8000;
-    border-right: 1px solid #FF8000;
+    background-color: darken(lightgray, @obscuring-percentage);
   }
 }
 
@@ -162,7 +145,7 @@
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(skyblue, 10%);
+    background-color: darken(skyblue, @obscuring-percentage);
   }
 }
 
@@ -173,7 +156,7 @@
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(pink, 10%);
+    background-color: darken(pink, @obscuring-percentage);
   }
 }
 
@@ -184,7 +167,7 @@
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(#FFD700, 10%);
+    background-color: darken(#FFD700, @obscuring-percentage);
   }
 }
 
@@ -195,6 +178,6 @@
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(#FFA770, 10%);
+    background-color: darken(#FFA770, @obscuring-percentage);
   }
 }
