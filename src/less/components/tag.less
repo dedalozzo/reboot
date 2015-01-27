@@ -9,6 +9,11 @@
 @obscuring-percentage: 5%;
 @obscuring-percentage-double: @obscuring-percentage * 2;
 
+@tag-link-color: skyblue;
+@tag-question-color: pink;
+@tag-article-color: #FFD700;
+@tag-book-color: #FFA770;
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
@@ -99,114 +104,114 @@
 }
 
 .tag.facebook {
-  color: #3C5595;
+  color: @facebook-color;
 
   &:hover,
   &:focus {
-    color: #3C5595;
+    color: @facebook-color;
   }
 }
 
 .tag.twitter {
-  color: #4AAFDB;
+  color: @twitter-color;
 
   &:hover,
   &:focus {
-    color: #4AAFDB;
+    color: @twitter-color;
   }
 }
 
 .tag.google {
-  color: #D84D3A;
+  color: @google-color;
 
   &:hover,
   &:focus {
-    color: #D84D3A;
+    color: @google-color;
   }
 }
 
 .tag.linkedin {
-  color: #1D87BE;
+  color: @linkedin-color;
 
   &:hover,
   &:focus {
-    color: #1D87BE;
+    color: @linkedin-color;
   }
 }
 
 .tag.rss {
-  color: #FF8000;
+  color: @rss-color;
 
   &:hover,
   &:focus {
-    color: #FF8000;
+    color: @rss-color;
   }
 }
 
 .tag.link {
-  background-color: skyblue;
+  background-color: @tag-link-color;
   color: @gray-dark;
 
-  border-bottom-color: darken(skyblue, @obscuring-percentage);
-  border-right-color: darken(skyblue, @obscuring-percentage);
+  border-bottom-color: darken(@tag-link-color, @obscuring-percentage);
+  border-right-color: darken(@tag-link-color, @obscuring-percentage);
 
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(skyblue, @obscuring-percentage);
+    background-color: darken(@tag-link-color, @obscuring-percentage);
 
-    border-bottom-color: darken(skyblue, @obscuring-percentage-double);
-    border-right-color: darken(skyblue, @obscuring-percentage-double);
+    border-bottom-color: darken(@tag-link-color, @obscuring-percentage-double);
+    border-right-color: darken(@tag-link-color, @obscuring-percentage-double);
   }
 }
 
 .tag.question {
-  background-color: pink;
+  background-color: @tag-question-color;
   color: @gray-dark;
 
-  border-bottom-color: darken(pink, @obscuring-percentage);
-  border-right-color: darken(pink, @obscuring-percentage);
+  border-bottom-color: darken(@tag-question-color, @obscuring-percentage);
+  border-right-color: darken(@tag-question-color, @obscuring-percentage);
 
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(pink, @obscuring-percentage);
+    background-color: darken(@tag-question-color, @obscuring-percentage);
 
-    border-bottom-color: darken(pink, @obscuring-percentage-double);
-    border-right-color: darken(pink, @obscuring-percentage-double);
+    border-bottom-color: darken(@tag-question-color, @obscuring-percentage-double);
+    border-right-color: darken(@tag-question-color, @obscuring-percentage-double);
   }
 }
 
 .tag.article {
-  background-color: #FFD700;
+  background-color: @tag-article-color;
   color: @gray-dark;
 
-  border-bottom-color: darken(#FFD700, @obscuring-percentage);
-  border-right-color: darken(#FFD700, @obscuring-percentage);
+  border-bottom-color: darken(@tag-article-color, @obscuring-percentage);
+  border-right-color: darken(@tag-article-color, @obscuring-percentage);
 
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(#FFD700, @obscuring-percentage);
+    background-color: darken(@tag-article-color, @obscuring-percentage);
 
-    border-bottom-color: darken(#FFD700, @obscuring-percentage-double);
-    border-right-color: darken(#FFD700, @obscuring-percentage-double);
+    border-bottom-color: darken(@tag-article-color, @obscuring-percentage-double);
+    border-right-color: darken(@tag-article-color, @obscuring-percentage-double);
   }
 }
 
 .tag.book {
-  background-color: #FFA770;
+  background-color: @tag-book-color;
   color: @gray-dark;
 
-  border-bottom-color: darken(#FFA770, @obscuring-percentage);
-  border-right-color: darken(#FFA770, @obscuring-percentage);
+  border-bottom-color: darken(@tag-book-color, @obscuring-percentage);
+  border-right-color: darken(@tag-book-color, @obscuring-percentage);
 
   &:hover,
   &:focus {
     color: @gray-dark;
-    background-color: darken(#FFA770, @obscuring-percentage);
+    background-color: darken(@tag-book-color, @obscuring-percentage);
 
-    border-bottom-color: darken(#FFA770, @obscuring-percentage-double);
-    border-right-color: darken(#FFA770, @obscuring-percentage-double);
+    border-bottom-color: darken(@tag-book-color, @obscuring-percentage-double);
+    border-right-color: darken(@tag-book-color, @obscuring-percentage-double);
   }
 }
