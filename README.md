@@ -1,4 +1,4 @@
-# [P.it Bootstrap v0.8.0](http://dedalozzo.github.com/pit-bootstrap) [![Build Status](https://travis-ci.org/dedalozzo/pit-bootstrap.png?branch=0.8.0)](https://travis-ci.org/dedalozzo/pit-bootstrap)
+# [PitBootstrap v0.8.0](http://dedalozzo.github.com/pit-bootstrap) [![Build Status](https://travis-ci.org/dedalozzo/pit-bootstrap.png?branch=0.8.0)](https://travis-ci.org/dedalozzo/pit-bootstrap)
 
 Bootstrap is the front-end framework for the PitPress platform, created and maintained by [Filippo Fadda](https://it.linkedin.com/in/filippofadda).
 
