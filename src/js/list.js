@@ -3,7 +3,7 @@
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
 
-//var ajax = 'ajax.programmazione.me';
+var api = 'api.programmazione.me/';
 
 
 function like() {
@@ -16,7 +16,7 @@ function like() {
 
       $.ajax({
         type: "POST",
-        url: 'http://ajax.programmazione.me/like/',
+        url: api + 'like/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -51,33 +51,32 @@ function like() {
 
 
 function star() {
-  $("a.btn-star").click(
+  var btnStar = $("a.btn-star");
+
+  btnStar.click(
     function() {
       event.preventDefault();
 
       var tagId = $(this).attr("id");
-      var star = $(this);
 
       $.ajax({
         type: "POST",
-        url: 'http://ajax.programmazione.me/star/',
+        url: api + 'star/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: tagId },
         success: function(data) {
-
-          switch (data) {
-            case 1:
-              star.addClass('active');
-              break;
-            case 2:
-              star.removeClass('active');
-              break;
-            case -1:
-              // No user logged in
-              break;
-          }
-
+          if (data[0])
+            switch (data[1]) {
+              case 1: // Starred.
+                btnStar.addClass('active');
+                break;
+              case 2: // Unstarred.
+                btnStar.removeClass('active');
+                break;
+            }
+          else
+            alert(data[1]);
         }
       });
 
