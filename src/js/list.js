@@ -3,7 +3,7 @@
 //! @author Filippo F. Fadda
 //! @copyright 3F s.a.s. di Filippo Fadda
 
-var api = 'api.programmazione.me/';
+var api = 'http://api.programmazione.me/';
 
 
 function like() {
