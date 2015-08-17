@@ -16,4 +16,4 @@ All rights reserved.
 
 License
 -------
-PitBootstrap is licensed under the Apache License, Version 2.0 - see the LICENSE file for details.
+ReBoot is licensed under the Apache License, Version 2.0 - see the LICENSE file for details.
