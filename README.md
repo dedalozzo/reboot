@@ -1,6 +1,6 @@
-PitBootstrap
-============
-PitBootstrap is the front-end framework for the [PitPress](https://github.com/dedalozzo/pit-press) platform, created and maintained by [Filippo Fadda](https://it.linkedin.com/in/filippofadda).
+ReBoot
+======
+ReBoot is the default theme for the [ReIndex](https://github.com/dedalozzo/reindex) platform.
 
 
 Authors
