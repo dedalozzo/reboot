@@ -13,7 +13,7 @@
   ],
   "type": "reindex-theme",
   "require": {
-    "dedalozzo/installers": "dev-master"
+    "composer/installers": "dev-master"
   },
   "repositories": [
     {
