@@ -12,13 +12,13 @@
     }
   ],
   "type": "reindex-theme",
-  "require": {
-    "composer/installers": "dev-master"
-  },
   "repositories": [
     {
       "type": "vcs",
-      "url":  "git@github.com:dedalozzo/installers.git"
+      "url":  "https://github.com/dedalozzo/installers"
     }
-  ]
+  ],
+  "require": {
+    "composer/installers": "dev-master"
+  }
 }
