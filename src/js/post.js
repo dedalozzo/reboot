@@ -1,7 +1,7 @@
 //! @file post.js
 //! @brief AJAX requests for a single post.
 //! @author Filippo F. Fadda
-//! @copyright 3F s.a.s. di Filippo Fadda
+//! @copyright REINDEX LTD
 
 var api = 'http://api.programmazione.me/';
 
