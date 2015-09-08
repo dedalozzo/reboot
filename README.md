@@ -10,7 +10,7 @@ Filippo F. Fadda - <filippo.fadda@programmazione.it> - <http://www.linkedin.com/
 
 Copyright
 ---------
-Copyright (c) 2013-2015, Filippo Fadda
+Copyright (c) 2013-2015, REINDEX LTD
 All rights reserved.
 
 
