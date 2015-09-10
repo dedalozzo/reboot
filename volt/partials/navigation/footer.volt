@@ -15,5 +15,5 @@
         You must give <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">appropriate credit</a>, provide a link to the license, and <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
         If you remix, transform, or build upon the material, you must distribute your contributions under the <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">same license</a> as the original.
       </p>
-      <p class="version">Powered by <a href="">ReIndex</a> v{{ version }}</p>
+      <p class="version">Powered by <a href="//reindex.xyz">ReIndex</a> v{{ version }}</p>
     </footer>
