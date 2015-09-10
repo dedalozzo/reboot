@@ -19,7 +19,7 @@
 
     <div class="welcome">
       <div class="wrap">
-        <img src="//{{ serverName }}/pit-bootstrap/dist/img/languages.jpg" width="530" height="261">
+        <img src="{{ dist }}/img/languages.jpg" width="530" height="261">
         <div class="error"><span>{{ code }}</span></div>
       </div>
       <p>
