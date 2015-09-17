@@ -67,7 +67,6 @@
               <table>
                 <tr><td>2345</td></tr>
                 <tr><td>REPUTATION</td></tr>
-                <tr><td><span class="badges"><i class="icon-certificate gold"></i> 12<i class="icon-certificate silver"></i> 14<i class="icon-certificate bronze"></i> 122</span></td></tr>
               </table>
             </div>
             <a class="username" href="{{ userUrl }}">{{ post.username }}</a>
@@ -140,7 +139,6 @@
             <table>
               <tr><td>2345</td></tr>
               <tr><td>REPUTATION</td></tr>
-              <tr><td><span class="badges"><i class="icon-certificate gold"></i> 12<i class="icon-certificate silver"></i> 14<i class="icon-certificate bronze"></i> 122</span></td></tr>
             </table>
           </div>
           <a class="username" href="{{ userUrl }}">{{ username }}</a>

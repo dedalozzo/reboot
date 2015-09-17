@@ -7,7 +7,6 @@
     <li><a class="tag {{ name }}" href="//{{ domainName~'/'~path }}/">{{ path }}</a></li>
     {% endfor %}
     <li><a class="tag alt" href="//{{ domainName }}/tags/"><i class="icon-tags"></i>&nbsp;tags</a></li>
-    <li><a class="tag alt" href="//{{ domainName }}/badges/"><i class="icon-certificate"></i>&nbsp;badges</a></li>
     <li><a class="tag alt" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;users</a></li>
     <li class="space"></li>
     <li><a class="tag alt twitter" href="http://twitter.com/prg_it"><i class="icon-twitter nameless"></i></a></li>
