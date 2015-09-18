@@ -35,6 +35,7 @@
             <div class="reputation">
               <table>
                 <tr><td>2345</td></tr>
+                <tr><td>REPUTATION</td></tr>
               </table>
             </div>
             <a class="username" href="{{ userUrl }}">{{ entry.username }}</a>
