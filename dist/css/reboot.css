@@ -791,16 +791,16 @@ footer>.version{margin-bottom:0;color:black;font-size:80%;text-align:left;}
 #facebook-btn .logo{background-color:#4d6bb7;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/facebook.png');}
 #github-btn{background-color:#797979;text-shadow:0 -1px #acacac;}
 #github-btn:hover,#github-btn:active{background-color:#6c6c6c;}
-#github-btn .logo{background-color:#939393;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/github.png');}
+#github-btn .logo{background-color:#939393;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/github.png');}
 #google-btn{background-color:#d84d3a;text-shadow:0 -1px #e99a8f;}
 #google-btn:hover,#google-btn:active{background-color:#cf3d29;}
-#google-btn .logo{background-color:#e07365;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/google.png');}
+#google-btn .logo{background-color:#e07365;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/google.png');}
 #linkedin-btn{background-color:#1d87bd;text-shadow:0 -1px #5ab7e6;}
 #linkedin-btn:hover,#linkedin-btn:active{background-color:#1a77a7;}
-#linkedin-btn .logo{background-color:#2ea3df;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/linkedin.png');}
+#linkedin-btn .logo{background-color:#2ea3df;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/linkedin.png');}
 #twitter-btn{background-color:#4aafdb;text-shadow:0 -1px #9fd5ec;}
 #twitter-btn:hover,#twitter-btn:active{background-color:#35a6d7;}
-#twitter-btn .logo{background-color:#75c2e3;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/twitter.png');}
+#twitter-btn .logo{background-color:#75c2e3;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/twitter.png');}
 ul.social>li{padding-right:10px;}
 ul.social>li:last-child{padding-right:0;}
 .social>li>a{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;box-shadow:inset 0 1px rgba(255, 255, 255, 0.5),0 2px #ffffff;color:white;display:block;font-size:110%;min-width:79px;padding:12px 12px 12px 56px;position:relative;text-align:left;text-transform:capitalize;font-weight:500;}
