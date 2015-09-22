@@ -27,7 +27,7 @@
           <li><button><i class="icon-wrench"></i>Settings</button></li>
           <li><button><i class="icon-gears"></i>Administration</button></li>
           <li class="dropdown-divider"></li>
-          <li><a href="//{{ domainName }}/disconnect/"><i class="icon-signout"></i>Disconnect</a></li>
+          <li><a href="//{{ domainName }}/signout/"><i class="icon-signout"></i>Sign Out</a></li>
         </ul>
       </div>
     </li>
