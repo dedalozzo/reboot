@@ -31,8 +31,8 @@
     <aside class="registration">
       <section class="notebook gutter" id="sign">
         <ul class="list tabs no-gutter">
-          <li{% if signin is defined %} class="active"{% endif %}><a href="#signin" data-toggle="tab">ACCEDI</a></li>
-          <li{% if signup is defined %} class="active"{% endif %}><a href="#signup" data-toggle="tab">REGISTRATI</a></li>
+          <li{% if signin is defined %} class="active"{% endif %}><a href="#signin" data-toggle="tab">Sign In</a></li>
+          <li{% if signup is defined %} class="active"{% endif %}><a href="#signup" data-toggle="tab">Sign Up</a></li>
         </ul>
         <div class="notebook-page{% if signin is defined %} active{% endif %}" id="signin">
           <div>
@@ -48,7 +48,7 @@
                 <span class="error">{{ validation.first("password") }}</span>
               </div>
               <div class="align-right">
-                <button type="submit" name="signin" class="btn blue">Accedi</button>
+                <button type="submit" name="signin" class="btn blue">Sign In</button>
               </div>
             </form>
           </div>
@@ -86,7 +86,7 @@
                 <span class="error">{{ validation.first("confirmPassword") }}</span>
               </div>
               <div class="align-right">
-                <button type="submit" name="signup" value="signup" class="btn blue">Registrati</button>
+                <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
               </div>
             </form>
           </div>
