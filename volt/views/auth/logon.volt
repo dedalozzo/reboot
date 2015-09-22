@@ -41,11 +41,11 @@
               <input type="hidden" name="{{ security.getTokenKey() }}" value="{{ security.getToken() }}"/>
               <div class="half-gutter">
                 {{ email_field("email", "placeholder": "E-mail") }}
-                <span class="error">{{ validation.first("email") }}</span>
+                {% if signin is defined %}<span class="error">{{ validation.first("email") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
                 {{ password_field("password", "placeholder": "Password") }}
-                <span class="error">{{ validation.first("password") }}</span>
+                {% if signin is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
               </div>
               <div class="align-right">
                 <button type="submit" name="signin" class="btn blue">Sign In</button>
@@ -71,19 +71,19 @@
             <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
               <div class="half-gutter">
                 {{ text_field("username", "placeholder": "Nome utente") }}
-                <span class="error">{{ validation.first("username") }}</span>
+                {% if signup is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
                 {{ email_field("email", "placeholder": "E-mail") }}
-                <span class="error">{{ validation.first("email") }}</span>
+                {% if signup is defined %}<span class="error">{{ validation.first("email") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
                 {{ password_field("password", "placeholder": "Password") }}
-                <span class="error">{{ validation.first("password") }}</span>
+                {% if signup is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
                 {{ password_field("confirmPassword", "placeholder": "Ripeti la password") }}
-                <span class="error">{{ validation.first("confirmPassword") }}</span>
+                {% if signup is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
               </div>
               <div class="align-right">
                 <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
