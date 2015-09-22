@@ -20,7 +20,7 @@
     {{ flash.output() }}
 
     <div class="welcome">
-      <img src="//{{ serverName }}/pit-bootstrap/dist/img/languages.jpg" width="530" height="261">
+      <img src="{{ dist }}/img/languages.jpg" width="530" height="261">
       <p>
         Stai connesso con amici, colleghi, altri geeks come te, con la medesima passione per l'informatica.
         Tieniti aggiornato sulle cose che ti interessano. Apprendi dagli altri e insegna loro ciò che già sai.
