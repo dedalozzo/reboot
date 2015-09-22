@@ -788,7 +788,7 @@ footer>.version{margin-bottom:0;color:black;font-size:80%;text-align:left;}
 .tooltip.bottom-right .tooltip-arrow{top:0;right:5px;border-width:0 5px 5px;border-bottom-color:rgba(0, 0, 0, 0.9);}
 #facebook-btn{background-color:#3c5595;text-shadow:0 -1px #7189c6;}
 #facebook-btn:hover,#facebook-btn:active{background-color:#354b83;}
-#facebook-btn .logo{background-color:#4d6bb7;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/facebook.png');}
+#facebook-btn .logo{background-color:#4d6bb7;background-color:rgba(255, 255, 255, 0.2);background-image:url('../img/social/facebook.png');}
 #github-btn{background-color:#797979;text-shadow:0 -1px #acacac;}
 #github-btn:hover,#github-btn:active{background-color:#6c6c6c;}
 #github-btn .logo{background-color:#939393;background-color:rgba(255, 255, 255, 0.2);background-image:url('/pit-bootstrap/dist/img/social/github.png');}
