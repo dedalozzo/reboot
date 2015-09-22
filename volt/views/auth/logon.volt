@@ -68,7 +68,7 @@
         </div>
         <div class="notebook-page{% if signup is defined %} active{% endif %}" id="signup">
           <div>
-            <form action="//{{ serverName }}/accedi/" id="signupform" name="signupform" method="post" role="form">
+            <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
               <div class="half-gutter">
                 {{ text_field("username", "placeholder": "Nome utente") }}
                 <span class="error">{{ validation.first("username") }}</span>
