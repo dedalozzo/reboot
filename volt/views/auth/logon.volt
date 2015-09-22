@@ -37,7 +37,7 @@
         <div class="notebook-page{% if signin is defined %} active{% endif %}" id="signin">
           <div>
             <p>Se possiedi già un'utenza sul sito, puoi accedere usando le tue credenziali.</p>
-            <form action="//{{ serverName }}/accedi/" id="signinform" name="signinform" method="post" role="form">
+            <form action="//{{ serverName }}/logon/" id="signinform" name="signinform" method="post" role="form">
               <input type="hidden" name="{{ security.getTokenKey() }}" value="{{ security.getToken() }}"/>
               <div class="half-gutter">
                 {{ email_field("email", "placeholder": "E-mail") }}
