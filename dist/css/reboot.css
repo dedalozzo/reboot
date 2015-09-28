@@ -619,6 +619,7 @@ a.btn{display:inline-block !important;}
 .list.mbottom15>li:last-child{margin-bottom:0;}
 .list.even>li:nth-child(even){margin-top:3px;margin-bottom:15px;}
 .list.even>li:last-child{margin-bottom:0;}
+.list.hmenu>li>a{margin-right:4px;}
 .ghost{max-width:930px;background-color:trasparent;margin-right:auto;margin-left:auto;width:auto;text-align:left;}.ghost:before,.ghost:after{content:" ";display:table;}
 .ghost:after{clear:both;}
 .banner{margin-bottom:20px;}
