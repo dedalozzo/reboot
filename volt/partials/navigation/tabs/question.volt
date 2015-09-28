@@ -7,7 +7,7 @@
   'importantByTag': 'important',
   'infoByTag': 'info'
   ] %}
-  {% set resource = etag.name~'/domande' %}
+  {% set resource = etag.name~'/questions' %}
 {% else %}
   {% set menu = [
   'favorite': 'favorites',
