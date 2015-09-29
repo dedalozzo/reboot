@@ -7,18 +7,15 @@
   'importantByTag': 'important',
   'infoByTag': 'info'
   ] %}
-  {% set resource = etag.name~'/questions' %}
 {% else %}
   {% set menu = [
   'favorite': 'favorites',
-  'interesting': 'interesting',
   'active': 'active',
   'popular': 'popular',
   'newest': 'new',
-  'open': 'open',
-  'important': 'important'
+  'open': 'open'
   ] %}
-  {% set resource = 'questions' %}
 {% endif %}
+{% set resource = 'questions' %}
 {% set buttonLabel = 'new' %}
 {% set buttonLink = '/questions/add' %}
