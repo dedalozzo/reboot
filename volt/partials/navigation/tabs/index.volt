@@ -1,5 +1,4 @@
 {% if etag is defined %}
-  {% set resource = etag.name %}
   {% set menu = [
   'activeByTag': 'active',
   'popularByTag': 'popular',
@@ -9,7 +8,6 @@
 {% else %}
   {% set menu = [
   'favorite': 'favorites',
-  'interesting': 'interesting',
   'active': 'active',
   'popular': 'popular',
   'newest': 'new'
