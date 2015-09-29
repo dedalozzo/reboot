@@ -9,7 +9,11 @@
     <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-plus icon-large"> {{ buttonLabel }}</a></li>
   {% endif %}
   {% if resource is defined %}
-    {% set controllerPath = resource~'/' %}
+    {% if etag is defined %}
+      {% set controllerPath = etag.name~'/'~resource~'/' %}
+    {% else %}
+      {% set controllerPath = resource~'/' %}
+    {% endif %}
   {% else %}
     {% set controllerPath = '' %}
   {% endif %}
