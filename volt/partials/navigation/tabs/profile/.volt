@@ -1,5 +1,5 @@
 {% set resource = profile.username %}
-{% set menu = [
+{% set tabs = [
   'activities': 'activities',
   'projects': 'projects',
   'connections': 'connections',

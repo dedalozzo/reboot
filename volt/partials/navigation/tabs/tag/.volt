@@ -1,4 +1,4 @@
-{% set menu = [
+{% set tabs = [
   'synonyms': 'synonyms',
   'newest': 'new',
   'byName': 'name',

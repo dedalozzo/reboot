@@ -1,4 +1,5 @@
-{# Menu #}
+{# Tabs #}
+{{ partial("partials/navigation/tabs/"~controllerName) }}
 <ul class="list tabs half-gutter">
   {% if etag is defined %}
     <li><span><a id="{{ etag.id }}" class="btn-star{% if etag.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<b>{{ etag.name }}</b></span></li>
@@ -17,7 +18,7 @@
   {% else %}
     {% set controllerPath = '' %}
   {% endif %}
-  {% for name, actionPath in menu %}
-    <li{{ (name == actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="//{{ domainName~'/'~controllerPath~actionPath }}/">{{ actionPath|minustospace }}</a></li>
+  {% for name, actionPath in tabs %}
+    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="//{{ domainName~'/'~controllerPath~actionPath }}/">{{ actionPath|minustospace }}</a></li>
   {% endfor %}
 </ul>

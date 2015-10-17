@@ -2,9 +2,8 @@
 
 {% block content %}
   <div id="content">
-    {{ partial("partials/navigation/tabs/"~controllerName) }}
     {% include "partials/navigation/tabs.volt"%}
-    {% include "partials/navigation/pills.volt" %}
+    {% include "partials/navigation/dropdowns.volt" %}
 
     <div class="column-left">
       {% set showUser = TRUE %}

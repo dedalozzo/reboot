@@ -1,16 +1,21 @@
 {% if etag is defined %}
-  {% set menu = [
+  {% set tabs = [
   'activeByTag': 'active',
   'popularByTag': 'popular',
   'newestByTag': 'new',
+  'openByTag': 'open',
+  'importantByTag': 'important',
   'infoByTag': 'info'
   ] %}
 {% else %}
-  {% set menu = [
+  {% set tabs = [
   'favorite': 'favorites',
   'active': 'active',
   'popular': 'popular',
-  'newest': 'new'
+  'newest': 'new',
+  'open': 'open'
   ] %}
 {% endif %}
-{% block vars %}{% endblock %}
+{% set resource = 'questions' %}
+{% set buttonLabel = 'new' %}
+{% set buttonLink = '/questions/add' %}

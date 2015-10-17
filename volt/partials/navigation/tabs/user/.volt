@@ -1,4 +1,4 @@
-{% set menu = [
+{% set tabs = [
   'privileges': 'privileges',
   'moderators': 'moderators',
   'voters': 'voters',

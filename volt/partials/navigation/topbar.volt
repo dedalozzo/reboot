@@ -1,3 +1,4 @@
+{# Top Bar #}
 <nav class="topbar">
   <ul class="list">
     {% include "partials/brand.volt" %}

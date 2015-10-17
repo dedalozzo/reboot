@@ -1,4 +1,4 @@
-{% extends "partials/navigation/tabs/index.volt" %}
+{% extends "partials/navigation/tabs/index/.volt" %}
 {% block vars %}
   {% set resource = 'articles' %}
   {% set buttonLabel = 'new' %}

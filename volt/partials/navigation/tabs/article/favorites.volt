@@ -1,0 +1,1 @@
+{% extends "partials/navigation/tabs/index/favorites.volt" %}
