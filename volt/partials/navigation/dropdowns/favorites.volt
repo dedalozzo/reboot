@@ -1,6 +1,6 @@
 <li>
-  <button class="btn-link" data-dropdown="#dropdown-filter">{{ dispatcher.getParam('filter')|minustospace }} &blacktriangledown;</button>
-  <div id="dropdown-filter" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
+  <button class="btn-link" data-dropdown="#dropdown-favorites">{{ dispatcher.getParam('filter')|minustospace }} &blacktriangledown;</button>
+  <div id="dropdown-favorites" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
     <ul class="dropdown-menu">
       {% set path = "//"~domainName~'/'~controllerPath~actionPath~'/' %}
       <li><a href="//{{ path~'posting-date' }}/">posting date</a></li>
