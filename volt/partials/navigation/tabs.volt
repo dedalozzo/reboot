@@ -1,5 +1,7 @@
 {# Tabs #}
 {{ partial("partials/navigation/tabs/"~controllerName~"/") }}
+{% set uri = 'porcodio' %}
+
 <ul class="list tabs half-gutter">
   {% if etag is defined %}
     {% set tagRoute = etag.name~'/' %}
@@ -12,7 +14,7 @@
   {% if buttonLabel is defined %}
     <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-plus icon-large"> {{ buttonLabel }}</a></li>
   {% endif %}
-  {% set pippo = '//'~domainName~'/'~tagRoute~controllerRoute %}
+  {% set uri = '//'~domainName~'/'~tagRoute~controllerRoute %}
   {% for name, actionRoute in tabs %}
     <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ pippo~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
