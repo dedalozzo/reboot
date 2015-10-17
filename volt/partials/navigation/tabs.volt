@@ -1,5 +1,4 @@
 {# Tabs #}
-{% set actionRoute = tabs[actionName] %}
 {{ partial("partials/navigation/tabs/"~controllerName~"/") }}
 <ul class="list tabs half-gutter">
   {% if etag is defined %}
@@ -13,8 +12,9 @@
   {% if buttonLabel is defined %}
     <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-plus icon-large"> {{ buttonLabel }}</a></li>
   {% endif %}
-  {% set uri = '//'~domainName~'/'~tagRoute~controllerRoute %}
-  {% for name, route in tabs %}
-    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~route }}/">{{ route|minustospace }}</a></li>
+  {% set uri = '//'~domainName~tagRoute~controllerRoute %}
+  {% for name, actionRoute in tabs %}
+    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~actionRoute }}/">{{ route|minustospace }}</a></li>
   {% endfor %}
 </ul>
+{% set actionRoute = tabs[actionName] %}
