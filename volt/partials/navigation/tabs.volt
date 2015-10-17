@@ -1,5 +1,5 @@
 {# Tabs #}
-{{ partial("partials/navigation/tabs/"~controllerName) }}
+{{ partial("partials/navigation/tabs/"~controllerName~"/.volt") }}
 <ul class="list tabs half-gutter">
   {% if etag is defined %}
     <li><span><a id="{{ etag.id }}" class="btn-star{% if etag.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<b>{{ etag.name }}</b></span></li>
