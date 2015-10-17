@@ -13,14 +13,14 @@
   {% set actionRoute = tabs[actionName] %}
   {% if resource is defined %}
     {% if etag is defined %}
-      {% set uri = site~'/'~etag.name~'/'~resource %}
+      {% set uri = site~'/'~etag.name~'/'~resource~'/' %}
     {% else %}
-      {% set uri = site~'/'~resource %}
+      {% set uri = site~'/'~resource~'/' %}
     {% endif %}
   {% else %}
-    {% set uri = site %}
+    {% set uri = site~'/' %}
   {% endif %}
   {% for name, route in tabs %}
-    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~'/'~route }}/">{{ route|minustospace }}</a></li>
+    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~route }}/">{{ route|minustospace }}</a></li>
   {% endfor %}
 </ul>
