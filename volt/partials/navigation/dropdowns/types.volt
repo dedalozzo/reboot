@@ -1,15 +1,15 @@
 <li>
-  <button class="btn-link" data-dropdown="#dropdown-cat">{{ controllerName === 'index' ? 'all types' : types[controllerName] }} &blacktriangledown;</button>
-  <div id="dropdown-cat" class="dropdown dropdown-relative dropdown-tip">
+  <button class="btn-link" data-dropdown="#dropdown-types">{{ controllerName === 'index' ? 'all types' : types[controllerName] }} &blacktriangledown;</button>
+  <div id="dropdown-types" class="dropdown dropdown-relative dropdown-tip">
     <ul class="dropdown-menu">
       {% if etag is defined %}
-        {% set tagName = etag.name~'/' %}
+        {% set tagName = etag.name %}
       {% else %}
         {% set tagName = '' %}
       {% endif %}
-      <li><a href="//{{ domainName~'/'~tagName~actionPath }}/">all types</a></li>
-      {% for name, path in types %}
-        <li><a href="//{{ domainName~'/'~tagName~path~'/'~actionPath }}/">{{ path }}</a></li>
+      <li><a href="{{ site~'/'~tagName~'/'~actionRoute }}/">all types</a></li>
+      {% for name, route in types %}
+        <li><a href="//{{ site~'/'~tagName~'/'~route~'/'~actionRoute }}/">{{ route }}</a></li>
       {% endfor %}
     </ul>
   </div>
