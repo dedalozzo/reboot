@@ -3,13 +3,13 @@
   <div id="dropdown-types" class="dropdown dropdown-relative dropdown-tip">
     <ul class="dropdown-menu">
       {% if etag is defined %}
-        {% set tagName = etag.name %}
+        {% set tagRoute = '/'~etag.name %}
       {% else %}
-        {% set tagName = '' %}
+        {% set tagRoute = '/' %}
       {% endif %}
-      <li><a href="{{ site~'/'~tagName~'/'~actionRoute }}/">all types</a></li>
+      <li><a href="//{{ domainName~tagRoute~'/'~actionRoute }}/">all types</a></li>
       {% for name, route in types %}
-        <li><a href="//{{ site~'/'~tagName~'/'~route~'/'~actionRoute }}/">{{ route }}</a></li>
+        <li><a href="//{{ domainName~tagRoute~'/'~route~'/'~actionRoute }}/">{{ route }}</a></li>
       {% endfor %}
     </ul>
   </div>
