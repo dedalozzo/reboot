@@ -2,9 +2,10 @@
   <button class="btn-link" data-dropdown="#dropdown-favorites">{{ dispatcher.getParam('filter')|minustospace }} &blacktriangledown;</button>
   <div id="dropdown-favorites" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
     <ul class="dropdown-menu">
-      {% set path = "//"~domainName~'/'~controllerPath~actionPath~'/' %}
-      <li><a href="//{{ path~'posting-date' }}/">posting date</a></li>
-      <li><a href="//{{ path~'insertion-date' }}/">insertion date</a></li>
+    {% set temp = uri~actionRoute~'/' %}
+    {% for name, value in periods %}
+      <li><a href="{{ temp~name }}/">{{ name|minustospace }}</a></li>
+    {% endfor %}
     </ul>
   </div>
 </li>
