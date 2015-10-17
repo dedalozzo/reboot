@@ -7,9 +7,9 @@
       {% else %}
         {% set tagRoute = '/' %}
       {% endif %}
-      <li><a href="//{{ domainName~tagRoute~'/'~actionRoute }}/">all types</a></li>
-      {% for name, route in types %}
-        <li><a href="//{{ domainName~tagRoute~'/'~route~'/'~actionRoute }}/">{{ route }}</a></li>
+      <li><a href="//{{ domainName~tagRoute~actionRoute }}/">all types</a></li>
+      {% for typeName, typeRoute in types %}
+        <li><a href="//{{ domainName~tagRoute~typeRoute~'/'~actionRoute }}/">{{ typeRoute }}</a></li>
       {% endfor %}
     </ul>
   </div>
