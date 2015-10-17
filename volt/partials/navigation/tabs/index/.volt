@@ -13,4 +13,6 @@
   'newest': 'new'
   ] %}
 {% endif %}
-{% block vars %}{% endblock %}
+{% block vars %}
+  {% set controllerRoute = '/' %}
+{% endblock %}

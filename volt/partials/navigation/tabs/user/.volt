@@ -6,4 +6,4 @@
   'newest': 'new',
   'reputation': 'reputation'
 ] %}
-{% set resource = 'users' %}
+{% set controllerRoute = 'users' %}

@@ -1,4 +1,4 @@
-{% set resource = profile.username %}
+{% set controllerRoute = profile.username %}
 {% set tabs = [
   'activities': 'activities',
   'projects': 'projects',

@@ -16,6 +16,6 @@
   'open': 'open'
   ] %}
 {% endif %}
-{% set resource = 'questions' %}
+{% set controllerRoute = 'questions/' %}
 {% set buttonLabel = 'new' %}
 {% set buttonLink = '/questions/add' %}
