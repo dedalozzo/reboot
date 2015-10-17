@@ -9,8 +9,8 @@
   <button class="btn-link" data-dropdown="#dropdown-tags">{{ selectedOption }} &blacktriangledown;</button>
   <div id="dropdown-tags" class="dropdown dropdown-relative dropdown-tip">
     <ul class="dropdown-menu">
-      {% if resource is defined %}
-      <li><a href="//{{ domainName~'/'~resource~'/'~actionRoute }}/">all tags</a></li>
+      {% if etag is defined %}
+      <li><a href="//{{ domainName~'/'~tagRoute~actionRoute }}/">all tags</a></li>
       {% else %}
       <li><a href="//{{ domainName~'/'~actionRoute }}/">all tags</a></li>
       {% endif %}
