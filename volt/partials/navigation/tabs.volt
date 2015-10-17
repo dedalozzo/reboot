@@ -9,16 +9,18 @@
   {% if buttonLabel is defined %}
     <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-plus icon-large"> {{ buttonLabel }}</a></li>
   {% endif %}
+  {% set site = '//'~domainName %}
+  {% set actionRoute = tabs[actionName] %}
   {% if resource is defined %}
     {% if etag is defined %}
-      {% set controllerPath = etag.name~'/'~resource~'/' %}
+      {% set uri = site~'/'~etag.name~'/'~resource %}
     {% else %}
-      {% set controllerPath = resource~'/' %}
+      {% set uri = site~'/'~resource %}
     {% endif %}
   {% else %}
-    {% set controllerPath = '' %}
+    {% set uri = site %}
   {% endif %}
-  {% for name, actionPath in tabs %}
-    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="//{{ domainName~'/'~controllerPath~actionPath }}/">{{ actionPath|minustospace }}</a></li>
+  {% for name, route in tabs %}
+    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~'/'~route }}/">{{ route|minustospace }}</a></li>
   {% endfor %}
 </ul>
