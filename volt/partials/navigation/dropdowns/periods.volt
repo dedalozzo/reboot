@@ -3,7 +3,7 @@
   <div id="dropdown-periods" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
     <ul class="dropdown-menu">
       {% for name, value in periods %}
-        <li><a href="{{ uri~'/'~name }}/">{{ name|minustospace }}</a></li>
+        <li><a href="{{ uri~actionRoute~'/'~name }}/">{{ name|minustospace }}</a></li>
       {% endfor %}
     </ul>
   </div>
