@@ -25,7 +25,7 @@
             <li><a class="tag {{ entry.type }}" href="{{ baseUrl~'/'~types[entry.type] }}/">{{ types[entry.type] }}</a></li>
             {% set tags = entry.tags %}
             {% for tag in tags %}
-            <li><a class="tag" href="{{ baseUrl }}/{{ tag['value'] }}/{% if etag is defined %}{{ types[entry.type] }}/{% endif %}">{{ tag['value'] }}</a></li>
+            <li><a class="tag" href="{{ baseUrl }}/{{ tag['value'] }}/{% if !(controllerRoute is empty) %}{{ types[entry.type] }}/{% endif %}">{{ tag['value'] }}</a></li>
             {% endfor %}
             <li class="space"></li>
           </ul>
