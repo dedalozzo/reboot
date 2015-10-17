@@ -14,5 +14,5 @@
   ] %}
 {% endif %}
 {% block vars %}
-  {% set controllerRoute = '/' %}
+  {% set controllerRoute = '' %}
 {% endblock %}
