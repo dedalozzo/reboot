@@ -1,4 +1,3 @@
-{% set controllerRoute = profile.username %}
 {% set tabs = [
   'activities': 'activities',
   'projects': 'projects',
@@ -6,3 +5,4 @@
   'about': 'about',
   'index': 'timeline'
 ] %}
+{% set controllerRoute = profile.username~'/' %}
