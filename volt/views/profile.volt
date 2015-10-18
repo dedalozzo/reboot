@@ -28,7 +28,7 @@
   </div>
 
   {% set controllerPath = '/' %}
-  {% include "partials/navigation/tabs/profile/.volt" %}
+  {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/pills.volt" %}
 
