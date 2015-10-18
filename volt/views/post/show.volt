@@ -152,7 +152,7 @@
         <li><button class="btn btn-icon blue" title="share"><i class="icon-link icon-large"></i></button></li>
         <li><button class="btn btn-icon blue"><i class="icon-comment icon-large"></i></button></li>
         <li><button class="btn btn-icon blue" title="segnala un problema riguardante la risposta"><i class="icon-flag icon-large"></i></button></li>
-        <li><a class="btn btn-icon blue" title="migliora la risposta modificandone il contenuto" href="//{{ serverName~'/'~post.id~'/modifica/' }}"><i class="icon-file-text icon-large"></i></a></li>
+        <li><a class="btn btn-icon blue" title="migliora la risposta modificandone il contenuto" href="//{{ serverName~'/'~post.id~'/edit/' }}"><i class="icon-file-text icon-large"></i></a></li>
         <li><button class="btn btn-icon red" title="elimina la risposta"><i class="icon-trash icon-large"></i></button></li>
       </ul>
     </div>
@@ -162,7 +162,6 @@
   </div> <!-- /column-left -->
 
   <aside class="column-right">
-    <div id="stats"><div>{{ hitsCount }}</div>{% if hitsCount == 1 %} VIEW{% else %} VIEWS{% endif %}</div>
     <div class="banner"><a href="#"><img src="/img/300x250cro.jpeg" /></a></div>
   </aside> <!-- /column-right -->
 </div>
