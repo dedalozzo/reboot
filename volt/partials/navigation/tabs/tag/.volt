@@ -5,6 +5,6 @@
   'active': 'active',
   'popular': 'popular'
 ] %}
-{% set controllerRoute = 'tags' %}
+{% set controllerRoute = 'tags/' %}
 {% set buttonLabel = 'new' %}
 {% set buttonLink = '/tags/add' %}

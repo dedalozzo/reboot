@@ -6,4 +6,4 @@
   'newest': 'new',
   'reputation': 'reputation'
 ] %}
-{% set controllerRoute = 'users' %}
+{% set controllerRoute = 'users/' %}
