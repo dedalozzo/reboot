@@ -30,7 +30,7 @@
   {% set controllerPath = '/' %}
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
-  {% include "partials/navigation/pills.volt" %}
+  {% include "partials/navigation/dropdowns.volt" %}
 
   {{ flash.output() }}
 
