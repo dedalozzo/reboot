@@ -17,5 +17,3 @@
   ] %}
 {% endif %}
 {% set controllerRoute = 'questions/' %}
-{% set buttonLabel = 'new' %}
-{% set buttonLink = '/questions/add' %}

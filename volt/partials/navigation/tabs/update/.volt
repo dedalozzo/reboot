@@ -1,4 +1,4 @@
 {% extends "partials/navigation/tabs/index/.volt" %}
 {% block vars %}
-  {% set controllerRoute = 'articles/' %}
+  {% set controllerRoute = 'updates/' %}
 {% endblock %}
