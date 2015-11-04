@@ -33,20 +33,6 @@
       </div>
     </li>
     <li><button class="btn btn-icon blue" title="messaggi e notifiche" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
-    <li>
-      <button class="btn btn-icon blue" title="collabora" data-dropdown="#dropdown-plus"><i class="icon-plus icon-large"></i></button>
-      <div id="dropdown-plus" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
-        <ul class="dropdown-menu">
-          <li><button><i class="icon-link"></i>Add link</button></li>
-          <li><button><i class="icon-question"></i>Ask a question</button></li>
-          <li class="dropdown-divider"></li>
-          <li><button><i class="icon-pencil"></i>Edit an article</button></li>
-          <li><button><i class="icon-pencil"></i>Review a book</button></li>
-          <li class="dropdown-divider"></li>
-          <li><button><i class="icon-tag"></i>Add a tag</button></li>
-        </ul>
-      </div>
-    </li>
     {% endif %}
   </ul>
 
