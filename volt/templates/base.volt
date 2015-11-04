@@ -64,12 +64,12 @@
   {% block header %}
   {% endblock %}
 
+  {% block menubar %}
+    {% include "partials/navigation/menubar.volt" %}
+  {% endblock %}
+
   {% block content %}
     <div id="content">
-
-    {% block menubar %}
-      {% include "partials/navigation/menubar.volt" %}
-    {% endblock %}
 
     </div> <!-- /content -->
   {% endblock %}
