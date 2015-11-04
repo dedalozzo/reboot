@@ -55,10 +55,6 @@
     <a id="skin" href="#"></a>
   {% endblock %}
 
-  {% block menubar %}
-    {% include "partials/navigation/menubar.volt" %}
-  {% endblock %}
-
   <div id="{% block container %}scrollable{% endblock %}">
 
   {% block billboard %}
@@ -70,6 +66,10 @@
 
   {% block content %}
     <div id="content">
+
+    {% block menubar %}
+      {% include "partials/navigation/menubar.volt" %}
+    {% endblock %}
 
     </div> <!-- /content -->
   {% endblock %}
