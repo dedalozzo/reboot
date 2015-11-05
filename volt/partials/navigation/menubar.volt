@@ -10,5 +10,5 @@
     <li><a href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;users</a></li>
     <li class="space"></li>
   </ul>
+  <hr class="fade-long">
 </nav>
-<hr class="fade-long">
