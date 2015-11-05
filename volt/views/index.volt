@@ -3,10 +3,10 @@
 {% block content %}
   <div id="content">
     {% include "partials/navigation/tabs.volt" %}
-    {% include "partials/navigation/dropdowns.volt" %}
 
     <div class="column-left">
       {% set showUser = TRUE %}
+      {% include "partials/navigation/dropdowns.volt" %}
       {% include "partials/list-of-posts.volt" %}
     </div> <!-- /column-left -->
 
