@@ -1,6 +1,6 @@
 {# Menu bar #}
 <nav class="menubar">
-  <ul class="list pills">
+  <ul class="list pills no-gutter">
     <li><a href="//{{ domainName }}"><i class="icon-home"></i>&nbsp;home</a></li>
     {% include 'partials/types.volt' %}
     {% for name, path in types %}
