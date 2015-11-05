@@ -66,7 +66,7 @@
 
   {% block menubar %}
     {% include "partials/navigation/menubar.volt" %}
-    <hr class="fade-long">
+    <hr class="fade-long no-gutter">
   {% endblock %}
 
   {% block content %}
