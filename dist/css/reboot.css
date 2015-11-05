@@ -586,7 +586,7 @@ a.btn{display:inline-block !important;}
 .icon-weibo:before{content:"\f18a";}
 .icon-renren:before{content:"\f18b";}
 #skin{display:block;height:100%;width:100%;position:fixed;left:0;top:0;z-index:0;text-indent:-5000em;}
-#content{width:auto;margin-bottom:20px;padding:20px 20px 0 20px;background-color:#ffffff;border:0 solid #666666;-webkit-border-radius:0 0 2px 2px;-moz-border-radius:0 0 2px 2px;border-radius:0 0 2px 2px;}#content:before,#content:after{content:" ";display:table;}
+#content{width:auto;margin-top:41px;margin-bottom:20px;padding:20px 20px 0 20px;background-color:#ffffff;border:0 solid #666666;-webkit-border-radius:0 0 2px 2px;-moz-border-radius:0 0 2px 2px;border-radius:0 0 2px 2px;}#content:before,#content:after{content:" ";display:table;}
 #content:after{clear:both;}
 #scrollable{width:970px;height:100%;background-color:transparent;margin-right:auto;margin-left:auto;position:relative;margin-top:20px;text-align:center;}
 #fixed{width:970px;background-color:transparent;margin-right:auto;margin-left:auto;position:relative;text-align:left;}
