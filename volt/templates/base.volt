@@ -64,11 +64,13 @@
   {% block header %}
   {% endblock %}
 
+  {% block menubar %}
+    {% include "partials/navigation/menubar.volt" %}
+    <hr class="fade-long">
+  {% endblock %}
+
   {% block content %}
     <div id="content">
-
-      {% include "partials/navigation/menubar.volt" %}
-      <hr class="fade-long">
 
     </div> <!-- /content -->
   {% endblock %}

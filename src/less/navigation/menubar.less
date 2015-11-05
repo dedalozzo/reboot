@@ -31,8 +31,10 @@
   width: auto;
   height: auto;
   //#gradient > .vertical(white, darken(white, 10%));
+  background-color: @content-background-color;
   position: relative;
   margin-top: @gutter;
+  padding: @gutter;
   text-align: center;
   .border-radius(2px 2px 0 0);
 }
@@ -41,7 +43,6 @@
   width: auto;
   margin-right: auto;
   margin-left: auto;
-  padding: 5px;
 }
 
 .menubar > ul > li + li > a {
