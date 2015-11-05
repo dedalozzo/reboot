@@ -744,7 +744,7 @@ footer>.version{margin-bottom:0;color:black;font-size:80%;text-align:left;}
 .toolgroup>a+a,.toolgroup>span+span,.toolgroup>a+span,.toolgroup>span+a{border-left:1px solid #d9d9d9;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .toolgroup>a{border-right:none;-webkit-border-radius:0 !important;-moz-border-radius:0 !important;border-radius:0 !important;}
 .tag{display:inline-block;padding:4px 5px 4px 5px !important;vertical-align:middle;text-transform:lowercase;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:normal;line-height:1;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;color:#0077cc;background-color:#e6e6e6;border-top:0;border-left:0;border-bottom:1px solid #d9d9d9;border-right:1px solid #d9d9d9;}.tag:hover,.tag:focus{text-decoration:none;color:#0077cc;background-color:#d9d9d9;border-bottom-color:#cdcdcd;border-right-color:#cdcdcd;}
-.tag.big{font-size:110%;text-transform:uppercase;}
+.tag.big{font-size:120%;}
 .tag.hoverless:hover,.tag.hoverless:focus{color:#0077cc;background-color:#e6e6e6;border-bottom-color:#d9d9d9;border-right-color:#d9d9d9;}
 .tag>i.nameless{text-align:center;display:inline-block;min-width:13px;}
 .popularity{color:#666666;vertical-align:middle;border-top:1px solid transparent;}
