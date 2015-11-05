@@ -10,6 +10,8 @@
     </li>
     <li><a class="link" href="//{{ domainName }}/tour/">Tour</a></li>
     <li><a class="link" href="//{{ domainName }}/aiuto/">Help</a></li>
+    <li><a class="link" href="//{{ domainName }}/tags/"><i class="icon-tags"></i>&nbsp;Tags</a></li>
+    <li><a class="link" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;Users</a></li>
     <li class="space"></li>
     {% if user.isMember() %}
       {% set userUri = '//'~domainName~'/'~user.username %}

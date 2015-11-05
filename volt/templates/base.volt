@@ -46,6 +46,7 @@
   </style>
 </head>
 <body onload="localStorage.clear();">
+  {% include 'partials/types.volt' %}
 
   {% block topbar %}
     {% include "partials/navigation/topbar.volt" %}
@@ -62,12 +63,6 @@
   {% endblock %}
 
   {% block header %}
-  {% endblock %}
-
-  {% block menubar %}
-    {% include 'partials/types.volt' %}
-    {% include "partials/navigation/menubar.volt" %}
-    <hr class="fade-long no-gutter">
   {% endblock %}
 
   {% block content %}
