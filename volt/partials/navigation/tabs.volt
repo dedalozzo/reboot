@@ -11,7 +11,7 @@
   <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-th-large icon-large"></a></li>
   {% set uri = '//'~domainName~'/'~tagRoute~controllerRoute %}
   {% for name, actionRoute in tabs %}
-    <li{{ (name === actionName) ? ' class="active pull-right"' : ' class="pull-right"' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
+    <li{{ (name === actionName) ? ' class="active"' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
 </ul>
 {% set actionRoute = tabs[actionName] %}
