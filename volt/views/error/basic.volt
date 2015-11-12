@@ -3,7 +3,6 @@
 {% block topbar %}{% endblock %}
 {% block menubar %}{% endblock %}
 {% block container %}fixed{% endblock %}
-{% block billboard %}{% endblock %}
 
 {% block header %}
   <ul class="list auto">
