@@ -1,9 +1,9 @@
 {% set tabs = [
-  'privileges': 'privileges',
-  'moderators': 'moderators',
-  'voters': 'voters',
-  'byName': 'name',
-  'newest': 'new',
-  'reputation': 'reputation'
+'reputation': 'reputation'
+'newest': 'new',
+'byName': 'name',
+'voters': 'voters',
+'moderators': 'moderators',
+'privileges': 'privileges',
 ] %}
 {% set controllerRoute = 'users/' %}

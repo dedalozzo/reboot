@@ -1,16 +1,16 @@
 {% if etag is defined %}
   {% set tabs = [
-  'activeByTag': 'active',
-  'popularByTag': 'popular',
-  'newestByTag': 'new',
   'infoByTag': 'info'
+  'newestByTag': 'new',
+  'popularByTag': 'popular',
+  'activeByTag': 'active',
   ] %}
 {% else %}
   {% set tabs = [
-  'favorite': 'favorites',
-  'active': 'active',
-  'popular': 'popular',
   'newest': 'new'
+  'popular': 'popular',
+  'active': 'active',
+  'favorite': 'favorites',
   ] %}
 {% endif %}
 {% block vars %}

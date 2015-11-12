@@ -1,8 +1,8 @@
 {% set tabs = [
-  'synonyms': 'synonyms',
-  'newest': 'new',
-  'byName': 'name',
-  'active': 'active',
-  'popular': 'popular'
+'newest': 'new',
+'popular': 'popular'
+'active': 'active',
+'byName': 'name',
+'synonyms': 'synonyms',
 ] %}
 {% set controllerRoute = 'tags/' %}

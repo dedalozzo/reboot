@@ -1,8 +1,8 @@
 {% set tabs = [
-  'activities': 'activities',
-  'projects': 'projects',
-  'connections': 'connections',
-  'about': 'about',
-  'index': 'timeline'
+'index': 'timeline'
+'about': 'about',
+'connections': 'connections',
+'projects': 'projects',
+'activities': 'activities',
 ] %}
 {% set controllerRoute = profile.username~'/' %}
