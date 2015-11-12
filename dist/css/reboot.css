@@ -99,9 +99,9 @@ a.btn{display:inline-block !important;}
 .btn.large{min-height:40px;padding:0 12px;line-height:40px;font-size:110% !important;}
 .btn-link,.btn-link:hover,.btn-link:active,.btn-link.active,.btn-link:disabled{border-color:transparent;background:none;}
 .btn-link{color:#0077cc;}
-.btn-link:hover,.btn-link:active,.btn-link.active{color:#0077cc;text-decoration:underline;}
+.btn-link:hover,.btn-link:active,.btn-link.active{color:#0077cc;text-decoration:none;}
 .btn-link:disabled{color:#999999;}
-.btn-link:focus{outline:2px solid;}
+.btn-link:focus{outline:0;}
 .btn-like,.btn-star,.btn-accept{color:#666666 !important;width:34px !important;background-color:transparent !important;padding:0;}
 .btn-like:hover,.btn-star:hover,.btn-accept:hover{background-color:transparent;text-decoration:none;cursor:pointer;}
 .btn-like.active{color:#ff3232 !important;}
