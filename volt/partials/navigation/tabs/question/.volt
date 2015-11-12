@@ -1,19 +1,19 @@
 {% if etag is defined %}
   {% set tabs = [
-  'infoByTag': 'info'
+  'infoByTag': 'info',
   'importantByTag': 'important',
   'openByTag': 'open',
   'newestByTag': 'new',
   'popularByTag': 'popular',
-  'activeByTag': 'active',
+  'activeByTag': 'active'
   ] %}
 {% else %}
   {% set tabs = [
-  'open': 'open'
+  'open': 'open',
   'newest': 'new',
   'popular': 'popular',
   'active': 'active',
-  'favorite': 'favorites',
+  'favorite': 'favorites'
   ] %}
 {% endif %}
 {% set controllerRoute = 'questions/' %}
