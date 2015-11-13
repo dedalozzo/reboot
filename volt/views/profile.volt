@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div id="content" class="no-top" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
+<div id="content" class="profile-top" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
   <div class="ghost gutter-plus" style="margin-top: 200px;">
     <div style="position: relative;">
       <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.primaryEmail) }}&s=160">

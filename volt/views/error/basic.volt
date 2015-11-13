@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-  <div id="content">
+  <div id="content" class="no-top">
 
     <div id="page-title">{{ title }}</div>
     <hr class="fade-long">
