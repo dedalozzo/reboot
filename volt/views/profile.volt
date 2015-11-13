@@ -76,6 +76,6 @@
 
 {% block script %}
 <script>
-  $('html, body').animate({scrollTop: '+=252px'}, 1);
+  $('html, body').animate({scrollTop: '+=292px'}, 1);
 </script>
 {% endblock %}
