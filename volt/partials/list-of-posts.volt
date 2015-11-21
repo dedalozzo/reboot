@@ -34,7 +34,7 @@
             <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ entry.gravatar }}&s=32" /></a>
             <div class="reputation">
               <table>
-                <tr><td>2345</td></tr>
+                <tr><td>2.345</td></tr>
                 <tr><td>REPUTATION</td></tr>
               </table>
             </div>
