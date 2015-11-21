@@ -49,8 +49,10 @@
   &:hover,
   &:focus {
     background-color: @tabs-border-color;
-    border-top: 2px solid @link;
-    border-bottom: 1px solid @tabs-border-color;
+    border: @tabs-border-width solid @tabs-border-color;
+    border-top: 2px solid @link-color;
+    .border-radius(2px 2px 0 0);
+    //border-bottom: 1px solid @tabs-border-color;
   }
 }
 
