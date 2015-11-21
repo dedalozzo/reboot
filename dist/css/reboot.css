@@ -636,7 +636,7 @@ a.btn{display:inline-block !important;}
 .list.tabs>li{float:left;margin-bottom:-1px;line-height:1.6;}
 .list.tabs>li+li>*{margin-left:4px;}
 .list.tabs>li>*{display:block;padding:4px 6px 3px 6px;text-shadow:0 1px 1px rgba(0, 0, 0, 0.2);}
-.list.tabs>li>a{color:#666666;border:1px solid transparent;border-top:2px solid transparent;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}.list.tabs>li>a:hover,.list.tabs>li>a:focus{background-color:#b3b3b3;border-color:#b3b3b3;border-top:2px solid white;border-bottom:1px solid #b3b3b3;}
+.list.tabs>li>a{color:#666666;border:1px solid transparent;border-top:2px solid transparent;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}.list.tabs>li>a:hover,.list.tabs>li>a:focus{background-color:#b3b3b3;border-color:#b3b3b3 !important;border-bottom:1px solid #b3b3b3;}
 .list.tabs>.active{border-bottom:0 !important;}
 .list.tabs>.active>a,.list.tabs>.active>a:hover,.list.tabs>.active>a:focus{color:#333333;background-color:transparent;border:1px solid #b3b3b3;border-top:2px solid #0077cc;border-bottom:1px solid #ffffff !important;font-weight:bold;}
 .list.tabs>.icon>a:hover,.list.tabs>.icon>a:focus{color:#0077cc;background-color:transparent;border:1px solid transparent !important;}
