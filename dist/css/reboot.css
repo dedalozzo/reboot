@@ -636,10 +636,10 @@ a.btn{display:inline-block !important;}
 .list.tabs>li{float:left;margin-bottom:-1px;line-height:1.6;}
 .list.tabs>li+li>*{margin-left:4px;}
 .list.tabs>li>*{display:block;padding:4px 6px 3px 6px;text-shadow:0 1px 1px rgba(0, 0, 0, 0.2);}
-.list.tabs>li>a{color:#666666;border:2px solid transparent;-webkit-border-radius:2px 2px 2px 2px;-moz-border-radius:2px 2px 2px 2px;border-radius:2px 2px 2px 2px;}.list.tabs>li>a:hover,.list.tabs>li>a:focus{background-color:#b3b3b3;border-color:#b3b3b3 !important;border-bottom:2px solid #b3b3b3;}
+.list.tabs>li>a{color:#666666;border:1px solid transparent;-webkit-border-radius:2px 2px 2px 2px;-moz-border-radius:2px 2px 2px 2px;border-radius:2px 2px 2px 2px;}.list.tabs>li>a:hover,.list.tabs>li>a:focus{background-color:#b3b3b3;border-color:#b3b3b3 !important;border-top:3px solid transparent;border-bottom:1px solid #b3b3b3;}
 .list.tabs>.active{border-bottom:0 !important;}
-.list.tabs>.active>a,.list.tabs>.active>a:hover,.list.tabs>.active>a:focus{color:#333333;background-color:transparent;border:1px solid #b3b3b3;border-top:2px solid #0077cc;border-bottom:2px solid white !important;font-weight:bold;}
-.list.tabs>.icon>a:hover,.list.tabs>.icon>a:focus{color:#0077cc;background-color:transparent;border:2px solid transparent !important;}
+.list.tabs>.active>a,.list.tabs>.active>a:hover,.list.tabs>.active>a:focus{color:#333333;background-color:transparent;border:1px solid #b3b3b3;border-top:2px solid #0077cc;border-bottom:1px solid #ffffff !important;font-weight:bold;}
+.list.tabs>.icon>a:hover,.list.tabs>.icon>a:focus{color:#0077cc;background-color:transparent;border:1px solid transparent !important;}
 .topbar{position:fixed;top:0;left:0;overflow:visible;width:100%;text-align:left;border-bottom:1px solid #ffffff;background-image:-webkit-gradient(linear, left 0%, left 100%, from(#f8f8f8), to(#ebebeb));background-image:-webkit-linear-gradient(top, #f8f8f8, 0%, #ebebeb, 100%);background-image:-moz-linear-gradient(top, #f8f8f8 0%, #ebebeb 100%);background-image:linear-gradient(to bottom, #f8f8f8 0%, #ebebeb 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffebebeb', GradientType=0);z-index:1030;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
 .topbar>ul{width:1010px;margin-right:auto;margin-left:auto;}
 .topbar>ul{padding-top:5px;padding-bottom:4px;}

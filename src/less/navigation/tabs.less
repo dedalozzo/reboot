@@ -42,14 +42,15 @@
 
 .list.tabs > li > a {
   color: @gray;
-  border: 2px solid transparent;
+  border: @tabs-border-width solid transparent;
   .border-radius(2px 2px 2px 2px);
 
   &:hover,
   &:focus {
     background-color: @tabs-border-color;
     border-color: @tabs-border-color !important;
-    border-bottom: 2px solid @tabs-border-color;
+    border-top: 3px solid transparent;
+    border-bottom: 1px solid @tabs-border-color;
   }
 }
 
@@ -64,7 +65,7 @@
   background-color: transparent;
   border: @tabs-border-width solid @tabs-border-color;
   border-top: 2px solid @link-color;
-  border-bottom: 2px solid white !important;
+  border-bottom: @tabs-border-width solid white !important;
   font-weight: bold;
 }
 
@@ -72,5 +73,5 @@
 .list.tabs > .icon > a:focus {
   color: @link-color-hover;
   background-color: transparent;
-  border: 2px solid transparent !important;
+  border: @tabs-border-width solid transparent !important;
 }
