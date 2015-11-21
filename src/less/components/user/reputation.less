@@ -8,6 +8,7 @@
 // SETTINGS
 // ---------------------------------------------------------------------------------------------------------------------
 @reputation-background-color: lighten(@blue, 35%) !important;
+@reputation-border-radius: 2px;
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -17,7 +18,7 @@
 // Normal.
 .reputation {
   .box-sizing(border-box);
-  .border-radius(3px);
+  .border-radius(@reputation-border-radius);
   border: 1px solid @gray-lighter;
   color: @gray-dark;
   #gradient > .horizontal(white, @reputation-background-color, 0%, 100%);
