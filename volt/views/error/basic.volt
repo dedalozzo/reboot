@@ -29,7 +29,7 @@
     {% if user.isMember() %}
       {% set username = user.username %}
     {% else %}
-      {% set username = 'ospite' %}
+      {% set username = 'guest' %}
     {% endif %}
 
     <aside class="prompt gutter">
