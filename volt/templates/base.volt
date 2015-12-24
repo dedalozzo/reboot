@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="it" xmlns="http://www.w3.org/1999/html">
-<!-- Copyright (c) 2000-{{ year }} 3F sas All rights reserved. -->
+<!-- Copyright (c) 2015-{{ year }} REINDEX LTD All rights reserved. -->
 <!-- Version {{ version }} -->
 <head>
   <title>{{ title }} - {{ domainName|capitalize }}</title>
