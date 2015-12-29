@@ -1,7 +1,7 @@
 <ul class="dropdown-menu">
   {% if post.canBeProtected() %}
     {% set showDiv = TRUE %}
-    <li><button id='m-close' title="prevent users from adding further {% if post.type == 'question' %} answers{% else %} comments{% endif %} to the {{ post.type }}"><i class="icon-lock"></i>Close</button></li>
+    <li><button id='m-close' title="prevent members from adding further {% if post.type == 'question' %} answers{% else %} comments{% endif %} to the {{ post.type }}"><i class="icon-lock"></i>Close</button></li>
     <li><button id='m-lock' title="protect the {{ post.type }} from further modifications"><i class="icon-umbrella"></i>Lock</button></li>
   {% elseif post.canBeUnprotected() %}
     {% set showDiv = TRUE %}

@@ -6,4 +6,4 @@
 'moderators': 'moderators',
 'privileges': 'privileges'
 ] %}
-{% set controllerRoute = 'users/' %}
+{% set controllerRoute = 'members/' %}

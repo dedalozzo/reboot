@@ -2,7 +2,7 @@
 
 {% block content %}
   <div id="content">
-  {% include "partials/navigation/tabs/user/" %}
+  {% include "partials/navigation/tabs/member/" %}
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
@@ -14,23 +14,23 @@
     </div>
   {% endif %}
 
-  {% if users is defined %}
-    {% for user in users %}
+  {% if members is defined %}
+    {% for member in members %}
       {% set modulus = loop.index % 4 %}
-      {% set url = '//'~domainName~'/'~user.username %}
+      {% set url = '//'~domainName~'/'~member.username %}
       {% if loop.first %}
       <ul class="list gutter">
       {% endif %}
         <li style="width: 25%;">
           <section class="item-user">
-            <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ user.gravatar }}&s=48" /></a>
+            <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=48" /></a>
             <div class="reputation ext">
               <table>
                 <tr><td>2345</td></tr>
                 <tr><td>REPUTAZIONE</td></tr>
               </table>
             </div>
-            <a class="username" href="{{ url }}">{{ user.username }}</a>
+            <a class="username" href="{{ url }}">{{ member.username }}</a>
           </section>
         </li>
       {% if loop.last %}
