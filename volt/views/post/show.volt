@@ -73,7 +73,7 @@
           </section>
         </div>
         <ul class="list item-buttons gutter">
-          <li><button class="btn btn-like {% if post.didUserVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
+          <li><button class="btn btn-like {% if post.didMemberVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
           <li><button class="btn btn-link score">{{ score }}</button></li>
           <li class="space"></li>
           <li><button class="btn btn-star {% if post.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></button></li>
@@ -105,9 +105,9 @@
         </ul>
 
         <ul class="list item-actors">
-          {% set usersHaveVoted = post.getUsersHaveVoted() %}
-          {% for userHasVoted in usersHaveVoted %}
-          <li><a href="{{ baseUrl~userHasVoted.id }}"><img class="img-polaroid" title="{{ userHasVoted.username }}" src="{{ userHasVoted.gravatar }}&s=20" /></a></li>
+          {% set membersHaveVoted = post.getMembersHaveVoted() %}
+          {% for memberHasVoted in membersHaveVoted %}
+          <li><a href="{{ baseUrl~memberHasVoted.id }}"><img class="img-polaroid" title="{{ memberHasVoted.username }}" src="{{ memberHasVoted.gravatar }}&s=20" /></a></li>
           {% endfor  %}
         </ul>
       </section>
