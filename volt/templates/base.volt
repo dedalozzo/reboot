@@ -38,6 +38,12 @@
 
   {{ assets.outputJs() }}
 
+  {# Removes the Facebook ugliness. #}
+  <script>
+    if (window.location.hash == "#_=_")
+      window.location.hash = "";
+  </script>
+
   <style>
     body {
       background-image: url({{ dist }}/img/bg/bg_px.png);
