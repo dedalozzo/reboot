@@ -31,10 +31,10 @@
     <aside class="registration">
       <section class="notebook gutter" id="sign">
         <ul class="list tabs no-gutter">
-          <li{% if signin is defined %} class="active"{% endif %}><a href="#signin" data-toggle="tab">Sign In</a></li>
+          <li{% if signin is defined or logon is defined%} class="active"{% endif %}><a href="#signin" data-toggle="tab">Sign In</a></li>
           <li{% if signup is defined %} class="active"{% endif %}><a href="#signup" data-toggle="tab">Sign Up</a></li>
         </ul>
-        <div class="notebook-page{% if signin is defined %} active{% endif %}" id="signin">
+        <div class="notebook-page{% if signin is defined or logon is defined %} active{% endif %}" id="signin">
           <div>
             <p>Se possiedi già un'utenza sul sito, puoi accedere usando le tue credenziali.</p>
             <form action="//{{ serverName }}/logon/" id="signinform" name="signinform" method="post" role="form">
