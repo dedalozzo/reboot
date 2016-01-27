@@ -10,7 +10,7 @@
   'newest': 'new',
   'popular': 'popular',
   'active': 'active',
-  'favorite': ['favorites']
+  'favorite': 'favorites'
   ] %}
 {% endif %}
 {% block vars %}

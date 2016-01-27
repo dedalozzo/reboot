@@ -13,7 +13,7 @@
   'newest': 'new',
   'popular': 'popular',
   'active': 'active',
-  'favorite': ['favorites']
+  'favorite': 'favorites'
   ] %}
 {% endif %}
 {% set controllerRoute = 'questions/' %}
