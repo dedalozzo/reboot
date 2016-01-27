@@ -4,6 +4,5 @@
 'byName': 'name',
 'voters': 'voters',
 'moderators': 'moderators',
-'privileges': 'privileges'
 ] %}
 {% set controllerRoute = 'users/' %}
