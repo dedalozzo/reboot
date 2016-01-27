@@ -6,14 +6,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {% if actionName == 'byName' %}
-    <div class="ghost gutter">
-      <form method="get" action="search.php" autocomplete="off" name="form_search">
-        <div>Cerca tra gli utenti:&nbsp;&nbsp;<input type="text" style="width: 200px;" placeholder="Nome utente" autocomplete="on" id="keyword" name="keyword" /></div>
-      </form>
-    </div>
-  {% endif %}
-
   {% if members is defined %}
     {% for member in members %}
       {% set modulus = loop.index % 4 %}
