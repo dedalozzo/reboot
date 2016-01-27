@@ -3,6 +3,6 @@
 'about': 'about',
 'connections': 'connections',
 'projects': 'projects',
-'settings': ['settings'] {# settings will be shown only if the the current user matches the profile #}
+'settings': ['settings']
 ] %}
 {% set controllerRoute = profile.username~'/' %}
