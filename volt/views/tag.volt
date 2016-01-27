@@ -8,14 +8,6 @@
 
     <div class="ghost gutter">Un tag è un'etichetta che relaziona un contenuto con altri simili, inerenti lo stesso argomento. Un corretto utilizzo dei tag permette agli utenti di trovare contenuti afferenti ai propri interessi, agevolandoli nella selezione delle domande a cui potrebbero essere in grado di rispondere.</div>
 
-    {% if actionName == 'byName' %}
-    <div class="ghost gutter">
-      <form method="get" action="search.php" autocomplete="off" name="form_search">
-        <div>Cerca tra i tags:&nbsp;&nbsp;<input type="text" style="width: 200px;" placeholder="Nome tag" autocomplete="on" id="keyword" name="keyword" /></div>
-      </form>
-    </div>
-    {% endif %}
-
     {% if entries is defined %}
       {% for entry in entries %}
         {% set modulus = loop.index % 4 %}
