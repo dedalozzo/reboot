@@ -2,7 +2,6 @@
 'reputation': 'reputation',
 'newest': 'new',
 'byName': 'name',
-'voters': 'voters',
-'moderators': 'moderators',
+'moderators': 'moderators'
 ] %}
 {% set controllerRoute = 'users/' %}
