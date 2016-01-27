@@ -21,13 +21,12 @@
         <ul class="dropdown-menu">
           <li><a href="{{ userUri }}"><i class="icon-home"></i>Timeline</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="{{ userUri }}/profile/"><i class="icon-user"></i>Profile</a></li>
+          <li><a href="{{ userUri }}/about/"><i class="icon-user"></i>About</a></li>
           <li><a href="{{ userUri }}/connections/"><i class="icon-group"></i>Connections</a></li>
-          <li><a href="//{{ domainName }}/preferiti/"><i class="icon-star"></i>Favorites</a></li>
+          <li><a href="//{{ domainName }}/favorites/"><i class="icon-star"></i>Favorites</a></li>
           <li><a href="{{ userUri }}/projects/"><i class="icon-github"></i>Projects</a></li>
-          <li><a href="{{ userUri }}/activities/"><i class="icon-tasks"></i>Activities</a></li>
           <li class="dropdown-divider"></li>
-          <li><button><i class="icon-wrench"></i>Settings</button></li>
+          <li><a href="{{ userUri }}/settings/"><i class="icon-wrench"></i>Settings</a></li>
           <li><button><i class="icon-gears"></i>Administration</button></li>
           <li class="dropdown-divider"></li>
           <li><a href="//{{ domainName }}/signout/"><i class="icon-signout"></i>Sign Out</a></li>
