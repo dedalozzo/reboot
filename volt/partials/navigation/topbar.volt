@@ -21,7 +21,7 @@
         <ul class="dropdown-menu">
           <li><a href="{{ userUri }}"><i class="icon-home"></i>Timeline</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="{{ userUri }}/profile/"><i class="icon-user"></i>Profile</a></li>
+          <li><a href="{{ userUri }}/about/"><i class="icon-user"></i>Profile</a></li>
           <li><a href="{{ userUri }}/connections/"><i class="icon-group"></i>Connections</a></li>
           <li><a href="//{{ domainName }}/favorites/"><i class="icon-star"></i>Favorites</a></li>
           <li><a href="{{ userUri }}/projects/"><i class="icon-github"></i>Projects</a></li>
