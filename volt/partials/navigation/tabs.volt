@@ -11,6 +11,13 @@
   <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-th-large icon-large"></a></li>
   {% set uri = '//'~domainName~'/'~tagRoute~controllerRoute %}
   {% for name, actionRoute in tabs %}
+    {% if actionRoute is type('array') %}
+      {% if not user.match(profile.id) %}
+        {% continue %}
+      {% else %}
+        {% set actionRoute = actionRoute|key %}
+      {% endif %}
+    {% endif %}
     <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
 </ul>
