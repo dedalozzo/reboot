@@ -15,7 +15,7 @@
       {% if not user.match(profile.id) %}
         {% continue %}
       {% else %}
-        {% set actionRoute = actionRoute|key %}
+        {% set actionRoute = actionRoute|current %}
       {% endif %}
     {% endif %}
     <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
