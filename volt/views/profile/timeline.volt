@@ -6,23 +6,7 @@
 
 {% block content %}
 <div id="content" class="profile-top" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
-  <div class="ghost gutter-plus" style="margin-top: 200px;">
-    <div style="position: relative;">
-      <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.primaryEmail) }}&s=160">
-      {% if user.isMember() and user.match(profile.id) %}
-      <a class="change-avatar" href="http://it.gravatar.com/"><i class="icon-camera"></i>CAMBIA FOTO</a>
-      {% endif %}
-    </div>
-    <div class="full-name">{% if profile.firstName is defined %}{{ profile.firstName }}{% endif %} {% if profile.lastName is defined %}{{ profile.lastName }}{% endif %}</div>
-    <div class="pull-right" style="margin-top: 148px;">
-      {% if user.isMember() and (user.match(profile.id) or user.isAdmin()) %}
-      <a class="btn blue" href="#"><i class="icon-user"></i> MODIFICA</a>
-      {% endif %}
-      {% if user.isAdmin() %}
-      <a class="btn" href="#"><i class="icon-flag"></i> BANNA</a>
-      {% endif %}
-    </div>
-  </div>
+  {% include "partials/profile-header.volt" %}
 
   {% set controllerPath = '/' %}
   {% include "partials/navigation/tabs/profile/" %}
