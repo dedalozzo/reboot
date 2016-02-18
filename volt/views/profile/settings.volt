@@ -24,23 +24,23 @@
     <div>
       <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
         <div class="half-gutter">
-          {{ text_field("username", "placeholder": "Nome utente") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
+          {{ text_field("firstName", "placeholder": "First name") }}
+          {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
         </div>
         <div class="half-gutter">
-          {{ email_field("email", "placeholder": "E-mail") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("email") }}</span>{% endif %}
+          {{ text_field("lastName", "placeholder": "Last name") }}
+          {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
         </div>
         <div class="half-gutter">
-          {{ password_field("password", "placeholder": "Password") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
+          {{ radio_field('gender', 'value': 'Male', 'id': 'male') }}
+          {{ radio_field('gender', 'value': 'Female', 'id': 'female') }}
         </div>
         <div class="half-gutter">
-          {{ password_field("confirmPassword", "placeholder": "Ripeti la password") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
+          {{ date_field("birthday", "placeholder": "Last name") }}
+          {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
         </div>
         <div class="align-right">
-          <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
+          <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
         </div>
       </form>
     </div>
