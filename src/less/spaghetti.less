@@ -4,3 +4,77 @@
   padding: 0;
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@rabs-background-color: lighten(@blue, 35%) !important;
+@rabs-border-color: @gray-light;
+@rabs-border-width: 1px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Gives the rabs something to sit on.
+.list.rabs {
+  margin-right: @gutter;
+  border-right: @rabs-border-width solid @rabs-border-color;
+  text-transform: uppercase;
+  .user-select(none);
+}
+
+// Makes the list-items overlay the right border.
+.list.rabs > li {
+  float: left;
+  margin-right: -@rabs-border-width;
+  line-height: 1.6; // Don't fuckin change this!
+}
+
+.list.rabs > li + li > * {
+  margin-left: 4px;
+}
+
+.list.rabs > li > * {
+  display: block;
+  padding: 4px 6px 3px 6px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.list.rabs > li > a {
+  color: @gray;
+  border: @rabs-border-width solid transparent;
+  border-left: 2px solid transparent;
+  .border-radius(2px 2px -2px -2px);
+
+  &:hover,
+  &:focus {
+    background-color: @rabs-background-color;
+    border: @rabs-border-width solid @rabs-border-color;
+    border-left: 2px solid @link-color;
+    border-right: 1px solid transparent;
+  }
+}
+
+.list.rabs > .active {
+  border-right: 0 !important;
+}
+
+.list.rabs > .active > a,
+.list.rabs > .active > a:hover,
+.list.rabs > .active > a:focus {
+  color: @gray-dark;
+  background-color: transparent;
+  border: @rabs-border-width solid @rabs-border-color;
+  border-left: 2px solid @link-color;
+  border-right: @rabs-border-width solid white !important;
+  font-weight: bold;
+}
+
+.list.rabs > .icon > a:hover,
+.list.rabs > .icon > a:focus {
+  color: @link-color-hover;
+  background-color: transparent;
+  border: @rabs-border-width solid transparent;
+  border-left: 2px solid transparent;
+}
