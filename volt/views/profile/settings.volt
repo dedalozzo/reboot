@@ -15,21 +15,18 @@
 
   {{ flash.output() }}
 
-  <div class="column-left">
+  <div class="column-left compressed">
 
     <ul class="list vertical rabs half-gutter">
-      <li class="pull-right icon"><a href="//programmazione.me" class="icon-th-list icon-large"></a></li>
-      <li class="pull-right icon"><a href="//programmazione.me" class="icon-th-large icon-large"></a></li>
-      <li><a href="//programmazione.me/Dedalo/timeline/">timeline</a></li>
-      <li><a href="//programmazione.me/Dedalo/about/">about</a></li>
-      <li><a href="//programmazione.me/Dedalo/connections/">connections</a></li>
-      <li><a href="//programmazione.me/Dedalo/projects/">projects</a></li>
-      <li class="active"><a href="//programmazione.me/Dedalo/settings/">settings</a></li>
+      <li><a href="//programmazione.me/Dedalo/timeline/">General</a></li>
+      <li class="active"><a href="//programmazione.me/Dedalo/about/">Account Settings</a></li>
+      <li><a href="//programmazione.me/Dedalo/about/">Logins</a></li>
+      <li><a href="//programmazione.me/Dedalo/connections/">Emails</a></li>
     </ul>
 
   </div> <!-- /column-left -->
 
-  <div class="column-right">
+  <div class="column-right expanded">
 
     <div>
       <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
