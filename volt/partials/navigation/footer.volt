@@ -1,4 +1,4 @@
-    <footer id="footer">
+    <footer>
       <ul class="list">
         <li><a href="//{{ domainName }}/tour/">ABOUT</a></li>
         <li><a href="//{{ domainName }}/help/">HELP</a></li>
