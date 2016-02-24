@@ -17,11 +17,12 @@
 
   <div class="column-left compressed">
 
+    {% set uri = '//'~domainName~'/'~controllerRoute %}
     <ul class="list vertical rabs half-gutter">
-      <li><a href="//programmazione.me/Dedalo/timeline/">General</a></li>
-      <li class="active"><a href="//programmazione.me/Dedalo/about/">Account Settings</a></li>
-      <li><a href="//programmazione.me/Dedalo/about/">Logins</a></li>
-      <li><a href="//programmazione.me/Dedalo/connections/">Emails</a></li>
+      <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/settings/general/">General</a></li>
+      <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/settings/account/">Account Settings</a></li>
+      <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/settings/logins/">Logins</a></li>
+      <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/settings/emails/">Emails</a></li>
     </ul>
 
   </div> <!-- /column-left -->
