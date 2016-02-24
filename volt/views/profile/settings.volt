@@ -34,8 +34,10 @@
           {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
         </div>
         <div class="half-gutter">
-          {{ radio_field('gender', 'value': 'Male', 'id': 'male') }}
-          {{ radio_field('gender', 'value': 'Female', 'id': 'female') }}
+          {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
+          <label for="male">Male</label>
+          {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
+          <label for="female">Female</label>
         </div>
         <div class="half-gutter">
           {{ date_field("birthday", "placeholder": "Last name") }}
