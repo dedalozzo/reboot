@@ -20,7 +20,6 @@
 .list.rabs {
   height: 100%;
   margin-right: @gutter;
-  border-right: @rabs-border-width solid @rabs-border-color;
   text-transform: uppercase;
   .user-select(none);
 }
@@ -50,12 +49,10 @@
     background-color: @rabs-background-color;
     border: @rabs-border-width solid @rabs-border-color;
     border-left: 2px solid @link-color;
-    border-right: 1px solid transparent;
   }
 }
 
 .list.rabs > .active {
-  border-right: 0 !important;
 }
 
 .list.rabs > .active > a,
@@ -65,7 +62,6 @@
   background-color: transparent;
   border: @rabs-border-width solid @rabs-border-color;
   border-left: 2px solid @link-color;
-  border-right: @rabs-border-width solid white !important;
   font-weight: bold;
 }
 
