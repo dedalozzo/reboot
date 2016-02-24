@@ -25,27 +25,31 @@
 
     <div>
       <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
-        <div class="half-gutter">
-          {{ text_field("firstName", "placeholder": "First name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ text_field("lastName", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
-          <label for="male">Male</label>
-          {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
-          <label for="female">Female</label>
-        </div>
-        <div class="half-gutter">
-          {{ date_field("birthday", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
-        </div>
-        <div class="align-right">
-          <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
-        </div>
+        <fieldset>
+          <legend>Personal Information</legend><br />
+          <div class="half-gutter">
+            <label for="firstName">First Name:</label>
+            {{ text_field("firstName", "placeholder": "First name") }}
+            {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
+          </div>
+          <div class="half-gutter">
+            {{ text_field("lastName", "placeholder": "Last name") }}
+            {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
+          </div>
+          <div class="half-gutter">
+            {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
+            <label for="male">Male</label>
+            {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
+            <label for="female">Female</label>
+          </div>
+          <div class="half-gutter">
+            {{ date_field("birthday", "placeholder": "Last name") }}
+            {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
+          </div>
+          <div class="align-right">
+            <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
+          </div>
+        </fieldset>
       </form>
     </div>
 
