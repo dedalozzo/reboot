@@ -23,10 +23,9 @@
 
   <div class="column-right expanded">
 
-    <div>
+    <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
         <fieldset>
-          <legend>Personal information</legend><br />
           <div class="half-gutter">
             <label for="firstName">First name:</label>
             {{ text_field("firstName", "placeholder": "First name") }}
