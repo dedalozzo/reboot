@@ -28,7 +28,7 @@
         <fieldset>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
-            {{ text_field("firstName", "placeholder": "First name") }}
+            {{ text_field("firstName", "placeholder": "First name", 'class': 'half') }}
             {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
@@ -45,7 +45,7 @@
           </div>
           <div class="half-gutter">
             <label for="birthday">Birthday:</label><br>
-            {{ date_field("birthday", "placeholder": "Last name") }}
+            {{ date_field("birthday", "placeholder": "Last name", 'class': 'date') }}
             {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
           </div>
           <div class="align-right">
