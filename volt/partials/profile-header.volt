@@ -1,4 +1,7 @@
 <div class="ghost gutter-plus" style="margin-top: 200px;">
+  {% if user.isMember() and (user.match(profile.id) or user.isAdmin()) %}
+  <a class="change-avatar" href="#"><i class="icon-camera"></i></a>
+  {% endif %}
   <div style="position: relative;">
     <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.primaryEmail) }}&s=160">
     {% if user.isMember() and user.match(profile.id) %}
@@ -7,8 +10,5 @@
   </div>
   <div class="full-name">{% if profile.firstName is defined %}{{ profile.firstName }}{% endif %} {% if profile.lastName is defined %}{{ profile.lastName }}{% endif %}</div>
   <div class="pull-right" style="margin-top: 148px;">
-    {% if user.isMember() and (user.match(profile.id) or user.isAdmin()) %}
-    <a class="change-avatar" href="#"><i class="icon-camera"></i>CAMBIA SFONDO</a>
-    {% endif %}
   </div>
 </div>
