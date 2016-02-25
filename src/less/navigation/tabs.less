@@ -31,14 +31,29 @@
   line-height: 1.6; // Don't fuckin change this!
 }
 
+// Vertical tabs don't float.
+.list.tabs.vertical > li {
+  float: none;
+}
+
 .list.tabs > li + li > * {
   margin-left: 4px;
+}
+
+// Vertical tabs don't have a left margin.
+.list.tabs > li + li > * {
+  margin-left: 0;
 }
 
 .list.tabs > li > * {
   display: block;
   padding: 4px 6px 3px 6px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+// Vertical tabs have a margin bottom.
+.list.tabs > li > * {
+  margin-bottom: 5px;
 }
 
 .list.tabs > li > a {
@@ -56,7 +71,22 @@
   }
 }
 
+// Vertical tabs don't override the bottom border.
+.list.tabs.vertical > li > a {
+  border-right: 2px solid transparent;
+
+  &:hover,
+  &:focus {
+    border-left: 2px solid @link-color;
+  }
+}
+
 .list.tabs > .active {
+  border-bottom: 0 !important;
+}
+
+// Vertical tabs don't override the bottom border.
+.list.tabs.vertical > .active {
   border-bottom: 0 !important;
 }
 
@@ -68,6 +98,14 @@
   border: @tabs-border-width solid @tabs-border-color;
   border-top: 2px solid @link-color;
   border-bottom: @tabs-border-width solid white !important;
+  font-weight: bold;
+}
+
+// Vertical tabs don't have a border bottom even when active.
+.list.tabs.vertical > .active > a,
+.list.tabs.vertical > .active > a:hover,
+.list.tabs.vertical > .active > a:focus {
+  border-left: 2px solid @link-color;
   font-weight: bold;
 }
 
