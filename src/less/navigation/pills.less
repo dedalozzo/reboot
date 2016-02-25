@@ -1,0 +1,65 @@
+//! @file pills.less
+//! @brief Pills.
+//! @author Filippo F. Fadda
+//! @copyright REINDEX LTD
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SETTINGS
+// ---------------------------------------------------------------------------------------------------------------------
+@pills-background-color: lighten(@blue, 35%) !important;
+@pills-border-color: @gray-light;
+@pills-border-width: 1px;
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Gives the pills something to sit on.
+.list.pills {
+  height: 100%;
+  margin-right: @gutter;
+  text-transform: uppercase;
+  .user-select(none);
+}
+
+// Makes the list-items overlay the right border.
+.list.pills > li {
+  margin-right: -@pills-border-width;
+  line-height: 1.6; // Don't fuckin change this!
+}
+
+.list.pills > li > * {
+  display: block;
+  margin-bottom: 5px;
+  padding: 4px 6px 3px 6px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.list.pills > li > a {
+  color: @gray;
+  border: @pills-border-width solid transparent;
+  border-left: 2px solid transparent;
+  .border-radius(2px 2px -2px -2px);
+
+  &:hover,
+  &:focus {
+    background-color: @pills-background-color;
+    border: @pills-border-width solid @pills-border-color;
+    border-left: 2px solid @link-color;
+  }
+}
+
+.list.pills > .active {
+}
+
+.list.pills > .active > a,
+.list.pills > .active > a:hover,
+.list.pills > .active > a:focus {
+  color: @gray-dark;
+  background-color: transparent;
+  border: @pills-border-width solid @pills-border-color;
+  border-left: 2px solid @link-color;
+  font-weight: bold;
+}

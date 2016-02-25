@@ -1,6 +1,6 @@
 {# Settings #}
 {% set uri = '//'~domainName~'/'~controllerRoute %}
-<ul class="list vertical tabs half-gutter">
+<ul class="list pills half-gutter">
   <li{{ ('settings' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/">General</a></li>
   <li{{ ('account' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/account/">Account</a></li>
   <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/logins/">Logins</a></li>
