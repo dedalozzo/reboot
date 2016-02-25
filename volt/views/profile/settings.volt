@@ -37,7 +37,7 @@
             {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
-            <label>Gender:</label>
+            <label>Gender:</label><br>
             {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
             <label for="male">Male</label>
             {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
