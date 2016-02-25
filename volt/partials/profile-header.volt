@@ -9,7 +9,6 @@
   <div class="pull-right" style="margin-top: 148px;">
     {% if user.isMember() and (user.match(profile.id) or user.isAdmin()) %}
     <div style="position: relative;">
-      <img id="avatar" class="img-polaroid pull-left" src="http://gravatar.com/avatar/6e8f028adc23ca57bf0e730c4c7f7ae8?d=identicon&s=160">
       <a class="change-avatar" href="#"><i class="icon-camera"></i>CAMBIA SFONDO</a>
     </div>
     {% endif %}
