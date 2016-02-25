@@ -33,7 +33,7 @@
           </div>
           <div class="half-gutter">
             <label for="lastName">Last name:</label>
-            {{ text_field("lastName", "placeholder": "Last name", 'width': '50%') }}
+            {{ text_field("lastName", "placeholder": "Last name", 'class': 'half') }}
             {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
