@@ -27,12 +27,12 @@
       <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
-            <label for="firstName">First name:</label>
+            <label for="firstName">First name:</label><br>
             {{ text_field("firstName", "placeholder": "First name") }}
             {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
-            <label for="lastName">Last name:</label>
+            <label for="lastName">Last name:</label><br>
             {{ text_field("lastName", "placeholder": "Last name", 'class': 'half') }}
             {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
           </div>
@@ -44,7 +44,7 @@
             <label for="female">Female</label>
           </div>
           <div class="half-gutter">
-            <label for="birthday">Birthday:</label>
+            <label for="birthday">Birthday:</label><br>
             {{ date_field("birthday", "placeholder": "Last name") }}
             {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
           </div>
