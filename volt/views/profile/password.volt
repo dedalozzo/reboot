@@ -27,11 +27,6 @@
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
-            <label for="firstName">First name:</label><br>
-            {{ text_field("oldPassword", "placeholder": "Old password", 'class': 'half') }}
-            {% if updatePassword is defined %}<span class="error">{{ validation.first("oldPassword") }}</span>{% endif %}
-          </div>
-          <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
             {{ password_field("oldPassword", "placeholder": "New password", 'class': 'half') }}
             {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
