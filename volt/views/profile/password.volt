@@ -24,32 +24,30 @@
   <div class="column-right expanded">
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
+      <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
-            {{ text_field("firstName", "placeholder": "First name", 'class': 'half') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
+            {{ text_field("oldPassword", "placeholder": "Old password", 'class': 'half') }}
+            {% if updatePassword is defined %}<span class="error">{{ validation.first("oldPassword") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
-            <label for="lastName">Last name:</label><br>
-            {{ text_field("lastName", "placeholder": "Last name", 'class': 'half') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
+            <label for="oldPassword">Old password:</label><br>
+            {{ password_field("oldPassword", "placeholder": "New password", 'class': 'half') }}
+            {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
-            <label>Gender:</label><br>
-            {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
-            <label for="male">Male</label>
-            {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
-            <label for="female">Female</label>
+            <label for="newPassword">New password:</label><br>
+            {{ password_field("newPassword", "placeholder": "Confirm password", 'class': 'half') }}
+            {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
-            <label for="birthday">Birthday:</label><br>
-            {{ date_field("birthday", "placeholder": "Last name", 'class': 'date') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
+            <label for="confirmPassword">Confirm password:</label><br>
+            {{ password_field("confirmPassword", "placeholder": "Ripeti la password", 'class': 'half') }}
+            {% if updatePassword is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
           </div>
           <div class="align-right">
-            <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
+            <button type="submit" name="updatePassword" value="updatePassword" class="btn blue">Save</button>
           </div>
         </fieldset>
       </form>
