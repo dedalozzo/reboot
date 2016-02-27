@@ -24,32 +24,15 @@
   <div class="column-right expanded">
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
+      <form action="//{{ serverName }}/logon/" id="usernameform" name="usernameform" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
-            <label for="firstName">First name:</label><br>
-            {{ text_field("firstName", "placeholder": "First name", 'class': 'half') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
-          </div>
-          <div class="half-gutter">
-            <label for="lastName">Last name:</label><br>
-            {{ text_field("lastName", "placeholder": "Last name", 'class': 'half') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
-          </div>
-          <div class="half-gutter">
-            <label>Gender:</label><br>
-            {{ radio_field('gender', 'value': 'm', 'id': 'male') }}
-            <label for="male">Male</label>
-            {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
-            <label for="female">Female</label>
-          </div>
-          <div class="half-gutter">
-            <label for="birthday">Birthday:</label><br>
-            {{ date_field("birthday", "placeholder": "Last name", 'class': 'date') }}
-            {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
+            <label for="username">Username:</label><br>
+            {{ text_field("username", "placeholder": "Nome utente") }}
+            {% if update is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
           </div>
           <div class="align-right">
-            <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
+            <button type="submit" name="update" value="update" class="btn blue">Save</button>
           </div>
         </fieldset>
       </form>
