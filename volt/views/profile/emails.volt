@@ -27,11 +27,12 @@
         <fieldset>
           <table>
             {% set emails = user.getEmails() %}
-            {% for email in emails %}
+            {% for email, verified in emails %}
             <tr>
-              <td>{{ email[0] }}</td>
-              <td>{{ email[1] ? 'verified' : 'not verified' }}</td>
-              <td>{{ user.canRemoveEmail(email[0]) ? 'yes' : 'no' }}</td>
+              {% set address = current %}
+              <td>{{ email }}</td>
+              <td>{{ verified ? 'verified' : 'not verified' }}</td>
+              <td>{{ user.canRemoveEmail(email) ? 'yes' : 'no' }}</td>
             </tr>
             {% endfor %}
           </table>
