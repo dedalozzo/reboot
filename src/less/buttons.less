@@ -220,7 +220,8 @@ a.btn {
 // ---------------------------------------------------------------------------------------------------------------------
 .btn-like,
 .btn-star,
-.btn-accept {
+.btn-accept,
+.btn-trash {
   color: @gray !important;
   width: 34px !important;
   background-color: transparent !important;
@@ -229,7 +230,8 @@ a.btn {
 
 .btn-like:hover,
 .btn-star:hover,
-.btn-accept:hover {
+.btn-accept:hover,
+.btn-trash {
   background-color: transparent;
   text-decoration: none; // Required for `a` elements.
   cursor: pointer;
@@ -247,6 +249,9 @@ a.btn {
   color: @green !important;
 }
 
+.btn-trash.active {
+  color: @gray !important;
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // A BUTTON THAT APPEARS LIKE AN ICON
