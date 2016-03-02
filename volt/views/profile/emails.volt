@@ -25,6 +25,16 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
+          <table>
+            {% set emails = user.emails %}
+            {% for email in emails %}
+            <tr>
+              <td>{{ email[0] }}</td>
+              <td>{{ email[1] ? 'verified' : 'not verified' }}</td>
+              <td>{{ user.canRemoveEmail(email[0]) ? 'yes' : 'no' }}</td>
+            </tr>
+            {% endfor %}
+          </table>
           <div class="half-gutter">
             <label for="email">Add e-mail address:</label><br>
             {{ email_field("email", "placeholder": "E-mail address", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">Save</button>
