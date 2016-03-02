@@ -25,7 +25,7 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
-          <table id="emails">
+          <table id="emails" class="gutter">
             <thead>
               <tr>
                 <th scope="col" id="address">Address</th>
@@ -42,7 +42,7 @@
                 <td>{{ email }}</td>
                 <td>{{ verified ? 'verified' : 'not verified' }}</td>
                 <td>{{ verified ? '' : 'Resend verification e-mail' }}</td>
-                <td>{{ user.canRemoveEmail(email) ? 'yes' : 'no' }}</td>
+                <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
             </tbody>
