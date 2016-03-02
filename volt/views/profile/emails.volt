@@ -26,7 +26,7 @@
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
           <table>
-            {% set emails = user.emails %}
+            {% set emails = user.getEmails() %}
             {% for email in emails %}
             <tr>
               <td>{{ email[0] }}</td>
