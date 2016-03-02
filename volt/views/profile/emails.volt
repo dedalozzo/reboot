@@ -29,6 +29,7 @@
             <thead>
               <tr>
                 <th scope="col" id="address">Address</th>
+                <th scope="col" id="verified">Primary</th>
                 <th scope="col" id="verified">Verified</th>
                 <th scope="col" id="sendVerification"></th>
                 <th scope="col" id="delete"></th>
@@ -40,7 +41,8 @@
               <tr>
                 {% set address = current %}
                 <td>{{ email }}</td>
-                <td>{{ verified ? '<div class="badge">verified</div>' : 'not verified' }}</td>
+                <td>{{ user.isPrimaryEmail(email) ? '<div class="highlight blue">primary</div>' : '' }}</td>
+                <td>{{ verified ? '<div class="highlight green">verified</div>' : 'not verified' }}</td>
                 <td>{{ verified ? '' : 'Resend verification e-mail' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
