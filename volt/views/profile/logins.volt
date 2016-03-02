@@ -17,42 +17,12 @@
 
   <div class="column-left compressed">
 
-    {% set uri = '//'~domainName~'/'~controllerRoute %}
-    <ul class="list vertical rabs half-gutter">
-      <li{{ ('settings' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/">General Settings</a></li>
-      <li{{ ('account' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/account/">Account Settings</a></li>
-      <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/logins/">Logins</a></li>
-      <li{{ ('emails' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Emails</a></li>
-      <li{{ ('privacy' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Privacy Settings</a></li>
-    </ul>
+    {% include "partials/navigation/settings.volt" %}
 
   </div> <!-- /column-left -->
 
   <div class="column-right expanded">
 
-    <div>
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
-        <div class="half-gutter">
-          {{ text_field("firstName", "placeholder": "First name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ text_field("lastName", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ radio_field('gender', 'value': 'Male', 'id': 'male') }}
-          {{ radio_field('gender', 'value': 'Female', 'id': 'female') }}
-        </div>
-        <div class="half-gutter">
-          {{ date_field("birthday", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
-        </div>
-        <div class="align-right">
-          <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
-        </div>
-      </form>
-    </div>
 
   </div> <!-- /column-right -->
 
