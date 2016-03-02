@@ -25,16 +25,27 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
-          <table>
+          <table id="emails">
+            <thead>
+              <tr>
+                <th scope="col" id="address">Address</th>
+                <th scope="col" id="verified">Verified</th>
+                <th scope="col" id="sendVerification"></th>
+                <th scope="col" id="delete"></th>
+              </tr>
+            </thead>
+            <tbody>
             {% set emails = user.getEmails() %}
             {% for email, verified in emails %}
-            <tr>
-              {% set address = current %}
-              <td>{{ email }}</td>
-              <td>{{ verified ? 'verified' : 'not verified' }}</td>
-              <td>{{ user.canRemoveEmail(email) ? 'yes' : 'no' }}</td>
-            </tr>
+              <tr>
+                {% set address = current %}
+                <td>{{ email }}</td>
+                <td>{{ verified ? 'verified' : 'not verified' }}</td>
+                <td>{{ verified ? '' : 'Resend verification e-mail' }}</td>
+                <td>{{ user.canRemoveEmail(email) ? 'yes' : 'no' }}</td>
+              </tr>
             {% endfor %}
+            </tbody>
           </table>
           <div class="half-gutter">
             <label for="email">Add e-mail address:</label><br>
