@@ -43,6 +43,7 @@
                   {% set primary = TRUE %}
                 {% else %}
                   {% set primary = FALSE %}
+                {% endif %}
                 <td>{{ primary ? '<b>'~email~'</b>' : email }}</td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : 'not verified' }}</td>
