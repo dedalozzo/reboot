@@ -26,15 +26,6 @@
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
           <table id="emails" class="gutter">
-            <thead>
-              <tr>
-                <th scope="col" id="address">Address</th>
-                <th scope="col" id="verified">Primary</th>
-                <th scope="col" id="verified">Verified</th>
-                <th scope="col" id="sendVerification"></th>
-                <th scope="col" id="delete"></th>
-              </tr>
-            </thead>
             <tbody>
             {% set emails = user.getEmails() %}
             {% for email, verified in emails %}
@@ -44,10 +35,12 @@
                 {% else %}
                   {% set primary = FALSE %}
                 {% endif %}
-                <td width="100%">{{ primary ? '<b>'~email~'</b>' : email }}</td>
+                <td width="100%">
+                  {{ primary ? '<b>'~email~'</b>' : email }}
+                  {{ verified == FALSE ? '' : '<br><a href="#">Resend the verification e-mail</a>.' }}
+                </td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
-                <td>{{ verified == FALSE ? '' : '<a href="#">Resend verification e-mail</a>' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
