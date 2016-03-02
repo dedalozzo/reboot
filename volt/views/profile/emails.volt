@@ -39,9 +39,12 @@
             {% set emails = user.getEmails() %}
             {% for email, verified in emails %}
               <tr>
-                {% set address = current %}
-                <td>{{ email }}</td>
-                <td>{{ user.primaryEmail === email ? '<div class="highlight blue">primary</div>' : '' }}</td>
+                {%  if (user.primaryEmail === email) %}
+                  {% set primary = TRUE %}
+                {% else %}
+                  {% set primary = FALSE %}
+                <td>{{ primary ? '<b>'~email~'</b>' : email }}</td>
+                <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : 'not verified' }}</td>
                 <td>{{ verified ? '' : 'Resend verification e-mail' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
