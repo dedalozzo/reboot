@@ -17,40 +17,20 @@
 
   <div class="column-left compressed">
 
-    {% set uri = '//'~domainName~'/'~controllerRoute %}
-    <ul class="list vertical rabs half-gutter">
-      <li{{ ('settings' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/">General Settings</a></li>
-      <li{{ ('account' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/account/">Account Settings</a></li>
-      <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/logins/">Logins</a></li>
-      <li{{ ('emails' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Emails</a></li>
-      <li{{ ('privacy' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Privacy Settings</a></li>
-    </ul>
+    {% include "partials/navigation/settings.volt" %}
 
   </div> <!-- /column-left -->
 
   <div class="column-right expanded">
-
-    <div>
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
-        <div class="half-gutter">
-          {{ text_field("firstName", "placeholder": "First name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ text_field("lastName", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ radio_field('gender', 'value': 'Male', 'id': 'male') }}
-          {{ radio_field('gender', 'value': 'Female', 'id': 'female') }}
-        </div>
-        <div class="half-gutter">
-          {{ date_field("birthday", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
-        </div>
-        <div class="align-right">
-          <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
-        </div>
+    <div class="ghost gutter">
+      <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
+        <fieldset>
+          <div class="half-gutter">
+            <label for="email">Add e-mail address:</label><br>
+            {{ email_field("email", "placeholder": "E-mail address", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">Save</button>
+            {% if addEmail is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
+          </div>
+        </fieldset>
       </form>
     </div>
 
