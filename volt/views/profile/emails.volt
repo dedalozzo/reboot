@@ -40,7 +40,7 @@
               <tr>
                 {% set address = current %}
                 <td>{{ email }}</td>
-                <td>{{ verified ? 'verified' : 'not verified' }}</td>
+                <td>{{ verified ? '<div class="badge">verified</div>' : 'not verified' }}</td>
                 <td>{{ verified ? '' : 'Resend verification e-mail' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
