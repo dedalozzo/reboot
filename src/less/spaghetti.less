@@ -13,8 +13,20 @@ table#emails td {
   white-space: nowrap;
 
   &ntd:last-child {
-    margin-top: -2px;
     padding-right: 0;
+  }
+}
+
+table#emails td {
+  padding-right: 10px;
+  white-space: nowrap;
+
+  &nth-last-child {
+    padding-right: 0;
+
+    &button {
+      margin-top: -2px;
+    }
   }
 }
 
