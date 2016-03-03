@@ -44,6 +44,22 @@
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
+            {% for email, verified in emails %}
+              <tr>
+                {%  if (user.primaryEmail === email) %}
+                  {% set primary = TRUE %}
+                {% else %}
+                  {% set primary = FALSE %}
+                {% endif %}
+                <td width="100%">
+                  {{ primary ? '<b>'~email~'</b>' : email }}
+                  {{ verified == FALSE ? '' : '<p>Verification e-mail sent. <a href="#">Resend</a>.</p>' }}
+                </td>
+                <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
+                <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
+                <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-trash" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
+              </tr>
+            {% endfor %}
             </tbody>
           </table>
           <div class="half-gutter">
