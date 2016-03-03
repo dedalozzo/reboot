@@ -28,7 +28,7 @@
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
           <div class="gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</div>
-          <table id="emails" class="gutter">
+          <table id="emails" class="std gutter">
             <tbody>
             {% set logins = user.getLogins() %}
             {% for address, login in logins %}
@@ -36,6 +36,7 @@
                 <td width="100%">{{ login[2] }}</td>
                 <td>{{ login[0] }}</td>
                 <td><a href="{{ login[3] }}">{{ login[1] }}</a></td>
+                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
               </tr>
             {% endfor %}
             </tbody>
