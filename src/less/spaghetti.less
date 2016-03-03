@@ -4,11 +4,11 @@
   padding: 0;
 }
 
-table#emails {
+table.std {
   width: 100%;
 }
 
-table#emails td {
+table.std td {
   padding: 0 10px 5px 0;
   height: 32px;
   white-space: nowrap;
@@ -19,14 +19,14 @@ table#emails td {
   font-size: @font-size-base;
 }
 
+table.std td:last-child {
+  padding-right: 0 !important;
+}
+
 table#emails td:nth-child(2) {
   font-size: @font-size-mini;
 }
 
 table#emails td:nth-child(3), td:nth-child(4) {
   text-align: center;
-}
-
-table#emails td:last-child {
-  padding-right: 0 !important;
 }
