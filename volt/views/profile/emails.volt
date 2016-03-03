@@ -36,8 +36,10 @@
                   {% set primary = FALSE %}
                 {% endif %}
                 <td width="100%">
-                  {{ primary ? '<b>'~email~'</b>' : email }}
-                  {{ verified == FALSE ? '' : '<p>Verification e-mail sent. <a href="#">Resend</a>.</p>' }}
+                  <div>
+                    {{ primary ? '<b>'~email~'</b>' : email }}
+                    {{ verified == FALSE ? '' : '<p>Verification e-mail sent. <a href="#">Resend</a>.</p>' }}
+                  </div>
                 </td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
