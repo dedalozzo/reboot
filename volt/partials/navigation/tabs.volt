@@ -18,7 +18,7 @@
         {% set actionRoute = actionRoute|current %}
       {% endif %}
     {% endif %}
-    <li{{ (name === actionName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
+    <li{{ (name === tabName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
 </ul>
 {% set actionRoute = tabs[actionName] %}
