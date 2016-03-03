@@ -17,13 +17,11 @@ table#emails td {
   font-family: @font-family-base;
   font-size: @font-size-base;
 
-  background-color: cornsilk;
+  &:nth-child(2) {
+    font-size: @font-size-mini;
+  }
 
   &:last-child {
     padding-right: 0 !important;
   }
-}
-
-table#emails td p {
-  font-size: @font-size-mini;
 }
