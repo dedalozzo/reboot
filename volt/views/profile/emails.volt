@@ -25,6 +25,7 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
+          <div class="half-gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication.</div>
           <table id="emails" class="gutter">
             <tbody>
             {% set emails = user.getEmails() %}
