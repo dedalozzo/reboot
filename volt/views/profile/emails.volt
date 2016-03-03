@@ -49,10 +49,8 @@
                 {% else %}
                   {% set primary = FALSE %}
                 {% endif %}
-                <td width="100%">
-                  {{ primary ? '<b>'~email~'</b>' : email }}
-                  {{ verified == FALSE ? '' : '<p>Verification e-mail sent. <a href="#">Resend</a>.</p>' }}
-                </td>
+                <td width="100%">{{ primary ? '<b>'~email~'</b>' : email }}</td>
+                <td>{{ verified == FALSE ? '' : 'Verification e-mail sent. <a href="#">Resend</a>.' }}</td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
