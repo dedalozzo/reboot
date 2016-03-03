@@ -67,6 +67,7 @@
   {% block header %}
   {% endblock %}
 
+  {% set tabName = actionName %}
   {% block content %}
     <div id="content">
 
