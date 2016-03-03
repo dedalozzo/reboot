@@ -40,6 +40,7 @@
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
+                <td>{{ primary ? '' : '<button class="btn btn-icon blue" title="make e-mail primary"><i class="icon-bolt icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
             {% for email, verified in emails %}
@@ -49,6 +50,7 @@
                 <td></td>
                 <td><div class="highlight red">not verified</div></td>
                 <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
+                <td></td>
               </tr>
               <tr>
                 <td width="100%">francesco.bianchi@yandex.com</td>
