@@ -39,7 +39,7 @@
                 <td>{{ verified ? '' : 'Verification e-mail sent. <a href="#">Resend</a>.' }}</td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
-                <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-remove icon-large"></i></button>' }}</td>
+                <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
             {% for email, verified in emails %}
@@ -48,15 +48,15 @@
                 <td>Verification e-mail sent. <a href="#">Resend</a>.</td>
                 <td></td>
                 <td><div class="highlight red">not verified</div></td>
-                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-remove icon-large"></i></button></td>
+                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
               </tr>
               <tr>
                 <td width="100%">francesco.bianchi@yandex.com</td>
                 <td></td>
                 <td></td>
                 <td><div class="highlight green">verified</div></td>
-                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-remove icon-large"></i></button></td>
-                <td><button class="btn btn-icon blue" title="remove e-mail"><i class="icon-ok icon-large"></i></button></td>
+                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
+                <td><button class="btn btn-icon blue" title="make e-mail primary"><i class="icon-bolt icon-large"></i></button></td>
               </tr>
             {% endfor %}
             </tbody>
