@@ -48,22 +48,6 @@
                 <td>{{ user.canRemoveEmail(email) ? '' : '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' }}</td>
               </tr>
             {% endfor %}
-            {% for email, verified in emails %}
-              <tr>
-                <td width="100%">dedalo@doramail.com</td>
-                <td>Verification e-mail sent. <a href="#">Resend</a>.</td>
-                <td></td>
-                <td><div class="highlight red">not verified</div></td>
-                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
-              </tr>
-              <tr>
-                <td width="100%">francesco.bianchi@yandex.com</td>
-                <td><a href="#">Make e-mail primary</a>.</td>
-                <td></td>
-                <td><div class="highlight green">verified</div></td>
-                <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
-              </tr>
-            {% endfor %}
             </tbody>
           </table>
           <div class="half-gutter">
