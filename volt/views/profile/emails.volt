@@ -9,7 +9,7 @@
   {% include "partials/profile-header.volt" %}
 
   {% set controllerPath = '/' %}
-  {% set actionName = 'settings' %}
+  {% set tabName = 'settings' %}
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
