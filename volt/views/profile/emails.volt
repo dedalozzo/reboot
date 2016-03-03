@@ -36,7 +36,7 @@
                   {% set primary = FALSE %}
                 {% endif %}
                 <td width="100%">
-                  <div>
+                  <div style="display: table-cell; vertical-align: middle">
                     {{ primary ? '<b>'~email~'</b>' : email }}
                     {{ verified == FALSE ? '' : '<p>Verification e-mail sent. <a href="#">Resend</a>.</p>' }}
                   </div>
