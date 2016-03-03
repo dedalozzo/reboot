@@ -36,6 +36,13 @@
                   {% set primary = FALSE %}
                 {% endif %}
                 <td width="100%">{{ primary ? '<b>'~email~'</b>' : email }}</td>
+                {% if not verified %}
+                <td>Verification e-mail sent. <a href="#">Resend</a></td>
+                {% elseif not primary %}
+                <td><a href="#">Make e-mail primary</a>.</td>
+                {% else %}
+                <td></td>
+                {% endif %}
                 <td>{{ verified ? '' : 'Verification e-mail sent. <a href="#">Resend</a>.' }}</td>
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
@@ -54,7 +61,7 @@
               </tr>
               <tr>
                 <td width="100%">francesco.bianchi@yandex.com</td>
-                <td></td>
+                <td><a href="#">Make e-mail primary</a>.</td>
                 <td></td>
                 <td><div class="highlight green">verified</div></td>
                 <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
