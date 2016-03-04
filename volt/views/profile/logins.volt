@@ -24,7 +24,7 @@
 
   <div class="column-right expanded">
 
-    {%- macro format_consumer_name(consumerName) %}
+    {% macro format_consumer_name(consumerName) %}
       {% if consumerName == "facebook" %}
         Facebook
       {% elseif consumerName == "linkedin" %}
@@ -34,7 +34,7 @@
       {% elseif consumerName == "google" %}
         Google
       {% endif %}
-    {%- endmacro %}
+    {% endmacro %}
 
     <div class="gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
@@ -45,7 +45,7 @@
             {% set logins = user.getLogins() %}
             {% for address, login in logins %}
               <tr>
-                <td><div class="highlight {{ login[0] }}">{{ format_consumer_name(login[0]) }}</div></td>
+                <td><a href="{{ login[3] }}" class="highlight {{ login[0] }}">{{ format_consumer_name(login[0]) }}</a></td>
                 <td width="100%">{{ login[2] }}</td>
                 <td><a href="{{ login[3] }}">{{ login[1] }}</a></td>
                 <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
