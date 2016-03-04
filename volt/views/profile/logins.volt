@@ -45,7 +45,7 @@
             {% set logins = user.getLogins() %}
             {% for address, login in logins %}
               <tr>
-                <td><a href="{{ login[3] }}" class="highlight {{ login[0] }}">{{ format_consumer_name(login[0]) }}</a></td>
+                <td><div class="highlight {{ login[0] }}">{{ format_consumer_name(login[0]) }}</div></td>
                 <td width="100%">{{ login[2] }}</td>
                 <td><a href="{{ login[3] }}">{{ login[1] }}</a></td>
                 <td><button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button></td>
