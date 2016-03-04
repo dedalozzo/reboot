@@ -39,7 +39,7 @@
     <div class="gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
-          <div class="gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</div>
+          <p class="gutter">You Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</p>
           <table id="logins" class="std gutter">
             <tbody>
             {% set logins = user.getLogins() %}
@@ -54,7 +54,7 @@
             </tbody>
           </table>
           <div>
-            <p>Puoi anche registrarti usando uno dei seguenti social networks.</p>
+            <p>You can add a social login using one of the following sites.</p>
             <ul class="list social half-gutter">
               <li><a id="facebook-btn" rel="facebook" href="//{{ serverName }}/logon/facebook/"><span class="logo"></span>Facebook</a></li>
               <li><a id="linkedin-btn" rel="linkedin" href="//{{ serverName }}/logon/linkedin/"><span class="logo"></span>LinkedIn</a></li>
