@@ -54,7 +54,7 @@
             </tbody>
           </table>
           <div>
-            <p>You can add a social login using one of the following sites.</p>
+            <p>You may add a social login using one of the following providers.</p>
             <ul class="list social half-gutter">
               <li><a id="facebook-btn" rel="facebook" href="//{{ serverName }}/logon/facebook/"><span class="logo"></span>Facebook</a></li>
               <li><a id="linkedin-btn" rel="linkedin" href="//{{ serverName }}/logon/linkedin/"><span class="logo"></span>LinkedIn</a></li>
