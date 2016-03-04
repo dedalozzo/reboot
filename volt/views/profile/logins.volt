@@ -39,7 +39,7 @@
     <div class="gutter">
       <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
         <fieldset>
-          <p class="gutter">You Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</p>
+          <p class="gutter">You can sign in with any of the following social logins. When you remove a social login, the associated e-mail remains and you can still use it to perform the sign in.</p>
           <table id="logins" class="std gutter">
             <tbody>
             {% set logins = user.getLogins() %}
