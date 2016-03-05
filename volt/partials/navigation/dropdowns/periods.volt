@@ -1,6 +1,7 @@
+{%  macro dropdown(name) %}
 <li>
   <button class="btn-link" data-dropdown="#dropdown-periods">{{ dispatcher.getParam('filter')|minustospace }} &blacktriangledown;</button>
-  <div id="dropdown-periods" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
+  <div id="dropdown-{{ name }}" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
     <ul class="dropdown-menu">
     {% set temp = uri~actionRoute~'/' %}
     {% for name, value in filters %}
@@ -9,3 +10,4 @@
     </ul>
   </div>
 </li>
+{% endmacro %}
