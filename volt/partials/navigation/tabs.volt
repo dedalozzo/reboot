@@ -7,8 +7,6 @@
   {% else %}
     {% set tagRoute = '' %}
   {% endif %}
-  <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-th-list icon-large"></a></li>
-  <li class="pull-right icon"><a href="//{{ domainName~buttonLink }}" class="icon-th-large icon-large"></a></li>
   {% set uri = '//'~domainName~'/'~tagRoute~controllerRoute %}
   {% for name, actionRoute in tabs %}
     {% if actionRoute is type('array') %}
