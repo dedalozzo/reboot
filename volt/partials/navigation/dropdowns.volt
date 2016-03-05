@@ -1,5 +1,4 @@
 {# Dropdowns #}
-{% set actionPath = menu[actionName] %}
 {% if tabs[actionName] is type('array') %}
   {% set actionRoute = tabs[actionName]|current %}
 {% else %}
