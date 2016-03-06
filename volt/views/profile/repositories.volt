@@ -23,7 +23,6 @@
     {% if repos is defined %}
     {% set baseUrl = '//'~domainName %}
     {% for repo in repos %}
-    {% set userUrl = baseUrl~'/'~entry.username %}
     <article id="{{ repo.id }}">
       <hr class="fade-short">
       <ul class="list item-info">
