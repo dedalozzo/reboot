@@ -37,7 +37,7 @@
           <div class="ghost gutter">
             {% if repo['language'] is not empty %}
             <ul class="list item-tags">
-              <li><a class="tag" href="{{ baseUrl }}/{{ repo['language']|lower|url_encode }}/%}">{{ repo['language'] }}</a></li>
+              <li><a class="tag" href="{{ baseUrl }}/{{ repo['language']|lower|url_encode }}/">{{ repo['language'] }}</a></li>
               <li class="space"></li>
             </ul>
             {% endif %}
