@@ -2,7 +2,7 @@
 'index': 'timeline',
 'about': 'about',
 'connections': 'connections',
-'projects': 'projects',
+'repositories': 'repositories',
 'settings': ['settings']
 ] %}
 {% set controllerRoute = profile.username~'/' %}
