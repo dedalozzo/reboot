@@ -14,43 +14,43 @@
 
   {{ flash.output() }}
 
-  <div class="column-left compressed">
+  <div class="column-left">
+
+    {% if repos is defined %}
+      {% set baseUrl = '//'~domainName %}
+      {% for repo in repos %}
+        <article id="{{ repo.id }}">
+          <hr class="fade-short">
+          <ul class="list item-info">
+            <li>{{ repo.created_at }}</li>
+            <li>
+              <i class="icon-star"></i>&nbsp;{{ repo.stargazers_count }}&nbsp;&nbsp;
+              <i class="icon-eye-open"></i>&nbsp;{{ repo.watchers_count }}&nbsp;&nbsp;
+              <i class="icon-code-fork"></i>&nbsp;{{ repo.forks_count }}
+            </li>
+          </ul>
+          <section class="item-content">
+            <div class="ghost half-gutter">
+              <a class="item-title" href="{{ repo.url }}">{{ repo.name }}</a>
+              <div class="item-excerpt">{{ repo.description }}</div>
+            </div>
+            <div class="ghost gutter">
+              <ul class="list item-tags">
+                <li><a class="tag" href="{{ baseUrl }}/{{ repo.language|url_encode }}/%}">{{ repo.language }}</a></li>
+                <li class="space"></li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        {% elsefor %}
+        <div class="alert alert-info">Siamo spiacenti, la ricerca non ha prodotto alcun risultato.</div>
+      {% endfor %}
+      {% include "partials/pagination.volt" %}
+    {% endif %}
 
   </div> <!-- /column-left -->
 
-  <div class="column-right expanded">
-
-    {% if repos is defined %}
-    {% set baseUrl = '//'~domainName %}
-    {% for repo in repos %}
-    <article id="{{ repo.id }}">
-      <hr class="fade-short">
-      <ul class="list item-info">
-        <li>{{ repo.created_at }}</li>
-        <li>
-          <i class="icon-star"></i>&nbsp;{{ repo.stargazers_count }}&nbsp;&nbsp;
-          <i class="icon-eye-open"></i>&nbsp;{{ repo.watchers_count }}&nbsp;&nbsp;
-          <i class="icon-code-fork"></i>&nbsp;{{ repo.forks_count }}
-        </li>
-      </ul>
-      <section class="item-content">
-        <div class="ghost half-gutter">
-          <a class="item-title" href="{{ repo.url }}">{{ repo.name }}</a>
-          <div class="item-excerpt">{{ repo.description }}</div>
-        </div>
-        <div class="ghost gutter">
-          <ul class="list item-tags">
-            <li><a class="tag" href="{{ baseUrl }}/{{ repo.language|url_encode }}/%}">{{ repo.language }}</a></li>
-            <li class="space"></li>
-          </ul>
-        </div>
-      </section>
-    </article>
-    {% elsefor %}
-    <div class="alert alert-info">Siamo spiacenti, la ricerca non ha prodotto alcun risultato.</div>
-    {% endfor %}
-    {% include "partials/pagination.volt" %}
-    {% endif %}
+  <div class="column-right">
 
   </div> <!-- /column-right -->
 
