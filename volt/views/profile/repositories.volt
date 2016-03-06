@@ -10,11 +10,12 @@
 
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
-  {% include "partials/navigation/dropdowns.volt" %}
 
   {{ flash.output() }}
 
   <div class="column-left">
+
+  {% include "partials/navigation/dropdowns.volt" %}
 
   {% if repos is defined %}
     {% set baseUrl = '//'~domainName %}

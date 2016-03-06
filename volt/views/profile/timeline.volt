@@ -8,7 +8,6 @@
 <div id="content" class="profile-top" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
   {% include "partials/profile-header.volt" %}
 
-  {% set controllerPath = '/' %}
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
