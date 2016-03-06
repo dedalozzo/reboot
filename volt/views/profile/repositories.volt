@@ -41,13 +41,7 @@
         </div>
         <div class="ghost gutter">
           <ul class="list item-tags">
-          </ul>
-          <ul class="list item-tags">
-            <li><a class="tag {{ entry.type }}" href="{{ baseUrl~'/'~types[entry.type] }}/">{{ types[entry.type] }}</a></li>
-            {% set tags = entry.tags %}
-            {% for tag in tags %}
-            <li><a class="tag" href="{{ baseUrl }}/{{ tag['value']|url_encode }}/{% if !(controllerRoute is empty) %}{{ types[entry.type] }}/{% endif %}">{{ tag['value'] }}</a></li>
-            {% endfor %}
+            <li><a class="tag" href="{{ baseUrl }}/{{ repo.language|url_encode }}/%}">{{ repo.language }}</a></li>
             <li class="space"></li>
           </ul>
         </div>
