@@ -24,9 +24,9 @@
         <ul class="list item-info">
           <li>{{ repo['created_at'] }}</li>
           <li>
-            <i class="icon-star"></i>&nbsp;{{ repo['stargazers_count'] }}&nbsp;&nbsp;
-            <i class="icon-eye-open"></i>&nbsp;{{ repo['watchers_count'] }}&nbsp;&nbsp;
-            <i class="icon-code-fork"></i>&nbsp;{{ repo['forks_count'] }}
+            <i class="icon-star" title="stargazers"></i>&nbsp;{{ repo['stargazers_count'] }}&nbsp;&nbsp;
+            <i class="icon-eye-open" title="watchers"></i>&nbsp;{{ repo['watchers_count'] }}&nbsp;&nbsp;
+            <i class="icon-code-fork" title="forks"></i>&nbsp;{{ repo['forks_count'] }}
           </li>
         </ul>
         <section class="item-content">
