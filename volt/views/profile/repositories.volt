@@ -32,7 +32,7 @@
         </ul>
         <section class="item-content">
           <div class="ghost half-gutter">
-            <a class="item-title" href="{{ repo['url'] }}">{{ repo['name'] }}</a>
+            <a class="item-title" href="{{ repo['html_url'] }}">{{ repo['name'] }}</a>
             <div class="item-excerpt">{{ repo['description'] }}</div>
           </div>
           <div class="ghost gutter">
