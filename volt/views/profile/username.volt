@@ -32,6 +32,7 @@
             <li><i class="icon-caret-right small"></i> the first character cannot be a number</li>
             <li><i class="icon-caret-right small"></i> all the other characters allowed are letters and numbers</li>
             <li><i class="icon-caret-right small"></i> the total length should be between <span class="keyword">{{ usernameMinLength }}</span> and <span class="keyword">{{ usernameMaxLength }}</span> chars</li>
+            <li><i class="icon-caret-right small"></i> the username is case sensitive, <span class="keyword">foobar</span> is different from <span class="keyword">FooBar</span> chars</li>
           </ul>
           <div class="half-gutter">
             <label for="username">Username:</label><br>
