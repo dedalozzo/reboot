@@ -37,7 +37,7 @@
           <div class="half-gutter">
             <label for="username">Username:</label><br>
             {{ text_field("username", "placeholder": "Nome utente", 'class': 'half') }}
-            {% if update is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
+            <span class="error">{{ validation.first("username") }}</span>
           </div>
           <div class="align-right">
             <button type="submit" name="update" value="update" class="btn blue">Update</button>
