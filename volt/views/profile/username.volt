@@ -24,7 +24,7 @@
   <div class="column-right expanded">
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/settings/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
         <fieldset>
           <ul class="list vertical post-it">
             <li class="title">A username should match the following conditions</li>
