@@ -27,7 +27,7 @@
       <form action="//{{ serverName }}/logon/" id="usernameform" name="usernameform" method="post" role="form">
         <fieldset>
           <p class="gutter">A username should match the following conditions:</p>
-          <ul class="list">
+          <ul class="list vertical">
             <li><i class="icon-caret-right small"></i> only one special char between <span class="keyword">.</span>, <span class="keyword">_</span>, <span class="keyword">-</span> is allowed and it must not be at the extremes of the string</li>
             <li><i class="icon-caret-right small"></i> the first character cannot be a number</li>
             <li><i class="icon-caret-right small"></i> all the other characters allowed are letters and numbers</li>
