@@ -23,7 +23,7 @@
   <div class="column-right expanded">
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
+      <form action="//{{ serverName }}/settings/" id="pinfofrm" name="pinfo" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
@@ -48,7 +48,7 @@
             {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
           </div>
           <div class="align-right">
-            <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
+            <button type="submit" name="update" class="btn blue">Update</button>
           </div>
         </fieldset>
       </form>
