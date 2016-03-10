@@ -24,7 +24,7 @@
   <div class="column-right expanded">
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/logon/" id="usernameform" name="usernameform" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
         <fieldset>
           <ul class="list vertical post-it">
             <li class="title">A username should match the following conditions</li>
@@ -40,7 +40,7 @@
             {% if update is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
           </div>
           <div class="align-right">
-            <button type="submit" name="update" value="update" class="btn blue">Save</button>
+            <button type="submit" name="update" value="update" class="btn blue">Update</button>
           </div>
         </fieldset>
       </form>
