@@ -13,8 +13,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
@@ -22,6 +20,8 @@
   </div> <!-- /column-left -->
 
   <div class="column-right expanded">
+
+    {{ flash.output() }}
 
     <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
