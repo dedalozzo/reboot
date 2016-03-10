@@ -13,8 +13,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
@@ -23,26 +21,28 @@
 
   <div class="column-right expanded">
 
+    {{ flash.output() }}
+
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/settings/password/" id="passwordfrm" name="passwordfrm" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
             {{ password_field("oldPassword", "placeholder": "Old password", 'class': 'half') }}
-            {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
+            <span class="error">{{ validation.first("password") }}</span>
           </div>
           <div class="half-gutter">
             <label for="newPassword">New password:</label><br>
-            {{ password_field("newPassword", "placeholder": "New password", 'class': 'half') }}
-            {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
+            {{ password_field("newPassword", 'class': 'half') }}
+            <span class="error">{{ validation.first("password") }}</span>
           </div>
           <div class="half-gutter">
             <label for="confirmPassword">Confirm password:</label><br>
-            {{ password_field("confirmPassword", "placeholder": "Confirm password", 'class': 'half') }}
-            {% if updatePassword is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
+            {{ password_field("confirmPassword", 'class': 'half') }}
+            <span class="error">{{ validation.first("confirmPassword") }}</span>
           </div>
           <div class="align-right">
-            <button type="submit" name="updatePassword" value="updatePassword" class="btn blue">Save</button>
+            <button type="submit" name="update" value="update" class="btn blue">Update</button>
           </div>
         </fieldset>
       </form>
