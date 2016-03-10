@@ -26,6 +26,13 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/logon/" id="usernameform" name="usernameform" method="post" role="form">
         <fieldset>
+          <p class="gutter">A username should match the following conditions:</p>
+          <ol>
+            <li>only one special char `.`, `_`, `-` are allowed and it must not be at the extremes of the string;</li>
+            <li>the first character cannot be a number;</li>
+            <li>all the other characters allowed are letters and numbers;</li>
+            <li>the total length should be between `usernameMinLength` and `usernameMaxLength` chars.</li>
+          </ol>
           <div class="half-gutter">
             <label for="username">Username:</label><br>
             {{ text_field("username", "placeholder": "Nome utente", 'class': 'half') }}
