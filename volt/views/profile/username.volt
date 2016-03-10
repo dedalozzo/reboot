@@ -27,12 +27,12 @@
       <form action="//{{ serverName }}/logon/" id="usernameform" name="usernameform" method="post" role="form">
         <fieldset>
           <p class="gutter">A username should match the following conditions:</p>
-          <ol>
-            <li>only one special char `.`, `_`, `-` are allowed and it must not be at the extremes of the string;</li>
-            <li>the first character cannot be a number;</li>
-            <li>all the other characters allowed are letters and numbers;</li>
-            <li>the total length should be between `usernameMinLength` and `usernameMaxLength` chars.</li>
-          </ol>
+          <ul>
+            <li><i class="icon-caret-right small"></i> only one special char <span class="keyword">.</span>, <span class="keyword">_</span>, <span class="keyword">-</span> are allowed and it must not be at the extremes of the string</li>
+            <li><i class="icon-caret-right small"></i> the first character cannot be a number</li>
+            <li><i class="icon-caret-right small"></i> all the other characters allowed are letters and numbers</li>
+            <li><i class="icon-caret-right small"></i> the total length should be between <span class="keyword">{{ usernameMinLength }}</span> and <span class="keyword">{{ usernameMaxLength }}</span> chars</li>
+          </ul>
           <div class="half-gutter">
             <label for="username">Username:</label><br>
             {{ text_field("username", "placeholder": "Nome utente", 'class': 'half') }}
