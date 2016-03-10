@@ -28,17 +28,17 @@
         <fieldset>
           <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
-            {{ password_field("oldPassword", "placeholder": "New password", 'class': 'half') }}
+            {{ password_field("oldPassword", "placeholder": "Old password", 'class': 'half') }}
             {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
             <label for="newPassword">New password:</label><br>
-            {{ password_field("newPassword", "placeholder": "Confirm password", 'class': 'half') }}
+            {{ password_field("newPassword", "placeholder": "New password", 'class': 'half') }}
             {% if updatePassword is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
           </div>
           <div class="half-gutter">
             <label for="confirmPassword">Confirm password:</label><br>
-            {{ password_field("confirmPassword", "placeholder": "Ripeti la password", 'class': 'half') }}
+            {{ password_field("confirmPassword", "placeholder": "Confirm password", 'class': 'half') }}
             {% if updatePassword is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
           </div>
           <div class="align-right">
