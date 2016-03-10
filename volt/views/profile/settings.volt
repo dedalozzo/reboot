@@ -23,7 +23,7 @@
     {{ flash.output() }}
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfo" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
