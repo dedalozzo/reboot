@@ -24,7 +24,7 @@
           <li><a href="{{ userUri }}/about/"><i class="icon-user"></i>Profile</a></li>
           <li><a href="{{ userUri }}/connections/"><i class="icon-group"></i>Connections</a></li>
           <li><a href="//{{ domainName }}/favorites/"><i class="icon-star"></i>Favorites</a></li>
-          <li><a href="{{ userUri }}/projects/"><i class="icon-github"></i>Projects</a></li>
+          <li><a href="{{ userUri }}/repositories/"><i class="icon-github"></i>Repositories</a></li>
           <li class="dropdown-divider"></li>
           <li><a href="{{ userUri }}/settings/"><i class="icon-wrench"></i>Settings</a></li>
           <li><button><i class="icon-gears"></i>Administration</button></li>
