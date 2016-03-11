@@ -46,7 +46,7 @@
                 <td></td>
                 {% endif %}
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
-                <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight red">not verified</div>' }}</td>
+                <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight orange">not verified</div>' }}</td>
                 <td>{{ user.canRemoveEmail(email) ? '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' : '' }}</td>
               </tr>
             {% endfor %}
