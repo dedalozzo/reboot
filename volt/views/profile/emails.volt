@@ -53,16 +53,13 @@
             </tbody>
           </table>
           <div class="half-gutter">
-            <ul class="list">
-              <li><label for="email">Add an e-mail address:</label><br></li>
-              <li>
-                {{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}
-              </li>
-              <li>
-                <button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button>
-              </li>
-              <li><span class="error">{{ validation.first("email") }}</span></li>
+            <label for="email">Add an e-mail address:</label><br>
+            <ul class="list no-gutter">
+              <li>{{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}</li>
+              <li><button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button></li>
+              <li class="space"></li>
             </ul>
+            <span class="error">{{ validation.first("email") }}</span>
           </div>
         </fieldset>
       </form>
