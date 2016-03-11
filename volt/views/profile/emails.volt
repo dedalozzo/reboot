@@ -24,7 +24,7 @@
   <div class="column-right expanded">
 
     <div class="gutter">
-      <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/settings/emails/" id="emailsfrm" name="emailsfrm" method="post" role="form">
         <fieldset>
           <p class="gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</p>
           <table id="emails" class="std gutter">
@@ -56,9 +56,9 @@
             <ul class="list">
               <li>
                 <label for="email">Add an e-mail address:</label><br>
-                <span class="error">{{ validation.first("password") }}</span>
+                <span class="error">{{ validation.first("email") }}</span>
               </li>
-              <li>{{ email_field("email", "placeholder": "E-mail address", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button></li>
+              <li>{{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button></li>
             </ul>
           </div>
         </fieldset>
