@@ -13,8 +13,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
@@ -23,6 +21,8 @@
 
   <div class="column-right expanded">
 
+    {{ flash.output() }}
+    
     <div class="gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/emails/" id="emailsfrm" name="emailsfrm" method="post" role="form">
         <fieldset>
