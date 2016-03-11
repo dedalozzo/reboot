@@ -26,9 +26,17 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/password/" id="passwordfrm" name="passwordfrm" method="post" role="form">
         <fieldset>
+          <p class="gutter">La <b>password</b> ti permettere di accedere al tuo profilo utilizzando una qualunque delle e-mail associate al medesimo. Per ragioni di sicurezza scegli una password diversa da quella che usi su altri siti.</p>
+          <ul class="list vertical post-it">
+            <li class="title">The password should match the following conditions</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere almeno <span class="keyword">{{ passwordMinLenght }}</span> caratteri</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere al massimo <span class="keyword">{{ passwordMaxLenght }}</span> caratteri</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere almeno un numero</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere almeno una lettera</li>
+          </ul>
           <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
-            {{ password_field("oldPassword", "placeholder": "Old password", 'class': 'half') }}
+            {{ password_field("oldPassword", 'class': 'half') }}
             <span class="error">{{ validation.first("password") }}</span>
           </div>
           <div class="half-gutter">
