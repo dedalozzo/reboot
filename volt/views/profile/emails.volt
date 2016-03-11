@@ -22,7 +22,7 @@
   <div class="column-right expanded">
 
     {{ flash.output() }}
-    
+
     <div class="gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/emails/" id="emailsfrm" name="emailsfrm" method="post" role="form">
         <fieldset>
