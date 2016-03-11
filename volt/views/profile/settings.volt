@@ -43,14 +43,12 @@
             {{ radio_field('gender', 'value': 'f', 'id': 'female') }}
             <label for="female">Female</label>
           </div>
-          <div class="half-gutter">
+          <div class="gutter">
             <label for="birthday">Birthday:</label><br>
             {{ date_field("birthday", "placeholder": "Last name", 'class': 'date') }}
             <span class="error">{{ validation.first("birthday") }}</span>
           </div>
-          <div class="align-right">
-            <button type="submit" name="update" class="btn blue">Update</button>
-          </div>
+          <button type="submit" name="update" value="update" class="btn blue">UPDATE PERSONAL INFO</button>
         </fieldset>
       </form>
     </div>
