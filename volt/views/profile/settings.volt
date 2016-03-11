@@ -25,6 +25,7 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
+          <p class="gutter">Le seguenti <b>informazioni personali</b> sono facoltative, ma vengono aggiornate automaticamente ogni qualvolta viene fatto il sign in attraverso uno dei provider supportati. Tale aggiornamento avviene esclusivamente se i dati non sono ancora presenti.</p>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
             {{ text_field("firstName", "placeholder": "First name", 'class': 'half') }}
