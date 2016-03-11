@@ -44,14 +44,12 @@
             {{ password_field("newPassword", 'class': 'half') }}
             <span class="error">{{ validation.first("newPassword") }}</span>
           </div>
-          <div class="half-gutter">
+          <div class="gutter">
             <label for="confirmPassword">Confirm password:</label><br>
             {{ password_field("confirmPassword", 'class': 'half') }}
             <span class="error">{{ validation.first("confirmPassword") }}</span>
           </div>
-          <div class="align-right">
-            <button type="submit" name="update" value="update" class="btn blue">Update</button>
-          </div>
+          <button type="submit" name="update" value="update" class="btn red">CHANGE PASSWORD</button>
         </fieldset>
       </form>
     </div>
