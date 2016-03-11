@@ -52,15 +52,12 @@
             {% endfor %}
             </tbody>
           </table>
-          <div class="half-gutter">
+          <div class="gutter">
             <label for="email">Add an e-mail address:</label><br>
-            <ul class="list no-gutter">
-              <li>{{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}</li>
-              <li><button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button></li>
-              <li class="space"></li>
-            </ul>
+            {{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}
             <span class="error">{{ validation.first("email") }}</span>
           </div>
+          <button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL ADDRESS</button>
         </fieldset>
       </form>
     </div>
