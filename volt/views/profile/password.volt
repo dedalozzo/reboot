@@ -37,12 +37,12 @@
           <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
             {{ password_field("oldPassword", 'class': 'half') }}
-            <span class="error">{{ validation.first("password") }}</span>
+            <span class="error">{{ validation.first("oldPassword") }}</span>
           </div>
           <div class="half-gutter">
             <label for="newPassword">New password:</label><br>
             {{ password_field("newPassword", 'class': 'half') }}
-            <span class="error">{{ validation.first("password") }}</span>
+            <span class="error">{{ validation.first("newPassword") }}</span>
           </div>
           <div class="half-gutter">
             <label for="confirmPassword">Confirm password:</label><br>
