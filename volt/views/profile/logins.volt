@@ -36,7 +36,7 @@
     {% endmacro %}
 
     <div class="gutter">
-      <form action="//{{ serverName }}/logon/" id="passwordform" name="passwordform" method="post" role="form">
+      <form action="//{{ serverName }}/{{ user.username }}/settings/logins/" id="loginsfrm" name="loginsfrm" method="post" role="form">
         <fieldset>
           <p class="gutter">You can sign in with any of the following <b>social logins</b>. When you remove a social login, the associated e-mail remains and you can still use it to perform the sign in.</p>
           <table id="logins" class="std gutter">
