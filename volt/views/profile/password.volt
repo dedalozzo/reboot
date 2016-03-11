@@ -29,10 +29,8 @@
           <p class="gutter">La <b>password</b> ti permettere di accedere al tuo profilo utilizzando una qualunque delle e-mail associate al medesimo. Per ragioni di sicurezza scegli una password diversa da quella che usi su altri siti.</p>
           <ul class="list vertical post-it">
             <li class="title">The password should match the following conditions</li>
-            <li><i class="icon-caret-right small"></i> deve contenere almeno <span class="keyword">{{ passwordMinLength }}</span> caratteri</li>
-            <li><i class="icon-caret-right small"></i> deve contenere al massimo <span class="keyword">{{ passwordMaxLength }}</span> caratteri</li>
-            <li><i class="icon-caret-right small"></i> deve essere presente almeno un numero</li>
-            <li><i class="icon-caret-right small"></i> deve essere presente almeno una lettera</li>
+            <li><i class="icon-caret-right small"></i> deve contenere almeno <span class="keyword">{{ passwordMinLength }}</span> caratteri e al massimo <span class="keyword">{{ passwordMaxLength }}</span></li>
+            <li><i class="icon-caret-right small"></i> devono essere presenti almeno <b>un numero</b> ed <b>una lettera</b></li>
           </ul>
           <div class="half-gutter">
             <label for="oldPassword">Old password:</label><br>
