@@ -35,14 +35,12 @@
             <li><i class="icon-caret-right small"></i> the total length should be between <span class="keyword">{{ usernameMinLength }}</span> and <span class="keyword">{{ usernameMaxLength }}</span> chars</li>
             <li><i class="icon-caret-right small"></i> the username is case sensitive, that means <span class="keyword">foobar</span> is different from <span class="keyword">FooBar</span></li>
           </ul>
-          <div class="half-gutter">
+          <div class="gutter">
             <label for="username">Username:</label><br>
             {{ text_field("username", "placeholder": "Nome utente", 'class': 'half') }}
             <span class="error">{{ validation.first("username") }}</span>
           </div>
-          <div class="align-right">
-            <button type="submit" name="update" value="update" class="btn blue">Update</button>
-          </div>
+          <button type="submit" name="update" value="update" class="btn red">CHANGE USERNAME</button>
         </fieldset>
       </form>
     </div>
