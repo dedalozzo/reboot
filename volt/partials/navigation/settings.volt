@@ -6,5 +6,5 @@
   <li{{ ('password' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/password/">Change Password</a></li>
   <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/logins/">Logins</a></li>
   <li{{ ('emails' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Emails</a></li>
-  <li{{ ('privacy' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/privacy/">Privacy</a></li>
+  <li{{ ('privacy' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/privacy/">Privacy Settings</a></li>
 </ul>
