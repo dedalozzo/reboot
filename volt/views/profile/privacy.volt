@@ -13,8 +13,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
@@ -23,27 +21,13 @@
 
   <div class="column-right expanded">
 
+    {{ flash.output() }}
+
     <div>
-      <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
-        <div class="half-gutter">
-          {{ text_field("firstName", "placeholder": "First name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("firstName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ text_field("lastName", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("lastName") }}</span>{% endif %}
-        </div>
-        <div class="half-gutter">
-          {{ radio_field('gender', 'value': 'Male', 'id': 'male') }}
-          {{ radio_field('gender', 'value': 'Female', 'id': 'female') }}
-        </div>
-        <div class="half-gutter">
-          {{ date_field("birthday", "placeholder": "Last name") }}
-          {% if signup is defined %}<span class="error">{{ validation.first("birthday") }}</span>{% endif %}
-        </div>
-        <div class="align-right">
-          <button type="submit" name="signup" value="signup" class="btn blue">Save</button>
-        </div>
+      <form action="//{{ serverName }}/{{ user.username }}/settings/username/" id="privacyfrm" name="privacyfrm" method="post" role="form">
+        <fieldset>
+          <button type="submit" name="update" value="update" class="btn red">UPDATE PRIVACY SETTINGS</button>
+        </fieldset>
       </form>
     </div>
 
