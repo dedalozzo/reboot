@@ -29,8 +29,8 @@
           <p class="gutter">La <b>password</b> ti permettere di accedere al tuo profilo utilizzando una qualunque delle e-mail associate al medesimo. Per ragioni di sicurezza scegli una password diversa da quella che usi su altri siti.</p>
           <ul class="list vertical post-it">
             <li class="title">The password should match the following conditions</li>
-            <li><i class="icon-caret-right small"></i> la password deve contenere almeno <span class="keyword">{{ passwordMinLenght }}</span> caratteri</li>
-            <li><i class="icon-caret-right small"></i> la password deve contenere al massimo <span class="keyword">{{ passwordMaxLenght }}</span> caratteri</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere almeno <span class="keyword">{{ passwordMinLength }}</span> caratteri</li>
+            <li><i class="icon-caret-right small"></i> la password deve contenere al massimo <span class="keyword">{{ passwordMaxLength }}</span> caratteri</li>
             <li><i class="icon-caret-right small"></i> la password deve contenere almeno un numero</li>
             <li><i class="icon-caret-right small"></i> la password deve contenere almeno una lettera</li>
           </ul>
