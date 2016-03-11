@@ -53,9 +53,13 @@
             </tbody>
           </table>
           <div class="half-gutter">
-            <label for="email">Add e-mail address:</label><br>
-            {{ email_field("email", "placeholder": "E-mail address", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">Save</button>
-            {% if addEmail is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
+            <ul class="list">
+              <li>
+                <label for="email">Add an e-mail address:</label><br>
+                <span class="error">{{ validation.first("password") }}</span>
+              </li>
+              <li>{{ email_field("email", "placeholder": "E-mail address", 'class': 'half') }}<button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL</button></li>
+            </ul>
           </div>
         </fieldset>
       </form>
