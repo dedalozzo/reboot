@@ -19,4 +19,3 @@
     <li{{ (name === tabName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
 </ul>
-{% set actionRoute = tabs[actionName] %}
