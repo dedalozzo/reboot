@@ -57,7 +57,7 @@
             {{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}
             <span class="error">{{ validation.first("email") }}</span>
           </div>
-          <button name="addEmail" type="submit" class="btn blue">ADD E-MAIL ADDRESS</button>
+          <button name="addEmail" type="submit" value="addEmail" class="btn blue">ADD E-MAIL ADDRESS</button>
         </fieldset>
       </form>
     </div>
