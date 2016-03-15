@@ -11,8 +11,6 @@
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left">
 
   {% include "partials/navigation/dropdowns.volt" %}
