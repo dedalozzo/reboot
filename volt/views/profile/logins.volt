@@ -11,11 +11,9 @@
   {% set tabName = 'settings' %}
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
-  {% include "partials/navigation/dropdowns.volt" %}
-
-  {{ flash.output() }}
 
   <div class="column-left compressed">
+
 
     {% include "partials/navigation/settings.volt" %}
 
@@ -34,6 +32,8 @@
         Google
       {% endif %}
     {% endmacro %}
+
+    {{ flash.output() }}
 
     <div class="gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/logins/" id="loginsfrm" name="loginsfrm" method="post" role="form">
