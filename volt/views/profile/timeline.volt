@@ -12,8 +12,6 @@
   {% include "partials/navigation/tabs.volt" %}
   {% include "partials/navigation/dropdowns.volt" %}
 
-  {{ flash.output() }}
-
   <div class="column-left">
 
     {% include "partials/list-of-posts.volt" %}
