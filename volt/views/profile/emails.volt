@@ -47,7 +47,7 @@
                 {% endif %}
                 <td>{{ primary ? '<div class="highlight blue">primary</div>' : '' }}</td>
                 <td>{{ verified ? '<div class="highlight green">verified</div>' : '<div class="highlight orange">not verified</div>' }}</td>
-                <td>{{ user.canRemoveEmail(email) ? '<button class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' : '' }}</td>
+                <td>{{ user.canRemoveEmail(email) ? '<button name="removeEmail" value="'~email~'" type="submit" class="btn btn-icon red" title="remove e-mail"><i class="icon-trash icon-large"></i></button>' : '' }}</td>
               </tr>
             {% endfor %}
             </tbody>
@@ -57,7 +57,7 @@
             {{ email_field("email", "placeholder": "foo.bar@example.com", 'class': 'half') }}
             <span class="error">{{ validation.first("email") }}</span>
           </div>
-          <button type="submit" name="addEmail" value="addEmail" class="btn blue">ADD E-MAIL ADDRESS</button>
+          <button name="addEmail" type="submit" class="btn blue">ADD E-MAIL ADDRESS</button>
         </fieldset>
       </form>
     </div>
