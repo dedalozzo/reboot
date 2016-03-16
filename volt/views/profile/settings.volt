@@ -21,7 +21,7 @@
 
     {{ flash.output() }}
 
-    <div class="ghost gutter" style="margin-top: 10px;">
+    <div class="ghost gutter margin-top">
       <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
           <p class="gutter">Le seguenti <b>informazioni personali</b> sono facoltative. Ti invitiamo comunque a tenerle aggiornate.</p>
