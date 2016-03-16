@@ -5,9 +5,8 @@
 {% endblock %}
 
 {% block content %}
-<div id="content" class="profile-top" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
+<div id="content" class="profile-top no-dropdown" style="background-image: url(//assets.worldwildlife.org/photos/1028/images/story_full_width/western-lowland-gorilla-heroHI_279168.jpg?1345535856); background-size: 1010px 410px; background-repeat: no-repeat;">
   {% include "partials/profile-header.volt" %}
-
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
 
@@ -21,7 +20,6 @@
 
     {{ flash.output() }}
 
-    <ul class="list hmenu gutter"></ul>
     <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
