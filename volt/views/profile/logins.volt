@@ -45,7 +45,7 @@
               <tr>
                 <td><div class="highlight {{ login[0] }}">{{ format_consumer_name(login[0]) }}</div></td>
                 <td width="100%">{{ login[2] }}</td>
-                <td><a href="{{ login[3] }}" target="_blank">{{ login[1] }}</a></td>
+                <td><a href="{{ login[3] }}" target="_blank">{{ login[4] is defined ? login[4] : login[1] }}</a></td>
                 <td><button name="removeLogin" type="submit" value="{{ address }}"  class="btn btn-icon red" title="remove login"><i class="icon-trash icon-large"></i></button></td>
               </tr>
             {% endfor %}
