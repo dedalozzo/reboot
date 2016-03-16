@@ -67,7 +67,9 @@
   {% block header %}
   {% endblock %}
 
-  {% set tabName = actionName %}
+  {% if actionName is defined %}
+    {% set tabName = actionName %}
+  {% endif %}
   {% block content %}
     <div id="content">
 
