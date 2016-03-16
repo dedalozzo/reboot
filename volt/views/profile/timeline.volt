@@ -18,7 +18,7 @@
 
   </div> <!-- /column-left -->
 
-  <div class="column-right">
+  <aside class="column-right">
     {# {% set lastVisit = user.getLastvisit() %} #}
     {# {% set hitsCount = user.getHitsCount() %} #}
 
@@ -50,7 +50,7 @@
     </blockquote>
     #}
 
-  </div> <!-- /column-right -->
+  </aside> <!-- /column-right -->
 
 </div> <!-- /content -->
 {% endblock %}

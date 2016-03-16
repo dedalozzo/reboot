@@ -5,7 +5,7 @@
   <div id="page-title">{{ post.title }}</div>
   <hr class="fade-long">
 
-  <div class="column-left expanded">
+  <aside class="column-left expanded">
     <!-- <div class="alert alert-info">Le tue modifiche saranno poste in coda sino a che il processo di revisione paritaria (peer review) avrà luogo. Ogni modifica, purché costruttiva, è benvenuta. Grazie.</div> -->
     {{ flash.output() }}
 
@@ -177,7 +177,7 @@
 
     </form>
 
-  </div> <!-- column-left -->
+  </aside> <!-- column-left -->
 
   <aside class="column-right compressed">
     {% include "partials/notes/formatting-rules.volt" %}

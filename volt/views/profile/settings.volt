@@ -11,17 +11,18 @@
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
 
-  <div class="column-left compressed">
+  <aside class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
 
-  </div> <!-- /column-left -->
+  </aside> <!-- /column-left -->
 
   <div class="column-right expanded">
 
     {{ flash.output() }}
 
-    <div class="ghost gutter margin-top">
+    <ul class="list hmenu gutter"></ul>
+    <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
           <p class="gutter">Le seguenti <b>informazioni personali</b> sono facoltative. Ti invitiamo comunque a tenerle aggiornate.</p>

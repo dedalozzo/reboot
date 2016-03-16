@@ -12,11 +12,11 @@
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
 
-  <div class="column-left compressed">
+  <aside class="column-left compressed">
 
     {% include "partials/navigation/settings.volt" %}
 
-  </div> <!-- /column-left -->
+  </aside> <!-- /column-left -->
 
   <div class="column-right expanded">
 

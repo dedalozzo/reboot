@@ -18,9 +18,9 @@
 
   </div> <!-- /column-left -->
 
-  <div class="column-right expanded">
+  <aside class="column-right expanded">
 
-  </div> <!-- /column-right -->
+  </aside> <!-- /column-right -->
 
 </div> <!-- /content -->
 {% endblock %}

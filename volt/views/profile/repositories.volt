@@ -51,9 +51,9 @@
 
   </div> <!-- /column-left -->
 
-  <div class="column-right">
+  <aside class="column-right">
 
-  </div> <!-- /column-right -->
+  </aside> <!-- /column-right -->
 
 </div> <!-- /content -->
 {% endblock %}
