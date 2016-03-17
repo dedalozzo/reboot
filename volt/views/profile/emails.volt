@@ -38,9 +38,9 @@
                 {% endif %}
                 <td width="100%">{{ primary ? '<b>'~email~'</b>' : email }}</td>
                 {% if not verified %}
-                <td><a href="#">Resend verification e-mail</a>.</td>
+                <td><button name="resendVerificationEmail" type="submit" value="{{ email }}" class="btn btl-link">Resend verification e-mail</button>.</td>
                 {% elseif not primary %}
-                <td><a href="#">Set as primary e-mail</a>.</td>
+                <td><button name="setAsPrimaryEmail" type="submit" value="{{ email }}" class="btn btl-link">Set as primary e-mail</button>.</td>
                 {% else %}
                 <td></td>
                 {% endif %}
