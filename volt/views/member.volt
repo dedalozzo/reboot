@@ -38,7 +38,7 @@
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
                 </div>
-                <div class="ghost gutter">
+                <div class="ghost">
                   <ul class="list item-tags">
                     <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
                     <li><a class="tag" href="//programmazione.me/p.it/">rust</a></li>
