@@ -28,10 +28,18 @@
               <div class="ghost half-gutter">
                 <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                 <a class="item-title" href="{{ url }}">{{ member.firstName~' '~member.lastName }}</a>
-                <a class="username" href="{{ url }}">{{ member.username }}</a>
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 <div class="item-excerpt">{{ member.headline }}</div>
               </div>
+            </section>
+            <section class="item-user pull-right">
+              <div class="reputation">
+                <table>
+                  <tr><td>2.345</td></tr>
+                  <tr><td>REPUTATION</td></tr>
+                </table>
+              </div>
+              <a class="username" href="{{ url }}">{{ member.username }}</a>
             </section>
           </article>
         </li>
