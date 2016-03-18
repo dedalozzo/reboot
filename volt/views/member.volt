@@ -28,7 +28,7 @@
               <div class="ghost half-gutter">
                 <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                 <a class="item-title" href="{{ url }}">{{ member.firstName~' '~member.lastName }}</a>
-                a.k.a. <a class="username" href="{{ url }}">{{ member.username }}</a>
+                a.k.a.&nbsp;<a class="username" href="{{ url }}">{{ member.username }}</a>
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 <div class="item-excerpt">{{ member.headline }}</div>
               </div>
