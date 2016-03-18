@@ -17,17 +17,18 @@
           <article id="{{ entry.id }}">
             <hr class="fade-short">
             <ul class="list item-info">
-              <li>REP 8.896&nbsp;&nbsp;</li>
+              <li><i class="icon-briefcase" title="reputation"></i>REP 8.896&nbsp;&nbsp;</li>
               <li>
-                <i class="icon-group"></i>&nbsp;570&nbsp;&nbsp;
-                <i class="icon-male"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
+                <i class="icon-group" title="connections"></i>&nbsp;570&nbsp;&nbsp;
+                <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
               </li>
             </ul>
             <section class="item-content">
               <div class="ghost half-gutter">
                 <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
-                <a class="item-title" href="{{ url }}">{{ member.firstName~''~member.lastName }}</a>
+                <a class="username" href="{{ url }}">{{ member.username }}</a>
+                <a class="item-title" href="{{ url }}">{{ member.firstName~' '~member.lastName }}</a>
                 <div class="item-excerpt">{{ member.headline }}</div>
               </div>
             </section>
