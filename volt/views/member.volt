@@ -65,7 +65,7 @@
     </div> <!-- /column-left -->
 
     <aside class="column-right wide-skyscraper">
-      <div class="banner"><a href="#"><img src="http://spreadubuntu.org/files/banner-160x600.png" /></a></div>
+      <div class="banner"><a href="#"><img src="http://spreadubuntu.org/files/banner-160x600.png" width="160" height="600" /></a></div>
     </aside> <!-- /column-right -->
   </div>
 {% endblock %}
