@@ -28,15 +28,12 @@
               <div class="ghost half-gutter">
                 <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                 <a class="item-title" href="{{ url }}">{{ member.firstName~' '~member.lastName }}</a>
-                <a class="username" href="{{ url }}">{{ member.username }}</a>
+                <!-- <a class="username" href="{{ url }}">{{ member.username }}</a> -->
+                <ul class="list">
+                  <li><button class="btn blue">Follow</button></li>
+                  <li><button class="btn blue">Connect</button></li>
+                </ul>
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
-                <div class="item-meta">
-                  <ul class="list">
-                    <li><button class="btn blue">Follow</button></li>
-                    <li><button class="btn blue">Connect</button></li>
-                  </ul>
-                  <div class="clear"></div>
-                </div>
               </div>
             </section>
           </article>
