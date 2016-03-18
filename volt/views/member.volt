@@ -14,7 +14,7 @@
       <ul class="list fifty gutter">
       {% endif %}
         <li>
-          <article id="{{ entry.id }}">
+          <article id="{{ member.id }}">
             <hr class="fade-short">
             <ul class="list item-info">
               <li>{{ member.when }}</li>
@@ -31,10 +31,13 @@
                 <a class="username" href="{{ url }}">{{ member.username }}</a>
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 <div class="item-excerpt">{{ member.headline }}</div>
-                <ul class="list pull-right">
-                  <li><button class="btn blue">Follow</button></li>
-                  <li><button class="btn blue">Connect</button></li>
-                </ul>
+                <div class="item-meta">
+                  <ul class="list pull-right">
+                    <li><button class="btn blue">Follow</button></li>
+                    <li><button class="btn blue">Connect</button></li>
+                  </ul>
+                  <div class="clear"></div>
+                </div>
               </div>
             </section>
           </article>
