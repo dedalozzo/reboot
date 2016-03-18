@@ -38,7 +38,7 @@
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
                   <div class="item-meta">
-                    <button class="btn blue">Follow</button><button class="btn blue">Connect</button>
+                    <button class="btn small blue">Follow</button>&nbsp;&nbsp;<button class="btn small blue">Connect</button>
                   </div>
                   <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 </div>
