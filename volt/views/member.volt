@@ -11,9 +11,9 @@
       {% set modulus = loop.index % 2 %}
       {% set url = '//'~domainName~'/'~member.username %}
       {% if loop.first %}
-      <ul class="list gutter">
+      <ul class="list fifty gutter">
       {% endif %}
-        <li style="width: 50%;">
+        <li>
           <article id="{{ entry.id }}">
             <hr class="fade-short">
             <ul class="list item-info">
@@ -22,7 +22,7 @@
                 <i class="icon-group" title="connections"></i>&nbsp;570&nbsp;&nbsp;
                 <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
               </li>
-              <li><i class="icon-briefcase" title="reputation"></i>8.896</li>
+              <li><i class="icon-briefcase" title="reputation"></i>&nbsp;8.896</li>
             </ul>
             <section class="item-content">
               <div class="ghost half-gutter">
@@ -37,7 +37,7 @@
         </li>
       {% if loop.last %}
         {% for i in 1..modulus  %}
-        <li style="width: 25%;"></li>
+        <li></li>
         {% endfor  %}
       </ul>
 
