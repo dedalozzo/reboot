@@ -29,7 +29,7 @@
                 <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                 <a class="item-title" href="{{ url }}">{{ member.firstName~' '~member.lastName }}</a>
                 <a class="username" href="{{ url }}">{{ member.username }}</a>
-                <div class="item-excerpt">{{ member.headline }}</div>
+                <div class="item-excerpt base left">{{ member.headline }}</div>
                 <div class="item-meta">
                   <button class="btn blue">Follow</button><button class="btn blue">Connect</button>
                 </div>
