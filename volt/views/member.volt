@@ -13,7 +13,7 @@
       {% if loop.first %}
       <ul class="list gutter">
       {% endif %}
-        <li style="width: 25%;">
+        <li style="width: 50%;">
           <section class="item-user">
             <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=48" /></a>
             <div class="reputation ext">
