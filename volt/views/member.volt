@@ -38,7 +38,7 @@
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
                 </div>
-                <div class="pull-right" style="position: relative; margin-top: -49px;"><button class="btn blue">Connect</button></div>
+                <div class="pull-right" style="position: relative; margin-top: -48px;"><button class="btn blue">Connect</button></div>
                 <div class="ghost">
                   <ul class="list item-tags">
                     <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
