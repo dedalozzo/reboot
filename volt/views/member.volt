@@ -8,7 +8,7 @@
 
   {% if members is defined %}
     {% for member in members %}
-      {% set modulus = loop.index % 4 %}
+      {% set modulus = loop.index % 2 %}
       {% set url = '//'~domainName~'/'~member.username %}
       {% if loop.first %}
       <ul class="list gutter">
