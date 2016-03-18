@@ -43,6 +43,16 @@
                     <div class="clear"></div>
                   </div>
                 </div>
+                <div class="ghost gutter">
+                  <ul class="list item-tags">
+                    <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
+                    <li><a class="tag" href="//programmazione.me/p.it/">rust</a></li>
+                    <li><a class="tag" href="//programmazione.me/p.it/">scala</a></li>
+                    <li><a class="tag" href="//programmazione.me/p.it/">swift</a></li>
+                    <li><a class="tag" href="//programmazione.me/p.it/">couchdb</a></li>
+                    <li class="space"></li>
+                  </ul>
+                </div>
               </section>
             </article>
           </li>
