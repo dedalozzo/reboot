@@ -13,6 +13,7 @@
 @column-right-width: 300 + @gutter;
 @column-right-reduce: 50;
 @column-right-expand: 400;
+@column-right-wide-skyscraper: 160;
 
 .column-right {
   float: right;
@@ -27,4 +28,8 @@
 
 .column-right.expanded {
   width: @column-right-width + @column-right-expand;
+}
+
+.column-right.wide-skyscraper {
+  width: @column-right-width + @column-right-wide-skyscraper;
 }
