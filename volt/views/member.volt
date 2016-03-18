@@ -17,11 +17,12 @@
           <article id="{{ entry.id }}">
             <hr class="fade-short">
             <ul class="list item-info">
-              <li><i class="icon-briefcase" title="reputation"></i>REP 8.896&nbsp;&nbsp;</li>
+              <li>{{ member.when }}</li>
               <li>
                 <i class="icon-group" title="connections"></i>&nbsp;570&nbsp;&nbsp;
                 <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
               </li>
+              <li><i class="icon-briefcase" title="reputation"></i>8.896</li>
             </ul>
             <section class="item-content">
               <div class="ghost half-gutter">
