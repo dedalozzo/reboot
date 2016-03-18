@@ -20,8 +20,6 @@
         </div>
         <div class="ghost gutter">
           <ul class="list item-tags">
-          </ul>
-          <ul class="list item-tags">
             <li><a class="tag {{ entry.type }}" href="{{ baseUrl~'/'~types[entry.type] }}/">{{ types[entry.type] }}</a></li>
             {% set tags = entry.tags %}
             {% for tag in tags %}
