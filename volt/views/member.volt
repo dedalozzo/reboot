@@ -42,11 +42,8 @@
         {% endfor  %}
       </ul>
 
-      <hr>
       {% elseif (modulus == 0) %}
       </ul>
-
-      <hr>
 
       <ul class="list fifty gutter">
       {% endif %}
