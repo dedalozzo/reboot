@@ -8,29 +8,31 @@
 // CSS
 // ---------------------------------------------------------------------------------------------------------------------
 .highlight {
+  border-top: 2px solid @gray-lighter;
   padding: 0;
   margin-bottom: @gutter - 5;
-  .border-radius(1px);
   white-space: nowrap;
   text-align: left;
   width: auto;
 }
 
 .highlight > pre {
+  padding: 0;
   color: @gray-darker;
-  background-color: @gray-superlight;
+  background-color: white;
   font-size: @font-size-mini;
-  padding: 4px 6px 4px 6px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // SINGLE WORD
 // ---------------------------------------------------------------------------------------------------------------------
 .highlight.word {
+  border-top: none;
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 0 !important;
   padding: 3px 5px 3px 5px;
+  .border-radius(1px);
   font-weight: bold;
   color: white;
   background-color: @gray;
