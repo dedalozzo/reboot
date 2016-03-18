@@ -15,7 +15,7 @@
       {% endif %}
         <li style="width: 50%;">
           <section class="item-user">
-            <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=100" /></a>
+            <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
             <div class="reputation ext">
               <table>
                 <tr><td>2345</td></tr>
