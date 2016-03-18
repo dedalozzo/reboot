@@ -1,0 +1,39 @@
+//! @file Table.less
+//! @brief A table standard style.
+//! @details
+//! @copyright REINDEX LTD
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+// ---------------------------------------------------------------------------------------------------------------------
+table.std {
+  width: 100%;
+}
+
+table.std td {
+  padding: 0 10px 5px 0;
+  height: 32px;
+  white-space: nowrap;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+}
+
+table.std td:last-child {
+  padding-right: 0 !important;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// E-MAILS
+// ---------------------------------------------------------------------------------------------------------------------
+table#emails td:nth-child(2) {
+  font-size: @font-size-mini;
+}
+
+table#emails td:nth-child(3), td:nth-child(4) {
+  text-align: center;
+}
