@@ -14,16 +14,24 @@
       <ul class="list gutter">
       {% endif %}
         <li style="width: 50%;">
-          <section class="item-user">
-            <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
-            <div class="reputation ext">
-              <table>
-                <tr><td>2345</td></tr>
-                <tr><td>REPUTAZIONE</td></tr>
-              </table>
-            </div>
-            <a class="username" href="{{ url }}">{{ member.username }}</a>
-          </section>
+          <article id="{{ entry.id }}">
+            <hr class="fade-short">
+            <ul class="list item-info">
+              <li>REP 8.896&nbsp;&nbsp;</li>
+              <li>
+                <i class="icon-group"></i>&nbsp;570&nbsp;&nbsp;
+                <i class="icon-male"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
+              </li>
+            </ul>
+            <section class="item-content">
+              <div class="ghost half-gutter">
+                <a class="avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
+                <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
+                <a class="item-title" href="{{ url }}">{{ member.firstName~''~member.lastName }}</a>
+                <div class="item-excerpt">{{ member.headline }}</div>
+              </div>
+            </section>
+          </article>
         </li>
       {% if loop.last %}
         {% for i in 1..modulus  %}
