@@ -32,7 +32,7 @@
                 <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 <div class="item-excerpt">{{ member.headline }}</div>
                 <div class="item-meta">
-                  <ul class="list pull-right">
+                  <ul class="list">
                     <li><button class="btn blue">Follow</button></li>
                     <li><button class="btn blue">Connect</button></li>
                   </ul>
