@@ -38,9 +38,10 @@
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
                   <div class="item-meta">
-                    <button class="btn small blue">Follow</button>&nbsp;&nbsp;<button class="btn small blue">Connect</button>
+                    <span>Member since: 10/04/2016</span><br>
+                    <span>Tags: </span><a href="#">c++</a>, <a href="#">java</a>, <a href="#">php</a>, <a href="#">python</a>
+                    <div class="clear"></div>
                   </div>
-                  <!-- <a class="item-img" href=""><img class="img-polaroid" src="http://lorempixel.com/g/300/150/technics/"></a> -->
                 </div>
               </section>
             </article>
