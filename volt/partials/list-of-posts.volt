@@ -7,7 +7,7 @@
       <ul class="list item-info">
         <li>{{ entry.timestamp }}</li>
         <li>
-          <i class="icon-eye-open" title="views"></i>{{ entry.hitsCount }}&nbsp;&nbsp;
+          <i class="icon-eye-open" title="views"></i>&nbsp;{{ entry.hitsCount }}&nbsp;&nbsp;
           <i class="icon-thumbs-up"></i>&nbsp;{{ entry.score }}&nbsp;&nbsp;
           <i class="icon-comments"></i>&nbsp;{{ entry.repliesCount }}
         </li>

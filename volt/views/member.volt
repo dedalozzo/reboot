@@ -19,7 +19,7 @@
             <ul class="list item-info">
               <li>{{ member.when }}</li>
               <li>
-                <i class="icon-eye-open" title="views"></i>{{ member.hitsCount }}&nbsp;&nbsp;
+                <i class="icon-eye-open" title="views"></i>&nbsp;{{ member.hitsCount }}&nbsp;&nbsp;
                 <i class="icon-group" title="connections"></i>&nbsp;570&nbsp;&nbsp;
                 <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
               </li>
