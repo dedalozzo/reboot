@@ -37,11 +37,6 @@
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
-                  <div class="item-meta">
-                    <span>Member since: 10/04/2016</span><br>
-                    <span>Tags: </span><a href="#">c++</a>, <a href="#">java</a>, <a href="#">php</a>, <a href="#">python</a>
-                    <div class="clear"></div>
-                  </div>
                 </div>
                 <div class="ghost gutter">
                   <ul class="list item-tags">
