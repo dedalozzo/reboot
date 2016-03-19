@@ -32,6 +32,7 @@
                   <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
+                  <span class="username"></span>
                   {% else %}
                   <a class="item-title" href="{{ url }}">{{ member.fullName }}</a>
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
