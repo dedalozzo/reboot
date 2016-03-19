@@ -38,7 +38,7 @@
                   {% endif %}
                   <div class="item-excerpt">{{ member.headline }}</div>
                   <div class="align-right anchor-rb">
-                    <button class="btn blue mini push-right">CONNECT</button><button class="btn blue mini">FOLLOW</button>
+                    <button class="btn blue mini pull-right push-right">CONNECT</button><button class="btn blue mini pull-right">FOLLOW</button>
                   </div>
                 </div>
                 <div class="ghost">
