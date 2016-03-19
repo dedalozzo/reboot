@@ -28,7 +28,7 @@
                 <li><i class="icon-eye-open" title="views"></i>&nbsp;{{ member.hitsCount }}</li>
               </ul>
               <section class="item-content">
-                <div class="ghost half-gutter">
+                <div class="ghost half-gutter" style="position: relative">
                   <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
