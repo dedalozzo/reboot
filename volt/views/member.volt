@@ -36,8 +36,8 @@
                   <a class="item-title" href="{{ url }}">{{ member.fullName }}</a>
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
-                  <div class="item-excerpt base left">{{ member.headline }}</div>
-                  <div class="item-connect">
+                  <div class="item-headline">{{ member.headline }}</div>
+                  <div class="align-right">
                     <button class="btn blue mini">CONNECT</button>
                     <button class="btn blue mini">FOLLOW</button>
                   </div>
