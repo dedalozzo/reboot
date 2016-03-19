@@ -30,10 +30,10 @@
               <section class="item-content">
                 <div class="ghost half-gutter">
                   <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
-                  <ul class="item-connect list">
-                    <li><button class="btn blue mini">CONNECT</button></li>
-                    <li><button class="btn blue mini">FOLLOW</button></li>
-                  </ul>
+                  <div class="item-connect">
+                    <button class="btn blue mini">CONNECT</button>
+                    <button class="btn blue mini">FOLLOW</button>
+                  </div>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
                   {% else %}
