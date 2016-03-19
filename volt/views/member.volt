@@ -38,8 +38,8 @@
                   {% endif %}
                   <div class="item-excerpt">{{ member.headline }}</div>
                   <div class="align-right anchor-rb">
-                    <button class="btn blue mini pull-right">FOLLOW</button>
-                    <button class="btn blue mini pull-right push-right">CONNECT</button>
+                    <button class="btn btn-icon blue mini pull-right">FOLLOW</button>
+                    <button class="btn btn-icon blue mini pull-right push-right">CONNECT</button>
                   </div>
                 </div>
                 <div class="ghost">
