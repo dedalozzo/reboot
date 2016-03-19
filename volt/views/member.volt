@@ -32,13 +32,12 @@
                   <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
-                  <span class="username"></span>
                   {% else %}
                   <a class="item-title" href="{{ url }}">{{ member.fullName }}</a>
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-headline">{{ member.headline }}</div>
-                  <div class="align-right">
+                  <div class="align-right" style="position: fixed; bottom: 0; right: 0;">
                     <button class="btn blue mini">CONNECT</button>
                     <button class="btn blue mini">FOLLOW</button>
                   </div>
