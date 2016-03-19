@@ -36,7 +36,7 @@
                   <a class="item-title" href="{{ url }}">{{ member.fullName }}</a>
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
-                  <div class="item-headline">{{ member.headline }}</div>
+                  <div class="item-excerpt">{{ member.headline }}</div>
                   <div class="align-right anchor-rb">
                     <button class="btn blue mini">CONNECT</button>
                     <button class="btn blue mini">FOLLOW</button>
