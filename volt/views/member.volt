@@ -37,8 +37,8 @@
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
+                  <div class="item-connect"><button class="btn blue mini">CONNECT</button></div>
                 </div>
-                <div class="item-connect"><button class="btn blue mini">CONNECT</button></div>
                 <div class="ghost">
                   <ul class="list item-tags">
                     <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
