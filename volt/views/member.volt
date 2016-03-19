@@ -29,7 +29,10 @@
               </ul>
               <section class="item-content">
                 <div class="ghost half-gutter">
-                  <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
+                  <div style="position: relative;">
+                    <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
+                    <a class="connect" href="#"><i class="icon-plus"></i> CONNETTI</a>
+                  </div>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
                   {% else %}
@@ -37,9 +40,6 @@
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-excerpt base left">{{ member.headline }}</div>
-                </div>
-                <div class="pull-right" style="position: relative; margin-top: -42px;">
-                  <button class="btn btn-icon blue"><i class="icon-plus"></i>&nbsp;Connect</button>
                 </div>
                 <div class="ghost">
                   <ul class="list item-tags">
