@@ -18,15 +18,15 @@
         <ul class="list item-info">
           <li>{{ post.isApproved() ? post.whenHasBeenPublished() : post.whenHasBeenCreated() }}</li>
           <li>
-            <i class="icon-facebook"></i>&nbsp;0&nbsp;&nbsp;
-            <i class="icon-twitter"></i>&nbsp;0&nbsp;&nbsp;
-            <i class="icon-google-plus"></i>&nbsp;0&nbsp;&nbsp;
-            <i class="icon-mail-forward"></i>&nbsp;0
+            <i class="icon-facebook" title="facebook"></i>&nbsp;0&nbsp;&nbsp;
+            <i class="icon-twitter" title="twitter"></i>&nbsp;0&nbsp;&nbsp;
+            <i class="icon-google-plus" title="google+"></i>&nbsp;0&nbsp;&nbsp;
+            <i class="icon-mail-forward" title="mail"></i>&nbsp;0
           </li>
           <li>
             <i class="icon-eye-open" title="views"></i>&nbsp;{{ hitsCount }}&nbsp;&nbsp;
-            <i class="icon-thumbs-up"></i>&nbsp;{{ score }}&nbsp;&nbsp;
-            <i class="icon-comments"></i>&nbsp;{{ repliesCount }}
+            <i class="icon-thumbs-up" title="likes"></i>&nbsp;{{ score }}&nbsp;&nbsp;
+            <i class="icon-comments" title="comments"></i>&nbsp;{{ repliesCount }}
           </li>
         </ul>
         {% if post.type == 'book' %}
