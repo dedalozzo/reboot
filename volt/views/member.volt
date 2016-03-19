@@ -28,7 +28,7 @@
                 <li><i class="icon-eye-open" title="views"></i>&nbsp;{{ member.hitsCount }}</li>
               </ul>
               <section class="item-content">
-                <div class="ghost half-gutter" style="position: relative">
+                <div class="ghost half-gutter">
                   <a class="item-img avatar" href="{{ url }}"><img class="img-polaroid" src="{{ member.gravatar }}&s=150" /></a>
                   {% if member.fullName|trim is empty %}
                   <a class="item-title" href="{{ url }}">{{ member.username }}</a>
@@ -39,7 +39,6 @@
                   <div class="item-excerpt">{{ member.headline }}</div>
                   <div class="align-right anchor-rb">
                     <button class="btn btn-icon blue mini pull-right"><i class="icon-plus"></i> CONNECT</button>
-                    <button class="btn btn-icon blue mini pull-right push-right">CONNECT</button>
                   </div>
                 </div>
                 <div class="ghost">
