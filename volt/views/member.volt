@@ -40,7 +40,7 @@
                 </div>
                 <div class="pull-right" style="position: relative; margin-top: -42px;">
                   <button class="btn btn-icon blue"><i class="icon-plus"></i>&nbsp;Connect</button>
-                </div
+                </div>
                 <div class="ghost">
                   <ul class="list item-tags">
                     <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
