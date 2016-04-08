@@ -3,7 +3,7 @@
   <a class="change-avatar" href="#"><i class="icon-camera"></i></a>
   {% endif %}
   <div style="position: relative;">
-    <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.primaryEmail) }}&s=160">
+    <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.emails.primary) }}&s=160">
     {% if user.isMember() and user.match(profile.id) %}
       <a class="change-avatar" href="http://it.gravatar.com/"><i class="icon-camera"></i>CAMBIA FOTO</a>
     {% endif %}

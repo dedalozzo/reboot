@@ -28,10 +28,10 @@
           <p class="gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</p>
           <table id="emails" class="std gutter">
             <tbody>
-            {% set emails = user.getEmails() %}
+            {% set emails = user.emails %}
             {% for email, verified in emails %}
               <tr>
-                {%  if (user.primaryEmail === email) %}
+                {%  if (user.emails.primary === email) %}
                   {% set primary = TRUE %}
                 {% else %}
                   {% set primary = FALSE %}
