@@ -31,7 +31,7 @@
             {% set emails = user.emails %}
             {% for email, verified in emails %}
               <tr>
-                {%  if (user.emails.primary === email) %}
+                {%  if (user.emails.isPrimary(email)) %}
                   {% set primary = TRUE %}
                 {% else %}
                   {% set primary = FALSE %}
