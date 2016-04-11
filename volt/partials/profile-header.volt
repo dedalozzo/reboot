@@ -1,5 +1,5 @@
 <div class="ghost gutter-plus" style="margin-top: 200px;">
-  {% if user.isMember() and (user.match(profile.id) or user.isAdmin()) %}
+  {% if user.isMember() and user.match(profile.id) %}
   <a class="change-avatar" href="#"><i class="icon-camera"></i></a>
   {% endif %}
   <div style="position: relative;">
