@@ -94,13 +94,11 @@
           {% if post.canBeEdited() %}
           <li><a class="btn btn-icon blue" title="revise and improve the {{ post.type }}" href="//{{ serverName~'/'~post.id~'/edit/' }}"><i class="icon-file-text icon-large"></i></a></li>
           {% endif %}
-          {% if user.isModerator() %}
           <li>
             <button id="b-admin" class="btn btn-icon orange" title="admin tools" data-dropdown="#dropdown-moderator"><i class="icon-gear icon-large"></i></button>
             <div id="dropdown-moderator" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
             </div>
           </li>
-          {% endif %}
           <li><button class="btn blue"><i class="icon-reply"></i> REPLY</button></li>
         </ul>
 
