@@ -16,7 +16,7 @@
     <article id="{{ post.id }}">
       <section class="item-content">
         <ul class="list item-info">
-          <li>{{ post.isApproved() ? post.whenHasBeenPublished() : post.whenHasBeenCreated() }}</li>
+          <li>{{ post.state.isApproved() ? post.whenHasBeenPublished() : post.whenHasBeenCreated() }}</li>
           <li>
             <i class="icon-facebook" title="facebook"></i>&nbsp;0&nbsp;&nbsp;
             <i class="icon-twitter" title="twitter"></i>&nbsp;0&nbsp;&nbsp;
