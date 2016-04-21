@@ -91,7 +91,7 @@
             </div>
           </li>
           <li><button class="btn btn-icon blue" title="flag this {{ post.type }} for serious problem or moderation attention"><i class="icon-flag icon-large"></i></button></li>
-          {% if post.canBeEdited() %}
+          {% if canEdit %}
           <li><a class="btn btn-icon blue" title="revise and improve the {{ post.type }}" href="//{{ serverName~'/'~post.id~'/edit/' }}"><i class="icon-file-text icon-large"></i></a></li>
           {% endif %}
           <li>
