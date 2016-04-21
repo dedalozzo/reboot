@@ -8,14 +8,10 @@ var api = 'http://api.programmazione.me/';
 function like() {
   $("article > section.item-content > ul.item-buttons > li > button.btn-like").click(
     function() {
-      alert('PORCA LOCA!');
-
       event.preventDefault();
 
       var postId = $(this).parents("article").attr("id");
       var like = $(this);
-
-
 
       $.ajax({
         type: "POST",
