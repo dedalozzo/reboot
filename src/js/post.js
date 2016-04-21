@@ -13,7 +13,7 @@ function like() {
       var postId = $(this).parents("article").attr("id");
       var like = $(this);
 
-      alert(postId);
+      alert('PORCA LOCA!');
 
       $.ajax({
         type: "POST",
