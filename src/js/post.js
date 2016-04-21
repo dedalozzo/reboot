@@ -13,6 +13,8 @@ function like() {
       var postId = $(this).parents("article").attr("id");
       var like = $(this);
 
+      alert(postId);
+
       $.ajax({
         type: "POST",
         url: api + 'like/',
