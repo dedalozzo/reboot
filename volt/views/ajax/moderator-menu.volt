@@ -9,7 +9,7 @@
   {% endif %}
   {% if canChangeVisibility %}
     {% set showDiv = TRUE %}
-    {% if post.isVisible %}
+    {% if post.isVisible() %}
       <li><button id="m-hide" title="hide the {{ post.type }}"><i class="icon-eye-close"></i>Hide</button></li>
     {% else %}
       <li><button id="m-show" title="show the {{ post.type }}"><i class="icon-eye-open"></i>Show</button></li>
