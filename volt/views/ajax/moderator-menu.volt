@@ -8,6 +8,9 @@
     <li><button id='m-unprotect' title="unprotect the {{ post.type }}"><i class="icon-sun"></i>Unprotect</button></li>
   {% endif %}
   {% if canChangeVisibility %}
+    {% if showDiv is TRUE %}
+      <li class="dropdown-divider"></li>
+    {% endif %}
     {% set showDiv = TRUE %}
     {% if post.isVisible() %}
       <li><button id="m-hide" title="hide the {{ post.type }}"><i class="icon-eye-close"></i>Hide</button></li>
@@ -15,12 +18,15 @@
       <li><button id="m-show" title="show the {{ post.type }}"><i class="icon-eye-open"></i>Show</button></li>
     {% endif %}
   {% endif %}
-  {% if showDiv is defined %}
-    <li class="dropdown-divider"></li>
-  {% endif %}
   {% if canMoveToTrash %}
+    {% if showDiv is TRUE %}
+      <li class="dropdown-divider"></li>
+    {% endif %}
     <li><button id="m-trash" title="move the {{ post.type }} to the trash"><i class="icon-trash"></i>Move to trash</button></li>
   {% elseif canRestore %}
+    {% if showDiv is TRUE %}
+      <li class="dropdown-divider"></li>
+    {% endif %}
     <li><button id="m-undo" title="restore the {{ post.type }} from the trash"><i class="icon-undo"></i>Put back</button></li>
   {% endif %}
 </ul>
