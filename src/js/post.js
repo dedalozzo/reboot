@@ -5,6 +5,7 @@
 
 var api = 'http://api.programmazione.me/';
 
+
 function like() {
   $("article > section.item-content > ul.item-buttons > li > button.btn-like").click(
     function() {
