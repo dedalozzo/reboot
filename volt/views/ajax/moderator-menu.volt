@@ -1,4 +1,5 @@
 <ul class="dropdown-menu">
+  {% set showDiv = FALSE %}
   {% if canProtect %}
     {% set showDiv = TRUE %}
     <li><button id='m-close' title="prevent members from adding further {% if post.type == 'question' %} answers{% else %} comments{% endif %} to the {{ post.type }}"><i class="icon-lock"></i>Close</button></li>
