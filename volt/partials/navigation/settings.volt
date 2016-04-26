@@ -7,4 +7,5 @@
   <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/logins/">Social Logins</a></li>
   <li{{ ('emails' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/emails/">Emails</a></li>
   <li{{ ('privacy' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/privacy/">Privacy Settings</a></li>
+  <li{{ ('blacklist' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}settings/blacklist/">Blacklist</a></li>
 </ul>
