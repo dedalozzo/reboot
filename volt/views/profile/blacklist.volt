@@ -31,9 +31,8 @@
             {% set blacklist = user.blacklist.asArray() %}
             {% for member in blacklist %}
               <tr>
-                <td width="100%"><b>{{ member['value'][0] }}</b></td>
-                <td>{{ member['value'][3] }}</td>
-                <td>{{ member['value'][4] }}</td>
+                <td><b>{{ member['value'][0] }}</b></td>
+                <td width="100%">{{ member['value'][3]~' '~member['value'][4] }}</td>
                 <td><button name="removeMember" type="submit" value="{{ member['value'][0] }}" class="btn btn-icon red" title="remove user"><i class="icon-trash icon-large"></i></button></td>
               </tr>
             {% endfor %}
