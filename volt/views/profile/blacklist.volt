@@ -32,8 +32,8 @@
             {% for member in blacklist %}
               <tr>
                 <td><a class="avatar" href="//{{ serverName }}/{{ member['value'][0] }}"><img class="img-polaroid" src="{{ profile.getGravatar(member['value'][1]) }}&s=24" /></a></td>
-                <td width="40%"><a href="//{{ serverName }}/{{ member['value'][0] }}">{{ member['value'][0] }}</a></td>
-                <td width="60%">{{ member['value'][3]~' '~member['value'][4] }}</td>
+                <td width="30%"><a href="//{{ serverName }}/{{ member['value'][0] }}">{{ member['value'][0] }}</a></td>
+                <td width="70%">{{ member['value'][3]~' '~member['value'][4] }}</td>
                 <td><button name="removeMember" type="submit" value="{{ member['value'][0] }}" class="btn btn-icon red" title="remove user"><i class="icon-trash icon-large"></i></button></td>
               </tr>
             {% endfor %}
