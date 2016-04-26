@@ -28,7 +28,7 @@
           <p class="gutter">Your <b>blacklist</b> is used to prevent other users to interact with you. Every user listed in your blacklist can't contact you, neither he can add you as friend.</p>
           <table id="blacklist" class="std gutter">
             <tbody>
-            {% set blacklist = user.getBlacklist() %}
+            {% set blacklist = user.blacklist.asArray() %}
             {% for member in blacklist %}
               <tr>
                 <td width="100%"><b>{{ member['value'][0] }}</b></td>
