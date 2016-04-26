@@ -40,11 +40,11 @@
             </tbody>
           </table>
           <div class="gutter">
-            <label for="username">Add an user to the blacklist:</label><br>
-            {{ text_field("username", "placeholder": "username", 'class': 'half') }}
-            <span class="error">{{ validation.first("username") }}</span>
+            <label for="nickname">Add an user to the blacklist:</label><br>
+            {{ text_field("nickname", "placeholder": "username", 'class': 'half') }}
+            <span class="error">{{ validation.first("nickname") }}</span>
           </div>
-          <button name="addMember" type="submit" value="addMember" class="btn blue">ADD A MEMBER TO THE BLACKLIST</button>
+          <button name="addMember" type="submit" value="addMember" class="btn blue">ADD TO BLACKLIST</button>
         </fieldset>
       </form>
     </div>
