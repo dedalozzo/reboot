@@ -14,7 +14,7 @@
 
   <aside class="column-left compressed">
 
-    {% include "partials/navigation/profile.volt" %}
+    {% include "partials/navigation/settings.volt" %}
 
   </aside> <!-- /column-left -->
 
