@@ -1,7 +1,7 @@
 {# Settings #}
 {% set uri = '//'~domainName~'/settings' %}
 <ul class="list vertical pills half-gutter">
-  <li{{ ('settings' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/">Personal Info</a></li>
+  <li{{ ('index' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/">Personal Info</a></li>
   <li{{ ('username' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/username/">Change Username</a></li>
   <li{{ ('password' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/password/">Change Password</a></li>
   <li{{ ('logins' === actionName) ? ' class="active"' : '' }}><a href="{{ uri }}/logins/">Social Logins</a></li>
