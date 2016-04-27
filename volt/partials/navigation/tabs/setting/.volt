@@ -5,4 +5,4 @@
 'repositories': 'repositories',
 'settings': ['settings']
 ] %}
-{% set controllerRoute = profile.username~'/' %}
+{% set controllerRoute = 'settings/' %}
