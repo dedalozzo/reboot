@@ -6,7 +6,7 @@
 var api = 'http://api.programmazione.me/';
 
 
-function like() {
+function addFriend() {
   $("article > section.item-content > div > div > button.btn-icon").click(
     function() {
       event.preventDefault();
@@ -43,6 +43,6 @@ function like() {
 
 $(document).ready(
   function() {
-    connect();
+    addFriend();
   }
 );
