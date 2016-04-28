@@ -37,9 +37,15 @@
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-excerpt">{{ member.headline }}</div>
+                  {% if member.isMyFriend %}
                   <div class="align-right anchor-rb">
                     <button class="btn btn-icon blue mini pull-right"><i class="icon-plus"></i> CONNECT</button>
                   </div>
+                  {% else %}
+                  <div class="align-right anchor-rb">
+                    <button class="btn btn-icon blue mini pull-right"><i class="icon-ok"></i> FRIEND</button>
+                  </div>
+                  {% endif %}
                 </div>
                 <div class="ghost">
                   <ul class="list item-tags">
