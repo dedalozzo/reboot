@@ -23,7 +23,7 @@
                 <li>{{ member.when }}</li>
                 <li>
                   <i class="icon-group" title="connections"></i>&nbsp;{{ member.friendsCount }}&nbsp;&nbsp;
-                  <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;892
+                  <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;{{ member.followersCount }}
                 </li>
                 <li><i class="icon-eye-open" title="views"></i>&nbsp;{{ member.hitsCount }}</li>
               </ul>
