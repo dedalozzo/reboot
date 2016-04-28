@@ -58,7 +58,7 @@ function star(event) {
     function() {
       event.preventDefault();
 
-      var postId = $("article").attr("id");
+      var postId = $(this).parents("article").attr("id");
 
       $.ajax({
         type: "POST",
