@@ -16,7 +16,7 @@ function like() {
 
       $.ajax({
         type: "POST",
-        url: api + 'connect/',
+        url: api + 'addfriend/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: memberId },
