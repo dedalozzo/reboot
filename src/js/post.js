@@ -6,7 +6,7 @@
 var api = 'http://api.programmazione.me/';
 
 
-function like() {
+function like(event) {
   $("article > section.item-content > ul.item-buttons > li > button.btn-like").click(
     function() {
       event.preventDefault();
@@ -51,7 +51,7 @@ function like() {
 }
 
 
-function star() {
+function star(event) {
   var btnStar = $("button.btn-star");
 
   btnStar.click(
@@ -87,34 +87,34 @@ function star() {
 }
 
 
-function submit() {
+function submit(event) {
 
 }
 
 
-function approve() {
+function approve(event) {
 
 }
 
 
-function returnForRevision() {
+function returnForRevision(event) {
 
 }
 
 
-function reject() {
+function reject(event) {
 
 }
 
 
-function revert() {
+function revert(event) {
 
 }
 
 
-function moveToTrash() {
+function moveToTrash(event) {
   $(document).on('click', '#m-trash',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -140,7 +140,7 @@ function moveToTrash() {
 }
 
 
-function restore() {
+function restore(event) {
   $(document).on('click', '#m-undo',
     function() {
       event.preventDefault();
@@ -168,12 +168,12 @@ function restore() {
 }
 
 
-function markAsDraft() {
+function markAsDraft(event) {
 
 }
 
 
-function close() {
+function close(event) {
   $(document).on('click', '#m-close',
     function() {
       event.preventDefault();
@@ -201,7 +201,7 @@ function close() {
 }
 
 
-function lock() {
+function lock(event) {
   $(document).on('click', '#m-lock',
     function() {
       event.preventDefault();
@@ -229,7 +229,7 @@ function lock() {
 }
 
 
-function unprotect() {
+function unprotect(event) {
   $(document).on('click', '#m-unprotect',
     function() {
       event.preventDefault();
@@ -257,7 +257,7 @@ function unprotect() {
 }
 
 
-function hide() {
+function hide(event) {
   $(document).on('click', '#m-hide',
     function() {
       event.preventDefault();
@@ -285,7 +285,7 @@ function hide() {
 }
 
 
-function show() {
+function show(event) {
   $(document).on('click', '#m-show',
     function() {
       event.preventDefault();
@@ -313,7 +313,7 @@ function show() {
 }
 
 
-function buildToolsMenu() {
+function buildToolsMenu(event) {
 
   $(document).on('click', '#b-admin',
     function() {
