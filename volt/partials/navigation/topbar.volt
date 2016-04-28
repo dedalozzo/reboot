@@ -26,7 +26,7 @@
           <li><a href="//{{ domainName }}/favorites/"><i class="icon-star"></i>Favorites</a></li>
           <li><a href="{{ userUri }}/repositories/"><i class="icon-github"></i>Repositories</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="/settings/"><i class="icon-wrench"></i>Settings</a></li>
+          <li><a href="{{ userUri }}/settings/"><i class="icon-wrench"></i>Settings</a></li>
           <li><button><i class="icon-gears"></i>Administration</button></li>
           <li class="dropdown-divider"></li>
           <li><a href="//{{ domainName }}/signout/"><i class="icon-signout"></i>Sign Out</a></li>
