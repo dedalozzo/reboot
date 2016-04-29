@@ -87,32 +87,32 @@ function star(event) {
 }
 
 
-function submit() {
+function submit(event) {
 
 }
 
 
-function approve() {
+function approve(event) {
 
 }
 
 
-function returnForRevision() {
+function returnForRevision(event) {
 
 }
 
 
-function reject() {
+function reject(event) {
 
 }
 
 
-function revert() {
+function revert(event) {
 
 }
 
 
-function moveToTrash() {
+function moveToTrash(event) {
   $(document).on('click', '#m-trash',
     function(event) {
       event.preventDefault();
@@ -140,7 +140,7 @@ function moveToTrash() {
 }
 
 
-function restore() {
+function restore(event) {
   $(document).on('click', '#m-undo',
     function(event) {
       event.preventDefault();
@@ -173,7 +173,7 @@ function markAsDraft(event) {
 }
 
 
-function close() {
+function close(event) {
   $(document).on('click', '#m-close',
     function(event) {
       event.preventDefault();
@@ -201,7 +201,7 @@ function close() {
 }
 
 
-function lock() {
+function lock(event) {
   $(document).on('click', '#m-lock',
     function(event) {
       event.preventDefault();
@@ -229,7 +229,7 @@ function lock() {
 }
 
 
-function unprotect() {
+function unprotect(event) {
   $(document).on('click', '#m-unprotect',
     function(event) {
       event.preventDefault();
@@ -257,7 +257,7 @@ function unprotect() {
 }
 
 
-function hide() {
+function hide(event) {
   $(document).on('click', '#m-hide',
     function(event) {
       event.preventDefault();
@@ -285,7 +285,7 @@ function hide() {
 }
 
 
-function show() {
+function show(event) {
   $(document).on('click', '#m-show',
     function(event) {
       event.preventDefault();
@@ -313,7 +313,7 @@ function show() {
 }
 
 
-function buildToolsMenu() {
+function buildToolsMenu(event) {
 
   $(document).on('click', '#b-admin',
     function(event) {
@@ -358,22 +358,22 @@ function buildToolsMenu() {
 
 
 $(document).ready(
-  function() {
+  function(event) {
     like(event);
-    star();
-    submit();
-    approve();
-    returnForRevision();
-    reject();
-    revert();
-    moveToTrash();
-    restore();
-    markAsDraft();
-    close();
-    lock();
-    unprotect();
-    hide();
-    show();
-    buildToolsMenu();
+    star(event);
+    submit(event);
+    approve(event);
+    returnForRevision(event);
+    reject(event);
+    revert(event);
+    moveToTrash(event);
+    restore(event);
+    markAsDraft(event);
+    close(event);
+    lock(event);
+    unprotect(event);
+    hide(event);
+    show(event);
+    buildToolsMenu(event);
   }
 );

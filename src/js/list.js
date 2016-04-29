@@ -6,7 +6,7 @@
 var api = 'http://programmazione.me/api/';
 
 
-function like() {
+function like(event) {
   $("article > div.item-tools > a:first-child").click(
     function(event) {
       event.preventDefault();
@@ -50,7 +50,7 @@ function like() {
 }
 
 
-function star() {
+function star(event) {
   var btnStar = $("a.btn-star");
 
   btnStar.click(
@@ -87,8 +87,8 @@ function star() {
 
 
 $(document).ready(
-  function() {
-    like();
-    star();
+  function(event) {
+    like(event);
+    star(event);
   }
 );
