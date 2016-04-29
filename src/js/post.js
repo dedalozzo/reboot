@@ -358,9 +358,9 @@ function buildToolsMenu() {
 
 
 $(document).ready(
-  function(event) {
+  function() {
     like(event);
-    star(event);
+    star();
     submit();
     approve();
     returnForRevision();
