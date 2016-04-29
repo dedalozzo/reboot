@@ -6,7 +6,7 @@
 var api = 'http://programmazione.me/api/';
 
 
-function like() {
+function like(event) {
   $("article > section.item-content > ul.item-buttons > li > button.btn-like").click(
     function(event) {
       event.preventDefault();
@@ -359,7 +359,7 @@ function buildToolsMenu() {
 
 $(document).ready(
   function(event) {
-    like();
+    like(event);
     star(event);
     submit();
     approve();
