@@ -8,7 +8,7 @@ var api = 'http://api.programmazione.me/';
 
 function addFriend() {
   $("article > section.item-content > div > div > button.btn-icon").click(
-    function() {
+    function(event) {
       event.preventDefault();
 
       var memberId = $(this).parents("article").attr("id");

@@ -8,7 +8,7 @@ var api = 'http://api.programmazione.me/';
 
 function like() {
   $("article > div.item-tools > a:first-child").click(
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $(this).parents("article").attr("id");
@@ -54,7 +54,7 @@ function star() {
   var btnStar = $("a.btn-star");
 
   btnStar.click(
-    function() {
+    function(event) {
       event.preventDefault();
 
       var tagId = $(this).attr("id");

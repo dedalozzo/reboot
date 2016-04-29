@@ -6,9 +6,9 @@
 var api = 'http://api.programmazione.me/';
 
 
-function like(event) {
+function like() {
   $("article > section.item-content > ul.item-buttons > li > button.btn-like").click(
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $(this).parents("article").attr("id");
@@ -51,11 +51,11 @@ function like(event) {
 }
 
 
-function star(event) {
+function star() {
   var btnStar = $("button.btn-star");
 
   btnStar.click(
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -87,32 +87,32 @@ function star(event) {
 }
 
 
-function submit(event) {
+function submit() {
 
 }
 
 
-function approve(event) {
+function approve() {
 
 }
 
 
-function returnForRevision(event) {
+function returnForRevision() {
 
 }
 
 
-function reject(event) {
+function reject() {
 
 }
 
 
-function revert(event) {
+function revert() {
 
 }
 
 
-function moveToTrash(event) {
+function moveToTrash() {
   $(document).on('click', '#m-trash',
     function(event) {
       event.preventDefault();
@@ -140,9 +140,9 @@ function moveToTrash(event) {
 }
 
 
-function restore(event) {
+function restore() {
   $(document).on('click', '#m-undo',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -173,9 +173,9 @@ function markAsDraft(event) {
 }
 
 
-function close(event) {
+function close() {
   $(document).on('click', '#m-close',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -201,9 +201,9 @@ function close(event) {
 }
 
 
-function lock(event) {
+function lock() {
   $(document).on('click', '#m-lock',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -229,9 +229,9 @@ function lock(event) {
 }
 
 
-function unprotect(event) {
+function unprotect() {
   $(document).on('click', '#m-unprotect',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -257,9 +257,9 @@ function unprotect(event) {
 }
 
 
-function hide(event) {
+function hide() {
   $(document).on('click', '#m-hide',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -285,9 +285,9 @@ function hide(event) {
 }
 
 
-function show(event) {
+function show() {
   $(document).on('click', '#m-show',
-    function() {
+    function(event) {
       event.preventDefault();
 
       var postId = $("article").attr("id");
@@ -313,10 +313,10 @@ function show(event) {
 }
 
 
-function buildToolsMenu(event) {
+function buildToolsMenu() {
 
   $(document).on('click', '#b-admin',
-    function() {
+    function(event) {
       event.preventDefault();
       var postId = $(this).parents("article").attr("id");
       var pippo = $("#dropdown-moderator");
