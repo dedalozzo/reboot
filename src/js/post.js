@@ -51,7 +51,7 @@ function like() {
 }
 
 
-function star() {
+function star(event) {
   var btnStar = $("button.btn-star");
 
   btnStar.click(
@@ -358,9 +358,9 @@ function buildToolsMenu() {
 
 
 $(document).ready(
-  function() {
+  function(event) {
     like();
-    star();
+    star(event);
     submit();
     approve();
     returnForRevision();
