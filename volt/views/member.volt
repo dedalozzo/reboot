@@ -37,7 +37,7 @@
                   <a class="username" href="{{ url }}">{{ member.username }}</a>
                   {% endif %}
                   <div class="item-excerpt">{{ member.headline }}</div>
-                  {% if member.friend %}
+                  {% if member.friendshipExists %}
                     <div class="align-right anchor-rb">
                       <i class="icon-ok"></i> CONNECTION
                     </div>
