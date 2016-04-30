@@ -5,7 +5,7 @@
     {% set url = baseUrl~member.username %}
     {% if loop.first %}
 <ul class="list fifty gutter">
-    { % endif %}
+    {% endif %}
   <li>
     <article id="{{ member.id }}">
       <hr class="fade-short">
