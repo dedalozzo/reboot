@@ -56,7 +56,7 @@
         <div class="ghost gutter">
           <ul class="list item-tags">
             <li><a class="tag {{ post.type }}" href="//{{ domainName~'/'~types[post.type] }}/">{{ types[post.type] }}</a></li>
-            {% set tags = post.getTags() %}
+            {% set tags = post.tags.names() %}
             {% for tag in tags %}
             <li><a class="tag" href="//{{ serverName }}/{{ tag['value'] }}/">{{ tag['value'] }}</a></li>
             {% endfor  %}

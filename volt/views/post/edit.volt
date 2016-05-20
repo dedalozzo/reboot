@@ -143,7 +143,7 @@
               });
             },
             onInitialize: function() {
-              {% set tags = post.getTags() %}
+              {% set tags = post.tags.names() %}
               {% for tag in tags %}
               {#
               this.addOption({ id: {{ loop.index }}, title: '{{ tag['value'] }}', url: '//{{ domainName }}/{{ tag['value'] }}/' });
