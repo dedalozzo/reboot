@@ -76,7 +76,7 @@
           <li><button class="btn btn-like {% if post.didMemberVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
           <li><button class="btn btn-link score">{{ score }}</button></li>
           <li class="space"></li>
-          <li><button class="btn btn-star {% if post.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></button></li>
+          <li><button class="btn btn-star {% if user.favorites.exists(post) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></button></li>
           <li>
             <button class="btn btn-icon blue" title="share permalink to this {{ post.type }}" data-dropdown="#dropdown-share"><i class="icon-share icon-large"></i></button>
             <div id="dropdown-share" class="dropdown dropdown-relative dropdown-tip">
