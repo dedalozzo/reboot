@@ -5,11 +5,10 @@
   {% include "partials/types.volt" %}
   {% set baseUrl = '//'~domainName~'/' %}
   {% set userUrl = baseUrl~post.username %}
-  {% set hitsCount = post.getHitsCount() %}
-  {% set score = post.getScore() %}
+  {% set score = post.score %}
   {% set repliesCount = post.getRepliesCount() %}
 
-  <div id="page-title"><button class="btn btn-star {% if post.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-largest"></i></button> {{ post.title }}</div>
+  <div id="page-title">{{ post.title }}</div>
   <hr class="fade-long">
   <div class="column-left">
 
@@ -73,10 +72,9 @@
           </section>
         </div>
         <ul class="list item-buttons gutter">
-          <li><button class="btn btn-like {% if post.didMemberVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
+          <li><button class="btn btn-like {% if post.votes.didMemberVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
           <li><button class="btn btn-link score">{{ score }}</button></li>
           <li class="space"></li>
-          <li><button class="btn btn-star {% if user.favorites.exists(post) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></button></li>
           <li>
             <button class="btn btn-icon blue" title="share permalink to this {{ post.type }}" data-dropdown="#dropdown-share"><i class="icon-share icon-large"></i></button>
             <div id="dropdown-share" class="dropdown dropdown-relative dropdown-tip">
@@ -103,7 +101,7 @@
         </ul>
 
         <ul class="list item-actors">
-          {% set membersHaveVoted = post.getMembersHaveVoted() %}
+          {% set membersHaveVoted = post.votes.getVoters() %}
           {% for memberHasVoted in membersHaveVoted %}
           <li><a href="{{ baseUrl~memberHasVoted.id }}"><img class="img-polaroid" title="{{ memberHasVoted.username }}" src="{{ memberHasVoted.gravatar }}&s=20" /></a></li>
           {% endfor  %}

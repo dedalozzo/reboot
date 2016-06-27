@@ -12,8 +12,7 @@
   'open': 'open',
   'newest': 'new',
   'popular': 'popular',
-  'active': 'active',
-  'favorite': 'favorites'
+  'active': 'active'
   ] %}
 {% endif %}
 {% set controllerRoute = 'questions/' %}

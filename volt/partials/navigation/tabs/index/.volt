@@ -9,8 +9,7 @@
   {% set tabs = [
   'newest': 'new',
   'popular': 'popular',
-  'active': 'active',
-  'favorite': 'favorites'
+  'active': 'active'
   ] %}
 {% endif %}
 {% block vars %}
