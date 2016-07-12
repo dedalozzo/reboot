@@ -8,17 +8,6 @@
     {% set showDiv = TRUE %}
     <li><button id='m-unprotect' title="unprotect the {{ post.type }}"><i class="icon-sun"></i>Unprotect</button></li>
   {% endif %}
-  {% if canChangeVisibility %}
-    {% if showDiv is TRUE %}
-      <li class="dropdown-divider"></li>
-    {% endif %}
-    {% set showDiv = TRUE %}
-    {% if post.isVisible() %}
-      <li><button id="m-hide" title="hide the {{ post.type }}"><i class="icon-eye-close"></i>Hide</button></li>
-    {% else %}
-      <li><button id="m-show" title="show the {{ post.type }}"><i class="icon-eye-open"></i>Show</button></li>
-    {% endif %}
-  {% endif %}
   {% if canMoveToTrash %}
     {% if showDiv is TRUE %}
       <li class="dropdown-divider"></li>
