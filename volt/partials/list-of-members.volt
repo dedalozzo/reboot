@@ -31,7 +31,7 @@
             <div class="align-right anchor-rb">
               <i class="icon-ok"></i> CONNECTION
             </div>
-          {% else %}
+          {% elseif !user.match(entry.id) %}
             <div class="align-right anchor-rb">
               <button class="btn btn-icon blue mini pull-right"><i class="icon-plus"></i> CONNECT</button>
             </div>
