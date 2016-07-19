@@ -1,8 +1,8 @@
 {% set tabs = [
-'reputation': 'by reputation',
+'reputation': 'reputation',
 'popular': 'popular',
 'newest': 'new',
-'byName': 'alphabetic order',
-'byRole': 'by role'
+'byName': 'name',
+'byRole': 'role'
 ] %}
 {% set controllerRoute = 'users/' %}
