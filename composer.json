@@ -19,6 +19,6 @@
     }
   ],
   "require": {
-    "composer/installers": "dev-master"
+    "composer/installers": "~1"
   }
 }
