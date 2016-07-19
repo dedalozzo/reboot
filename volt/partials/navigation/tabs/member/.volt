@@ -2,6 +2,6 @@
 'reputation': 'reputation',
 'newest': 'new',
 'byName': 'name',
-'byRole': 'whatthefuck'
+'byRole': 'role'
 ] %}
 {% set controllerRoute = 'users/' %}
