@@ -5,7 +5,7 @@
   {% include "partials/types.volt" %}
   {% set baseUrl = '//'~domainName~'/' %}
   {% set userUrl = baseUrl~post.username %}
-  {% set score = post.score %}
+  {% set score = post.votes.count() %}
   {% set repliesCount = post.getRepliesCount() %}
 
   <div id="page-title">{{ post.title }}</div>
@@ -142,7 +142,7 @@
       </div>
       <ul class="list item-buttons gutter">
         <li><button class="btn btn-like {% if reply.didMemberVote() %} active {% endif %} red" title="la risposta mi piace"><i class="icon-thumbs-up icon-largest"></i></button></li>
-        <li><button class="btn btn-link score">{{ reply.getScore() }}</button></li>
+        <li><button class="btn btn-link score">{{ reply.votes.count() }}</button></li>
         <li><button class="btn btn-accept" title="accetta la risposta"><i class="icon-ok icon-largest"></i></button></li>
         <li class="space"></li>
         <li><button class="btn btn-icon blue" title="share"><i class="icon-link icon-large"></i></button></li>
