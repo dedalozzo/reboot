@@ -23,7 +23,7 @@
             <i class="icon-mail-forward" title="mail"></i>&nbsp;0
           </li>
           <li>
-            <i class="icon-eye-open" title="views"></i>&nbsp;{{ hitsCount }}&nbsp;&nbsp;
+            <i class="icon-eye-open" title="views"></i>&nbsp;
             <i class="icon-thumbs-up" title="likes"></i>&nbsp;{{ score }}&nbsp;&nbsp;
             <i class="icon-comments" title="comments"></i>&nbsp;{{ repliesCount }}
           </li>
