@@ -72,7 +72,7 @@
           </section>
         </div>
         <ul class="list item-buttons gutter">
-          <li><button class="btn btn-like {% if post.votes.didMemberVote() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
+          <li><button class="btn btn-like {% if post.votes.exists() %} active{% endif %}" title="like"><i class="icon-thumbs-up icon-largest"></i></button></li>
           <li><button class="btn btn-link score">{{ score }}</button></li>
           <li class="space"></li>
           <li>
