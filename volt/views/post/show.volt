@@ -141,7 +141,7 @@
         </section>
       </div>
       <ul class="list item-buttons gutter">
-        <li><button class="btn btn-like {% if reply.didMemberVote() %} active {% endif %} red" title="la risposta mi piace"><i class="icon-thumbs-up icon-largest"></i></button></li>
+        <li><button class="btn btn-like {% if reply.votes.exists() %} active {% endif %} red" title="la risposta mi piace"><i class="icon-thumbs-up icon-largest"></i></button></li>
         <li><button class="btn btn-link score">{{ reply.votes.count() }}</button></li>
         <li><button class="btn btn-accept" title="accetta la risposta"><i class="icon-ok icon-largest"></i></button></li>
         <li class="space"></li>
