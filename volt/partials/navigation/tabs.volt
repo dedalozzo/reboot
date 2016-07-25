@@ -3,7 +3,7 @@
 <ul class="list tabs {{ tabName === actionName ? 'half-gutter' : 'gutter'}}">
   {% if etag is defined %}
     {% set tagRoute = etag.name~'/' %}
-    <li><span><a id="{{ etag.id }}" class="btn-star{% if etag.isStarred() %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<b>{{ etag.name }}</b></span></li>
+    <li><span><a id="{{ etag.id }}" class="btn-star{% if user.tags.exists(etag.unversionId) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<b>{{ etag.name }}</b></span></li>
   {% else %}
     {% set tagRoute = '' %}
   {% endif %}
