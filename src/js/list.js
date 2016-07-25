@@ -71,7 +71,7 @@ function star(event) {
               case 1: // Starred.
                 btnStar.addClass('active');
                 break;
-              case -1: // Unstarred.
+              case 2: // Unstarred.
                 btnStar.removeClass('active');
                 break;
             }
