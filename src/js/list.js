@@ -61,7 +61,7 @@ function star(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'star/',
+        url: api + '/tag/star/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: tagId },
@@ -71,7 +71,7 @@ function star(event) {
               case 1: // Starred.
                 btnStar.addClass('active');
                 break;
-              case 2: // Unstarred.
+              case -1: // Unstarred.
                 btnStar.removeClass('active');
                 break;
             }
@@ -83,7 +83,6 @@ function star(event) {
     }
   );
 }
-
 
 
 $(document).ready(
