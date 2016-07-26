@@ -19,5 +19,4 @@
     {% endif %}
     <li{{ (name === tabName) ? ' class="active"' : '' }}><a href="{{ uri~actionRoute }}/">{{ actionRoute|right_trim('/') }}</a></li>
   {% endfor %}
-  {% include "partials/navigation/dropdowns/types.volt" %}
 </ul>
