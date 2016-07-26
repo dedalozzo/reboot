@@ -1,7 +1,7 @@
 {# Tabs #}
 {{ partial("partials/navigation/tabs/"~controllerName~"/") }}
 <ul class="list tabs {{ tabName === actionName ? 'half-gutter' : 'gutter'}}">
-  <li{{ (actionName === 'index' and controllerName === 'index') ? ' class="active"' : '' }}><a href="{{ uri }}/">Home</a></li>
+  <li{{ (actionName === 'index' and controllerName === 'index') ? ' class="active"' : '' }}><a href="{{ uri }}/"><i class="icon-home icon-large"></i>&nbsp;Home</a></li>
   {% if etag is defined %}
     {% set tagRoute = etag.name~'/' %}
     <li><span><a id="{{ etag.id }}" class="btn-star{% if user.tags.exists(etag.unversionId) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<a class="tag" href="//programmazione.me/php/">{{ etag.name }}</a></span></li>
