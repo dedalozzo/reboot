@@ -1,5 +1,5 @@
 {% if user.isMember() %}
-  {% set tags = user.tags %}
+  {% set tags = user.tags.names %}
   {% if !(tags is empty) %}
   <ul class="list item-tags gutter-minus">
     <li class="title">Tags preferiti</li>
