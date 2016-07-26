@@ -2,6 +2,7 @@
 {{ partial("partials/navigation/tabs/"~controllerName~"/") }}
 <ul class="list tabs {{ tabName === actionName ? 'half-gutter' : 'gutter'}}">
   <li{{ (actionName === 'index' and controllerName === 'index') ? ' class="active"' : '' }}><a href="{{ uri }}/">Home</a></li>
+  {% include "partials/navigation/dropdowns/types.volt" %}
   {% if etag is defined %}
     {% set tagRoute = etag.name~'/' %}
     <li><span><a id="{{ etag.id }}" class="btn-star{% if user.tags.exists(etag.unversionId) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<b>{{ etag.name }}</b></span></li>
