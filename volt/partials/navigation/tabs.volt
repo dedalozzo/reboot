@@ -4,7 +4,7 @@
   <li{{ (actionName === 'index' and controllerName === 'index') ? ' class="active"' : '' }}><a href="{{ uri }}/">Home</a></li>
   {% if etag is defined %}
     {% set tagRoute = etag.name~'/' %}
-    <li><a id="{{ etag.id }}" class="{% if actionName === 'info' %}active{% endif %}"><i class="icon-star icon-large"></i>&nbsp;{{ etag.name }}</a></li>
+    <li><span><a id="{{ etag.id }}" class="btn-star{% if user.tags.exists(etag.unversionId) %} active{% endif %}" title="add to favorites"><i class="icon-star icon-large"></i></a>&nbsp;<a class="tag" href="//programmazione.me/php/">{{ etag.name }}</a></span></li>
   {% else %}
     {% set tagRoute = '' %}
   {% endif %}
