@@ -1,6 +1,5 @@
 {% if etag is defined %}
   {% set tabs = [
-  'infoByTag': 'info',
   'newestByTag': 'new',
   'popularByTag': 'popular',
   'activeByTag': 'active'
