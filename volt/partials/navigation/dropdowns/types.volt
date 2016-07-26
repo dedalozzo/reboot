@@ -1,6 +1,5 @@
 <li>
-  <span>display:</span>
-  <button class="btn-link" data-dropdown="#dropdown-types">{{ controllerName === 'index' ? 'everything' : types[controllerName] }} &blacktriangledown;</button>
+  display: <button class="btn-link" data-dropdown="#dropdown-types">{{ controllerName === 'index' ? 'everything' : types[controllerName] }} &blacktriangledown;</button>
   <div id="dropdown-types" class="dropdown dropdown-relative dropdown-tip">
     <ul class="dropdown-menu">
       <li><a href="//{{ domainName~'/'~tagRoute~actionRoute }}/">everything</a></li>
