@@ -1,6 +1,5 @@
 {% if etag is defined %}
   {% set tabs = [
-  'infoByTag': 'info',
   'importantByTag': 'important',
   'openByTag': 'open',
   'newestByTag': 'new',
