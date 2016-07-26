@@ -1,4 +1,5 @@
 {%  macro dropdown(name, filters, uri, actionRoute) %}
+<li>{{ name }}:</li>
 <li>
   <button class="btn-link" data-dropdown="#dropdown-{{ name }}">{{ dispatcher.getParam('filter')|minustospace }} &blacktriangledown;</button>
   <div id="dropdown-{{ name }}" class="dropdown dropdown-relative dropdown-tip">
