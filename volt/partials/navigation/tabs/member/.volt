@@ -1,4 +1,4 @@
-{% if dispatcher.getParam('role') is defined %}
+{% if dispatcher.getParam('role') !== null %}
   {% set tabs = [
   'reputation': 'reputation',
   'popular': 'popular',
