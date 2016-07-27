@@ -6,7 +6,7 @@
 
   {% include "partials/navigation/tabs/profile/" %}
   {% include "partials/navigation/tabs.volt" %}
-  {% include "partials/navigation/dropdowns.volt" %}
+  {% include "partials/navigation/filters.volt" %}
 
   <div class="column-left">
 

@@ -8,7 +8,7 @@
 
     <div class="column-left">
       {% set showUser = TRUE %}
-      {% include "partials/navigation/dropdowns.volt" %}
+      {% include "partials/navigation/filters.volt" %}
       {% include "partials/list-of-posts.volt" %}
     </div> <!-- /column-left -->
 

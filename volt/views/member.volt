@@ -9,7 +9,7 @@
 
     <div class="column-left super">
 
-    {% include "partials/navigation/dropdowns.volt" %}
+    {% include "partials/navigation/filters.volt" %}
     {% include "partials/list-of-members.volt" %}
 
     </div> <!-- /column-left -->

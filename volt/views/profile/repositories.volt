@@ -9,7 +9,7 @@
 
   <div class="column-left">
 
-  {% include "partials/navigation/dropdowns.volt" %}
+  {% include "partials/navigation/filters.volt" %}
 
   {% if repos is defined %}
     {% set baseUrl = '//'~domainName %}
