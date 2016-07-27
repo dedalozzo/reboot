@@ -1,4 +1,4 @@
 {% include "partials/navigation/dropdowns/filters.volt" %}
-{{ dropdown('role', filters, uri, actionRoute) }}
+{{ dropdown('role', roles, uri, actionRoute) }}
 <li class="space"></li>
 {{ dropdown('when', periods, uri, actionRoute) }}
