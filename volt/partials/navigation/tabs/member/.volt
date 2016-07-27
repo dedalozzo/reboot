@@ -1,4 +1,4 @@
-{% if role is defined %}
+{% if dispatcher.getParam('role') is defined %}
   {% set tabs = [
   'reputation': 'reputation',
   'popular': 'popular',
