@@ -48,7 +48,7 @@
   </div> <!-- /column-left -->
 
   <aside class="column-right">
-
+    <div class="banner"><a href="#"><img src="/img/300x250.gif" /></a></div>
   </aside> <!-- /column-right -->
 
 </div> <!-- /content -->
