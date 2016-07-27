@@ -2,8 +2,10 @@
 
 {% block content %}
   <div id="content">
-  {% include "partials/navigation/tabs/member/" %}
-  {% include "partials/navigation/tabs.volt" %}
+    <div class="banner"><a href="#"><img src="/img/970x180.jpg" /></a></div>
+
+    {% include "partials/navigation/tabs/member/" %}
+    {% include "partials/navigation/tabs.volt" %}
 
     <div class="column-left super">
 
