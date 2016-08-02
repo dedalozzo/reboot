@@ -11,6 +11,10 @@
 @topbar-color: black;
 @topbar-background-color: lighten(@gray-lighter, 7%);
 @topbar-border-color: white;
+@topbar-min-height: 34px;
+@topbar-padding-top: 4px;
+@topbar-padding-bottom: 4px;
+@topbar-height: @topbar-min-height + @topbar-padding-top + @topbar-padding-bottom;
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -68,7 +72,7 @@
 
 .topbar > ul {
   width: @total-width;
-  min-height: 34px;
+  min-height: @topbar-min-height;
   vertical-align: middle;
   margin-right: auto;
   margin-left: auto;
@@ -76,8 +80,8 @@
 }
 
 .topbar > ul {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: @topbar-padding-top;
+  padding-bottom: @topbar-padding-bottom;
 }
 
 .topbar > ul > li  {
