@@ -15,7 +15,7 @@
           <i class="icon-group" title="connections"></i> 0
           <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;{{ entry.followersCount }}
         </li>
-        <li><i class="icon-eye-open" title="views"></i>&nbsp;{{ entry.hitsCount }}</li>
+        <li><i class="icon-eye-open" title="views"></i>&nbsp;0</li>
       </ul>
       <section class="item-content">
         <div class="ghost half-gutter rel">
