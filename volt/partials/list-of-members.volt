@@ -12,7 +12,7 @@
       <ul class="list item-info">
         <li>{{ entry.when }}</li>
         <li>
-          <i class="icon-group" title="connections"></i>&nbsp;{{ entry.friendsCount }}&nbsp;&nbsp;
+          <i class="icon-group" title="connections"></i> 0
           <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;{{ entry.followersCount }}
         </li>
         <li><i class="icon-eye-open" title="views"></i>&nbsp;{{ entry.hitsCount }}</li>
