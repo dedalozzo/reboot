@@ -33,6 +33,8 @@
       </div>
     </li>
     <li><button class="btn btn-icon blue" title="messaggi e notifiche" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
+    {% else %}
+    <li><a href="//{{ domainName }}/logon/">Log in</a></li>
     {% endif %}
   </ul>
 
