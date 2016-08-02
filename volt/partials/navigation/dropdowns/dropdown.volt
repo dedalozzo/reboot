@@ -1,17 +1,21 @@
-{%  macro dropdown(label, name, items, uri, actionRoute, prevRoutes = {}, nextRoutes = {}) %}
+{%  macro dropdown(label, name, items, uri, actionRoute, prevRoutes = null, nextRoutes = null) %}
   <li>{{ label }}:</li>
   <li>
     <button class="btn-link" data-dropdown="#dropdown-{{ name }}">{{ dispatcher.getParam(name)|minustospace }} &blacktriangledown;</button>
     <div id="dropdown-{{ name }}" class="dropdown dropdown-relative dropdown-tip">
       <ul class="dropdown-menu">
         {% set prefix = uri~actionRoute~'/' %}
-        {% for index, route in prevRoutes %}
-          {% set prefix = prefix~route~'/' %}
-        {% endfor %}
+        {% if prevRoutes is defined %}
+          {% for index, route in prevRoutes %}
+            {% set prefix = prefix~route~'/' %}
+          {% endfor %}
+        {% endif %}
         {% set postfix = '' %}
-        {% for index, route in nextRoutes %}
-          {% set postfix = postfix~'/'~route %}
-        {% endfor %}
+        {% if nextRoutes is defined %}
+          {% for index, route in nextRoutes %}
+            {% set postfix = postfix~'/'~route %}
+          {% endfor %}
+        {% endif %}
         {% for name, value in items %}
           <li><a href="{{ prefix~name~postfix }}/">{{ name|minustospace }}</a></li>
         {% endfor %}
