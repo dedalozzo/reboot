@@ -1,4 +1,4 @@
-{%  macro dropdown(label, name, items, uri, actionRoute, prevRoutes = [], nextRoutes = []) %}
+{%  macro dropdown(label, name, items, uri, actionRoute, prevRoutes = {}, nextRoutes = {}) %}
   <li>{{ label }}:</li>
   <li>
     <button class="btn-link" data-dropdown="#dropdown-{{ name }}">{{ dispatcher.getParam(name)|minustospace }} &blacktriangledown;</button>
