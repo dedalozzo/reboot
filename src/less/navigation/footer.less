@@ -11,22 +11,23 @@
 /*
   <footer>
     <ul class="list">
-      <li><a href="{{ baseUri }}/tour/">CHI SIAMO</a></li>
-      <li><a href="{{ baseUri }}/aiuto/">AIUTO</a></li>
-      <li><a href="{{ baseUri }}/legale/">LEGALE</a></li>
-      <li><a href="{{ baseUri }}/privacy/">PRIVACY</a></li>
-      <li><a href="{{ baseUri }}/lavoro/">LAVORO</a></li>
-      <li><a href="{{ baseUri }}/pubblicita/">PUBBLICITÀ</a></li>
-      <li><a href="{{ baseUri }}/contatti/">CONTATTI</a></li>
+      <li><a href="//programmazione.me/tour/">ABOUT</a></li>
+      <li><a href="//programmazione.me/help/">HELP</a></li>
+      <li><a href="//programmazione.me/tour/">TOUR</a></li>
+      <li><a href="//programmazione.me/legal/">LEGAL</a></li>
+      <li><a href="//programmazione.me/privacy/">PRIVACY</a></li>
+      <li><a href="//programmazione.me/careers/">CAREERS</a></li>
+      <li><a href="//programmazione.me/advertising/">ADVERTISING</a></li>
+      <li><a href="//programmazione.me/contacts/">CONTACTS</a></li>
       <li class="space"></li>
-      <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/it/"><img alt="Licenza Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/it/80x15.png" /></a></li>
+      <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" /></a></li>
     </ul>
     <p class="copyright">
-      © {{ serverName|capitalize }}™ 1999-{{ year }}. Testata giornalistica iscritta col n. 569 presso il Tribunale di Milano in data 14/10/2002.
-      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Alcuni diritti riservati.<br>
-      I contributi degli utenti</span> sono distribuiti con licenza <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/it/">cc-wiki</a>, l'attribuzione è richiesta e la condivisione deve avvenire con le stesse modalità descritte in licenza.
+      <span>© Programmazione.me™ 1999-2016. Some rights reserved.</span><br>
+      You must give <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">appropriate credit</a>, provide a link to the license, and <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+      If you remix, transform, or build upon the material, you must distribute your contributions under the <a href="https://creativecommons.org/licenses/by-sa/4.0/#" target="_blank">same license</a> as the original.
     </p>
-    <p class="version">Powered by <a href="">PitPress</a> v{{ version }}</p>
+    <p class="version">Powered by <a href="//reindex.xyz">ReIndex</a> v0.20.0</p>
   </footer>
 */
 
@@ -68,6 +69,10 @@ footer > .copyright {
   line-height: normal;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  > span {
+    font-weight: 500;
+  }
 
   > a {
     color: @gray-darker;
