@@ -273,13 +273,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 0) {
 
-  // Webkit browsers need one more padding-top pixel to align vertically the text inside and keep the height fixed to 32px.
-  .selectize-input {
-    //padding-top: 2px; // It was 1px.
-  }
-  .selectize-control.multi .selectize-input > div {
-    //padding-top: 2px; // It was 1px.
-  }
 }
 
 
@@ -291,17 +284,6 @@
 
   .selectize-control.multi .selectize-input.has-items {
     padding: 0 4px 2px 4px;
-  }
-
-  // In case of multiple items, the placeholder is not correctly vertically aligned, we need extra padding.
-  .selectize-control.multi .selectize-input {
-    //padding-top: 1px; // It was 0.
-    //padding-bottom: 1px; // It was 0.
-  }
-
-  // Padding of the control that contains the items.
-  .selectize-control.multi .selectize-input.has-items {
-    //padding-top: 1px;
   }
 
 }
