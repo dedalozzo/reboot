@@ -11,23 +11,6 @@
 
     <form action="//{{ domainName }}/{{ post.id }}/modifica/" id="editform" name="editform" method="post" role="form">
 
-      <div class="half-gutter">
-        <select id="select-version" name="version">
-          {% for revision in revisions %}
-            <option value="{{ revision.id }}">Rev. - {{ revision.editor }} - {{ revision.whenHasBeenModified }} - {% if revision.editSummary is empty %} Prima versione {% else %} {{ revision.editSummary }} {% endif  %}</option>
-          {% endfor %}
-        </select>
-        <script>
-          $('#select-version').selectize({
-            sortField: {
-              field: 'text',
-              direction: 'asc'
-            },
-            dropdownParent: 'body'
-          });
-        </script>
-      </div>
-
       <div class="gutter">
         {{ text_field("title", "placeholder": "Titolo") }}
         <label>{{ validation.first("title") }}</label>
