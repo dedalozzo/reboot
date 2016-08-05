@@ -9,7 +9,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 // SETTINGS
 //----------------------------------------------------------------------------------------------------------------------
-@input-height: 30px;
+@input-height: 31px;
 //@input-line-height: 1.3; // Used for input controls.
 @input-line-height: @input-height / 2; // Used for input controls.
 
@@ -272,7 +272,8 @@ input[type="checkbox"]:focus:invalid:focus {
   input[type='url'],
   input[type='week'],
   textarea {
-    height: @input-height + 1;
+    //height: @input-height + 1;
+    padding-bottom: 1px;
   }
 
 }
