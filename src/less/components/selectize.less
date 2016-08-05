@@ -232,7 +232,7 @@
   [data-value] .remove {
     display: inline-block;
     padding-bottom: 0;
-    height: 23px;
+    height: 23px; // This is absurd, I really dunno why Chrome and Firefox need 23px instead of 22px.
     width: 20px;
 
     color: @gray;
@@ -288,6 +288,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
 
 @-moz-document url-prefix() {
+
+  .selectize-input {
+    padding-bottom: 0; // It was 1px.
+  }
 
   // In case of multiple items, the placeholder is not correctly vertically aligned, we need extra padding.
   .selectize-control.multi .selectize-input {
