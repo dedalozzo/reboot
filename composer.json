@@ -12,12 +12,6 @@
     }
   ],
   "type": "reindex-theme",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url":  "https://github.com/dedalozzo/installers"
-    }
-  ],
   "require": {
     "composer/installers": "~1"
   }
