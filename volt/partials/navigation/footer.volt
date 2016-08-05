@@ -2,6 +2,7 @@
       <ul class="list">
         <li><a href="//{{ domainName }}/tour/">ABOUT</a></li>
         <li><a href="//{{ domainName }}/help/">HELP</a></li>
+        <li><a href="//{{ domainName }}/tour/">TOUR</a></li>
         <li><a href="//{{ domainName }}/legal/">LEGAL</a></li>
         <li><a href="//{{ domainName }}/privacy/">PRIVACY</a></li>
         <li><a href="//{{ domainName }}/careers/">CAREERS</a></li>
