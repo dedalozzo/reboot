@@ -289,8 +289,8 @@
 
 @-moz-document url-prefix() {
 
-  .selectize-input {
-    padding-bottom: 0; // It was 1px.
+  .selectize-control.multi .selectize-input.has-items {
+    padding: 0 4px 2px 4px;
   }
 
   // In case of multiple items, the placeholder is not correctly vertically aligned, we need extra padding.
