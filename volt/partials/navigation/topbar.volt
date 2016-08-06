@@ -17,9 +17,11 @@
     {% if user.isMember() %}
       {% set userUri = '//'~domainName~'/'~user.username %}
     <li>
-      <button class="btn btn-icon blue" data-dropdown="#dropdown-user"><img class="gravatar" src="{{ user.getGravatar(user.emails.getPrimary()) }}&s=20"> {{ user.username }}</button>
+      <button class="btn btn-icon blue" data-dropdown="#dropdown-user"><img class="gravatar" src="{{ user.getGravatar(user.emails.getPrimary()) }}&s=20"></button>
       <div id="dropdown-user" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
         <ul class="dropdown-menu">
+          <li>Signed in as<br><b>{{ user.username }}</b></li>
+          <li class="dropdown-divider"></li>
           <li><a href="{{ userUri }}"><i class="icon-home"></i>Timeline</a></li>
           <li class="dropdown-divider"></li>
           <li><a href="{{ userUri }}/about/"><i class="icon-user"></i>Profile</a></li>
