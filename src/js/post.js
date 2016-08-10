@@ -16,7 +16,7 @@ function like(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'like/',
+        url: api + 'post/like/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -51,67 +51,6 @@ function like(event) {
 }
 
 
-function star(event) {
-  var btnStar = $("button.btn-star");
-
-  btnStar.click(
-    function(event) {
-      event.preventDefault();
-
-      var postId = $("article").attr("id");
-
-      $.ajax({
-        type: "POST",
-        url: api + 'star/',
-        xhrFields: { withCredentials: true },
-        dataType: "json",
-        data: { id: postId },
-
-        success: function(data) {
-          if (data[0])
-            switch (data[1]) {
-              case 1: // Starred
-                btnStar.addClass('active');
-                break;
-              case 2: // Unstarred
-                btnStar.removeClass('active');
-                break;
-            }
-          else
-            alert(data[1]);
-        }
-      });
-
-    }
-  );
-}
-
-
-function submit(event) {
-
-}
-
-
-function approve(event) {
-
-}
-
-
-function returnForRevision(event) {
-
-}
-
-
-function reject(event) {
-
-}
-
-
-function revert(event) {
-
-}
-
-
 function moveToTrash(event) {
   $(document).on('click', '#m-trash',
     function(event) {
@@ -121,7 +60,7 @@ function moveToTrash(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'move-to-trash/',
+        url: api + 'post/move-to-trash/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -149,7 +88,7 @@ function restore(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'restore/',
+        url: api + 'post/restore/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -168,11 +107,6 @@ function restore(event) {
 }
 
 
-function markAsDraft(event) {
-
-}
-
-
 function close(event) {
   $(document).on('click', '#m-close',
     function(event) {
@@ -182,7 +116,7 @@ function close(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'close/',
+        url: api + 'post/close/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -210,7 +144,7 @@ function lock(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'lock/',
+        url: api + 'post/lock/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -238,7 +172,7 @@ function unprotect(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'unprotect/',
+        url: api + 'post/unprotect/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -266,7 +200,7 @@ function hide(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'hide/',
+        url: api + 'post/hide/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -294,7 +228,7 @@ function show(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'show/',
+        url: api + 'post/show/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: postId },
@@ -360,15 +294,8 @@ function buildToolsMenu(event) {
 $(document).ready(
   function(event) {
     like(event);
-    star(event);
-    submit(event);
-    approve(event);
-    returnForRevision(event);
-    reject(event);
-    revert(event);
     moveToTrash(event);
     restore(event);
-    markAsDraft(event);
     close(event);
     lock(event);
     unprotect(event);
