@@ -16,7 +16,7 @@ function addFriend(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'addfriend/',
+        url: api + 'member/add-friend/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: memberId },
