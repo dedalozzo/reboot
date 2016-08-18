@@ -61,7 +61,7 @@ function star(event) {
 
       $.ajax({
         type: "POST",
-        url: api + 'star/',
+        url: api + 'tag/star/',
         xhrFields: { withCredentials: true },
         dataType: "json",
         data: { id: tagId },
