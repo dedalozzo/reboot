@@ -76,7 +76,7 @@
         <span class="error">{{ validation.first("tags[]") }}</span>
         <script>
           $('#tags').selectize({
-            plugins: ['remove_button'],
+            plugins: ['silent_remove', 'remove_button'],
             persist: false,
             openOnFocus: false,
             create: true,
