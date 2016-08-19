@@ -149,8 +149,8 @@
       </div>
 
       <div class="gutter">
-        {{ text_field("summary", "placeholder": "Breve descrizione delle modifiche apportate") }}
-        <label>{{ validation.first("summary") }}</label>
+        {{ text_field("editSummary", "placeholder": "Breve descrizione delle modifiche apportate") }}
+        <label>{{ validation.first("editSummary") }}</label>
       </div>
 
       <ul class="list btn-list gutter">
