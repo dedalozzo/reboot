@@ -9,7 +9,7 @@
     <!-- <div class="alert alert-info">Le tue modifiche saranno poste in coda sino a che il processo di revisione paritaria (peer review) avrà luogo. Ogni modifica, purché costruttiva, è benvenuta. Grazie.</div> -->
     {{ flash.output() }}
 
-    <form action="//{{ domainName }}/{{ post.id }}/modifica/" id="editform" name="editform" method="post" role="form">
+    <form action="//{{ domainName }}/{{ post.id }}/edit/" id="editform" name="editform" method="post" role="form">
 
       <div class="gutter">
         {{ text_field("title", "placeholder": "Titolo") }}
