@@ -253,10 +253,10 @@ function buildToolsMenu(event) {
     function(event) {
       event.preventDefault();
       var postId = $(this).parents("article").attr("id");
-      var pippo = $("#dropdown-moderator");
+      var menu = $("#dropdown-moderator");
 
-      if (pippo.css('display') == 'block') {
-        pippo.load("http://programmazione.me/ajax/moderator-menu/", {id: postId},
+      if (menu.css('display') == 'block') {
+        menu.load("http://programmazione.me/ajax/moderator-menu/", {id: postId},
           function() {
             var dropdown = $('.dropdown:visible').eq(0),
               trigger = dropdown.data('dropdown-trigger'),
@@ -285,7 +285,7 @@ function buildToolsMenu(event) {
           });
       }
       else
-        pippo.empty();
+        menu.empty();
     });
 
 }
