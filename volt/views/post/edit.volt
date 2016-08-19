@@ -14,6 +14,7 @@
       <div class="gutter">
         {{ text_field("title", "placeholder": "Titolo") }}
         <label>{{ validation.first("title") }}</label>
+        <span class="error">{{ validation.first("title") }}</span>
       </div>
 
       <div class="gutter">
@@ -63,6 +64,7 @@
 
               editor.refresh();
             </script>
+            <span class="error">{{ validation.first("body") }}</span>
           </div>
           <div class="notebook-page" id="preview">
           </div>
@@ -150,7 +152,7 @@
 
       <div class="gutter">
         {{ text_field("editSummary", "placeholder": "Breve descrizione delle modifiche apportate") }}
-        <label>{{ validation.first("editSummary") }}</label>
+        <span class="error">{{ validation.first("editSummary") }}</span>
       </div>
 
       <ul class="list btn-list gutter">
