@@ -81,7 +81,7 @@
             openOnFocus: false,
             create: true,
             //theme: 'links',
-            maxItems: null,
+            maxItems: null, // use 5 in case of a new post.
             valueField: 'id',
             labelField: 'name',
             searchField: 'name',
@@ -130,11 +130,11 @@
             onInitialize: function() {
               {% set tags = post.tags.names() %}
               {% for tag in tags %}
-              {#
-              this.addOption({ id: {{ loop.index }}, title: '{{ tag['value'] }}', url: '//{{ domainName }}/{{ tag['value'] }}/' });
-              #}
-              this.addOption({ id: {{ loop.index }}, name: '{{ tag['value'] }}' });
-              this.addItem({{ loop.index }});
+                {#
+                this.addOption({ id: {{ loop.index }}, title: '{{ tag['value'] }}', url: '//{{ domainName }}/{{ tag['value'] }}/' });
+                #}
+                this.addOption({ id: {{ loop.index }}, name: '{{ tag['value'] }}' });
+                this.addItem({{ loop.index }});
               {% endfor %}
             },
             onItemAdd: function(value, $item) {
