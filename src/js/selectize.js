@@ -1,4 +1,9 @@
 /**
+ * REPLACE IT BUT BEFORE READ THE NOTE IN THE END, SINCE WE NEED ALWAYS TO INCLUDE THE silent_remove PLUGIN
+ * WHICH IS NOT INCLUDED IN THE DEFAULT STANDALONE VERSION! NOTE BY FILIPPO F. FADDA.
+ */
+
+/**
  * sifter.js
  * Copyright (c) 2013 Brian Reavis & contributors
  *
@@ -3751,6 +3756,37 @@
           }
         }
         return original.apply(this, arguments);
+      };
+    })();
+  });
+
+
+  /**
+   * Created by wadjei on 19/02/2015.
+   * NOTE: REMEMBER TO ADD THIS SINCE IT'S NOT INCLUDED IN THE STANDALONE VERSION!
+   */
+  Selectize.define('silent_remove', function(options){
+    var self = this;
+
+    // override the setup method to add an extra "click" handler
+    this.on('item_remove', function(){
+      this.plugin_silent_remove_in_remove = true;
+    });
+
+    this.search = (function() {
+      var original = self.search;
+      return function() {
+        if (typeof(this.plugin_silent_remove_in_remove) != "undefined") {
+          delete this.plugin_silent_remove_in_remove;
+          return {
+            items: {},
+            query: [],
+            tokens: []
+          };
+        }
+        else {
+          return original.apply(this, arguments);
+        }
       };
     })();
   });
