@@ -13,7 +13,7 @@
 
       <div class="gutter">
         <label for="title">Title:</label><br>
-        {{ text_field("title", "placeholder": "Titolo") }}
+        {{ text_field("title", "placeholder": "A title is necessary to identify the content") }}
         <span class="error">{{ validation.first("title") }}</span>
       </div>
 
