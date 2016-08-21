@@ -73,7 +73,7 @@
 
       <div class="half-gutter">
         <label for="tags">Tags:</label><br>
-        <select id="tags" name="tags[]" placeholder="Seleziona alcuni tags..."></select>
+        <select id="tags" name="tags[]" placeholder="Select at least one tag, 5 at most..."></select>
         <script>
           $('#tags').selectize({
             plugins: ['silent_remove', 'remove_button'],
@@ -149,13 +149,13 @@
 
       <div class="gutter">
         <label for="editSummary">Edit Summary:</label><br>
-        {{ text_field("editSummary", "placeholder": "briefly explain your changes (corrected spelling, fixed grammar, improved formatting, etc.)") }}
+        {{ text_field("editSummary", "placeholder": "Briefly explain your changes (corrected spelling, fixed grammar, improved formatting, etc.)") }}
         <span class="error">{{ validation.first("editSummary") }}</span>
       </div>
 
       <ul class="list btn-list gutter">
-        <li class="pull-right"><a href="//{{ domainName~post.getHref() }}" class="btn">ANNULLA</a></li>
-        <li class="pull-right"><button type="submit" name="signin" class="btn red">SALVA LE MODIFICHE</button></li>
+        <li class="pull-right"><a href="//{{ domainName~post.getHref() }}" class="btn">CANCEL</a></li>
+        <li class="pull-right"><button type="submit" name="signin" class="btn red">SAVE EDITS</button></li>
       </ul>
 
     </form>
