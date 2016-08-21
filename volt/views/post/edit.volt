@@ -12,8 +12,8 @@
     <form action="//{{ domainName }}/{{ post.id }}/edit/" id="editform" name="editform" method="post" role="form">
 
       <div class="gutter">
+        <label for="title">Title:</label><br>
         {{ text_field("title", "placeholder": "Titolo") }}
-        <label>{{ validation.first("title") }}</label>
         <span class="error">{{ validation.first("title") }}</span>
       </div>
 
@@ -72,6 +72,7 @@
       </div>
 
       <div class="half-gutter">
+        <label for="tags">Tags:</label><br>
         <select id="tags" name="tags[]" placeholder="Seleziona alcuni tags..."></select>
         <script>
           $('#tags').selectize({
@@ -148,7 +149,7 @@
 
       <div class="gutter">
         <label for="editSummary">Edit Summary:</label><br>
-        {{ text_field("editSummary", "placeholder": "Briefly explain your changes (corrected spelling, fixed grammar, improved formatting, etc.") }}
+        {{ text_field("editSummary", "placeholder": "briefly explain your changes (corrected spelling, fixed grammar, improved formatting, etc.)") }}
         <span class="error">{{ validation.first("editSummary") }}</span>
       </div>
 
