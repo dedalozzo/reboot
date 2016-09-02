@@ -152,6 +152,7 @@
     <aside class="column-right compressed">
       {% include "partials/notes/formatting-rules.volt" %}
       {% include "partials/notes/tags-usage.volt" %}
+      {% include "partials/notes/metadata.volt" %}
     </aside> <!-- column-right -->
 
   </div>
