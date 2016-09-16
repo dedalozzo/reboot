@@ -6,7 +6,7 @@
   {% set baseUrl = '//'~domainName~'/' %}
   {% set userUrl = baseUrl~post.username %}
   {% set score = post.votes.count() %}
-  {% set repliesCount = post.getRepliesCount() %}
+  {% set repliesCount = post.getCommentsCount() %}
 
   <div id="page-title">{{ post.title }}</div>
   <hr class="fade-long">
