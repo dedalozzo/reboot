@@ -4,7 +4,7 @@
 <div id="content">
   {% include "partials/types.volt" %}
   {% set baseUrl = '//'~domainName~'/' %}
-  {% set userUrl = baseUrl~post.username %}
+  {% set userUrl = baseUrl~post.getAuthorUsername() %}
   {% set score = post.votes.count() %}
   {% set commentsCount = post.getCommentsCount() %}
 
@@ -61,14 +61,14 @@
             {% endfor  %}
           </ul>
           <section class="item-user pull-right">
-            <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ post.getGravatar() }}&s=48" /></a>
+            <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ post.getAuthorGravatar() }}&s=48" /></a>
             <div class="reputation ext">
               <table>
                 <tr><td>2345</td></tr>
                 <tr><td>REPUTATION</td></tr>
               </table>
             </div>
-            <a class="username" href="{{ userUrl }}">{{ post.username }}</a>
+            <a class="username" href="{{ userUrl }}">{{ post.getAuthorUsername() }}</a>
           </section>
         </div>
         <ul class="list item-buttons gutter">
@@ -103,7 +103,7 @@
         <ul class="list item-actors">
           {% set membersHaveVoted = post.votes.getVoters() %}
           {% for memberHasVoted in membersHaveVoted %}
-          <li><a href="{{ baseUrl~memberHasVoted.id }}"><img class="img-polaroid" title="{{ memberHasVoted.username }}" src="{{ memberHasVoted.gravatar }}&s=20" /></a></li>
+          <li><a href="{{ baseUrl~memberHasVoted.id }}"><img class="img-polaroid" title="{{ memberHasVoted.getAuthorUsername() }}" src="{{ memberHasVoted.getAuthorGravatar() }}&s=20" /></a></li>
           {% endfor  %}
         </ul>
       </section>
@@ -130,7 +130,7 @@
       </div>
       <div class="ghost gutter">
         <section class="item-user pull-right">
-          <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ comment.getGravatar() }}&s=48" /></a>
+          <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ comment.getAuthorGravatar() }}&s=48" /></a>
           <div class="reputation ext">
             <table>
               <tr><td>2345</td></tr>
