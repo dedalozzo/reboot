@@ -4,7 +4,8 @@
 <div id="content">
   {% include "partials/types.volt" %}
   {% set baseUrl = '//'~domainName~'/' %}
-  {% set userUrl = baseUrl~post.getAuthorUsername() %}
+  {% set username = post.getAuthorUsername() %}
+  {% set userUrl = baseUrl~username %}
   {% set score = post.votes.count() %}
   {% set commentsCount = post.getCommentsCount() %}
 
@@ -68,7 +69,7 @@
                 <tr><td>REPUTATION</td></tr>
               </table>
             </div>
-            <a class="username" href="{{ userUrl }}">{{ post.getAuthorUsername() }}</a>
+            <a class="username" href="{{ userUrl }}">{{ username }}</a>
           </section>
         </div>
         <ul class="list item-buttons gutter">
@@ -116,7 +117,7 @@
     </ul>
 
     {% for comment in comments %}
-    {% set username = comment.username %}
+    {% set username = comment.getAuthorUsername() %}
     {% set userUrl = baseUrl~username %}
 
     {% if not loop.first %}
