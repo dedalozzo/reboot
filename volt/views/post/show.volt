@@ -6,7 +6,7 @@
   {% set baseUrl = '//'~domainName~'/' %}
   {% set userUrl = baseUrl~post.username %}
   {% set score = post.votes.count() %}
-  {% set repliesCount = post.getCommentsCount() %}
+  {% set commentsCount = post.getCommentsCount() %}
 
   <div id="page-title">{{ post.title }}</div>
   <hr class="fade-long">
@@ -25,7 +25,7 @@
           <li>
             <i class="icon-eye-open" title="views"></i>&nbsp;
             <i class="icon-thumbs-up" title="likes"></i>&nbsp;{{ score }}&nbsp;&nbsp;
-            <i class="icon-comments" title="comments"></i>&nbsp;{{ repliesCount }}
+            <i class="icon-comments" title="comments"></i>&nbsp;{{ commentsCount }}
           </li>
         </ul>
         {% if post.type == 'book' %}
@@ -110,27 +110,27 @@
     </article>
 
     <ul class="list tabs">
-      <li><span><b>{{ repliesCount }}{% if repliesCount == 1 %} COMMENT{% else %} COMMENTS{% endif %}</b></span></li>
+      <li><span><b>{{ commentsCount }}{% if commentsCount == 1 %} COMMENT{% else %} COMMENTS{% endif %}</b></span></li>
       <li class="pull-right"><a href="#">MOST VOTED</a></li>
       <li class="active pull-right"><a href="#">RECENT</a></li>
     </ul>
 
-    {% for reply in replies %}
-    {% set username = reply.username %}
+    {% for comment in comments %}
+    {% set username = comment.username %}
     {% set userUrl = baseUrl~username %}
 
     {% if not loop.first %}
     {% endif %}
 
     <hr class="fade-short">
-    <div class="item-info">{{ reply.whenHasBeenCreated() }}</div>
+    <div class="item-info">{{ comment.whenHasBeenCreated() }}</div>
     <div class="item-content">
       <div class="item-body">
-        {{ reply.html }}
+        {{ comment.html }}
       </div>
       <div class="ghost gutter">
         <section class="item-user pull-right">
-          <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ reply.getGravatar() }}&s=48" /></a>
+          <a class="avatar" href="{{ userUrl }}"><img class="img-polaroid" src="{{ comment.getGravatar() }}&s=48" /></a>
           <div class="reputation ext">
             <table>
               <tr><td>2345</td></tr>
@@ -141,8 +141,8 @@
         </section>
       </div>
       <ul class="list item-buttons gutter">
-        <li><button class="btn btn-like {% if reply.votes.exists() %} active {% endif %} red" title="la risposta mi piace"><i class="icon-thumbs-up icon-largest"></i></button></li>
-        <li><button class="btn btn-link score">{{ reply.votes.count() }}</button></li>
+        <li><button class="btn btn-like {% if comment.votes.exists() %} active {% endif %} red" title="la risposta mi piace"><i class="icon-thumbs-up icon-largest"></i></button></li>
+        <li><button class="btn btn-link score">{{ comment.votes.count() }}</button></li>
         <li><button class="btn btn-accept" title="accetta la risposta"><i class="icon-ok icon-largest"></i></button></li>
         <li class="space"></li>
         <li><button class="btn btn-icon blue" title="share"><i class="icon-link icon-large"></i></button></li>
