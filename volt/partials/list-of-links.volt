@@ -7,7 +7,7 @@
       <div class="item-time">{{ entry.timestamp }}</div>
       <div class="item-tools">
         <a{% if entry.liked %} class="active"{% endif %} title="mi piace"><i class="icon-thumbs-up icon-large"></i></a><span>{{ entry.score }}</span>
-        <a href="{{ baseUrl~entry.url }}#comments"><i class="icon-comments icon-large"></i></a><span>{{ entry.repliesCount }}</span>
+        <a href="{{ baseUrl~entry.url }}#comments"><i class="icon-comments icon-large"></i></a><span>{{ entry.commentsCount }}</span>
       </div>
       <section class="item-content shift">
         <a class="item-title" href="{{ entry.url }}">{{ entry.title }}</a>

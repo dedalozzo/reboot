@@ -9,7 +9,7 @@
         <li>
           <i class="icon-eye-open" title="views"></i>&nbsp;0&nbsp;&nbsp;
           <i class="icon-thumbs-up"></i>&nbsp;{{ entry.score }}&nbsp;&nbsp;
-          <i class="icon-comments"></i>&nbsp;{{ entry.repliesCount }}
+          <i class="icon-comments"></i>&nbsp;{{ entry.commentsCount }}
         </li>
       </ul>
       <section class="item-content">

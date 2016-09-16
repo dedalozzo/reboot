@@ -9,7 +9,7 @@
         {% for question in questions %}
           <li>
             <a href="{{ question.url }}">
-              <div><i class="icon-thumbs-up"></i>&nbsp;{{ question.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ question.repliesCount }}</div>
+              <div><i class="icon-thumbs-up"></i>&nbsp;{{ question.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ question.commentsCount }}</div>
               <div>{{ question.whenHasBeenPublished }}</div>
               {{ question.title }}
             </a>
@@ -24,7 +24,7 @@
       {% for article in articles %}
         <li>
           <a href="{{ article.url }}">
-            <div><i class="icon-thumbs-up"></i>&nbsp;{{ article.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ article.repliesCount }}</div>
+            <div><i class="icon-thumbs-up"></i>&nbsp;{{ article.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ article.commentsCount }}</div>
             <div>{{ article.whenHasBeenPublished }}</div>
             {{ article.title }}
           </a>
@@ -39,7 +39,7 @@
       {% for book in books %}
         <li>
           <a href="{{ book.url }}">
-            <div><i class="icon-thumbs-up"></i>&nbsp;{{ book.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ book.repliesCount }}</div>
+            <div><i class="icon-thumbs-up"></i>&nbsp;{{ book.score }}&nbsp;&nbsp;<i class="icon-comments"></i>&nbsp;{{ book.commentsCount }}</div>
             <div>{{ book.whenHasBeenPublished }}</div>
             {{ book.title }}
           </a>
