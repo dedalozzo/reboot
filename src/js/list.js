@@ -5,7 +5,7 @@
 
 var api = 'http://programmazione.me/api/';
 
-
+/*
 function like(event) {
   $("article > div.item-tools > a:first-child").click(
     function(event) {
@@ -48,6 +48,7 @@ function like(event) {
     }
   );
 }
+*/
 
 
 function star(event) {
@@ -87,7 +88,7 @@ function star(event) {
 
 $(document).ready(
   function(event) {
-    like(event);
+    //like(event);
     star(event);
   }
 );
