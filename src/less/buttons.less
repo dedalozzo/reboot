@@ -199,11 +199,14 @@ a.btn {
   color: @link-color;
 }
 
-.btn-link:hover,
-.btn-link:active,
-.btn-link.active {
+.btn-link:hover {
   color: @link-color-hover;
   text-decoration: none;
+}
+
+.btn-link:active,
+.btn-link.active {
+  color: @red !important;
 }
 
 .btn-link:disabled {
