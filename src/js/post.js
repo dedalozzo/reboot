@@ -30,12 +30,10 @@ function like(event) {
               case 1: // Registered
                 votesCount++;
                 like.addClass('active');
-                like.text('unlike');
                 break;
               case 2: // Deleted
                 votesCount--;
                 like.removeClass('active');
-                like.text('like');
                 break;
               case 3: // Replaced
                 // Can't occour in case of a Like.
