@@ -97,7 +97,7 @@
                 '</ul>';
               },
               item: function(tag, escape) {
-                return '<div class="item"><a class="tag" href="' + '//{{ domainName }}/' + escape(tag.name) + '/">' + escape(tag.name) + '</a></div>';
+                return '<div class="item"><a class="tag" href="' + '//{{ domainName }}/' + encodeURIComponent(tag.name) + '/">' + escape(tag.name) + '</a></div>';
               }
             },
             /*
