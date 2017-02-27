@@ -1,7 +1,7 @@
 {% extends "templates/base.volt" %}
 
 {% block jsAssets %}
-  <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
 {% endblock %}
 
 {% block topbar %}{% endblock %}
@@ -124,8 +124,10 @@
 
 {% block script %}
   <script type="text/javascript">
-    $('.g-recaptcha').each(function(index, el) {
-      grecaptcha.render(el, {'sitekey' : '{{ recaptchaKey }}'});
-    });
+    var captchaCallback = function() {
+      $('.g-recaptcha').each(function(index, el) {
+        grecaptcha.render(el, {'sitekey' : '{{ recaptchaKey }}'});
+      });
+    };
   </script>
 {% endblock %}
