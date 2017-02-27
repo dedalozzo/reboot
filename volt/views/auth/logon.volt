@@ -56,7 +56,7 @@
                 <span class="error">{{ validation.first("captchaSignIn") }}</span>
               </div>
               <div class="align-right">
-                <button type="submit" name="signin" class="btn blue">Sign In</button>
+                <button type="submit" name="signin" class="btn blue">SIGN IN</button>
               </div>
             </form>
           </div>
@@ -98,7 +98,7 @@
                 <span class="error">{{ validation.first("captchaSignUp") }}</span>
               </div>
               <div class="align-right">
-                <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
+                <button type="submit" name="signup" value="signup" class="btn blue">SIGN UP</button>
               </div>
             </form>
           </div>
