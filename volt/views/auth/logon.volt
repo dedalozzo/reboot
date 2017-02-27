@@ -1,5 +1,9 @@
 {% extends "templates/base.volt" %}
 
+{% block jsAssets %}
+  <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+{% endblock %}
+
 {% block topbar %}{% endblock %}
 {% block menubar %}{% endblock %}
 {% block container %}fixed{% endblock %}
@@ -48,7 +52,7 @@
                 {% if signin is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
-                <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+                <div class="g-recaptcha" data-sitekey=""></div>
                 <span class="error">{{ validation.first("captcha") }}</span>
               </div>
               <div class="align-right">
@@ -90,7 +94,7 @@
                 {% if signup is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
-                <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+                <div class="g-recaptcha" data-sitekey=""></div>
                 <span class="error">{{ validation.first("captcha") }}</span>
               </div>
               <div class="align-right">
@@ -116,4 +120,12 @@
     </aside>
 
   </div> <!-- /content -->
+{% endblock %}
+
+{% block script %}
+  <script type="text/javascript">
+    $('.g-recaptcha').each(function(index, el) {
+      grecaptcha.render(el, {'sitekey' : '{{ recaptchaKey }}'});
+    });
+  </script>
 {% endblock %}

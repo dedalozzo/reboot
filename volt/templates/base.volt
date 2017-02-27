@@ -38,6 +38,9 @@
 
   {{ assets.outputJs() }}
 
+  {% block jsAssets %}
+  {% endblock %}
+
   {# Removes the Facebook ugliness. #}
   <script>
     if (window.location.hash == "#_=_")
