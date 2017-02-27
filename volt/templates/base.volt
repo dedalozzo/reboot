@@ -51,7 +51,7 @@
     }
   </style>
 </head>
-<body onload="localStorage.clear();">
+<body{% if debug %} onload="localStorage.clear();"{% endif %}>
   {% include 'partials/types.volt' %}
 
   {% block topbar %}
