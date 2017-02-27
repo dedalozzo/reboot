@@ -47,7 +47,10 @@
                 {{ password_field("password", "placeholder": "Password") }}
                 {% if signin is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
               </div>
-              <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+              <div class="half-gutter">
+                <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+                <span class="error">{{ validation.first("captcha") }}</span>
+              </div>
               <div class="align-right">
                 <button type="submit" name="signin" class="btn blue">Sign In</button>
               </div>
@@ -86,7 +89,10 @@
                 {{ password_field("confirmPassword", "placeholder": "Ripeti la password") }}
                 {% if signup is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
               </div>
-              <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+              <div class="half-gutter">
+                <div class="g-recaptcha" data-sitekey="{{ recaptchaKey }}"></div>
+                <span class="error">{{ validation.first("captcha") }}</span>
+              </div>
               <div class="align-right">
                 <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
               </div>
