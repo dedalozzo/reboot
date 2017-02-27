@@ -53,7 +53,7 @@
               </div>
               <div class="half-gutter">
                 <div class="g-recaptcha" data-sitekey=""></div>
-                <span class="error">{{ validation.first("captcha") }}</span>
+                <span class="error">{{ validation.first("captchaSignIn") }}</span>
               </div>
               <div class="align-right">
                 <button type="submit" name="signin" class="btn blue">Sign In</button>
@@ -95,7 +95,7 @@
               </div>
               <div class="half-gutter">
                 <div class="g-recaptcha" data-sitekey=""></div>
-                <span class="error">{{ validation.first("captcha") }}</span>
+                <span class="error">{{ validation.first("captchaSignUp") }}</span>
               </div>
               <div class="align-right">
                 <button type="submit" name="signup" value="signup" class="btn blue">Sign Up</button>
