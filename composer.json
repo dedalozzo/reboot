@@ -2,7 +2,7 @@
   "name": "reindex/reboot",
   "description": "ReBoot is the default theme for the ReIndex platform.",
   "keywords": ["theme", "reindex"],
-  "homepage": "http://reindex.xyz",
+  "homepage": "https://github.com/reindexltd/reboot",
   "license": "Apache-2.0",
   "authors": [
     {
