@@ -2,7 +2,7 @@
 
 {% block content %}
   <div id="content">
-    <div class="banner"><a href="#"><img src="/img/970x180.jpg" /></a></div>
+    <!-- <div class="banner"><a href="#"><img src="/img/970x180.jpg" /></a></div> -->
 
     {% include "partials/navigation/tabs.volt" %}
 

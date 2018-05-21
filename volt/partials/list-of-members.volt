@@ -62,7 +62,7 @@
 <ul class="list fifty gutter">
     {% endif %}
   {% elsefor %}
-  <div class="alert alert-info">Siamo spiacenti, la ricerca non ha prodotto alcun risultato.</div>
+  <div class="alert alert-info">Sorry, no results were found.</div>
   {% endfor %}
   {% include "partials/pagination.volt" %}
 {% endif %}

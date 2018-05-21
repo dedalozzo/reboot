@@ -8,7 +8,7 @@
     {% include "partials/navigation/tabs.volt" %}
     {% include "partials/navigation/filters.volt" %}
 
-    <div class="ghost gutter">Un tag è un'etichetta che relaziona un contenuto con altri simili, inerenti lo stesso argomento. Un corretto utilizzo dei tag permette agli utenti di trovare contenuti afferenti ai propri interessi, agevolandoli nella selezione delle domande a cui potrebbero essere in grado di rispondere.</div>
+    <div class="ghost gutter">A tag is a keyword or label that categorizes your post with other, similar posts. Using the right tags makes it easier for others to find your contents.</div>
 
     {% include "partials/list-of-tags.volt" %}
 

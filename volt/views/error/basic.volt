@@ -35,7 +35,7 @@
     <aside class="prompt gutter">
       <p>
         <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;{{ method }}&nbsp;{{ url }}<br>
-        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;Errore&nbsp;{{ code }}&nbsp;({{ title }})<br>
+        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;Error&nbsp;{{ code }}&nbsp;({{ title }})<br>
         <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;<blink>&#95</blink>
       </p>
     </aside>

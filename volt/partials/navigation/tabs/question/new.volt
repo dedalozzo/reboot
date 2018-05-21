@@ -1,1 +1,0 @@
-{% extends "partials/navigation/tabs/index/new.volt" %}

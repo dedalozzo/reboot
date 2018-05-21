@@ -8,9 +8,7 @@
         <i class="icon-search"></i>
       </form>
     </li>
-    <li><a class="link" href="//{{ domainName }}/questions/">Questions</a></li>
     <li><a class="link" href="//{{ domainName }}/articles/">Articles</a></li>
-    <li><a class="link" href="//{{ domainName }}/updates/">Updates</a></li>
     <li><a class="link" href="//{{ domainName }}/tags/"><i class="icon-tags"></i>&nbsp;Tags</a></li>
     <li><a class="link" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;Users</a></li>
     <li class="space"></li>
