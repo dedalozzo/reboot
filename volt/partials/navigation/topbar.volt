@@ -8,6 +8,7 @@
         <i class="icon-search"></i>
       </form>
     </li>
+    <li><a class="link" href="//{{ domainName }}/blogs/">Blogs</a></li>
     <li><a class="link" href="//{{ domainName }}/articles/">Articles</a></li>
     <li><a class="link" href="//{{ domainName }}/tags/"><i class="icon-tags"></i>&nbsp;Tags</a></li>
     <li><a class="link" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;Users</a></li>
@@ -33,9 +34,9 @@
         </ul>
       </div>
     </li>
-    <li><button class="btn btn-icon blue" title="messaggi e notifiche" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
+    <li><button class="btn btn-icon blue" title="messages and notifications" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
     {% else %}
-    <li><a class="link" href="//{{ domainName }}/logon/"><i class="icon-signin"></i> Log in</a></li>
+    <li><a class="link" href="//{{ domainName }}/logon/"><i class="icon-signin"></i> Log In</a></li>
     {% endif %}
   </ul>
 
