@@ -19,9 +19,10 @@
     <div class="welcome">
       <img src="{{ dist }}/img/languages.jpg" width="530" height="261">
       <p>
-        Stai connesso con amici, colleghi, altri geeks come te, con la medesima passione per l'informatica.
-        Tieniti aggiornato sulle cose che ti interessano. Apprendi dagli altri e insegna loro ciò che già sai.
-        È del tutto <b>gratuito</b> e lo sarà sempre!
+        Host your blog with us, write your articles offline using an extended version of Markdown, push them on your Git
+        repo, and relax! We'll work our magic for you...
+        Would you like to use your own domain? Use our APIs to serve the contents.
+        Stay connected with friends, colleagues, other geeks like you, with the same passion for information technology.
       </p>
     </div>
 
@@ -33,7 +34,7 @@
         </ul>
         <div class="notebook-page{% if signin is defined or logon is defined %} active{% endif %}" id="signin">
           <div>
-            <p>Se possiedi già un'utenza sul sito, puoi accedere usando le tue credenziali.</p>
+            <p>If you already have an account, use the same log in credentials.</p>
             <form action="//{{ serverName }}/logon/" id="signinform" name="signinform" method="post" role="form">
               <input type="hidden" name="{{ security.getTokenKey() }}" value="{{ security.getToken() }}"/>
               <div class="half-gutter">
@@ -54,7 +55,7 @@
             </form>
           </div>
           <div>
-            <p>Se non sei ancora registrato, puoi accedere usando uno dei seguenti social networks.</p>
+            <p>If you are not yet registered, you can log in using one of the following social networks.</p>
             <ul class="list social half-gutter">
               <li><a id="facebook-btn" rel="facebook" href="//{{ serverName }}/logon/facebook/"><span class="logo"></span>Facebook</a></li>
               <li><a id="google-btn" rel="google" href="//{{ serverName }}/logon/google/"><span class="logo"></span>Google+</a></li>
@@ -96,7 +97,7 @@
             </form>
           </div>
           <div>
-            <p>Puoi anche registrarti usando uno dei seguenti social networks.</p>
+            <p>You can log in using one of the following social networks.</p>
             <ul class="list social half-gutter">
               <li><a id="facebook-btn" rel="facebook" href="//{{ serverName }}/logon/facebook/"><span class="logo"></span>Facebook</a></li>
               <li><a id="google-btn" rel="google" href="//{{ serverName }}/logon/google/"><span class="logo"></span>Google+</a></li>
