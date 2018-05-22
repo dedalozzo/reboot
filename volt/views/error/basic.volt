@@ -3,7 +3,7 @@
 {% block menubar %}{% endblock %}
 
 {% block content %}
-  <div id="content" class="no-top">
+  <div id="content">
 
     <div id="page-title">{{ title }}</div>
     <hr class="fade-long">
