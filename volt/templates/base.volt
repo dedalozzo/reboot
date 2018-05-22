@@ -31,11 +31,6 @@
 
   {{ assets.outputCss() }}
 
-  {# HTML5 shim, for IE6-8 support of HTML5 elements #}
-  <!--[if lt IE 9]>
-  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
   {{ assets.outputJs() }}
 
   {% block jsAssets %}
@@ -49,8 +44,10 @@
 
   <style>
     body {
+      /*
       background-image: url({{ dist }}/img/bg/bg_px.png);
       background-repeat: repeat;
+      */
     }
   </style>
 </head>
