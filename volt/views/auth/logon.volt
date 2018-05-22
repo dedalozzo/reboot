@@ -19,8 +19,8 @@
     <div class="welcome">
       <img src="{{ dist }}/img/languages.jpg" width="530" height="261">
       <p>
-        Host your blog with us, write your articles offline using an extended version of Markdown, push them on your Git
-        repo, and relax! We'll work our magic for you...
+        Host your blog with us, write your articles offline using an extended version of Markdown, add them to your Git
+        repo, push and relax... we'll work our magic for you!
         Would you like to use your own domain? Use our APIs to serve the contents.
         Stay connected with friends, colleagues, other geeks like you, with the same passion for information technology.
       </p>
