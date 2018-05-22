@@ -9,7 +9,6 @@
     <li><a href="//{{ domainName }}/contacts/">Contacts</a></li>
   </ul>
   <p class="copyright">
-    <b>© ReIndex™ Ltd 2014-{{ year }}. Some rights reserved.</b>
+    <b>© ReIndex™ Ltd 2014-{{ year }}.</b>
   </p>
-  <p class="version">Powered by <a href="//reindex.xyz">ReIndex</a> v{{ version }}</p>
 </footer>
