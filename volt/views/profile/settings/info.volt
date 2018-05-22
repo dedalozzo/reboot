@@ -21,7 +21,7 @@
     <div class="ghost gutter">
       <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
-          <p class="gutter">Le seguenti <b>informazioni personali</b> sono facoltative. Ti invitiamo comunque a tenerle aggiornate.</p>
+          <p class="gutter">The following <b>personal information</b> are optionals. However, we invite you to keep them updated.</p>
           <div class="half-gutter">
             <label for="firstName">First name:</label><br>
             {{ text_field("firstName", "placeholder": "First name", 'class': 'half') }}
