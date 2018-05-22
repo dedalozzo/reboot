@@ -1,13 +1,7 @@
     <hr class="fade-long">
     <footer>
       <ul class="list">
-        <li><a href="//{{ domainName }}/tour/">ABOUT</a></li>
-        <li><a href="//{{ domainName }}/help/">HELP</a></li>
-        <li><a href="//{{ domainName }}/tour/">TOUR</a></li>
-        <li><a href="//{{ domainName }}/legal/">LEGAL</a></li>
-        <li><a href="//{{ domainName }}/privacy/">PRIVACY</a></li>
-        <li><a href="//{{ domainName }}/careers/">CAREERS</a></li>
-        <li><a href="//{{ domainName }}/contacts/">CONTACTS</a></li>
+        {% include "partials/navigation/footer-links.volt" %}
         <li class="space"></li>
         <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" /></a></li>
       </ul>
