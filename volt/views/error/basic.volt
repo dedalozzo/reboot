@@ -34,11 +34,12 @@
 
     <aside class="prompt gutter">
       <p>
-        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;{{ method }}&nbsp;{{ url }}<br>
-        Resolving reindex.local...<br>
-        Connecting to reindex.local|127.0.0.1|:80... connected.<br>
-        HTTP request sent, awaiting response...&nbsp;{{ code }}&nbsp;({{ title }})<br>
-        {{ date('Y-m-d H:i:s', time()) }}&nbsp;ERROR {{ code }}:&nbsp;({{ title }}).<br>
+        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;wget&nbsp;{{ url }}<br>
+        --{{ date('Y-m-d H:i:s', time()) }}--  {{ url }}<br>
+        Resolving {{ domainName }}...<br>
+        Connecting to {{ domainName }}|{{ serverAddr }}|:{{ serverPort }}... connected.<br>
+        HTTP request sent, awaiting response...&nbsp;{{ code }}&nbsp;{{ title }}<br>
+        {{ date('Y-m-d H:i:s', time()) }}&nbsp;ERROR {{ code }}:&nbsp;{{ title }}.<br>
         <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;<blink>&#95</blink>
       </p>
     </aside>
