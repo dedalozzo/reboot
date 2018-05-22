@@ -14,7 +14,7 @@
     <li><a class="link" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;Users</a></li>
     <li class="space"></li>
     {% if user.isMember() %}
-      {% set userUri = '//'~domainName~'/'~user.username %}
+      {% set userUri = '//'~domainName~'/users/'~user.username %}
     <li>
       <button class="btn btn-icon blue" data-dropdown="#dropdown-user"><img class="gravatar" src="{{ user.getGravatar(user.emails.getPrimary()) }}&s=20"></button>
       <div id="dropdown-user" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
