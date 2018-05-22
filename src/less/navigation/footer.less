@@ -41,7 +41,7 @@ footer {
   font-size: @font-size-small;
   padding: 6px 10px 5px 10px;
   color: @gray-darker;
-  #gradient > .vertical(@gray, darken(@gray, 5%));
+  //#gradient > .vertical(@gray, darken(@gray, 5%));
   //.border-radius(2px 2px 0 0);
   .border-radius(2px);
   .clearfix();
@@ -56,11 +56,11 @@ footer ul > li + li {
 }
 
 footer a {
-  color: white;
+  color: @link-color;
 
   &:hover,
   &:focus {
-    color: white;
+    color: @link-color-hover;
     text-decoration: underline !important;
   }
 }
@@ -95,7 +95,7 @@ footer > .version {
 
 // Footer right
 footer.right {
-  background: none @content-background-color !important;
+  //background: none @content-background-color !important;
 }
 
 footer.right ul {
@@ -110,15 +110,6 @@ footer.right ul > li {
 
 footer.right ul > li + li {
   padding-left: 0;
-}
-
-footer.right a {
-  color: @link-color;
-
-  &:hover,
-  &:focus {
-    color: @link-color-hover;
-  }
 }
 
 footer > .copyright {
