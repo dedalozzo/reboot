@@ -121,7 +121,7 @@
               load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                  url: 'http://programmazione.me/tags/filter/',
+                  url: 'http://reindex.local/tags/filter/',
                   type: 'POST',
                   dataType: 'json',
                   data: {

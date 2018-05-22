@@ -39,11 +39,11 @@
         </div>
         <div class="ghost">
           <ul class="list item-tags">
-            <li><a class="tag" href="//programmazione.me/p.it/">php</a></li>
-            <li><a class="tag" href="//programmazione.me/p.it/">rust</a></li>
-            <li><a class="tag" href="//programmazione.me/p.it/">scala</a></li>
-            <li><a class="tag" href="//programmazione.me/p.it/">swift</a></li>
-            <li><a class="tag" href="//programmazione.me/p.it/">couchdb</a></li>
+            <li><a class="tag" href="//reindex.local/p.it/">php</a></li>
+            <li><a class="tag" href="//reindex.local/p.it/">rust</a></li>
+            <li><a class="tag" href="//reindex.local/p.it/">scala</a></li>
+            <li><a class="tag" href="//reindex.local/p.it/">swift</a></li>
+            <li><a class="tag" href="//reindex.local/p.it/">couchdb</a></li>
             <li class="space"></li>
           </ul>
         </div>

@@ -3,7 +3,7 @@
 //! @author Filippo F. Fadda
 //! @copyright REINDEX LTD
 
-var api = 'http://programmazione.me/api/';
+var api = 'http://reindex.local/api/';
 
 
 function like(event) {
@@ -256,7 +256,7 @@ function buildToolsMenu(event) {
       var menu = $("#dropdown-moderator");
 
       if (menu.css('display') == 'block') {
-        menu.load("http://programmazione.me/ajax/moderator-menu/", {id: postId},
+        menu.load("http://reindex.local/ajax/moderator-menu/", {id: postId},
           function() {
             var dropdown = $('.dropdown:visible').eq(0),
               trigger = dropdown.data('dropdown-trigger'),

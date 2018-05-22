@@ -3,7 +3,7 @@
 //! @author Filippo F. Fadda
 //! @copyright REINDEX LTD
 
-var api = 'http://programmazione.me/api/';
+var api = 'http://reindex.local/api/';
 
 /*
 function like(event) {
