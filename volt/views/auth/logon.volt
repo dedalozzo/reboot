@@ -72,7 +72,7 @@
           <div>
             <form action="//{{ serverName }}/logon/" id="signupform" name="signupform" method="post" role="form">
               <div class="half-gutter">
-                {{ text_field("username", "placeholder": "Nome utente") }}
+                {{ text_field("username", "placeholder": "Username") }}
                 {% if signup is defined %}<span class="error">{{ validation.first("username") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
@@ -84,7 +84,7 @@
                 {% if signup is defined %}<span class="error">{{ validation.first("password") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
-                {{ password_field("confirmPassword", "placeholder": "Ripeti la password") }}
+                {{ password_field("confirmPassword", "placeholder": "Confirm password") }}
                 {% if signup is defined %}<span class="error">{{ validation.first("confirmPassword") }}</span>{% endif %}
               </div>
               <div class="half-gutter">
