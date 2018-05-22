@@ -1,7 +1,7 @@
 {% if entries is defined %}
   {% set baseUrl = '//'~domainName~'/users/' %}
   {% for entry in entries %}
-    {% set modulus = loop.index % 2 %}
+    {% set modulus = loop.index % 1 %}
     {% set url = baseUrl~entry.username %}
     {% if loop.first %}
 <ul class="list fifty gutter">
