@@ -4,7 +4,7 @@
     {% set modulus = loop.index % 1 %}
     {% set url = baseUrl~entry.username %}
     {% if loop.first %}
-<ul class="list fifty gutter">
+<ul class="list gutter">
     {% endif %}
   <li>
     <article id="{{ entry.id }}">
