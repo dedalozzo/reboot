@@ -44,7 +44,6 @@
         </div>
       </section>
     </article>
-  {% endfor  %}
   {% elsefor %}
     <div class="alert alert-info">Sorry, no results were found.</div>
   {% endfor %}
