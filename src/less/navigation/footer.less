@@ -47,23 +47,6 @@ footer {
   .clearfix();
 }
 
-footer.right {
-  background-color: @content-background-color !important;
-}
-
-footer.right ul {
-  display: inline-block !important;
-  text-align: center;
-}
-
-footer.right ul > li {
-  display: inline !important;
-}
-
-footer.right {
-  background-color: @content-background-color;
-}
-
 footer img {
   vertical-align: middle;
 }
@@ -107,4 +90,33 @@ footer > .version {
   color: black;
   font-size: @font-size-mini;
   text-align: left;
+}
+
+
+// Footer right
+footer.right {
+  background: none @content-background-color !important;
+  text-align: center;
+}
+
+footer.right ul {
+  display: inline-block !important;
+}
+
+footer.right ul > li {
+  display: inline !important;
+  padding: 10px;
+}
+
+footer.right ul > li + li {
+  padding-left: 0;
+}
+
+footer.right a {
+  color: @link-color;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+  }
 }
