@@ -7,15 +7,13 @@
     {% include "partials/navigation/tabs/member/" %}
     {% include "partials/navigation/tabs.volt" %}
 
-    <div class="column-left super">
-
+    <div class="column-left">
     {% include "partials/navigation/filters.volt" %}
     {% include "partials/list-of-members.volt" %}
-
     </div> <!-- /column-left -->
 
-    <aside class="column-right wide-skyscraper">
-      <div class="banner"><a href="#"><img src="http://city916.com/Images/160x600.gif" width="160" height="600" /></a></div>
+    <aside class="column-right">
+      <div class="banner"><a href="#"><img src="/img/300x250cro.jpeg" /></a></div>
     </aside> <!-- /column-right -->
   </div>
 {% endblock %}

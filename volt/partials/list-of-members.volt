@@ -7,7 +7,7 @@
       <ul class="list item-info">
         <li>{{ entry.when }}</li>
         <li>
-          <i class="icon-group" title="connections"></i> 0
+          <i class="icon-group" title="following"></i> 0
           <i class="icon-male" title="followers"></i><i class="icon-male small"></i><i class="icon-male mini"></i>&nbsp;{{ entry.followersCount }}
         </li>
         <li><i class="icon-eye-open" title="views"></i>&nbsp;0</li>
@@ -24,7 +24,7 @@
           <div class="item-excerpt">{{ entry.headline }}</div>
           {% if entry.friendshipExists %}
             <div class="align-right anchor-rb">
-              <i class="icon-ok"></i> CONNECTION
+              <button class="btn btn-icon blue mini pull-right"><i class="icon-minus"></i> UNFOLLOW</button>
             </div>
           {% elseif !user.match(entry.id) %}
             <div class="align-right anchor-rb">
