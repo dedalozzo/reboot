@@ -50,6 +50,10 @@
 </div> <!-- /content -->
 {% endblock %}
 
+{% block footer %}
+  {% include "partials/navigation/footer.volt" %}
+{% endblock %}
+
 {% block script %}
 <script>
   $('html, body').animate({scrollTop: '+=200px'}, 1);

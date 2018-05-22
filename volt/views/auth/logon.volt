@@ -4,16 +4,9 @@
   <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
 {% endblock %}
 
-{% block topbar %}{% endblock %}
 {% block menubar %}{% endblock %}
 {% block container %}fixed{% endblock %}
 {% block billboard %}{% endblock %}
-
-{% block header %}
-  <ul class="list auto">
-    {% include "partials/brand.volt" %}
-  </ul>
-{% endblock %}
 
 {% block content %}
   <div id="content" class="no-top">
@@ -120,6 +113,10 @@
     </aside>
 
   </div> <!-- /content -->
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/navigation/footer.volt" %}
 {% endblock %}
 
 {% block script %}

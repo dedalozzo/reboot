@@ -1,14 +1,7 @@
 {% extends "templates/base.volt" %}
 
-{% block topbar %}{% endblock %}
 {% block menubar %}{% endblock %}
 {% block container %}fixed{% endblock %}
-
-{% block header %}
-  <ul class="list auto">
-    {% include "partials/brand.volt" %}
-  </ul>
-{% endblock %}
 
 {% block content %}
   <div id="content" class="no-top">
