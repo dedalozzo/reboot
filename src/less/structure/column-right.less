@@ -10,15 +10,16 @@
 // ---------------------------------------------------------------------------------------------------------------------
 
 // 300 (medium rectangle) + gutter
-@column-right-width: 300 + @gutter;
+@column-right-padding-left: @gutter + 10;
+@column-right-width: 300 + @column-right-padding-left;
 @column-right-reduce: 50;
 @column-right-expand: 400;
-@column-right-wide-skyscraper: 160 + @gutter;
+@column-right-wide-skyscraper: 160 + @column-right-padding-left;
 
 .column-right {
   float: right;
   width: @column-right-width;
-  padding-left: @gutter;
+  padding-left: @column-right-padding-left;
   .box-sizing(border-box);
 }
 
