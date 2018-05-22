@@ -1,7 +1,6 @@
 {% extends "templates/base.volt" %}
 
 {% block menubar %}{% endblock %}
-{% block container %}fixed{% endblock %}
 
 {% block content %}
   <div id="content" class="no-top">
