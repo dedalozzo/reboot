@@ -18,6 +18,7 @@
       {% include "partials/widgets/favorite-tags.volt" %}
       {% include "partials/widgets/recent-tags.volt" %}
       <div class="banner"><a href="#"><img src="/img/300x250cro.jpeg" /></a></div>
+      {% include "partials/navigation/footer.volt" %}
     </aside> <!-- /column-right -->
   </div> <!-- /content -->
 {% endblock %}
