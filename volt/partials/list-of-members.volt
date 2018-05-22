@@ -1,12 +1,7 @@
 {% if entries is defined %}
   {% set baseUrl = '//'~domainName~'/users/' %}
   {% for entry in entries %}
-    {% set modulus = loop.index % 1 %}
     {% set url = baseUrl~entry.username %}
-    {% if loop.first %}
-<ul class="list gutter">
-    {% endif %}
-  <li>
     <article id="{{ entry.id }}">
       <hr class="fade-short">
       <ul class="list item-info">
@@ -49,20 +44,9 @@
         </div>
       </section>
     </article>
-  </li>
-    {% if loop.last %}
-      {% for i in 1..modulus  %}
-    <li></li>
-      {% endfor  %}
-</ul>
-
-    {% elseif (modulus == 0) %}
-</ul>
-
-<ul class="list fifty gutter">
-    {% endif %}
+  {% endfor  %}
   {% elsefor %}
-  <div class="alert alert-info">Sorry, no results were found.</div>
+    <div class="alert alert-info">Sorry, no results were found.</div>
   {% endfor %}
   {% include "partials/pagination.volt" %}
 {% endif %}
