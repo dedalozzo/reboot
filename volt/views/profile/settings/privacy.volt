@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div>
-      <form action="//{{ serverName }}/{{ user.username }}/settings/username/" id="privacyfrm" name="privacyfrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/username/" id="privacyfrm" name="privacyfrm" method="post" role="form">
         <fieldset>
           <button type="submit" name="update" value="update" class="btn red">UPDATE PRIVACY SETTINGS</button>
         </fieldset>

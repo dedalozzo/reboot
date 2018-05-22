@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/" id="pinfofrm" name="pinfofrm" method="post" role="form">
         <fieldset>
           <p class="gutter">The following <b>personal information</b> are optionals. However, we invite you to keep them updated.</p>
           <div class="half-gutter">

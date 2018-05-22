@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/password/" id="passwordfrm" name="passwordfrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/password/" id="passwordfrm" name="passwordfrm" method="post" role="form">
         <fieldset>
           <p class="gutter">The <b>password</b> let you access to your profile using any e-mails associated with it. For safety reasons, please choose a different password than the others you use on other websites.</p>
           <ul class="list vertical post-it">

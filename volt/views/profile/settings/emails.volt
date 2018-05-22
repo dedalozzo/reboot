@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div class="gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/emails/" id="emailsfrm" name="emailsfrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/emails/" id="emailsfrm" name="emailsfrm" method="post" role="form">
         <fieldset>
           <p class="gutter">Your <b>primary e-mail address</b> will be used to send you notifications as well as any kind of communication. You may change your primary e-mail anytime, choosing between any verified e-mails. The primary e-mail address can't be removed.</p>
           <table id="emails" class="std gutter">

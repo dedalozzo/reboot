@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/username/" id="usernamefrm" name="usernamefrm" method="post" role="form">
         <fieldset>
           <p class="gutter">The <b>username</b> uniquely identifies yourself on the website. You are allowed to change your username anytime, but this will effect your ranking on search engines.</p>
           <ul class="list vertical post-it">

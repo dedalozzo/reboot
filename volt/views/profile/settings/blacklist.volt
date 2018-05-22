@@ -19,7 +19,7 @@
     {{ flash.output() }}
 
     <div class="ghost gutter">
-      <form action="//{{ serverName }}/{{ user.username }}/settings/blacklist/" id="blacklistfrm" name="blacklistfrm" method="post" role="form">
+      <form action="//{{ serverName }}/users/{{ user.username }}/settings/blacklist/" id="blacklistfrm" name="blacklistfrm" method="post" role="form">
         <fieldset>
           <p class="gutter">Your <b>blacklist</b> is used to prevent other users to interact with you. Every user listed in your blacklist can't contact you, neither he can add you as friend.</p>
           <table id="blacklist" class="std gutter">
