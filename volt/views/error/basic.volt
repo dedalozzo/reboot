@@ -26,13 +26,13 @@
 
     <aside class="prompt gutter">
       <p>
-        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;wget&nbsp;{{ url }}<br>
+        <span class="at">{{ username }}@reindex</span>:<span class="tilde">~</span>$&nbsp;wget&nbsp;{{ url }}<br>
         --{{ date('Y-m-d H:i:s', time()) }}--  {{ url }}<br>
         Resolving {{ domainName }}...<br>
         Connecting to {{ domainName }}|{{ serverAddr }}|:{{ serverPort }}... connected.<br>
         HTTP request sent, awaiting response...&nbsp;{{ code }}&nbsp;{{ title }}<br>
         {{ date('Y-m-d H:i:s', time()) }}&nbsp;ERROR {{ code }}:&nbsp;{{ title }}.<br>
-        <span class="at">{{ username }}@pit</span>:<span class="tilde">~</span>$&nbsp;<blink>&#95</blink>
+        <span class="at">{{ username }}@reindex</span>:<span class="tilde">~</span>$&nbsp;<blink>&#95</blink>
       </p>
     </aside>
 
