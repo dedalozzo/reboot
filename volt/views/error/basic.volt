@@ -46,3 +46,7 @@
 
   </div> <!-- /content -->
 {% endblock %}
+
+{% block footer %}
+  {% include "partials/navigation/footer.volt" %}
+{% endblock %}
