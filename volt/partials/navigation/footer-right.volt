@@ -3,7 +3,5 @@
   <ul class="list inline">
     {% include "partials/navigation/footer-links.volt" %}
   </ul>
-  <p class="copyright">
-    <b>© ReIndex™ Ltd 2014-{{ year }}.</b>
-  </p>
+  <p class="copyright">© ReIndex™ Ltd 2014-{{ year }}</p>
 </footer>
