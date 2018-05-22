@@ -1,4 +1,4 @@
-<footer>
+<footer class="right">
   <ul class="list inline">
     <li><a href="//{{ domainName }}/tour/">About</a></li>
     <li><a href="//{{ domainName }}/help/">Help</a></li>
