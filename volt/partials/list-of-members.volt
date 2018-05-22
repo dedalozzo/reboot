@@ -1,5 +1,5 @@
 {% if entries is defined %}
-  {% set baseUrl = '//'~domainName~'/' %}
+  {% set baseUrl = '//'~domainName~'/users/' %}
   {% for entry in entries %}
     {% set modulus = loop.index % 2 %}
     {% set url = baseUrl~entry.username %}
@@ -33,7 +33,7 @@
             </div>
           {% elseif !user.match(entry.id) %}
             <div class="align-right anchor-rb">
-              <button class="btn btn-icon blue mini pull-right"><i class="icon-plus"></i> CONNECT</button>
+              <button class="btn btn-icon blue mini pull-right"><i class="icon-plus"></i> FOLLOW</button>
             </div>
           {% endif %}
         </div>
