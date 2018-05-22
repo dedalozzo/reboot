@@ -1,3 +1,4 @@
+    <hr class="fade-long">
     <footer>
       <ul class="list">
         <li><a href="//{{ domainName }}/tour/">ABOUT</a></li>
