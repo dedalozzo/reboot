@@ -5,7 +5,7 @@
   <div style="position: relative;">
     <img id="avatar" class="img-polaroid pull-left" src="{{ profile.getGravatar(profile.emails.getPrimary()) }}&s=160">
     {% if user.isMember() and user.match(profile.id) %}
-      <a class="change-avatar" href="http://it.gravatar.com/"><i class="icon-camera"></i>CHANGE PICTURE</a>
+      <a class="change-avatar" href="http://gravatar.com/"><i class="icon-camera"></i>CHANGE PICTURE</a>
     {% endif %}
   </div>
   <div class="full-name">{% if profile.firstName is defined %}{{ profile.firstName }}{% endif %} {% if profile.lastName is defined %}{{ profile.lastName }}{% endif %}</div>
