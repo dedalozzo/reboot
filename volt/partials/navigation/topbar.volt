@@ -2,7 +2,7 @@
 <nav class="topbar">
   <ul class="list">
     <li>
-      <img src="/img/brand.png" width="29" height="30">
+      <img src="{{ dist }}/img/brand.png" width="29" height="30">
     </li>
     <li>
       <form class="topbar-search" method="get" action="search.php" autocomplete="off" name="form_search">
