@@ -71,16 +71,16 @@
 }
 
 .topbar > ul {
-  width: @total-width;
-  height: @topbar-min-height;
-  vertical-align: middle;
   margin-right: auto;
   margin-left: auto;
-}
 
-.topbar > ul {
   padding-top: @topbar-padding-top;
   padding-bottom: @topbar-padding-bottom;
+
+  width: @total-width;
+  height: @topbar-min-height;
+
+  vertical-align: middle;
 }
 
 .topbar > ul > li  {
@@ -95,6 +95,16 @@
   &:hover,
   &:focus {
     color: @link-color-hover;
+  }
+}
+
+.topbar .logo {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+
+  > img {
+    vertical-align: middle;
   }
 }
 
