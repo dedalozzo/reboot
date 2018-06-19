@@ -1,7 +1,9 @@
 {# Top Bar #}
 <nav class="topbar">
   <ul class="list">
-    {% include "partials/brand.volt" %}
+    <li>
+      <img src="/img/brand.png" width="29" height="30">
+    </li>
     <li>
       <form class="topbar-search" method="get" action="search.php" autocomplete="off" name="form_search">
         <input class="" type="search" placeholder="Search" autocomplete="on" id="keyword" name="keyword">
