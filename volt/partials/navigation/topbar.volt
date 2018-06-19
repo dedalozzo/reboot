@@ -40,6 +40,6 @@
     {% endif %}
   </ul>
 
-  <!-- <a href="#" data-toggle="modal" data-target="#myModal">Registrati</a> -->
+  <!-- <a href="#" data-toggle="modal" data-target="#myModal">Sign In</a> -->
   <!-- Button trigger modal -->
 </nav>

@@ -23,30 +23,43 @@
 /*
   <nav class="topbar">
     <ul class="list">
-      <li><a class="topbar-brand-logo" href="{{ baseUri }}">&#62<blink>&#95</blink></a></li>
-      <li><a class="topbar-brand-name" href="//{{ domainName }}">PROGRAMMAZIONE.IT</a></li>
+      <li><a class="logo" href="/" target="_self"><img src="{{ dist }}/img/brand.png" width="29" height="30"></a></li>
       <li>
-        <ul class="list pills no-gutter">
-          {% for item in mainMenu %}
-            <li{{ (item['name'] == sectionName) ? ' class="active"' : '' }}><a href="//{{ item['path']~domainName }}"><i class="icon-{{ item['icon'] }}" ></i>&nbsp;{{ item['label'] }}</a></li>
-          {% endfor %}
-        </ul>
+        <form class="topbar-search" method="get" action="search.php" autocomplete="off" name="form_search">
+          <input class="" type="search" placeholder="Search" autocomplete="on" id="keyword" name="keyword">
+          <i class="icon-search"></i>
+        </form>
       </li>
+      <li><a class="link" href="//{{ domainName }}/blogs/">Blogs</a></li>
+      <li><a class="link" href="//{{ domainName }}/articles/">Articles</a></li>
+      <li><a class="link" href="//{{ domainName }}/tags/"><i class="icon-tags"></i>&nbsp;Tags</a></li>
+      <li><a class="link" href="//{{ domainName }}/users/"><i class="icon-group"></i>&nbsp;Users</a></li>
       <li class="space"></li>
+      {% if user.isMember() %}
+        {% set userUri = '//'~domainName~'/users/'~user.username %}
       <li>
-        <ul class="list">
-          <li><button class="btn btn-icon blue" title="cerca" data-dropdown="#dropdown-search"><i class="icon-search icon-large"></i></button></li>
-          <li><button class="btn btn-icon blue" title="collabora" data-dropdown="#dropdown-plus"><i class="icon-file icon-large"></i></button></li>
-          {% if currentUser is defined %}
-            {% set userUri = '//utenti.'~domainName~'/'~currentUser.id %}
-          <li><button class="btn btn-icon blue" title="messaggi e notifiche" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
-          <li><button class="btn btn-icon blue" data-dropdown="#dropdown-user"><img class="gravatar" src="{{ currentUser.getGravatar(currentUser.email) }}&s=20"></button></li>
-          {% else %}
-          <li><a href="{{ baseUri }}/accedi/">Accedi</a></li>
-          <li><a href="{{ baseUri }}/registrati/">Registrati</a></li>
-          {% endif %}
-        </ul>
+        <button class="btn btn-icon blue" data-dropdown="#dropdown-user"><img class="gravatar" src="{{ user.getGravatar(user.emails.getPrimary()) }}&s=20"></button>
+        <div id="dropdown-user" class="dropdown dropdown-relative dropdown-anchor-right dropdown-tip">
+          <ul class="dropdown-menu">
+            <li><span>Signed in as<br><b>{{ user.username }}</b></span></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="{{ userUri }}"><i class="icon-home"></i>Timeline</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="{{ userUri }}/about/"><i class="icon-user"></i>Profile</a></li>
+            <li><a href="{{ userUri }}/connections/"><i class="icon-group"></i>Connections</a></li>
+            <li><a href="{{ userUri }}/repositories/"><i class="icon-github"></i>Repositories</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="{{ userUri }}/settings/"><i class="icon-wrench"></i>Settings</a></li>
+            <li><button><i class="icon-gears"></i>Administration</button></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="//{{ domainName }}/signout/"><i class="icon-signout"></i>Sign Out</a></li>
+          </ul>
+        </div>
       </li>
+      <li><button class="btn btn-icon blue" title="messages and notifications" data-dropdown="#dropdown-inbox"><i class="icon-inbox icon-large"></i></button></li>
+      {% else %}
+      <li><a class="link" href="//{{ domainName }}/logon/"><i class="icon-signin"></i> Log In</a></li>
+      {% endif %}
     </ul>
   </nav>
 */
@@ -150,11 +163,6 @@
     padding-top: 1px;
   }
 
-  .topbar-brand-logo {
-    height: 27px;
-    width: 27px;
-  }
-
 }
 
 
@@ -162,9 +170,5 @@
 // MOZILLA SPECIFIC STYLES (FIREFOX, ETC.)
 // ---------------------------------------------------------------------------------------------------------------------
 @-moz-document url-prefix() {
-
-  .topbar-brand-name {
-    padding-bottom: 1px;
-  }
 
 }
